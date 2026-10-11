@@ -1,0 +1,108 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/001-init.sql:ro
+    networks:
+      - backend
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_PORT: "5432"
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      DB_POOL_SIZE: ${DB_POOL_SIZE}
+    depends_on:
+      db:
+        condition: service_healthy
+    expose:
+      - "8000"
+    cpus: 0.5
+    mem_limit: 384m
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz', timeout=2)
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    networks:
+      - backend
+
+  proxy:
+    image: nginx:alpine
+    depends_on:
+      web:
+        condition: service_healthy
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./frontend:/usr/share/nginx/html:ro
+    networks:
+      - frontend
+      - backend
+
+  api-test:
+    profiles:
+      - test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command:
+      - python
+      - /tests/api_smoke_test.py
+      - http://proxy
+      - /results/crud_check.json
+    volumes:
+      - ./scripts:/tests:ro
+      - ./results:/results
+    depends_on:
+      proxy:
+        condition: service_started
+    networks:
+      - frontend
+
+  load-generator:
+    profiles:
+      - load
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint:
+      - python
+      - /load/load_generator.py
+    volumes:
+      - ./scripts:/load:ro
+      - ./results:/results
+    depends_on:
+      proxy:
+        condition: service_started
+    networks:
+      - frontend
+
+volumes:
+  postgres_data:
+
+networks:
+  frontend:
+  backend:
+    internal: true
+

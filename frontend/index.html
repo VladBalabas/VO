@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Направлення на дослідження</title>
+    <link rel="stylesheet" href="/ui/styles.css?v=2">
+  </head>
+  <body>
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Лабораторна робота 1 · Варіант 2</p>
+        <h1>Направлення на дослідження</h1>
+        <p>Керування записами через масштабований CRUD API.</p>
+      </div>
+      <a class="docs-link" href="/docs">Документація API</a>
+    </header>
+
+    <main>
+      <section class="panel editor-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Редактор</p>
+            <h2 id="form-title">Нове направлення</h2>
+          </div>
+          <button id="cancel-edit" class="button secondary hidden" type="button">Скасувати</button>
+        </div>
+
+        <form id="referral-form">
+          <input id="referral-id" type="hidden">
+          <label>
+            Код пацієнта
+            <input id="patient-code" maxlength="64" required placeholder="PAT-0001">
+          </label>
+          <label>
+            Модальність
+            <select id="modality" required></select>
+          </label>
+          <label>
+            Пріоритет
+            <input id="priority" type="number" min="1" max="5" value="3" required>
+          </label>
+          <label>
+            Лікар
+            <input id="doctor" maxlength="120" required placeholder="Лікар Іваненко">
+          </label>
+          <label>
+            Дата видачі
+            <input id="issued-at" type="date" required>
+          </label>
+          <label>
+            Статус
+            <select id="status" required></select>
+          </label>
+          <button class="button primary form-submit" type="submit">Зберегти</button>
+        </form>
+      </section>
+
+      <section class="panel list-panel">
+        <div class="section-heading list-heading">
+          <div>
+            <p class="eyebrow">База даних</p>
+            <h2>Направлення <span id="total-count" class="count">0</span></h2>
+          </div>
+          <label class="filter-label">
+            Фільтр за статусом
+            <select id="status-filter"></select>
+          </label>
+        </div>
+
+        <div id="message" class="message hidden" role="status"></div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Пацієнт</th>
+                <th>Дослідження</th>
+                <th>Пріоритет</th>
+                <th>Лікар</th>
+                <th>Дата</th>
+                <th>Статус</th>
+                <th><span class="sr-only">Дії</span></th>
+              </tr>
+            </thead>
+            <tbody id="referrals-body"></tbody>
+          </table>
+          <p id="empty-state" class="empty-state hidden">Направлень за цим фільтром немає.</p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/ui/app.js?v=2"></script>
+  </body>
+</html>
