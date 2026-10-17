@@ -1,0 +1,20 @@
+{
+  "captured_on": "2026-10-17",
+  "project_name": "vo-lr1-bench-20261017",
+  "phase": "generator-noop",
+  "command": "docker compose -p vo-lr1-bench-20261017 logs --no-color proxy 2>&1 | Select-String -Pattern 'worker_connections|\\[alert\\]|\\[error\\]|\\[crit\\]' | Select-Object -First 12",
+  "output": [
+    "proxy-1  | 2026/10/17 11:51:24 [alert] 30#30: 512 worker_connections are not enough",
+    "proxy-1  | 2026/10/17 11:51:24 [alert] 30#30: 512 worker_connections are not enough",
+    "proxy-1  | 2026/10/17 11:51:24 [alert] 30#30: 512 worker_connections are not enough",
+    "proxy-1  | 2026/10/17 11:51:24 [alert] 30#30: 512 worker_connections are not enough",
+    "proxy-1  | 2026/10/17 11:51:24 [alert] 30#30: 512 worker_connections are not enough",
+    "proxy-1  | 2026/10/17 11:51:24 [alert] 30#30: 512 worker_connections are not enough",
+    "proxy-1  | 2026/10/17 11:51:24 [alert] 30#30: 512 worker_connections are not enough",
+    "proxy-1  | 2026/10/17 11:51:24 [alert] 30#30: 512 worker_connections are not enough",
+    "proxy-1  | 2026/10/17 11:51:24 [alert] 30#30: 512 worker_connections are not enough",
+    "proxy-1  | 2026/10/17 11:51:24 [alert] 30#30: 512 worker_connections are not enough",
+    "proxy-1  | 2026/10/17 11:51:24 [alert] 30#30: 512 worker_connections are not enough",
+    "proxy-1  | 2026/10/17 11:51:24 [alert] 30#30: 512 worker_connections are not enough"
+  ]
+}

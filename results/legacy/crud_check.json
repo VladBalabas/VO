@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-10-11T16:56:35.173613+00:00",
+  "checks": [
+    {
+      "request": "GET /healthz",
+      "status": 200
+    },
+    {
+      "request": "POST /referrals",
+      "status": 201
+    },
+    {
+      "request": "GET /referrals",
+      "status": 200
+    },
+    {
+      "request": "GET /referrals/{id}",
+      "status": 200
+    },
+    {
+      "request": "PUT /referrals/{id}",
+      "status": 200
+    },
+    {
+      "request": "POST /referrals (невалідні дані)",
+      "status": 400
+    },
+    {
+      "request": "POST /referrals (id від клієнта)",
+      "status": 400
+    },
+    {
+      "request": "DELETE /referrals/{id}",
+      "status": 204
+    },
+    {
+      "request": "DELETE /referrals/{id} повторно",
+      "status": 404
+    },
+    {
+      "request": "GET /referrals/{id} після видалення",
+      "status": 404
+    }
+  ],
+  "instance": "8c1ef5d038a4"
+}

@@ -5,78 +5,132 @@
       "requested_rate_rps": 10,
       "repeat_count": 3,
       "achieved_rate_rps": 10.0,
-      "latency_mean_ms": 3.856265,
-      "latency_p50_ms": 3.026167,
-      "latency_p95_ms": 5.269909,
-      "latency_p99_ms": 22.895428,
+      "successful_rate_rps": 10.0,
+      "attempted_completion_rate_rps": 10.0,
+      "latency_origin": "scheduled_at",
+      "in_flight_measurement": "independent_periodic_counter_samples",
+      "source_files": [
+        "open-r1-rate10-rep1.json",
+        "open-r1-rate10-rep2.json",
+        "open-r1-rate10-rep3.json"
+      ],
+      "latency_mean_ms": 5.616055,
+      "latency_p50_ms": 2.955458,
+      "latency_p95_ms": 27.063628,
+      "latency_p99_ms": 27.582589,
       "error_rate": 0.0,
-      "average_in_flight": 0.038563,
-      "schedule_lag_p95_ms": 0.660227
+      "average_in_flight": 0.0564,
+      "schedule_lag_p95_ms": 0.33607
     },
     {
       "instances": 1,
       "requested_rate_rps": 100,
       "repeat_count": 3,
       "achieved_rate_rps": 100.0,
-      "latency_mean_ms": 10.415918,
-      "latency_p50_ms": 3.132376,
-      "latency_p95_ms": 59.605335,
-      "latency_p99_ms": 79.774543,
+      "successful_rate_rps": 100.0,
+      "attempted_completion_rate_rps": 100.0,
+      "latency_origin": "scheduled_at",
+      "in_flight_measurement": "independent_periodic_counter_samples",
+      "source_files": [
+        "open-r1-rate100-rep1.json",
+        "open-r1-rate100-rep2.json",
+        "open-r1-rate100-rep3.json"
+      ],
+      "latency_mean_ms": 7.186249,
+      "latency_p50_ms": 2.785136,
+      "latency_p95_ms": 44.002864,
+      "latency_p99_ms": 69.507456,
       "error_rate": 0.0,
-      "average_in_flight": 1.041592,
-      "schedule_lag_p95_ms": 0.43876
+      "average_in_flight": 0.721557,
+      "schedule_lag_p95_ms": 0.260782
     },
     {
       "instances": 1,
       "requested_rate_rps": 500,
       "repeat_count": 3,
-      "achieved_rate_rps": 348.881133,
-      "latency_mean_ms": 652.883919,
-      "latency_p50_ms": 131.828826,
-      "latency_p95_ms": 3985.342109,
-      "latency_p99_ms": 9190.743784,
-      "error_rate": 0.2956,
-      "average_in_flight": 227.778881,
-      "schedule_lag_p95_ms": 13630.742645
+      "achieved_rate_rps": 313.626552,
+      "successful_rate_rps": 313.626552,
+      "attempted_completion_rate_rps": 490.143601,
+      "latency_origin": "scheduled_at",
+      "in_flight_measurement": "independent_periodic_counter_samples",
+      "source_files": [
+        "open-r1-rate500-rep1.json",
+        "open-r1-rate500-rep2.json",
+        "open-r1-rate500-rep3.json"
+      ],
+      "latency_mean_ms": 399.258112,
+      "latency_p50_ms": 119.549644,
+      "latency_p95_ms": 1431.795527,
+      "latency_p99_ms": 2344.307767,
+      "error_rate": 0.360133,
+      "average_in_flight": 195.696489,
+      "schedule_lag_p95_ms": 0.280419
     },
     {
       "instances": 2,
       "requested_rate_rps": 10,
       "repeat_count": 3,
       "achieved_rate_rps": 10.0,
-      "latency_mean_ms": 6.245202,
-      "latency_p50_ms": 3.175494,
-      "latency_p95_ms": 44.404322,
-      "latency_p99_ms": 45.058319,
+      "successful_rate_rps": 10.0,
+      "attempted_completion_rate_rps": 10.0,
+      "latency_origin": "scheduled_at",
+      "in_flight_measurement": "independent_periodic_counter_samples",
+      "source_files": [
+        "open-r2-rate10-rep1.json",
+        "open-r2-rate10-rep2.json",
+        "open-r2-rate10-rep3.json"
+      ],
+      "latency_mean_ms": 5.753155,
+      "latency_p50_ms": 3.096465,
+      "latency_p95_ms": 23.212397,
+      "latency_p99_ms": 37.861912,
       "error_rate": 0.0,
-      "average_in_flight": 0.062452,
-      "schedule_lag_p95_ms": 0.508643
+      "average_in_flight": 0.0575,
+      "schedule_lag_p95_ms": 0.329437
     },
     {
       "instances": 2,
       "requested_rate_rps": 100,
       "repeat_count": 3,
       "achieved_rate_rps": 100.0,
-      "latency_mean_ms": 6.752159,
-      "latency_p50_ms": 3.023159,
-      "latency_p95_ms": 39.012069,
-      "latency_p99_ms": 58.455834,
+      "successful_rate_rps": 100.0,
+      "attempted_completion_rate_rps": 100.0,
+      "latency_origin": "scheduled_at",
+      "in_flight_measurement": "independent_periodic_counter_samples",
+      "source_files": [
+        "open-r2-rate100-rep1.json",
+        "open-r2-rate100-rep2.json",
+        "open-r2-rate100-rep3.json"
+      ],
+      "latency_mean_ms": 6.222949,
+      "latency_p50_ms": 3.020916,
+      "latency_p95_ms": 27.520191,
+      "latency_p99_ms": 63.69299,
       "error_rate": 0.0,
-      "average_in_flight": 0.675216,
-      "schedule_lag_p95_ms": 0.395477
+      "average_in_flight": 0.624165,
+      "schedule_lag_p95_ms": 0.257946
     },
     {
       "instances": 2,
       "requested_rate_rps": 500,
       "repeat_count": 3,
-      "achieved_rate_rps": 488.962355,
-      "latency_mean_ms": 394.088246,
-      "latency_p50_ms": 146.320056,
-      "latency_p95_ms": 1546.539617,
-      "latency_p99_ms": 2355.435841,
-      "error_rate": 0.092933,
-      "average_in_flight": 192.694317,
-      "schedule_lag_p95_ms": 834.51351
+      "achieved_rate_rps": 361.382636,
+      "successful_rate_rps": 361.382636,
+      "attempted_completion_rate_rps": 494.818762,
+      "latency_origin": "scheduled_at",
+      "in_flight_measurement": "independent_periodic_counter_samples",
+      "source_files": [
+        "open-r2-rate500-rep1.json",
+        "open-r2-rate500-rep2.json",
+        "open-r2-rate500-rep3.json"
+      ],
+      "latency_mean_ms": 329.358835,
+      "latency_p50_ms": 128.661749,
+      "latency_p95_ms": 1362.40667,
+      "latency_p99_ms": 2260.146187,
+      "error_rate": 0.269667,
+      "average_in_flight": 162.978097,
+      "schedule_lag_p95_ms": 0.404402
     }
   ],
   "scaling": [
@@ -96,82 +150,192 @@
     },
     {
       "requested_rate_rps": 500,
-      "throughput_one_rps": 348.881133,
-      "throughput_two_rps": 488.962355,
-      "speedup": 1.401516,
-      "karp_flatt": 0.427027
+      "throughput_one_rps": 313.626552,
+      "throughput_two_rps": 361.382636,
+      "speedup": 1.152271,
+      "karp_flatt": 0.735703
     }
   ],
   "little": {
-    "lambda_rps": 100.0,
-    "mean_response_seconds": 0.010415918,
-    "lambda_times_w": 1.041592,
-    "measured_average_in_flight": 1.041592,
-    "discrepancy_percent": 1.9e-05
+    "source_file": "open-r1-rate100-rep3.json",
+    "independent_verification": true,
+    "latency_origin": "scheduled_at",
+    "cohort": "responses_2xx",
+    "lambda_rps": 99.984516,
+    "mean_response_seconds": 0.007186249,
+    "lambda_times_w": 0.718514,
+    "measured_average_in_flight": 0.721557,
+    "discrepancy_percent": 0.421778,
+    "repeat_checks": [
+      {
+        "source_file": "open-r1-rate100-rep1.json",
+        "independent_verification": true,
+        "latency_origin": "scheduled_at",
+        "cohort": "responses_2xx",
+        "lambda_rps": 100.0,
+        "mean_response_seconds": 0.009165548,
+        "lambda_times_w": 0.916555,
+        "measured_average_in_flight": 0.918276,
+        "discrepancy_percent": 0.187438
+      },
+      {
+        "source_file": "open-r1-rate100-rep2.json",
+        "independent_verification": true,
+        "latency_origin": "scheduled_at",
+        "cohort": "responses_2xx",
+        "lambda_rps": 100.0,
+        "mean_response_seconds": 0.00695671,
+        "lambda_times_w": 0.695671,
+        "measured_average_in_flight": 0.69662,
+        "discrepancy_percent": 0.136229
+      },
+      {
+        "source_file": "open-r1-rate100-rep3.json",
+        "independent_verification": true,
+        "latency_origin": "scheduled_at",
+        "cohort": "responses_2xx",
+        "lambda_rps": 99.984516,
+        "mean_response_seconds": 0.007186249,
+        "lambda_times_w": 0.718514,
+        "measured_average_in_flight": 0.721557,
+        "discrepancy_percent": 0.421778
+      }
+    ]
   },
   "closed_test_selection": {
     "rate_rps": 500,
-    "concurrency": 228,
+    "concurrency": 196,
     "saturation_observed": true,
-    "open_achieved_rate_rps": 348.881133,
-    "open_p95_ms": 3985.342109
+    "open_achieved_rate_rps": 313.626552,
+    "open_p95_ms": 1431.795527
   },
   "closed_comparison": {
     "rate_rps": 500,
-    "concurrency": 228,
-    "open_achieved_rate_rps": 348.881133,
-    "open_p95_ms": 3985.342109,
-    "closed_achieved_rate_rps": 269.425369,
-    "closed_p95_ms": 3198.599266
+    "concurrency": 196,
+    "open_achieved_rate_rps": 313.626552,
+    "open_p95_ms": 1431.795527,
+    "closed_achieved_rate_rps": 176.96216,
+    "closed_p95_ms": 3607.151547,
+    "closed_attempted_completion_rate_rps": 176.96216,
+    "closed_latency_origin": "scheduled_at",
+    "open_latency_origin": "scheduled_at",
+    "closed_minus_open_successful_rate_rps": -136.664392
   },
   "pod_counts_two_instances": {
-    "6e02b8e4e50b": 25691,
-    "89f77d52049f": 25670
+    "045aa42d5a01": 22333,
+    "6d8aacef4e5f": 22336
   },
   "startup": {
+    "median_ms": 9775.295,
     "runs_ms": [
-      10043.974,
-      10011.45,
-      9951.268
-    ],
-    "median_ms": 10011.45
+      9887.4,
+      9775.295,
+      9769.212
+    ]
   },
   "image": {
-    "mebibytes": 132.176,
-    "bytes": 138596769
+    "bytes": 138647467,
+    "mebibytes": 132.225
   },
   "generator_noop": {
-    "generated_at": "2026-10-11T15:52:55.017869+00:00",
+    "schema_version": 2,
+    "generator_implementation": "multiprocessing_thread_pools",
+    "latency_origin": "scheduled_at",
+    "latency_basis": "scheduled_at_to_completed_at_including_generator_queue",
+    "network_latency_origin": "sent_at",
+    "in_flight_measurement": "independent_periodic_counter_samples",
+    "in_flight_sample_interval_ms": 1.0,
+    "in_flight_sample_gap_max_ms": 2.249582,
+    "in_flight_sample_count": 9108,
+    "in_flight_integration": "trapezoidal_over_actual_sample_timestamps",
+    "in_flight_terminal_boundary": "zero_pending_after_last_completion; samples_after_observation_end_excluded",
+    "successful_in_flight_classification": "sampled_scheduled_success_cohort_minus_sampled_successful_completions",
+    "observation_window": "planned_start_through_max(nominal_end,last_completion); excludes_result_collection",
+    "finite_window_note": "Початково порожня система, завершальний drain і дискретизація впливають на скінченну вибірку; це не доказ стаціонарності.",
+    "generated_at": "2026-10-17T11:51:29.447954+00:00",
     "mode": "open",
     "requested_rate_rps": 500.0,
     "nominal_duration_seconds": 10.0,
-    "observation_seconds": 10.000909,
+    "observation_seconds": 10.0,
+    "completion_span_seconds": 10.0,
+    "drain_seconds": 0.0,
     "requests_scheduled": 5000,
-    "responses_2xx": 4941,
-    "responses_non_2xx": 59,
-    "error_rate": 0.0118,
-    "achieved_rate_rps": 499.954552,
-    "successful_rate_rps": 494.055088,
+    "requests_sent": 5000,
+    "requests_completed": 5000,
+    "responses_2xx": 4857,
+    "responses_non_2xx": 0,
+    "request_exceptions": 143,
+    "requests_failed": 143,
+    "error_rate": 0.0286,
+    "achieved_rate_rps": 485.7,
+    "successful_rate_rps": 485.7,
+    "attempted_completion_rate_rps": 500.0,
     "dispatch_rate_rps": 500.0,
-    "latency_mean_ms": 211.097514,
-    "latency_p50_ms": 28.824997,
-    "latency_p95_ms": 668.271212,
-    "latency_p99_ms": 1066.634149,
-    "schedule_lag_p95_ms": 413.046692,
-    "average_in_flight": 105.539163,
+    "latency_mean_ms": 49.160738,
+    "latency_p50_ms": 1.184817,
+    "latency_p95_ms": 467.277865,
+    "latency_p99_ms": 727.317936,
+    "successful_latency_mean_ms": 50.589078,
+    "network_latency_mean_ms": 48.97776,
+    "network_latency_p95_ms": 467.085531,
+    "schedule_lag_p95_ms": 0.306965,
+    "average_in_flight": 24.579304,
+    "average_successful_in_flight": 24.570327,
+    "peak_in_flight": 256,
+    "peak_generator_queued": 1,
+    "error_counts": {
+      "ConnectionResetError": 66,
+      "RemoteDisconnected": 77
+    },
     "status_counts": {
-      "200": 4941,
-      "exception": 59
+      "200": 4857,
+      "exception": 143
     },
     "pod_counts": {
-      "6e02b8e4e50b": 4941
+      "6d8aacef4e5f": 4857
     },
     "processes": 16,
-    "threads_per_process": 16,
+    "threads_per_process": 391,
+    "thread_pool_sizing": "ceil(rate*timeout*1.25/processes), minimum 16",
+    "worker_capacity": 6256,
+    "worker_peak_active_by_process": [
+      16,
+      19,
+      20,
+      19,
+      18,
+      17,
+      18,
+      18,
+      17,
+      17,
+      16,
+      15,
+      17,
+      18,
+      18,
+      16
+    ],
+    "worker_capacity_saturated": false,
+    "worker_capacity_covers_rate_times_timeout": true,
     "path_template": "/bench/noop"
   },
   "network_check": {
+    "host_command": "Test-NetConnection -ComputerName 127.0.0.1 -Port 5432 -InformationLevel Detailed",
+    "project_name": "vo-lr1-check-20261017",
+    "web_container_can_connect_to_db": true,
+    "container_output": [
+      "db:5432 CONNECTED"
+    ],
+    "host_output": "ComputerName     : 127.0.0.1\r\nRemoteAddress    : 127.0.0.1\r\nRemotePort       : 5432\r\nTcpTestSucceeded : False",
+    "generated_at": "2026-10-17T11:45:22.4993229Z",
     "host_port_5432_accessible": false,
-    "web_container_can_connect_to_db": true
+    "container_command": "docker compose -p vo-lr1-check-20261017 exec -T web python -c \"import socket; connection=socket.create_connection(('db', 5432), 2); print('db:5432 CONNECTED'); connection.close()\"",
+    "compose_ps": [
+      "NAME                            IMAGE                       COMMAND                  SERVICE   CREATED          STATUS                    PORTS",
+      "vo-lr1-check-20261017-db-1      postgres:17-alpine          \"docker-entrypoint.s…\"   db        23 seconds ago   Up 22 seconds (healthy)   5432/tcp",
+      "vo-lr1-check-20261017-proxy-1   nginx:alpine                \"/docker-entrypoint.…\"   proxy     23 seconds ago   Up 13 seconds             0.0.0.0:8080->80/tcp, [::]:8080->80/tcp",
+      "vo-lr1-check-20261017-web-1     vo-lr1-check-20261017-web   \"uvicorn backend.mai…\"   web       23 seconds ago   Up 20 seconds (healthy)   8000/tcp"
+    ]
   }
 }

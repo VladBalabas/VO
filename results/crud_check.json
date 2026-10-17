@@ -1,46 +1,800 @@
 {
-  "generated_at": "2026-10-11T16:56:35.173613+00:00",
+  "generated_at": "2026-10-17T11:44:44.571011+00:00",
+  "base_url": "http://proxy",
+  "completed": true,
   "checks": [
     {
       "request": "GET /healthz",
-      "status": 200
+      "method": "GET",
+      "path": "/healthz",
+      "payload": null,
+      "status": 200,
+      "body": {
+        "status": "готовий"
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "27",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
     },
     {
       "request": "POST /referrals",
-      "status": 201
+      "method": "POST",
+      "path": "/referrals",
+      "payload": {
+        "patient_code": "AUTO-415032A3",
+        "modality": "MRI",
+        "priority": 2,
+        "doctor": "Автоматичний тест",
+        "issued_at": "2026-10-17",
+        "status": "created"
+      },
+      "status": 201,
+      "body": {
+        "patient_code": "AUTO-415032A3",
+        "modality": "MRI",
+        "priority": 2,
+        "doctor": "Автоматичний тест",
+        "issued_at": "2026-10-17",
+        "status": "created",
+        "id": 1
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "158",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
     },
     {
-      "request": "GET /referrals",
-      "status": 200
+      "request": "GET /referrals?limit=100&offset=0&status=created",
+      "method": "GET",
+      "path": "/referrals?limit=100&offset=0&status=created",
+      "payload": null,
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "patient_code": "AUTO-415032A3",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Автоматичний тест",
+            "issued_at": "2026-10-17",
+            "status": "created",
+            "id": 1
+          }
+        ],
+        "total": 1,
+        "limit": 100,
+        "offset": 0
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "203",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
     },
     {
-      "request": "GET /referrals/{id}",
-      "status": 200
+      "request": "GET /referrals/1",
+      "method": "GET",
+      "path": "/referrals/1",
+      "payload": null,
+      "status": 200,
+      "body": {
+        "patient_code": "AUTO-415032A3",
+        "modality": "MRI",
+        "priority": 2,
+        "doctor": "Автоматичний тест",
+        "issued_at": "2026-10-17",
+        "status": "created",
+        "id": 1
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "158",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
     },
     {
-      "request": "PUT /referrals/{id}",
-      "status": 200
+      "request": "PUT /referrals/1",
+      "method": "PUT",
+      "path": "/referrals/1",
+      "payload": {
+        "patient_code": "AUTO-415032A3",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-17",
+        "status": "scheduled"
+      },
+      "status": 200,
+      "body": {
+        "patient_code": "AUTO-415032A3",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-17",
+        "status": "scheduled",
+        "id": 1
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "172",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
     },
     {
-      "request": "POST /referrals (невалідні дані)",
-      "status": 400
+      "request": "POST /referrals",
+      "method": "POST",
+      "path": "/referrals",
+      "payload": {
+        "patient_code": "AUTO-415032A3",
+        "modality": "INVALID",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-17",
+        "status": "scheduled"
+      },
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "enum",
+            "loc": [
+              "body",
+              "modality"
+            ],
+            "msg": "Input should be 'CT', 'MRI', 'XR', 'US' or 'PET'",
+            "input": "INVALID",
+            "ctx": {
+              "expected": "'CT', 'MRI', 'XR', 'US' or 'PET'"
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "183",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
     },
     {
-      "request": "POST /referrals (id від клієнта)",
-      "status": 400
+      "request": "POST /referrals",
+      "method": "POST",
+      "path": "/referrals",
+      "payload": {
+        "patient_code": "AUTO-415032A3",
+        "modality": "MRI",
+        "priority": 2,
+        "doctor": "Автоматичний тест",
+        "issued_at": "2026-10-17",
+        "status": "created",
+        "id": 999999
+      },
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "extra_forbidden",
+            "loc": [
+              "body",
+              "id"
+            ],
+            "msg": "Extra inputs are not permitted",
+            "input": 999999
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "113",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
     },
     {
-      "request": "DELETE /referrals/{id}",
-      "status": 204
+      "request": "GET /referrals/1",
+      "method": "GET",
+      "path": "/referrals/1",
+      "payload": null,
+      "status": 200,
+      "body": {
+        "patient_code": "AUTO-415032A3",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-17",
+        "status": "scheduled",
+        "id": 1
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "172",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
     },
     {
-      "request": "DELETE /referrals/{id} повторно",
-      "status": 404
+      "request": "GET /referrals/9223372036854775807",
+      "method": "GET",
+      "path": "/referrals/9223372036854775807",
+      "payload": null,
+      "status": 404,
+      "body": {
+        "detail": "Направлення не знайдено"
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "57",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
     },
     {
-      "request": "GET /referrals/{id} після видалення",
-      "status": 404
+      "request": "GET /referrals/0",
+      "method": "GET",
+      "path": "/referrals/0",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "0",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "149",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "PUT /referrals/0",
+      "method": "PUT",
+      "path": "/referrals/0",
+      "payload": {
+        "patient_code": "AUTO-415032A3",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-17",
+        "status": "scheduled"
+      },
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "0",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "149",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "DELETE /referrals/0",
+      "method": "DELETE",
+      "path": "/referrals/0",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "0",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "149",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "GET /referrals/-1",
+      "method": "GET",
+      "path": "/referrals/-1",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "-1",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "150",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "PUT /referrals/-1",
+      "method": "PUT",
+      "path": "/referrals/-1",
+      "payload": {
+        "patient_code": "AUTO-415032A3",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-17",
+        "status": "scheduled"
+      },
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "-1",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "150",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "DELETE /referrals/-1",
+      "method": "DELETE",
+      "path": "/referrals/-1",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "-1",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "150",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "GET /referrals/9223372036854775808",
+      "method": "GET",
+      "path": "/referrals/9223372036854775808",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "less_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be less than or equal to 9223372036854775807",
+            "input": "9223372036854775808",
+            "ctx": {
+              "le": 9223372036854775807
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "197",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "PUT /referrals/9223372036854775808",
+      "method": "PUT",
+      "path": "/referrals/9223372036854775808",
+      "payload": {
+        "patient_code": "AUTO-415032A3",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-17",
+        "status": "scheduled"
+      },
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "less_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be less than or equal to 9223372036854775807",
+            "input": "9223372036854775808",
+            "ctx": {
+              "le": 9223372036854775807
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "197",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "DELETE /referrals/9223372036854775808",
+      "method": "DELETE",
+      "path": "/referrals/9223372036854775808",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "less_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be less than or equal to 9223372036854775807",
+            "input": "9223372036854775808",
+            "ctx": {
+              "le": 9223372036854775807
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "197",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "GET /referrals/-9223372036854775809",
+      "method": "GET",
+      "path": "/referrals/-9223372036854775809",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "-9223372036854775809",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "168",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "PUT /referrals/-9223372036854775809",
+      "method": "PUT",
+      "path": "/referrals/-9223372036854775809",
+      "payload": {
+        "patient_code": "AUTO-415032A3",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-17",
+        "status": "scheduled"
+      },
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "-9223372036854775809",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "168",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "DELETE /referrals/-9223372036854775809",
+      "method": "DELETE",
+      "path": "/referrals/-9223372036854775809",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "-9223372036854775809",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "168",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "GET /referrals/abc",
+      "method": "GET",
+      "path": "/referrals/abc",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "abc"
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "156",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "PUT /referrals/abc",
+      "method": "PUT",
+      "path": "/referrals/abc",
+      "payload": {
+        "patient_code": "AUTO-415032A3",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-17",
+        "status": "scheduled"
+      },
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "abc"
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "156",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "DELETE /referrals/abc",
+      "method": "DELETE",
+      "path": "/referrals/abc",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "abc"
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "156",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "DELETE /referrals/1",
+      "method": "DELETE",
+      "path": "/referrals/1",
+      "payload": null,
+      "status": 204,
+      "body": null,
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "DELETE /referrals/1",
+      "method": "DELETE",
+      "path": "/referrals/1",
+      "payload": null,
+      "status": 404,
+      "body": {
+        "detail": "Направлення не знайдено"
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "57",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
+    },
+    {
+      "request": "GET /referrals/1",
+      "method": "GET",
+      "path": "/referrals/1",
+      "payload": null,
+      "status": 404,
+      "body": {
+        "detail": "Направлення не знайдено"
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 17 Oct 2026 11:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "57",
+        "connection": "close",
+        "x-pod": "bb1dbff6b1b1"
+      }
     }
   ],
-  "instance": "8c1ef5d038a4"
+  "instance": "bb1dbff6b1b1"
 }

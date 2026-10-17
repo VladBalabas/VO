@@ -1,0 +1,14 @@
+{
+  "error_rate": 0.0286,
+  "acceptable": false,
+  "schedule_lag_p95_ms": 0.306965,
+  "interpretation": "Це діагностичні пороги цієї роботи, а не вимога викладача; при провалі результат серії обмежений генератором і спільним середовищем.",
+  "thresholds": {
+    "maximum_schedule_lag_p95_ms": 20,
+    "maximum_error_rate": 0.01,
+    "minimum_successful_rate_rps": 475
+  },
+  "target_rate_rps": 500,
+  "successful_rate_rps": 485.7,
+  "worker_capacity_saturated": false
+}

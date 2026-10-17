@@ -1,6 +1,6 @@
 from typing import Annotated
 
-from fastapi import APIRouter, HTTPException, Query, Response, status
+from fastapi import APIRouter, HTTPException, Path, Query, Response, status
 
 from backend.application.referrals import ReferralNotFoundError
 from backend.domain.entities import ReferralStatus
@@ -15,6 +15,7 @@ from backend.ui.api.schemas import (
 
 
 router = APIRouter(prefix="/referrals", tags=["Направлення"])
+ReferralId = Annotated[int, Path(ge=1, le=2**63 - 1)]
 
 
 def not_found(error: ReferralNotFoundError) -> HTTPException:
@@ -49,10 +50,10 @@ async def list_referrals(
 @router.get(
     "/{referral_id}",
     response_model=ReferralResponse,
-    responses={404: {"model": ErrorResponse}},
+    responses={400: {"model": ErrorResponse}, 404: {"model": ErrorResponse}},
 )
 async def get_referral(
-    referral_id: int,
+    referral_id: ReferralId,
     service: ReferralServiceDependency,
 ) -> ReferralResponse:
     try:
@@ -68,7 +69,7 @@ async def get_referral(
     responses={400: {"model": ErrorResponse}, 404: {"model": ErrorResponse}},
 )
 async def replace_referral(
-    referral_id: int,
+    referral_id: ReferralId,
     payload: ReferralReplace,
     service: ReferralServiceDependency,
 ) -> ReferralResponse:
@@ -82,10 +83,10 @@ async def replace_referral(
 @router.delete(
     "/{referral_id}",
     status_code=status.HTTP_204_NO_CONTENT,
-    responses={404: {"model": ErrorResponse}},
+    responses={400: {"model": ErrorResponse}, 404: {"model": ErrorResponse}},
 )
 async def delete_referral(
-    referral_id: int,
+    referral_id: ReferralId,
     service: ReferralServiceDependency,
 ) -> Response:
     try:

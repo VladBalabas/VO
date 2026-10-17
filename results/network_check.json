@@ -1,4 +1,18 @@
 {
+  "host_command": "Test-NetConnection -ComputerName 127.0.0.1 -Port 5432 -InformationLevel Detailed",
+  "project_name": "vo-lr1-check-20261017",
+  "web_container_can_connect_to_db": true,
+  "container_output": [
+    "db:5432 CONNECTED"
+  ],
+  "host_output": "ComputerName     : 127.0.0.1\r\nRemoteAddress    : 127.0.0.1\r\nRemotePort       : 5432\r\nTcpTestSucceeded : False",
+  "generated_at": "2026-10-17T11:45:22.4993229Z",
   "host_port_5432_accessible": false,
-  "web_container_can_connect_to_db": true
+  "container_command": "docker compose -p vo-lr1-check-20261017 exec -T web python -c \"import socket; connection=socket.create_connection(('db', 5432), 2); print('db:5432 CONNECTED'); connection.close()\"",
+  "compose_ps": [
+    "NAME                            IMAGE                       COMMAND                  SERVICE   CREATED          STATUS                    PORTS",
+    "vo-lr1-check-20261017-db-1      postgres:17-alpine          \"docker-entrypoint.s…\"   db        23 seconds ago   Up 22 seconds (healthy)   5432/tcp",
+    "vo-lr1-check-20261017-proxy-1   nginx:alpine                \"/docker-entrypoint.…\"   proxy     23 seconds ago   Up 13 seconds             0.0.0.0:8080->80/tcp, [::]:8080->80/tcp",
+    "vo-lr1-check-20261017-web-1     vo-lr1-check-20261017-web   \"uvicorn backend.mai…\"   web       23 seconds ago   Up 20 seconds (healthy)   8000/tcp"
+  ]
 }

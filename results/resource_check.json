@@ -1,0 +1,406 @@
+{
+  "generated_at": "2026-10-17T12:05:42.5111993Z",
+  "measurement": "cgroup_v2_cpu_counters_before_and_after_measured_500rps_runs",
+  "runs": [
+    {
+      "source_file": "open-r1-rate500-rep1.json",
+      "containers": [
+        {
+          "throttled_period_percent": 96.296,
+          "throttled_usec_delta": 25280418,
+          "nr_periods_delta": 324,
+          "pod": "6d8aacef4e5f",
+          "cpu_percent_one_core": 45.353,
+          "after": {
+            "pod": "6d8aacef4e5f",
+            "sampled_at": 856.010742842,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 69477895,
+              "user_usec": 50531178,
+              "system_usec": 18946716,
+              "nr_periods": 3158,
+              "nr_throttled": 867,
+              "throttled_usec": 72458914,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "nr_throttled_delta": 312,
+          "counter_window_seconds": 34.60549266999999,
+          "usage_usec_delta": 15694653,
+          "before": {
+            "pod": "6d8aacef4e5f",
+            "sampled_at": 821.405250172,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 53783242,
+              "user_usec": 38747615,
+              "system_usec": 15035627,
+              "nr_periods": 2834,
+              "nr_throttled": 555,
+              "throttled_usec": 47178496,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "cpu_max": "50000 100000"
+        }
+      ]
+    },
+    {
+      "source_file": "open-r1-rate500-rep2.json",
+      "containers": [
+        {
+          "throttled_period_percent": 96.012,
+          "throttled_usec_delta": 24733034,
+          "nr_periods_delta": 326,
+          "pod": "6d8aacef4e5f",
+          "cpu_percent_one_core": 45.823,
+          "after": {
+            "pod": "6d8aacef4e5f",
+            "sampled_at": 904.527491723,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 90752844,
+              "user_usec": 66420386,
+              "system_usec": 24332457,
+              "nr_periods": 3607,
+              "nr_throttled": 1289,
+              "throttled_usec": 106602850,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "nr_throttled_delta": 313,
+          "counter_window_seconds": 34.32904560700001,
+          "usage_usec_delta": 15730504,
+          "before": {
+            "pod": "6d8aacef4e5f",
+            "sampled_at": 870.198446116,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 75022340,
+              "user_usec": 54595269,
+              "system_usec": 20427071,
+              "nr_periods": 3281,
+              "nr_throttled": 976,
+              "throttled_usec": 81869816,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "cpu_max": "50000 100000"
+        }
+      ]
+    },
+    {
+      "source_file": "open-r1-rate500-rep3.json",
+      "containers": [
+        {
+          "throttled_period_percent": 95.37,
+          "throttled_usec_delta": 24579716,
+          "nr_periods_delta": 324,
+          "pod": "6d8aacef4e5f",
+          "cpu_percent_one_core": 45.022,
+          "after": {
+            "pod": "6d8aacef4e5f",
+            "sampled_at": 952.924784131,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 111684402,
+              "user_usec": 82217809,
+              "system_usec": 29466593,
+              "nr_periods": 4050,
+              "nr_throttled": 1705,
+              "throttled_usec": 140471352,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "nr_throttled_delta": 309,
+          "counter_window_seconds": 34.502388052000015,
+          "usage_usec_delta": 15533497,
+          "before": {
+            "pod": "6d8aacef4e5f",
+            "sampled_at": 918.422396079,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 96150905,
+              "user_usec": 70497340,
+              "system_usec": 25653565,
+              "nr_periods": 3726,
+              "nr_throttled": 1396,
+              "throttled_usec": 115891636,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "cpu_max": "50000 100000"
+        }
+      ]
+    },
+    {
+      "source_file": "open-r2-rate500-rep1.json",
+      "containers": [
+        {
+          "throttled_period_percent": 59.633,
+          "throttled_usec_delta": 18091615,
+          "nr_periods_delta": 327,
+          "pod": "6d8aacef4e5f",
+          "cpu_percent_one_core": 42.132,
+          "after": {
+            "pod": "6d8aacef4e5f",
+            "sampled_at": 1282.231656855,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 163745249,
+              "user_usec": 118897587,
+              "system_usec": 44847662,
+              "nr_periods": 7074,
+              "nr_throttled": 2326,
+              "throttled_usec": 191830809,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "nr_throttled_delta": 195,
+          "counter_window_seconds": 35.207935287000055,
+          "usage_usec_delta": 14833735,
+          "before": {
+            "pod": "6d8aacef4e5f",
+            "sampled_at": 1247.023721568,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 148911514,
+              "user_usec": 107281199,
+              "system_usec": 41630315,
+              "nr_periods": 6747,
+              "nr_throttled": 2131,
+              "throttled_usec": 173739194,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "cpu_max": "50000 100000"
+        },
+        {
+          "throttled_period_percent": 64.688,
+          "throttled_usec_delta": 16388168,
+          "nr_periods_delta": 337,
+          "pod": "045aa42d5a01",
+          "cpu_percent_one_core": 43.245,
+          "after": {
+            "pod": "045aa42d5a01",
+            "sampled_at": 1283.060614617,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 53549362,
+              "user_usec": 40268741,
+              "system_usec": 13280621,
+              "nr_periods": 3020,
+              "nr_throttled": 665,
+              "throttled_usec": 50831056,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "nr_throttled_delta": 218,
+          "counter_window_seconds": 35.579065379999975,
+          "usage_usec_delta": 15386157,
+          "before": {
+            "pod": "045aa42d5a01",
+            "sampled_at": 1247.481549237,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 38163205,
+              "user_usec": 28580192,
+              "system_usec": 9583013,
+              "nr_periods": 2683,
+              "nr_throttled": 447,
+              "throttled_usec": 34442888,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "cpu_max": "50000 100000"
+        }
+      ]
+    },
+    {
+      "source_file": "open-r2-rate500-rep2.json",
+      "containers": [
+        {
+          "throttled_period_percent": 95.758,
+          "throttled_usec_delta": 26653011,
+          "nr_periods_delta": 330,
+          "pod": "6d8aacef4e5f",
+          "cpu_percent_one_core": 44.691,
+          "after": {
+            "pod": "6d8aacef4e5f",
+            "sampled_at": 1332.413000688,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 184871803,
+              "user_usec": 134611481,
+              "system_usec": 50260322,
+              "nr_periods": 7530,
+              "nr_throttled": 2736,
+              "throttled_usec": 225697147,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "nr_throttled_delta": 316,
+          "counter_window_seconds": 35.37434711500009,
+          "usage_usec_delta": 15809056,
+          "before": {
+            "pod": "6d8aacef4e5f",
+            "sampled_at": 1297.038653573,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 169062747,
+              "user_usec": 122714385,
+              "system_usec": 46348362,
+              "nr_periods": 7200,
+              "nr_throttled": 2420,
+              "throttled_usec": 199044136,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "cpu_max": "50000 100000"
+        },
+        {
+          "throttled_period_percent": 90.964,
+          "throttled_usec_delta": 27053723,
+          "nr_periods_delta": 332,
+          "pod": "045aa42d5a01",
+          "cpu_percent_one_core": 43.262,
+          "after": {
+            "pod": "045aa42d5a01",
+            "sampled_at": 1333.650604446,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 74585196,
+              "user_usec": 56224500,
+              "system_usec": 18360696,
+              "nr_periods": 3480,
+              "nr_throttled": 1060,
+              "throttled_usec": 84498419,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "nr_throttled_delta": 302,
+          "counter_window_seconds": 36.09363169900007,
+          "usage_usec_delta": 15614919,
+          "before": {
+            "pod": "045aa42d5a01",
+            "sampled_at": 1297.556972747,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 58970277,
+              "user_usec": 44381940,
+              "system_usec": 14588337,
+              "nr_periods": 3148,
+              "nr_throttled": 758,
+              "throttled_usec": 57444696,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "cpu_max": "50000 100000"
+        }
+      ]
+    },
+    {
+      "source_file": "open-r2-rate500-rep3.json",
+      "containers": [
+        {
+          "throttled_period_percent": 93.413,
+          "throttled_usec_delta": 25188971,
+          "nr_periods_delta": 334,
+          "pod": "6d8aacef4e5f",
+          "cpu_percent_one_core": 44.561,
+          "after": {
+            "pod": "6d8aacef4e5f",
+            "sampled_at": 1385.247115635,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 206692196,
+              "user_usec": 151054818,
+              "system_usec": 55637378,
+              "nr_periods": 8004,
+              "nr_throttled": 3159,
+              "throttled_usec": 262719090,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "nr_throttled_delta": 312,
+          "counter_window_seconds": 35.72233555699995,
+          "usage_usec_delta": 15918219,
+          "before": {
+            "pod": "6d8aacef4e5f",
+            "sampled_at": 1349.524780078,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 190773977,
+              "user_usec": 139046673,
+              "system_usec": 51727303,
+              "nr_periods": 7670,
+              "nr_throttled": 2847,
+              "throttled_usec": 237530119,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "cpu_max": "50000 100000"
+        },
+        {
+          "throttled_period_percent": 93.75,
+          "throttled_usec_delta": 27138477,
+          "nr_periods_delta": 336,
+          "pod": "045aa42d5a01",
+          "cpu_percent_one_core": 44.44,
+          "after": {
+            "pod": "045aa42d5a01",
+            "sampled_at": 1385.960657496,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 96720913,
+              "user_usec": 73080606,
+              "system_usec": 23640306,
+              "nr_periods": 3963,
+              "nr_throttled": 1489,
+              "throttled_usec": 120143190,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "nr_throttled_delta": 315,
+          "counter_window_seconds": 35.80584138300014,
+          "usage_usec_delta": 15912116,
+          "before": {
+            "pod": "045aa42d5a01",
+            "sampled_at": 1350.154816113,
+            "cpu_max": "50000 100000",
+            "cpu_stat": {
+              "usage_usec": 80808797,
+              "user_usec": 60916883,
+              "system_usec": 19891914,
+              "nr_periods": 3627,
+              "nr_throttled": 1174,
+              "throttled_usec": 93004713,
+              "nr_bursts": 0,
+              "burst_usec": 0
+            }
+          },
+          "cpu_max": "50000 100000"
+        }
+      ]
+    }
+  ],
+  "note": "Вікно лічильників також охоплює запуск контейнера генератора та читання моніторингу; CPU% є середнім за це вікно."
+}

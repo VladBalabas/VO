@@ -1,0 +1,2431 @@
+{
+  "generated_at": "2026-10-11T15:53:44.758024+00:00",
+  "mode": "open",
+  "requested_rate_rps": 10.0,
+  "nominal_duration_seconds": 30.0,
+  "observation_seconds": 30.0,
+  "requests_scheduled": 300,
+  "responses_2xx": 300,
+  "responses_non_2xx": 0,
+  "error_rate": 0.0,
+  "achieved_rate_rps": 10.0,
+  "successful_rate_rps": 10.0,
+  "dispatch_rate_rps": 10.0,
+  "latency_mean_ms": 3.747164,
+  "latency_p50_ms": 2.91882,
+  "latency_p95_ms": 5.062849,
+  "latency_p99_ms": 21.639119,
+  "schedule_lag_p95_ms": 0.780511,
+  "average_in_flight": 0.037472,
+  "status_counts": {
+    "200": 300
+  },
+  "pod_counts": {
+    "6e02b8e4e50b": 300
+  },
+  "samples": [
+    {
+      "sent_offset_ms": 0.803,
+      "latency_ms": 22.785,
+      "schedule_lag_ms": 0.803,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 1000.375,
+      "latency_ms": 3.436,
+      "schedule_lag_ms": 0.375,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 2000.561,
+      "latency_ms": 4.501,
+      "schedule_lag_ms": 0.561,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 3000.543,
+      "latency_ms": 3.069,
+      "schedule_lag_ms": 0.543,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 4000.266,
+      "latency_ms": 3.542,
+      "schedule_lag_ms": 0.266,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 5000.325,
+      "latency_ms": 3.213,
+      "schedule_lag_ms": 0.325,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 6000.273,
+      "latency_ms": 2.901,
+      "schedule_lag_ms": 0.273,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 7000.293,
+      "latency_ms": 2.553,
+      "schedule_lag_ms": 0.293,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 8000.293,
+      "latency_ms": 3.024,
+      "schedule_lag_ms": 0.293,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 9000.283,
+      "latency_ms": 3.088,
+      "schedule_lag_ms": 0.283,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 10000.284,
+      "latency_ms": 2.925,
+      "schedule_lag_ms": 0.284,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 11000.321,
+      "latency_ms": 2.707,
+      "schedule_lag_ms": 0.321,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 12000.287,
+      "latency_ms": 3.662,
+      "schedule_lag_ms": 0.287,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 13000.293,
+      "latency_ms": 3.978,
+      "schedule_lag_ms": 0.293,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 14000.278,
+      "latency_ms": 3.259,
+      "schedule_lag_ms": 0.278,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 15000.269,
+      "latency_ms": 2.504,
+      "schedule_lag_ms": 0.269,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 16000.289,
+      "latency_ms": 2.668,
+      "schedule_lag_ms": 0.289,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 17000.27,
+      "latency_ms": 2.681,
+      "schedule_lag_ms": 0.27,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 18000.271,
+      "latency_ms": 2.907,
+      "schedule_lag_ms": 0.271,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 19000.297,
+      "latency_ms": 3.879,
+      "schedule_lag_ms": 0.297,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 20000.284,
+      "latency_ms": 2.73,
+      "schedule_lag_ms": 0.284,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 21000.264,
+      "latency_ms": 2.591,
+      "schedule_lag_ms": 0.264,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 22000.289,
+      "latency_ms": 3.179,
+      "schedule_lag_ms": 0.289,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 23000.267,
+      "latency_ms": 2.648,
+      "schedule_lag_ms": 0.267,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 24000.273,
+      "latency_ms": 2.569,
+      "schedule_lag_ms": 0.273,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 25000.269,
+      "latency_ms": 3.103,
+      "schedule_lag_ms": 0.269,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 26000.29,
+      "latency_ms": 2.665,
+      "schedule_lag_ms": 0.29,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 27000.282,
+      "latency_ms": 2.727,
+      "schedule_lag_ms": 0.282,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 28000.295,
+      "latency_ms": 3.245,
+      "schedule_lag_ms": 0.295,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 29000.325,
+      "latency_ms": 2.741,
+      "schedule_lag_ms": 0.325,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 100.724,
+      "latency_ms": 21.255,
+      "schedule_lag_ms": 0.724,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 1100.605,
+      "latency_ms": 3.223,
+      "schedule_lag_ms": 0.605,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 2100.84,
+      "latency_ms": 4.758,
+      "schedule_lag_ms": 0.84,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 3100.695,
+      "latency_ms": 4.001,
+      "schedule_lag_ms": 0.695,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 4100.351,
+      "latency_ms": 2.799,
+      "schedule_lag_ms": 0.351,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 5100.253,
+      "latency_ms": 2.627,
+      "schedule_lag_ms": 0.253,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 6100.269,
+      "latency_ms": 2.967,
+      "schedule_lag_ms": 0.269,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 7100.343,
+      "latency_ms": 3.66,
+      "schedule_lag_ms": 0.343,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 8100.276,
+      "latency_ms": 2.623,
+      "schedule_lag_ms": 0.276,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 9100.24,
+      "latency_ms": 2.467,
+      "schedule_lag_ms": 0.24,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 10100.26,
+      "latency_ms": 3.214,
+      "schedule_lag_ms": 0.26,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 11100.232,
+      "latency_ms": 2.957,
+      "schedule_lag_ms": 0.232,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 12100.245,
+      "latency_ms": 4.233,
+      "schedule_lag_ms": 0.245,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 13100.273,
+      "latency_ms": 2.835,
+      "schedule_lag_ms": 0.273,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 14100.242,
+      "latency_ms": 2.476,
+      "schedule_lag_ms": 0.242,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 15100.291,
+      "latency_ms": 3.369,
+      "schedule_lag_ms": 0.291,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 16100.237,
+      "latency_ms": 3.765,
+      "schedule_lag_ms": 0.237,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 17100.303,
+      "latency_ms": 3.706,
+      "schedule_lag_ms": 0.303,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 18100.202,
+      "latency_ms": 2.55,
+      "schedule_lag_ms": 0.202,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 19100.259,
+      "latency_ms": 2.624,
+      "schedule_lag_ms": 0.259,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 20100.284,
+      "latency_ms": 2.984,
+      "schedule_lag_ms": 0.284,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 21100.289,
+      "latency_ms": 2.859,
+      "schedule_lag_ms": 0.289,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 22100.251,
+      "latency_ms": 2.578,
+      "schedule_lag_ms": 0.251,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 23100.242,
+      "latency_ms": 2.822,
+      "schedule_lag_ms": 0.242,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 24100.36,
+      "latency_ms": 3.398,
+      "schedule_lag_ms": 0.36,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 25100.253,
+      "latency_ms": 2.488,
+      "schedule_lag_ms": 0.253,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 26100.293,
+      "latency_ms": 2.955,
+      "schedule_lag_ms": 0.293,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 27100.307,
+      "latency_ms": 3.221,
+      "schedule_lag_ms": 0.307,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 28100.304,
+      "latency_ms": 2.815,
+      "schedule_lag_ms": 0.304,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 29100.463,
+      "latency_ms": 2.666,
+      "schedule_lag_ms": 0.463,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 200.758,
+      "latency_ms": 21.628,
+      "schedule_lag_ms": 0.758,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 1200.537,
+      "latency_ms": 3.15,
+      "schedule_lag_ms": 0.537,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 2200.953,
+      "latency_ms": 3.888,
+      "schedule_lag_ms": 0.953,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 3200.687,
+      "latency_ms": 3.239,
+      "schedule_lag_ms": 0.687,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 4200.291,
+      "latency_ms": 3.75,
+      "schedule_lag_ms": 0.291,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 5200.273,
+      "latency_ms": 3.15,
+      "schedule_lag_ms": 0.273,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 6200.247,
+      "latency_ms": 2.698,
+      "schedule_lag_ms": 0.247,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 7200.289,
+      "latency_ms": 2.622,
+      "schedule_lag_ms": 0.289,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 8200.268,
+      "latency_ms": 2.917,
+      "schedule_lag_ms": 0.268,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 9200.253,
+      "latency_ms": 3.277,
+      "schedule_lag_ms": 0.253,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 10200.25,
+      "latency_ms": 2.505,
+      "schedule_lag_ms": 0.25,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 11200.267,
+      "latency_ms": 2.692,
+      "schedule_lag_ms": 0.267,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 12202.151,
+      "latency_ms": 3.502,
+      "schedule_lag_ms": 2.151,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 13200.299,
+      "latency_ms": 2.765,
+      "schedule_lag_ms": 0.299,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 14200.302,
+      "latency_ms": 2.704,
+      "schedule_lag_ms": 0.302,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 15200.243,
+      "latency_ms": 2.492,
+      "schedule_lag_ms": 0.243,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 16200.27,
+      "latency_ms": 2.58,
+      "schedule_lag_ms": 0.27,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 17200.262,
+      "latency_ms": 2.564,
+      "schedule_lag_ms": 0.262,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 18200.221,
+      "latency_ms": 3.051,
+      "schedule_lag_ms": 0.221,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 19200.293,
+      "latency_ms": 3.367,
+      "schedule_lag_ms": 0.293,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 20200.276,
+      "latency_ms": 2.536,
+      "schedule_lag_ms": 0.276,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 21200.255,
+      "latency_ms": 2.652,
+      "schedule_lag_ms": 0.255,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 22200.305,
+      "latency_ms": 2.99,
+      "schedule_lag_ms": 0.305,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 23200.33,
+      "latency_ms": 2.652,
+      "schedule_lag_ms": 0.33,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 24200.266,
+      "latency_ms": 2.667,
+      "schedule_lag_ms": 0.266,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 25200.277,
+      "latency_ms": 3.038,
+      "schedule_lag_ms": 0.277,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 26200.267,
+      "latency_ms": 2.643,
+      "schedule_lag_ms": 0.267,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 27200.229,
+      "latency_ms": 2.592,
+      "schedule_lag_ms": 0.229,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 28200.266,
+      "latency_ms": 3.186,
+      "schedule_lag_ms": 0.266,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 29200.523,
+      "latency_ms": 2.964,
+      "schedule_lag_ms": 0.523,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 300.776,
+      "latency_ms": 20.192,
+      "schedule_lag_ms": 0.776,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 1300.447,
+      "latency_ms": 4.631,
+      "schedule_lag_ms": 0.447,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 2300.844,
+      "latency_ms": 4.619,
+      "schedule_lag_ms": 0.844,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 3300.627,
+      "latency_ms": 4.115,
+      "schedule_lag_ms": 0.627,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 4300.222,
+      "latency_ms": 2.802,
+      "schedule_lag_ms": 0.222,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 5300.221,
+      "latency_ms": 2.537,
+      "schedule_lag_ms": 0.221,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 6300.278,
+      "latency_ms": 2.98,
+      "schedule_lag_ms": 0.278,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 7300.325,
+      "latency_ms": 3.145,
+      "schedule_lag_ms": 0.325,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 8300.237,
+      "latency_ms": 2.658,
+      "schedule_lag_ms": 0.237,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 9300.248,
+      "latency_ms": 2.541,
+      "schedule_lag_ms": 0.248,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 10300.223,
+      "latency_ms": 3.016,
+      "schedule_lag_ms": 0.223,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 11300.248,
+      "latency_ms": 4.592,
+      "schedule_lag_ms": 0.248,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 12300.283,
+      "latency_ms": 2.723,
+      "schedule_lag_ms": 0.283,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 13300.321,
+      "latency_ms": 2.847,
+      "schedule_lag_ms": 0.321,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 14300.251,
+      "latency_ms": 2.488,
+      "schedule_lag_ms": 0.251,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 15300.239,
+      "latency_ms": 2.759,
+      "schedule_lag_ms": 0.239,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 16300.249,
+      "latency_ms": 3.748,
+      "schedule_lag_ms": 0.249,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 17300.248,
+      "latency_ms": 4.411,
+      "schedule_lag_ms": 0.248,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 18300.206,
+      "latency_ms": 2.57,
+      "schedule_lag_ms": 0.206,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 19300.244,
+      "latency_ms": 2.823,
+      "schedule_lag_ms": 0.244,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 20300.551,
+      "latency_ms": 2.961,
+      "schedule_lag_ms": 0.551,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 21300.238,
+      "latency_ms": 3.649,
+      "schedule_lag_ms": 0.238,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 22300.228,
+      "latency_ms": 2.669,
+      "schedule_lag_ms": 0.228,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 23300.257,
+      "latency_ms": 3.21,
+      "schedule_lag_ms": 0.257,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 24300.29,
+      "latency_ms": 2.828,
+      "schedule_lag_ms": 0.29,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 25300.222,
+      "latency_ms": 2.837,
+      "schedule_lag_ms": 0.222,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 26300.266,
+      "latency_ms": 3.13,
+      "schedule_lag_ms": 0.266,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 27300.343,
+      "latency_ms": 3.059,
+      "schedule_lag_ms": 0.343,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 28300.241,
+      "latency_ms": 2.478,
+      "schedule_lag_ms": 0.241,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 29300.378,
+      "latency_ms": 2.593,
+      "schedule_lag_ms": 0.378,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 400.746,
+      "latency_ms": 21.19,
+      "schedule_lag_ms": 0.746,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 1400.584,
+      "latency_ms": 3.517,
+      "schedule_lag_ms": 0.584,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 2400.916,
+      "latency_ms": 3.832,
+      "schedule_lag_ms": 0.916,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 3400.529,
+      "latency_ms": 3.044,
+      "schedule_lag_ms": 0.529,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 4400.259,
+      "latency_ms": 3.545,
+      "schedule_lag_ms": 0.259,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 5400.25,
+      "latency_ms": 3.306,
+      "schedule_lag_ms": 0.25,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 6400.247,
+      "latency_ms": 2.795,
+      "schedule_lag_ms": 0.247,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 7400.548,
+      "latency_ms": 2.669,
+      "schedule_lag_ms": 0.548,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 8400.248,
+      "latency_ms": 2.878,
+      "schedule_lag_ms": 0.248,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 9400.289,
+      "latency_ms": 3.733,
+      "schedule_lag_ms": 0.289,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 10400.274,
+      "latency_ms": 4.446,
+      "schedule_lag_ms": 0.274,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 11400.338,
+      "latency_ms": 3.132,
+      "schedule_lag_ms": 0.338,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 12400.25,
+      "latency_ms": 3.009,
+      "schedule_lag_ms": 0.25,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 13400.265,
+      "latency_ms": 2.766,
+      "schedule_lag_ms": 0.265,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 14400.27,
+      "latency_ms": 3.165,
+      "schedule_lag_ms": 0.27,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 15400.258,
+      "latency_ms": 2.698,
+      "schedule_lag_ms": 0.258,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 16400.242,
+      "latency_ms": 2.609,
+      "schedule_lag_ms": 0.242,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 17400.275,
+      "latency_ms": 2.642,
+      "schedule_lag_ms": 0.275,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 18400.257,
+      "latency_ms": 3.137,
+      "schedule_lag_ms": 0.257,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 19400.275,
+      "latency_ms": 3.17,
+      "schedule_lag_ms": 0.275,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 20400.311,
+      "latency_ms": 2.774,
+      "schedule_lag_ms": 0.311,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 21400.227,
+      "latency_ms": 2.488,
+      "schedule_lag_ms": 0.227,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 22400.256,
+      "latency_ms": 2.927,
+      "schedule_lag_ms": 0.256,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 23400.261,
+      "latency_ms": 2.541,
+      "schedule_lag_ms": 0.261,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 24400.291,
+      "latency_ms": 2.901,
+      "schedule_lag_ms": 0.291,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 25400.255,
+      "latency_ms": 3.417,
+      "schedule_lag_ms": 0.255,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 26400.324,
+      "latency_ms": 2.561,
+      "schedule_lag_ms": 0.324,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 27400.213,
+      "latency_ms": 2.662,
+      "schedule_lag_ms": 0.213,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 28400.252,
+      "latency_ms": 3.231,
+      "schedule_lag_ms": 0.252,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 29400.456,
+      "latency_ms": 2.9,
+      "schedule_lag_ms": 0.456,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 500.673,
+      "latency_ms": 19.6,
+      "schedule_lag_ms": 0.673,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 1500.902,
+      "latency_ms": 3.945,
+      "schedule_lag_ms": 0.902,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 2500.915,
+      "latency_ms": 5.156,
+      "schedule_lag_ms": 0.915,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 3500.525,
+      "latency_ms": 3.374,
+      "schedule_lag_ms": 0.525,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 4500.206,
+      "latency_ms": 2.937,
+      "schedule_lag_ms": 0.206,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 5500.276,
+      "latency_ms": 2.603,
+      "schedule_lag_ms": 0.276,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 6500.229,
+      "latency_ms": 2.794,
+      "schedule_lag_ms": 0.229,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 7500.287,
+      "latency_ms": 3.312,
+      "schedule_lag_ms": 0.287,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 8500.304,
+      "latency_ms": 2.898,
+      "schedule_lag_ms": 0.304,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 9500.271,
+      "latency_ms": 2.529,
+      "schedule_lag_ms": 0.271,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 10500.226,
+      "latency_ms": 4.891,
+      "schedule_lag_ms": 0.226,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 11500.248,
+      "latency_ms": 2.622,
+      "schedule_lag_ms": 0.248,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 12500.239,
+      "latency_ms": 2.535,
+      "schedule_lag_ms": 0.239,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 13500.259,
+      "latency_ms": 3.177,
+      "schedule_lag_ms": 0.259,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 14500.259,
+      "latency_ms": 2.48,
+      "schedule_lag_ms": 0.259,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 15500.235,
+      "latency_ms": 2.954,
+      "schedule_lag_ms": 0.235,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 16500.248,
+      "latency_ms": 3.548,
+      "schedule_lag_ms": 0.248,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 17500.229,
+      "latency_ms": 3.391,
+      "schedule_lag_ms": 0.229,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 18500.287,
+      "latency_ms": 2.474,
+      "schedule_lag_ms": 0.287,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 19500.279,
+      "latency_ms": 2.788,
+      "schedule_lag_ms": 0.279,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 20500.266,
+      "latency_ms": 2.834,
+      "schedule_lag_ms": 0.266,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 21500.252,
+      "latency_ms": 3.423,
+      "schedule_lag_ms": 0.252,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 22500.245,
+      "latency_ms": 2.575,
+      "schedule_lag_ms": 0.245,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 23500.239,
+      "latency_ms": 2.916,
+      "schedule_lag_ms": 0.239,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 24500.273,
+      "latency_ms": 2.682,
+      "schedule_lag_ms": 0.273,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 25500.282,
+      "latency_ms": 2.716,
+      "schedule_lag_ms": 0.282,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 26500.265,
+      "latency_ms": 3.331,
+      "schedule_lag_ms": 0.265,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 27500.247,
+      "latency_ms": 2.946,
+      "schedule_lag_ms": 0.247,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 28500.188,
+      "latency_ms": 2.558,
+      "schedule_lag_ms": 0.188,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 29500.368,
+      "latency_ms": 2.594,
+      "schedule_lag_ms": 0.368,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 600.868,
+      "latency_ms": 21.292,
+      "schedule_lag_ms": 0.868,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 1600.894,
+      "latency_ms": 4.228,
+      "schedule_lag_ms": 0.894,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 2600.782,
+      "latency_ms": 4.001,
+      "schedule_lag_ms": 0.782,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 3600.359,
+      "latency_ms": 3.275,
+      "schedule_lag_ms": 0.359,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 4600.25,
+      "latency_ms": 2.921,
+      "schedule_lag_ms": 0.25,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 5600.295,
+      "latency_ms": 4.144,
+      "schedule_lag_ms": 0.295,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 6600.223,
+      "latency_ms": 2.498,
+      "schedule_lag_ms": 0.223,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 7600.285,
+      "latency_ms": 2.844,
+      "schedule_lag_ms": 0.285,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 8600.28,
+      "latency_ms": 2.887,
+      "schedule_lag_ms": 0.28,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 9600.284,
+      "latency_ms": 5.239,
+      "schedule_lag_ms": 0.284,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 10600.218,
+      "latency_ms": 2.448,
+      "schedule_lag_ms": 0.218,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 11600.255,
+      "latency_ms": 3.293,
+      "schedule_lag_ms": 0.255,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 12600.283,
+      "latency_ms": 2.5,
+      "schedule_lag_ms": 0.283,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 13600.257,
+      "latency_ms": 2.739,
+      "schedule_lag_ms": 0.257,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 14600.434,
+      "latency_ms": 2.709,
+      "schedule_lag_ms": 0.434,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 15600.207,
+      "latency_ms": 2.627,
+      "schedule_lag_ms": 0.207,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 16600.3,
+      "latency_ms": 2.629,
+      "schedule_lag_ms": 0.3,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 17600.246,
+      "latency_ms": 2.645,
+      "schedule_lag_ms": 0.246,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 18600.249,
+      "latency_ms": 2.817,
+      "schedule_lag_ms": 0.249,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 19600.344,
+      "latency_ms": 2.582,
+      "schedule_lag_ms": 0.344,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 20600.309,
+      "latency_ms": 2.584,
+      "schedule_lag_ms": 0.309,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 21600.285,
+      "latency_ms": 2.731,
+      "schedule_lag_ms": 0.285,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 22600.307,
+      "latency_ms": 3.671,
+      "schedule_lag_ms": 0.307,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 23600.253,
+      "latency_ms": 2.559,
+      "schedule_lag_ms": 0.253,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 24600.334,
+      "latency_ms": 3.121,
+      "schedule_lag_ms": 0.334,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 25600.36,
+      "latency_ms": 3.54,
+      "schedule_lag_ms": 0.36,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 26600.283,
+      "latency_ms": 2.76,
+      "schedule_lag_ms": 0.283,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 27600.258,
+      "latency_ms": 2.84,
+      "schedule_lag_ms": 0.258,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 28600.271,
+      "latency_ms": 3.006,
+      "schedule_lag_ms": 0.271,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 29600.431,
+      "latency_ms": 2.951,
+      "schedule_lag_ms": 0.431,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 700.845,
+      "latency_ms": 20.22,
+      "schedule_lag_ms": 0.845,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 1700.78,
+      "latency_ms": 4.459,
+      "schedule_lag_ms": 0.78,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 2700.787,
+      "latency_ms": 5.104,
+      "schedule_lag_ms": 0.787,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 3700.626,
+      "latency_ms": 3.037,
+      "schedule_lag_ms": 0.626,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 4700.31,
+      "latency_ms": 3.08,
+      "schedule_lag_ms": 0.31,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 5700.233,
+      "latency_ms": 2.767,
+      "schedule_lag_ms": 0.233,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 6700.258,
+      "latency_ms": 3.015,
+      "schedule_lag_ms": 0.258,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 7700.273,
+      "latency_ms": 2.681,
+      "schedule_lag_ms": 0.273,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 8700.285,
+      "latency_ms": 4.265,
+      "schedule_lag_ms": 0.285,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 9700.335,
+      "latency_ms": 2.552,
+      "schedule_lag_ms": 0.335,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 10700.269,
+      "latency_ms": 3.046,
+      "schedule_lag_ms": 0.269,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 11700.246,
+      "latency_ms": 2.61,
+      "schedule_lag_ms": 0.246,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 12700.287,
+      "latency_ms": 3.388,
+      "schedule_lag_ms": 0.287,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 13700.267,
+      "latency_ms": 4.084,
+      "schedule_lag_ms": 0.267,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 14700.217,
+      "latency_ms": 2.561,
+      "schedule_lag_ms": 0.217,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 15700.265,
+      "latency_ms": 3.357,
+      "schedule_lag_ms": 0.265,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 16700.245,
+      "latency_ms": 3.05,
+      "schedule_lag_ms": 0.245,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 17700.454,
+      "latency_ms": 3.753,
+      "schedule_lag_ms": 0.454,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 18700.285,
+      "latency_ms": 2.812,
+      "schedule_lag_ms": 0.285,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 19700.356,
+      "latency_ms": 3.128,
+      "schedule_lag_ms": 0.356,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 20700.317,
+      "latency_ms": 2.891,
+      "schedule_lag_ms": 0.317,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 21700.264,
+      "latency_ms": 3.336,
+      "schedule_lag_ms": 0.264,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 22700.291,
+      "latency_ms": 2.74,
+      "schedule_lag_ms": 0.291,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 23700.292,
+      "latency_ms": 3.197,
+      "schedule_lag_ms": 0.292,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 24700.267,
+      "latency_ms": 2.679,
+      "schedule_lag_ms": 0.267,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 25700.267,
+      "latency_ms": 2.701,
+      "schedule_lag_ms": 0.267,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 26700.267,
+      "latency_ms": 3.381,
+      "schedule_lag_ms": 0.267,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 27700.255,
+      "latency_ms": 3.042,
+      "schedule_lag_ms": 0.255,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 28700.277,
+      "latency_ms": 2.627,
+      "schedule_lag_ms": 0.277,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 29700.399,
+      "latency_ms": 2.662,
+      "schedule_lag_ms": 0.399,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 800.707,
+      "latency_ms": 22.934,
+      "schedule_lag_ms": 0.707,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 1800.737,
+      "latency_ms": 16.3,
+      "schedule_lag_ms": 0.737,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 2800.776,
+      "latency_ms": 4.499,
+      "schedule_lag_ms": 0.776,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 3800.282,
+      "latency_ms": 2.706,
+      "schedule_lag_ms": 0.282,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 4800.228,
+      "latency_ms": 2.889,
+      "schedule_lag_ms": 0.228,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 5800.309,
+      "latency_ms": 3.548,
+      "schedule_lag_ms": 0.309,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 6800.275,
+      "latency_ms": 2.686,
+      "schedule_lag_ms": 0.275,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 7800.312,
+      "latency_ms": 3.348,
+      "schedule_lag_ms": 0.312,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 8800.283,
+      "latency_ms": 5.061,
+      "schedule_lag_ms": 0.283,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 9800.302,
+      "latency_ms": 3.311,
+      "schedule_lag_ms": 0.302,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 10800.283,
+      "latency_ms": 2.491,
+      "schedule_lag_ms": 0.283,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 11800.314,
+      "latency_ms": 4.798,
+      "schedule_lag_ms": 0.314,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 12800.259,
+      "latency_ms": 2.658,
+      "schedule_lag_ms": 0.259,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 13800.466,
+      "latency_ms": 2.618,
+      "schedule_lag_ms": 0.466,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 14800.315,
+      "latency_ms": 2.542,
+      "schedule_lag_ms": 0.315,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 15800.25,
+      "latency_ms": 2.73,
+      "schedule_lag_ms": 0.25,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 16800.268,
+      "latency_ms": 2.49,
+      "schedule_lag_ms": 0.268,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 17800.236,
+      "latency_ms": 3.054,
+      "schedule_lag_ms": 0.236,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 18800.233,
+      "latency_ms": 2.839,
+      "schedule_lag_ms": 0.233,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 19800.273,
+      "latency_ms": 2.672,
+      "schedule_lag_ms": 0.273,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 20800.229,
+      "latency_ms": 2.492,
+      "schedule_lag_ms": 0.229,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 21800.261,
+      "latency_ms": 2.617,
+      "schedule_lag_ms": 0.261,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 22800.286,
+      "latency_ms": 2.965,
+      "schedule_lag_ms": 0.286,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 23800.261,
+      "latency_ms": 2.586,
+      "schedule_lag_ms": 0.261,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 24800.373,
+      "latency_ms": 3.151,
+      "schedule_lag_ms": 0.373,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 25800.277,
+      "latency_ms": 2.768,
+      "schedule_lag_ms": 0.277,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 26800.285,
+      "latency_ms": 2.724,
+      "schedule_lag_ms": 0.285,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 27800.227,
+      "latency_ms": 2.984,
+      "schedule_lag_ms": 0.227,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 28800.289,
+      "latency_ms": 2.942,
+      "schedule_lag_ms": 0.289,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 29800.349,
+      "latency_ms": 4.063,
+      "schedule_lag_ms": 0.349,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 901.076,
+      "latency_ms": 24.882,
+      "schedule_lag_ms": 1.076,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 1900.939,
+      "latency_ms": 4.454,
+      "schedule_lag_ms": 0.939,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 2900.657,
+      "latency_ms": 5.523,
+      "schedule_lag_ms": 0.657,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 3900.287,
+      "latency_ms": 2.948,
+      "schedule_lag_ms": 0.287,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 4900.249,
+      "latency_ms": 2.645,
+      "schedule_lag_ms": 0.249,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 5900.197,
+      "latency_ms": 2.78,
+      "schedule_lag_ms": 0.197,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 6900.238,
+      "latency_ms": 4.434,
+      "schedule_lag_ms": 0.238,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 7900.249,
+      "latency_ms": 4.669,
+      "schedule_lag_ms": 0.249,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 8900.228,
+      "latency_ms": 2.706,
+      "schedule_lag_ms": 0.228,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 9900.246,
+      "latency_ms": 2.84,
+      "schedule_lag_ms": 0.246,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 10900.23,
+      "latency_ms": 2.906,
+      "schedule_lag_ms": 0.23,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 11900.238,
+      "latency_ms": 2.567,
+      "schedule_lag_ms": 0.238,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 12900.25,
+      "latency_ms": 3.473,
+      "schedule_lag_ms": 0.25,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 13900.243,
+      "latency_ms": 2.704,
+      "schedule_lag_ms": 0.243,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 14900.236,
+      "latency_ms": 3.272,
+      "schedule_lag_ms": 0.236,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 15900.239,
+      "latency_ms": 3.458,
+      "schedule_lag_ms": 0.239,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 16900.277,
+      "latency_ms": 3.655,
+      "schedule_lag_ms": 0.277,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 17900.214,
+      "latency_ms": 2.646,
+      "schedule_lag_ms": 0.214,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 18900.234,
+      "latency_ms": 2.613,
+      "schedule_lag_ms": 0.234,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 19900.233,
+      "latency_ms": 3.62,
+      "schedule_lag_ms": 0.233,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 20900.281,
+      "latency_ms": 3.038,
+      "schedule_lag_ms": 0.281,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 21900.237,
+      "latency_ms": 2.563,
+      "schedule_lag_ms": 0.237,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 22900.238,
+      "latency_ms": 2.779,
+      "schedule_lag_ms": 0.238,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 23900.243,
+      "latency_ms": 3.614,
+      "schedule_lag_ms": 0.243,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 24900.233,
+      "latency_ms": 2.607,
+      "schedule_lag_ms": 0.233,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 25900.232,
+      "latency_ms": 2.895,
+      "schedule_lag_ms": 0.232,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 26900.234,
+      "latency_ms": 3.435,
+      "schedule_lag_ms": 0.234,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 27900.24,
+      "latency_ms": 2.694,
+      "schedule_lag_ms": 0.24,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 28900.289,
+      "latency_ms": 2.778,
+      "schedule_lag_ms": 0.289,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    },
+    {
+      "sent_offset_ms": 29900.343,
+      "latency_ms": 2.472,
+      "schedule_lag_ms": 0.343,
+      "status": 200,
+      "pod": "6e02b8e4e50b",
+      "error": null
+    }
+  ],
+  "processes": 10,
+  "threads_per_process": 16,
+  "path_template": "/referrals/{id}"
+}

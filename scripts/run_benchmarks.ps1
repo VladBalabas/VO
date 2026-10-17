@@ -2,7 +2,9 @@ param(
     [int[]]$Rates = @(10, 100, 500),
     [int]$Repeats = 3,
     [int]$WarmupSeconds = 10,
-    [int]$DurationSeconds = 30
+    [int]$DurationSeconds = 30,
+    [string]$ProjectName = "vo-lr1-bench-$PID",
+    [switch]$ClosedOnly
 )
 
 $ErrorActionPreference = 'Stop'
@@ -11,6 +13,8 @@ $ResultsDirectory = Join-Path $ProjectRoot 'results'
 $RawDirectory = Join-Path $ResultsDirectory 'raw'
 $SeedFile = Join-Path $ResultsDirectory 'seed.json'
 $seedCreated = $false
+$previousProject = $env:COMPOSE_PROJECT_NAME
+$resourceRuns = [System.Collections.Generic.List[object]]::new()
 
 function Assert-LastExitCode {
     param([string]$Message)
@@ -69,13 +73,71 @@ function Set-WebScale {
     Wait-LabReady
 }
 
+function Read-WebCpuCounters {
+    $containerIds = @(docker compose ps --quiet web)
+    Assert-LastExitCode 'Не вдалося отримати web-контейнери.'
+    $snapshotCode = "import json,socket,time; from pathlib import Path; root=Path('/sys/fs/cgroup'); values={line.split()[0]:int(line.split()[1]) for line in (root/'cpu.stat').read_text().splitlines()}; print(json.dumps({'pod':socket.gethostname(),'sampled_at':time.monotonic(),'cpu_max':(root/'cpu.max').read_text().strip(),'cpu_stat':values}))"
+    foreach ($containerId in $containerIds) {
+        $snapshot = docker exec $containerId python -c $snapshotCode
+        Assert-LastExitCode 'Не вдалося прочитати cgroup CPU-лічильники.'
+        $snapshot | ConvertFrom-Json
+    }
+}
+
+function Save-ResourceRun {
+    param([string]$SourceFile, [object[]]$Before, [object[]]$After)
+    $containers = foreach ($end in $After) {
+        $start = $Before | Where-Object { $_.pod -eq $end.pod } | Select-Object -First 1
+        if ($null -eq $start) { throw 'Склад web-контейнерів змінився під час вимірювання.' }
+        $elapsed = $end.sampled_at - $start.sampled_at
+        $usage = $end.cpu_stat.usage_usec - $start.cpu_stat.usage_usec
+        $periods = $end.cpu_stat.nr_periods - $start.cpu_stat.nr_periods
+        $throttled = $end.cpu_stat.nr_throttled - $start.cpu_stat.nr_throttled
+        @{
+            pod = $end.pod
+            cpu_max = $end.cpu_max
+            counter_window_seconds = $elapsed
+            usage_usec_delta = $usage
+            cpu_percent_one_core = [math]::Round($usage / ($elapsed * 10000), 3)
+            nr_periods_delta = $periods
+            nr_throttled_delta = $throttled
+            throttled_usec_delta = $end.cpu_stat.throttled_usec - $start.cpu_stat.throttled_usec
+            throttled_period_percent = if ($periods -gt 0) { [math]::Round(100 * $throttled / $periods, 3) } else { 0 }
+            before = $start
+            after = $end
+        }
+    }
+    $resourceRuns.Add(@{ source_file = $SourceFile; containers = @($containers) })
+    @{
+        generated_at = [DateTime]::UtcNow.ToString('o')
+        measurement = 'cgroup_v2_cpu_counters_before_and_after_measured_500rps_runs'
+        note = 'Вікно лічильників також охоплює запуск контейнера генератора та читання моніторингу; CPU% є середнім за це вікно.'
+        runs = $resourceRuns
+    } | ConvertTo-Json -Depth 14 | Set-Content -LiteralPath (Join-Path $ResultsDirectory 'resource_check.json') -Encoding utf8
+}
+
 Set-Location $ProjectRoot
+if ($ProjectName -notmatch '^vo-lr1-bench-[a-zA-Z0-9-]+$') {
+    throw "Для вимірювань потрібне окреме ім’я vo-lr1-bench-*."
+}
+$existingContainers = @(docker compose -p $ProjectName ps --all --quiet)
+Assert-LastExitCode 'Не вдалося перевірити ізольований проєкт.'
+$existingVolumes = @(docker volume ls --quiet --filter "label=com.docker.compose.project=$ProjectName")
+Assert-LastExitCode 'Не вдалося перевірити тестові томи.'
+if ($existingContainers.Count -gt 0 -or $existingVolumes.Count -gt 0) {
+    throw "Тестовий проєкт уже має контейнери або томи; виберіть нове ім’я."
+}
+$env:COMPOSE_PROJECT_NAME = $ProjectName
+try {
 New-Item -ItemType Directory -Path $RawDirectory -Force | Out-Null
 
+if (-not $ClosedOnly) {
 $knownResultFiles = @(
     (Join-Path $ResultsDirectory 'startup_times.json'),
     (Join-Path $ResultsDirectory 'image_size.json'),
-    (Join-Path $ResultsDirectory 'network_check.json'),
+    (Join-Path $ResultsDirectory 'benchmark_network_check.json'),
+    (Join-Path $ResultsDirectory 'generator_check.json'),
+    (Join-Path $ResultsDirectory 'resource_check.json'),
     (Join-Path $ResultsDirectory 'summary.json'),
     (Join-Path $RawDirectory 'generator-noop.json'),
     (Join-Path $RawDirectory 'closed-loop.json'),
@@ -151,13 +213,23 @@ $containerCanConnect = $LASTEXITCODE -eq 0 -and ($containerCheck -contains 'CONN
 @{
     host_port_5432_accessible = $hostCanConnect
     web_container_can_connect_to_db = $containerCanConnect
-} | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $ResultsDirectory 'network_check.json') -Encoding utf8
+} | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $ResultsDirectory 'benchmark_network_check.json') -Encoding utf8
+}
+else {
+    if (-not (Test-Path -LiteralPath (Join-Path $RawDirectory 'open-r1-rate100-rep1.json'))) {
+        throw 'Для окремого закритого прогону спочатку потрібна відкрита серія.'
+    }
+    docker compose --profile load build web load-generator
+    Assert-LastExitCode 'Не вдалося зібрати образи.'
+    Set-WebScale 1
+}
 
 try {
     Write-Host 'Створення 100 тестових записів...'
     Invoke-Generator @('seed', '--count', '100', '--output', '/results/seed.json')
     $seedCreated = $true
 
+    if (-not $ClosedOnly) {
     Write-Host 'Окрема перевірка межі генератора на /bench/noop...'
     Invoke-Generator @(
         'open',
@@ -166,6 +238,19 @@ try {
         '--duration', '10',
         '--output', '/results/raw/generator-noop.json'
     )
+    $noop = Get-Content -Raw (Join-Path $RawDirectory 'generator-noop.json') | ConvertFrom-Json
+    $noopAcceptable = $noop.successful_rate_rps -ge 475 -and $noop.error_rate -le 0.01 -and $noop.schedule_lag_p95_ms -le 20 -and -not $noop.worker_capacity_saturated
+    @{
+        target_rate_rps = 500
+        acceptable = $noopAcceptable
+        thresholds = @{ minimum_successful_rate_rps = 475; maximum_error_rate = 0.01; maximum_schedule_lag_p95_ms = 20 }
+        successful_rate_rps = $noop.successful_rate_rps
+        error_rate = $noop.error_rate
+        schedule_lag_p95_ms = $noop.schedule_lag_p95_ms
+        worker_capacity_saturated = $noop.worker_capacity_saturated
+        interpretation = 'Це діагностичні пороги цієї роботи, а не вимога викладача; при провалі результат серії обмежений генератором і спільним середовищем.'
+    } | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $ResultsDirectory 'generator_check.json') -Encoding utf8
+    if (-not $noopAcceptable) { Write-Warning 'Контрольний noop показує вплив генератора або середовища: серію буде збережено з цим застереженням.' }
 
     foreach ($instances in @(1, 2)) {
         Write-Host "Конфігурація: $instances web-реплік."
@@ -182,6 +267,7 @@ try {
                 )
 
                 Write-Host "  $rate запитів/с, повтор $repeat/${Repeats}: вимірювання $DurationSeconds с"
+                $beforeCounters = if ($rate -eq 500) { @(Read-WebCpuCounters) } else { @() }
                 Invoke-Generator @(
                     'open',
                     '--seed-file', '/results/seed.json',
@@ -189,8 +275,12 @@ try {
                     '--duration', [string]$DurationSeconds,
                     '--output', "/results/raw/open-r$instances-rate$rate-rep$repeat.json"
                 )
+                if ($rate -eq 500) {
+                    Save-ResourceRun "open-r$instances-rate$rate-rep$repeat.json" $beforeCounters @(Read-WebCpuCounters)
+                }
             }
         }
+    }
     }
 
     Invoke-Analyzer
@@ -229,7 +319,14 @@ finally {
     if (Test-Path -LiteralPath $SeedFile) {
         Remove-Item -LiteralPath $SeedFile -Force
     }
-    Set-WebScale 2
 }
 
-Write-Host 'Повна серія вимірювань успішно завершена.'
+Write-Host 'Запитана серія вимірювань успішно завершена.'
+}
+finally {
+    try {
+        docker compose down -v
+        Assert-LastExitCode 'Не вдалося прибрати ізольований тестовий проєкт.'
+    }
+    finally { $env:COMPOSE_PROJECT_NAME = $previousProject }
+}

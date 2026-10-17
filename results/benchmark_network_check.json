@@ -1,0 +1,4 @@
+{
+  "host_port_5432_accessible": false,
+  "web_container_can_connect_to_db": true
+}
