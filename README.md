@@ -1,5 +1,7 @@
 # CRUD-сервіс направлень на дослідження
 
+Звіт лабораторної №1: [REPORT.md](REPORT.md). Звіт лабораторної №2 (масштабованість і Prometheus): [REPORT_L2.md](REPORT_L2.md). Проєктування та протокол відтворення лабораторної №2: [LAB2_DESIGN.md](LAB2_DESIGN.md), `scripts/run_lab2.py`, `scripts/analyze_lab2.py`, `scripts/verify_lab2_results.py`; фінальні raw-вимірювання — `results/lab2_final/`.
+
 Лабораторна робота 1 з дисципліни «Високопродуктивні розподілені обчислювальні системи». Варіант 2.
 
 ## Предметна сутність

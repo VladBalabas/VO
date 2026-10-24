@@ -1,0 +1,22 @@
+{
+  "audit_passed": true,
+  "checks": {
+    "independent_recalculation": true,
+    "regression_tests": true,
+    "api_full_log": true,
+    "graceful_shutdown": true,
+    "liveness_independent": true,
+    "four_targets_up": true,
+    "four_pods_receive_requests": true,
+    "generator_two_miss_ceiling": true,
+    "four_final_series": true,
+    "required_figures": true,
+    "report_links": true
+  },
+  "report_link_count": 42,
+  "missing_links": [],
+  "explicit_limitations": [
+    "USL fit has high RMSE",
+    "single common cause of N=4 degradation is not causally isolated"
+  ]
+}

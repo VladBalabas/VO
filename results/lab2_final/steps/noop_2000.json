@@ -1,0 +1,33 @@
+{
+  "rate": 2000,
+  "step_index": 9,
+  "start_offset_ms": 190000,
+  "start_epoch": 1792833365.2518585,
+  "x": 1999.9333333333334,
+  "stddev": 1.3345232785352157,
+  "counts_last_15s": [
+    1998,
+    2002,
+    1999,
+    2001,
+    1999,
+    2001,
+    2001,
+    1998,
+    2000,
+    2000,
+    2000,
+    2000,
+    2002,
+    2000,
+    1998
+  ],
+  "completed_window": 29999,
+  "non_2xx": 0,
+  "timeouts": 0,
+  "connection_errors": 0,
+  "sent_during_step": 39998,
+  "scheduled": 40000,
+  "schedule_lag_p95_ms": 1.1458775113624142,
+  "client_p99_ms": 2.4160555115031457
+}

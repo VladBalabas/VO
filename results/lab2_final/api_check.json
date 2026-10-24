@@ -1,0 +1,3575 @@
+{
+  "generated_at": "2026-10-24T09:35:23.410114+00:00",
+  "base_url": "http://proxy",
+  "completed": true,
+  "checks": [
+    {
+      "request": "GET /healthz",
+      "method": "GET",
+      "path": "/healthz",
+      "payload": null,
+      "status": 200,
+      "body": {
+        "status": "готовий"
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "27",
+        "connection": "close",
+        "x-pod": "64038b65437b"
+      }
+    },
+    {
+      "request": "POST /referrals",
+      "method": "POST",
+      "path": "/referrals",
+      "payload": {
+        "patient_code": "AUTO-8F350855",
+        "modality": "MRI",
+        "priority": 2,
+        "doctor": "Автоматичний тест",
+        "issued_at": "2026-10-24",
+        "status": "created"
+      },
+      "status": 201,
+      "body": {
+        "patient_code": "AUTO-8F350855",
+        "modality": "MRI",
+        "priority": 2,
+        "doctor": "Автоматичний тест",
+        "issued_at": "2026-10-24",
+        "status": "created",
+        "id": 334
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "160",
+        "connection": "close",
+        "x-pod": "f14881541ae8"
+      }
+    },
+    {
+      "request": "GET /referrals?limit=100&offset=0&status=created",
+      "method": "GET",
+      "path": "/referrals?limit=100&offset=0&status=created",
+      "payload": null,
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "patient_code": "BENCH-0001",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 001",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 1
+          },
+          {
+            "patient_code": "BENCH-0002",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 002",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 2
+          },
+          {
+            "patient_code": "BENCH-0003",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 003",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 3
+          },
+          {
+            "patient_code": "BENCH-0004",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 004",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 4
+          },
+          {
+            "patient_code": "BENCH-0005",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 005",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 5
+          },
+          {
+            "patient_code": "BENCH-0006",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 006",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 6
+          },
+          {
+            "patient_code": "BENCH-0007",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 007",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 7
+          },
+          {
+            "patient_code": "BENCH-0008",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 008",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 8
+          },
+          {
+            "patient_code": "BENCH-0009",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 009",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 9
+          },
+          {
+            "patient_code": "BENCH-0010",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 010",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 10
+          },
+          {
+            "patient_code": "BENCH-0011",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 011",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 11
+          },
+          {
+            "patient_code": "BENCH-0012",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 012",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 12
+          },
+          {
+            "patient_code": "BENCH-0013",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 013",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 13
+          },
+          {
+            "patient_code": "BENCH-0014",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 014",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 14
+          },
+          {
+            "patient_code": "BENCH-0015",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 015",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 15
+          },
+          {
+            "patient_code": "BENCH-0016",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 016",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 16
+          },
+          {
+            "patient_code": "BENCH-0017",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 017",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 17
+          },
+          {
+            "patient_code": "BENCH-0018",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 018",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 18
+          },
+          {
+            "patient_code": "BENCH-0019",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 019",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 19
+          },
+          {
+            "patient_code": "BENCH-0020",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 020",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 20
+          },
+          {
+            "patient_code": "BENCH-0021",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 021",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 21
+          },
+          {
+            "patient_code": "BENCH-0022",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 022",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 22
+          },
+          {
+            "patient_code": "BENCH-0023",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 023",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 23
+          },
+          {
+            "patient_code": "BENCH-0024",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 024",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 24
+          },
+          {
+            "patient_code": "BENCH-0025",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 025",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 25
+          },
+          {
+            "patient_code": "BENCH-0026",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 026",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 26
+          },
+          {
+            "patient_code": "BENCH-0027",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 027",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 27
+          },
+          {
+            "patient_code": "BENCH-0028",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 028",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 28
+          },
+          {
+            "patient_code": "BENCH-0029",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 029",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 29
+          },
+          {
+            "patient_code": "BENCH-0030",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 030",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 30
+          },
+          {
+            "patient_code": "BENCH-0031",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 031",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 31
+          },
+          {
+            "patient_code": "BENCH-0032",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 032",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 32
+          },
+          {
+            "patient_code": "BENCH-0033",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 033",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 33
+          },
+          {
+            "patient_code": "BENCH-0034",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 034",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 34
+          },
+          {
+            "patient_code": "BENCH-0035",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 035",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 35
+          },
+          {
+            "patient_code": "BENCH-0036",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 036",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 36
+          },
+          {
+            "patient_code": "BENCH-0037",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 037",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 37
+          },
+          {
+            "patient_code": "BENCH-0038",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 038",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 38
+          },
+          {
+            "patient_code": "BENCH-0039",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 039",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 39
+          },
+          {
+            "patient_code": "BENCH-0040",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 040",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 40
+          },
+          {
+            "patient_code": "BENCH-0041",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 041",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 41
+          },
+          {
+            "patient_code": "BENCH-0042",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 042",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 42
+          },
+          {
+            "patient_code": "BENCH-0043",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 043",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 43
+          },
+          {
+            "patient_code": "BENCH-0044",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 044",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 44
+          },
+          {
+            "patient_code": "BENCH-0045",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 045",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 45
+          },
+          {
+            "patient_code": "BENCH-0046",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 046",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 46
+          },
+          {
+            "patient_code": "BENCH-0047",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 047",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 47
+          },
+          {
+            "patient_code": "BENCH-0048",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 048",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 48
+          },
+          {
+            "patient_code": "BENCH-0049",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 049",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 49
+          },
+          {
+            "patient_code": "BENCH-0050",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 050",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 50
+          },
+          {
+            "patient_code": "BENCH-0051",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 051",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 51
+          },
+          {
+            "patient_code": "BENCH-0052",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 052",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 52
+          },
+          {
+            "patient_code": "BENCH-0053",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 053",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 53
+          },
+          {
+            "patient_code": "BENCH-0054",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 054",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 54
+          },
+          {
+            "patient_code": "BENCH-0055",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 055",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 55
+          },
+          {
+            "patient_code": "BENCH-0056",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 056",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 56
+          },
+          {
+            "patient_code": "BENCH-0057",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 057",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 57
+          },
+          {
+            "patient_code": "BENCH-0058",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 058",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 58
+          },
+          {
+            "patient_code": "BENCH-0059",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 059",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 59
+          },
+          {
+            "patient_code": "BENCH-0060",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 060",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 60
+          },
+          {
+            "patient_code": "BENCH-0061",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 061",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 61
+          },
+          {
+            "patient_code": "BENCH-0062",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 062",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 62
+          },
+          {
+            "patient_code": "BENCH-0063",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 063",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 63
+          },
+          {
+            "patient_code": "BENCH-0064",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 064",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 64
+          },
+          {
+            "patient_code": "BENCH-0065",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 065",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 65
+          },
+          {
+            "patient_code": "BENCH-0066",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 066",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 66
+          },
+          {
+            "patient_code": "BENCH-0067",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 067",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 67
+          },
+          {
+            "patient_code": "BENCH-0068",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 068",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 68
+          },
+          {
+            "patient_code": "BENCH-0069",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 069",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 69
+          },
+          {
+            "patient_code": "BENCH-0070",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 070",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 70
+          },
+          {
+            "patient_code": "BENCH-0071",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 071",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 71
+          },
+          {
+            "patient_code": "BENCH-0072",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 072",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 72
+          },
+          {
+            "patient_code": "BENCH-0073",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 073",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 73
+          },
+          {
+            "patient_code": "BENCH-0074",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 074",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 74
+          },
+          {
+            "patient_code": "BENCH-0075",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 075",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 75
+          },
+          {
+            "patient_code": "BENCH-0076",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 076",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 76
+          },
+          {
+            "patient_code": "BENCH-0077",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 077",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 77
+          },
+          {
+            "patient_code": "BENCH-0078",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 078",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 78
+          },
+          {
+            "patient_code": "BENCH-0079",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 079",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 79
+          },
+          {
+            "patient_code": "BENCH-0080",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 080",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 80
+          },
+          {
+            "patient_code": "BENCH-0081",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 081",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 81
+          },
+          {
+            "patient_code": "BENCH-0082",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 082",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 82
+          },
+          {
+            "patient_code": "BENCH-0083",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 083",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 83
+          },
+          {
+            "patient_code": "BENCH-0084",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 084",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 84
+          },
+          {
+            "patient_code": "BENCH-0085",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 085",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 85
+          },
+          {
+            "patient_code": "BENCH-0086",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 086",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 86
+          },
+          {
+            "patient_code": "BENCH-0087",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 087",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 87
+          },
+          {
+            "patient_code": "BENCH-0088",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 088",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 88
+          },
+          {
+            "patient_code": "BENCH-0089",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 089",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 89
+          },
+          {
+            "patient_code": "BENCH-0090",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 090",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 90
+          },
+          {
+            "patient_code": "BENCH-0091",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 091",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 91
+          },
+          {
+            "patient_code": "BENCH-0092",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 092",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 92
+          },
+          {
+            "patient_code": "BENCH-0093",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 093",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 93
+          },
+          {
+            "patient_code": "BENCH-0094",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 094",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 94
+          },
+          {
+            "patient_code": "BENCH-0095",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 095",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 95
+          },
+          {
+            "patient_code": "BENCH-0096",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 096",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 96
+          },
+          {
+            "patient_code": "BENCH-0097",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 097",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 97
+          },
+          {
+            "patient_code": "BENCH-0098",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 098",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 98
+          },
+          {
+            "patient_code": "BENCH-0099",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 099",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 99
+          },
+          {
+            "patient_code": "BENCH-0100",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 100",
+            "issued_at": "2026-10-23",
+            "status": "created",
+            "id": 100
+          }
+        ],
+        "total": 302,
+        "limit": 100,
+        "offset": 0
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "15478",
+        "connection": "close",
+        "x-pod": "86ca6345d547"
+      }
+    },
+    {
+      "request": "GET /referrals?limit=100&offset=100&status=created",
+      "method": "GET",
+      "path": "/referrals?limit=100&offset=100&status=created",
+      "payload": null,
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "patient_code": "BENCH-0001",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 001",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 133
+          },
+          {
+            "patient_code": "BENCH-0002",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 002",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 134
+          },
+          {
+            "patient_code": "BENCH-0003",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 003",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 135
+          },
+          {
+            "patient_code": "BENCH-0004",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 004",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 136
+          },
+          {
+            "patient_code": "BENCH-0005",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 005",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 137
+          },
+          {
+            "patient_code": "BENCH-0006",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 006",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 138
+          },
+          {
+            "patient_code": "BENCH-0007",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 007",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 139
+          },
+          {
+            "patient_code": "BENCH-0008",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 008",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 140
+          },
+          {
+            "patient_code": "BENCH-0009",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 009",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 141
+          },
+          {
+            "patient_code": "BENCH-0010",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 010",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 142
+          },
+          {
+            "patient_code": "BENCH-0011",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 011",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 143
+          },
+          {
+            "patient_code": "BENCH-0012",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 012",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 144
+          },
+          {
+            "patient_code": "BENCH-0013",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 013",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 145
+          },
+          {
+            "patient_code": "BENCH-0014",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 014",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 146
+          },
+          {
+            "patient_code": "BENCH-0015",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 015",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 147
+          },
+          {
+            "patient_code": "BENCH-0016",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 016",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 148
+          },
+          {
+            "patient_code": "BENCH-0017",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 017",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 149
+          },
+          {
+            "patient_code": "BENCH-0018",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 018",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 150
+          },
+          {
+            "patient_code": "BENCH-0019",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 019",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 151
+          },
+          {
+            "patient_code": "BENCH-0020",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 020",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 152
+          },
+          {
+            "patient_code": "BENCH-0021",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 021",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 153
+          },
+          {
+            "patient_code": "BENCH-0022",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 022",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 154
+          },
+          {
+            "patient_code": "BENCH-0023",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 023",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 155
+          },
+          {
+            "patient_code": "BENCH-0024",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 024",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 156
+          },
+          {
+            "patient_code": "BENCH-0025",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 025",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 157
+          },
+          {
+            "patient_code": "BENCH-0026",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 026",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 158
+          },
+          {
+            "patient_code": "BENCH-0027",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 027",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 159
+          },
+          {
+            "patient_code": "BENCH-0028",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 028",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 160
+          },
+          {
+            "patient_code": "BENCH-0029",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 029",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 161
+          },
+          {
+            "patient_code": "BENCH-0030",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 030",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 162
+          },
+          {
+            "patient_code": "BENCH-0031",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 031",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 163
+          },
+          {
+            "patient_code": "BENCH-0032",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 032",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 164
+          },
+          {
+            "patient_code": "BENCH-0033",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 033",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 165
+          },
+          {
+            "patient_code": "BENCH-0034",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 034",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 166
+          },
+          {
+            "patient_code": "BENCH-0035",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 035",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 167
+          },
+          {
+            "patient_code": "BENCH-0036",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 036",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 168
+          },
+          {
+            "patient_code": "BENCH-0037",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 037",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 169
+          },
+          {
+            "patient_code": "BENCH-0038",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 038",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 170
+          },
+          {
+            "patient_code": "BENCH-0039",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 039",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 171
+          },
+          {
+            "patient_code": "BENCH-0040",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 040",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 172
+          },
+          {
+            "patient_code": "BENCH-0041",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 041",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 173
+          },
+          {
+            "patient_code": "BENCH-0042",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 042",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 174
+          },
+          {
+            "patient_code": "BENCH-0043",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 043",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 175
+          },
+          {
+            "patient_code": "BENCH-0044",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 044",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 176
+          },
+          {
+            "patient_code": "BENCH-0045",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 045",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 177
+          },
+          {
+            "patient_code": "BENCH-0046",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 046",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 178
+          },
+          {
+            "patient_code": "BENCH-0047",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 047",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 179
+          },
+          {
+            "patient_code": "BENCH-0048",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 048",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 180
+          },
+          {
+            "patient_code": "BENCH-0049",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 049",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 181
+          },
+          {
+            "patient_code": "BENCH-0050",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 050",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 182
+          },
+          {
+            "patient_code": "BENCH-0051",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 051",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 183
+          },
+          {
+            "patient_code": "BENCH-0052",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 052",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 184
+          },
+          {
+            "patient_code": "BENCH-0053",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 053",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 185
+          },
+          {
+            "patient_code": "BENCH-0054",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 054",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 186
+          },
+          {
+            "patient_code": "BENCH-0055",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 055",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 187
+          },
+          {
+            "patient_code": "BENCH-0056",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 056",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 188
+          },
+          {
+            "patient_code": "BENCH-0057",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 057",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 189
+          },
+          {
+            "patient_code": "BENCH-0058",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 058",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 190
+          },
+          {
+            "patient_code": "BENCH-0059",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 059",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 191
+          },
+          {
+            "patient_code": "BENCH-0060",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 060",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 192
+          },
+          {
+            "patient_code": "BENCH-0061",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 061",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 193
+          },
+          {
+            "patient_code": "BENCH-0062",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 062",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 194
+          },
+          {
+            "patient_code": "BENCH-0063",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 063",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 195
+          },
+          {
+            "patient_code": "BENCH-0064",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 064",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 196
+          },
+          {
+            "patient_code": "BENCH-0065",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 065",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 197
+          },
+          {
+            "patient_code": "BENCH-0066",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 066",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 198
+          },
+          {
+            "patient_code": "BENCH-0067",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 067",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 199
+          },
+          {
+            "patient_code": "BENCH-0068",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 068",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 200
+          },
+          {
+            "patient_code": "BENCH-0069",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 069",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 201
+          },
+          {
+            "patient_code": "BENCH-0070",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 070",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 202
+          },
+          {
+            "patient_code": "BENCH-0071",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 071",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 203
+          },
+          {
+            "patient_code": "BENCH-0072",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 072",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 204
+          },
+          {
+            "patient_code": "BENCH-0073",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 073",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 205
+          },
+          {
+            "patient_code": "BENCH-0074",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 074",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 206
+          },
+          {
+            "patient_code": "BENCH-0075",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 075",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 207
+          },
+          {
+            "patient_code": "BENCH-0076",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 076",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 208
+          },
+          {
+            "patient_code": "BENCH-0077",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 077",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 209
+          },
+          {
+            "patient_code": "BENCH-0078",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 078",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 210
+          },
+          {
+            "patient_code": "BENCH-0079",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 079",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 211
+          },
+          {
+            "patient_code": "BENCH-0080",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 080",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 212
+          },
+          {
+            "patient_code": "BENCH-0081",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 081",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 213
+          },
+          {
+            "patient_code": "BENCH-0082",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 082",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 214
+          },
+          {
+            "patient_code": "BENCH-0083",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 083",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 215
+          },
+          {
+            "patient_code": "BENCH-0084",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 084",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 216
+          },
+          {
+            "patient_code": "BENCH-0085",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 085",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 217
+          },
+          {
+            "patient_code": "BENCH-0086",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 086",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 218
+          },
+          {
+            "patient_code": "BENCH-0087",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 087",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 219
+          },
+          {
+            "patient_code": "BENCH-0088",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 088",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 220
+          },
+          {
+            "patient_code": "BENCH-0089",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 089",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 221
+          },
+          {
+            "patient_code": "BENCH-0090",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 090",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 222
+          },
+          {
+            "patient_code": "BENCH-0091",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 091",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 223
+          },
+          {
+            "patient_code": "BENCH-0092",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 092",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 224
+          },
+          {
+            "patient_code": "BENCH-0093",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 093",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 225
+          },
+          {
+            "patient_code": "BENCH-0094",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 094",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 226
+          },
+          {
+            "patient_code": "BENCH-0095",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 095",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 227
+          },
+          {
+            "patient_code": "BENCH-0096",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 096",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 228
+          },
+          {
+            "patient_code": "BENCH-0097",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 097",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 229
+          },
+          {
+            "patient_code": "BENCH-0098",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 098",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 230
+          },
+          {
+            "patient_code": "BENCH-0099",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 099",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 231
+          },
+          {
+            "patient_code": "BENCH-0100",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 100",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 232
+          }
+        ],
+        "total": 302,
+        "limit": 100,
+        "offset": 100
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "15588",
+        "connection": "close",
+        "x-pod": "b284c47e1589"
+      }
+    },
+    {
+      "request": "GET /referrals?limit=100&offset=200&status=created",
+      "method": "GET",
+      "path": "/referrals?limit=100&offset=200&status=created",
+      "payload": null,
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "patient_code": "BENCH-0001",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 001",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 233
+          },
+          {
+            "patient_code": "BENCH-0001",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 001",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 234
+          },
+          {
+            "patient_code": "BENCH-0002",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 002",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 235
+          },
+          {
+            "patient_code": "BENCH-0003",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 003",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 236
+          },
+          {
+            "patient_code": "BENCH-0004",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 004",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 237
+          },
+          {
+            "patient_code": "BENCH-0005",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 005",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 238
+          },
+          {
+            "patient_code": "BENCH-0006",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 006",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 239
+          },
+          {
+            "patient_code": "BENCH-0007",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 007",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 240
+          },
+          {
+            "patient_code": "BENCH-0008",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 008",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 241
+          },
+          {
+            "patient_code": "BENCH-0009",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 009",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 242
+          },
+          {
+            "patient_code": "BENCH-0010",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 010",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 243
+          },
+          {
+            "patient_code": "BENCH-0011",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 011",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 244
+          },
+          {
+            "patient_code": "BENCH-0012",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 012",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 245
+          },
+          {
+            "patient_code": "BENCH-0013",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 013",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 246
+          },
+          {
+            "patient_code": "BENCH-0014",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 014",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 247
+          },
+          {
+            "patient_code": "BENCH-0015",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 015",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 248
+          },
+          {
+            "patient_code": "BENCH-0016",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 016",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 249
+          },
+          {
+            "patient_code": "BENCH-0017",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 017",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 250
+          },
+          {
+            "patient_code": "BENCH-0018",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 018",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 251
+          },
+          {
+            "patient_code": "BENCH-0019",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 019",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 252
+          },
+          {
+            "patient_code": "BENCH-0020",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 020",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 253
+          },
+          {
+            "patient_code": "BENCH-0021",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 021",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 254
+          },
+          {
+            "patient_code": "BENCH-0022",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 022",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 255
+          },
+          {
+            "patient_code": "BENCH-0023",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 023",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 256
+          },
+          {
+            "patient_code": "BENCH-0024",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 024",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 257
+          },
+          {
+            "patient_code": "BENCH-0025",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 025",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 258
+          },
+          {
+            "patient_code": "BENCH-0026",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 026",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 259
+          },
+          {
+            "patient_code": "BENCH-0027",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 027",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 260
+          },
+          {
+            "patient_code": "BENCH-0028",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 028",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 261
+          },
+          {
+            "patient_code": "BENCH-0029",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 029",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 262
+          },
+          {
+            "patient_code": "BENCH-0030",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 030",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 263
+          },
+          {
+            "patient_code": "BENCH-0031",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 031",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 264
+          },
+          {
+            "patient_code": "BENCH-0032",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 032",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 265
+          },
+          {
+            "patient_code": "BENCH-0033",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 033",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 266
+          },
+          {
+            "patient_code": "BENCH-0034",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 034",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 267
+          },
+          {
+            "patient_code": "BENCH-0035",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 035",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 268
+          },
+          {
+            "patient_code": "BENCH-0036",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 036",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 269
+          },
+          {
+            "patient_code": "BENCH-0037",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 037",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 270
+          },
+          {
+            "patient_code": "BENCH-0038",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 038",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 271
+          },
+          {
+            "patient_code": "BENCH-0039",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 039",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 272
+          },
+          {
+            "patient_code": "BENCH-0040",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 040",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 273
+          },
+          {
+            "patient_code": "BENCH-0041",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 041",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 274
+          },
+          {
+            "patient_code": "BENCH-0042",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 042",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 275
+          },
+          {
+            "patient_code": "BENCH-0043",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 043",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 276
+          },
+          {
+            "patient_code": "BENCH-0044",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 044",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 277
+          },
+          {
+            "patient_code": "BENCH-0045",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 045",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 278
+          },
+          {
+            "patient_code": "BENCH-0046",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 046",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 279
+          },
+          {
+            "patient_code": "BENCH-0047",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 047",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 280
+          },
+          {
+            "patient_code": "BENCH-0048",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 048",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 281
+          },
+          {
+            "patient_code": "BENCH-0049",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 049",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 282
+          },
+          {
+            "patient_code": "BENCH-0050",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 050",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 283
+          },
+          {
+            "patient_code": "BENCH-0051",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 051",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 284
+          },
+          {
+            "patient_code": "BENCH-0052",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 052",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 285
+          },
+          {
+            "patient_code": "BENCH-0053",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 053",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 286
+          },
+          {
+            "patient_code": "BENCH-0054",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 054",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 287
+          },
+          {
+            "patient_code": "BENCH-0055",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 055",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 288
+          },
+          {
+            "patient_code": "BENCH-0056",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 056",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 289
+          },
+          {
+            "patient_code": "BENCH-0057",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 057",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 290
+          },
+          {
+            "patient_code": "BENCH-0058",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 058",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 291
+          },
+          {
+            "patient_code": "BENCH-0059",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 059",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 292
+          },
+          {
+            "patient_code": "BENCH-0060",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 060",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 293
+          },
+          {
+            "patient_code": "BENCH-0061",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 061",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 294
+          },
+          {
+            "patient_code": "BENCH-0062",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 062",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 295
+          },
+          {
+            "patient_code": "BENCH-0063",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 063",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 296
+          },
+          {
+            "patient_code": "BENCH-0064",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 064",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 297
+          },
+          {
+            "patient_code": "BENCH-0065",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 065",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 298
+          },
+          {
+            "patient_code": "BENCH-0066",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 066",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 299
+          },
+          {
+            "patient_code": "BENCH-0067",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 067",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 300
+          },
+          {
+            "patient_code": "BENCH-0068",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 068",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 301
+          },
+          {
+            "patient_code": "BENCH-0069",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 069",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 302
+          },
+          {
+            "patient_code": "BENCH-0070",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 070",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 303
+          },
+          {
+            "patient_code": "BENCH-0071",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 071",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 304
+          },
+          {
+            "patient_code": "BENCH-0072",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 072",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 305
+          },
+          {
+            "patient_code": "BENCH-0073",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 073",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 306
+          },
+          {
+            "patient_code": "BENCH-0074",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 074",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 307
+          },
+          {
+            "patient_code": "BENCH-0075",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 075",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 308
+          },
+          {
+            "patient_code": "BENCH-0076",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 076",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 309
+          },
+          {
+            "patient_code": "BENCH-0077",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 077",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 310
+          },
+          {
+            "patient_code": "BENCH-0078",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 078",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 311
+          },
+          {
+            "patient_code": "BENCH-0079",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 079",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 312
+          },
+          {
+            "patient_code": "BENCH-0080",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 080",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 313
+          },
+          {
+            "patient_code": "BENCH-0081",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 081",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 314
+          },
+          {
+            "patient_code": "BENCH-0082",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 082",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 315
+          },
+          {
+            "patient_code": "BENCH-0083",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 083",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 316
+          },
+          {
+            "patient_code": "BENCH-0084",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 084",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 317
+          },
+          {
+            "patient_code": "BENCH-0085",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 085",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 318
+          },
+          {
+            "patient_code": "BENCH-0086",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 086",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 319
+          },
+          {
+            "patient_code": "BENCH-0087",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 087",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 320
+          },
+          {
+            "patient_code": "BENCH-0088",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 088",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 321
+          },
+          {
+            "patient_code": "BENCH-0089",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 089",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 322
+          },
+          {
+            "patient_code": "BENCH-0090",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 090",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 323
+          },
+          {
+            "patient_code": "BENCH-0091",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 091",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 324
+          },
+          {
+            "patient_code": "BENCH-0092",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 092",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 325
+          },
+          {
+            "patient_code": "BENCH-0093",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 093",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 326
+          },
+          {
+            "patient_code": "BENCH-0094",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 094",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 327
+          },
+          {
+            "patient_code": "BENCH-0095",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 095",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 328
+          },
+          {
+            "patient_code": "BENCH-0096",
+            "modality": "CT",
+            "priority": 1,
+            "doctor": "Тестовий лікар 096",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 329
+          },
+          {
+            "patient_code": "BENCH-0097",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Тестовий лікар 097",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 330
+          },
+          {
+            "patient_code": "BENCH-0098",
+            "modality": "XR",
+            "priority": 3,
+            "doctor": "Тестовий лікар 098",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 331
+          },
+          {
+            "patient_code": "BENCH-0099",
+            "modality": "US",
+            "priority": 4,
+            "doctor": "Тестовий лікар 099",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 332
+          }
+        ],
+        "total": 302,
+        "limit": 100,
+        "offset": 200
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "15587",
+        "connection": "close",
+        "x-pod": "64038b65437b"
+      }
+    },
+    {
+      "request": "GET /referrals?limit=100&offset=300&status=created",
+      "method": "GET",
+      "path": "/referrals?limit=100&offset=300&status=created",
+      "payload": null,
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "patient_code": "BENCH-0100",
+            "modality": "PET",
+            "priority": 5,
+            "doctor": "Тестовий лікар 100",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 333
+          },
+          {
+            "patient_code": "AUTO-8F350855",
+            "modality": "MRI",
+            "priority": 2,
+            "doctor": "Автоматичний тест",
+            "issued_at": "2026-10-24",
+            "status": "created",
+            "id": 334
+          }
+        ],
+        "total": 302,
+        "limit": 100,
+        "offset": 300
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "365",
+        "connection": "close",
+        "x-pod": "f14881541ae8"
+      }
+    },
+    {
+      "request": "GET /referrals/334",
+      "method": "GET",
+      "path": "/referrals/334",
+      "payload": null,
+      "status": 200,
+      "body": {
+        "patient_code": "AUTO-8F350855",
+        "modality": "MRI",
+        "priority": 2,
+        "doctor": "Автоматичний тест",
+        "issued_at": "2026-10-24",
+        "status": "created",
+        "id": 334
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "160",
+        "connection": "close",
+        "x-pod": "86ca6345d547"
+      }
+    },
+    {
+      "request": "PUT /referrals/334",
+      "method": "PUT",
+      "path": "/referrals/334",
+      "payload": {
+        "patient_code": "AUTO-8F350855",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-24",
+        "status": "scheduled"
+      },
+      "status": 200,
+      "body": {
+        "patient_code": "AUTO-8F350855",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-24",
+        "status": "scheduled",
+        "id": 334
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "174",
+        "connection": "close",
+        "x-pod": "b284c47e1589"
+      }
+    },
+    {
+      "request": "POST /referrals",
+      "method": "POST",
+      "path": "/referrals",
+      "payload": {
+        "patient_code": "AUTO-8F350855",
+        "modality": "INVALID",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-24",
+        "status": "scheduled"
+      },
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "enum",
+            "loc": [
+              "body",
+              "modality"
+            ],
+            "msg": "Input should be 'CT', 'MRI', 'XR', 'US' or 'PET'",
+            "input": "INVALID",
+            "ctx": {
+              "expected": "'CT', 'MRI', 'XR', 'US' or 'PET'"
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "183",
+        "connection": "close",
+        "x-pod": "64038b65437b"
+      }
+    },
+    {
+      "request": "POST /referrals",
+      "method": "POST",
+      "path": "/referrals",
+      "payload": {
+        "patient_code": "AUTO-8F350855",
+        "modality": "MRI",
+        "priority": 2,
+        "doctor": "Автоматичний тест",
+        "issued_at": "2026-10-24",
+        "status": "created",
+        "id": 999999
+      },
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "extra_forbidden",
+            "loc": [
+              "body",
+              "id"
+            ],
+            "msg": "Extra inputs are not permitted",
+            "input": 999999
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "113",
+        "connection": "close",
+        "x-pod": "f14881541ae8"
+      }
+    },
+    {
+      "request": "GET /referrals/1",
+      "method": "GET",
+      "path": "/referrals/1",
+      "payload": null,
+      "status": 200,
+      "body": {
+        "patient_code": "BENCH-0001",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Тестовий лікар 001",
+        "issued_at": "2026-10-23",
+        "status": "created",
+        "id": 1
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "152",
+        "connection": "close",
+        "x-pod": "86ca6345d547"
+      }
+    },
+    {
+      "request": "GET /referrals/9223372036854775807",
+      "method": "GET",
+      "path": "/referrals/9223372036854775807",
+      "payload": null,
+      "status": 404,
+      "body": {
+        "detail": "Направлення не знайдено"
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "57",
+        "connection": "close",
+        "x-pod": "b284c47e1589"
+      }
+    },
+    {
+      "request": "GET /referrals/0",
+      "method": "GET",
+      "path": "/referrals/0",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "0",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "149",
+        "connection": "close",
+        "x-pod": "64038b65437b"
+      }
+    },
+    {
+      "request": "PUT /referrals/0",
+      "method": "PUT",
+      "path": "/referrals/0",
+      "payload": {
+        "patient_code": "AUTO-8F350855",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-24",
+        "status": "scheduled"
+      },
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "0",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "149",
+        "connection": "close",
+        "x-pod": "f14881541ae8"
+      }
+    },
+    {
+      "request": "DELETE /referrals/0",
+      "method": "DELETE",
+      "path": "/referrals/0",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "0",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "149",
+        "connection": "close",
+        "x-pod": "86ca6345d547"
+      }
+    },
+    {
+      "request": "GET /referrals/-1",
+      "method": "GET",
+      "path": "/referrals/-1",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "-1",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "150",
+        "connection": "close",
+        "x-pod": "b284c47e1589"
+      }
+    },
+    {
+      "request": "PUT /referrals/-1",
+      "method": "PUT",
+      "path": "/referrals/-1",
+      "payload": {
+        "patient_code": "AUTO-8F350855",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-24",
+        "status": "scheduled"
+      },
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "-1",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "150",
+        "connection": "close",
+        "x-pod": "64038b65437b"
+      }
+    },
+    {
+      "request": "DELETE /referrals/-1",
+      "method": "DELETE",
+      "path": "/referrals/-1",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "-1",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "150",
+        "connection": "close",
+        "x-pod": "f14881541ae8"
+      }
+    },
+    {
+      "request": "GET /referrals/9223372036854775808",
+      "method": "GET",
+      "path": "/referrals/9223372036854775808",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "less_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be less than or equal to 9223372036854775807",
+            "input": "9223372036854775808",
+            "ctx": {
+              "le": 9223372036854775807
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "197",
+        "connection": "close",
+        "x-pod": "86ca6345d547"
+      }
+    },
+    {
+      "request": "PUT /referrals/9223372036854775808",
+      "method": "PUT",
+      "path": "/referrals/9223372036854775808",
+      "payload": {
+        "patient_code": "AUTO-8F350855",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-24",
+        "status": "scheduled"
+      },
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "less_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be less than or equal to 9223372036854775807",
+            "input": "9223372036854775808",
+            "ctx": {
+              "le": 9223372036854775807
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "197",
+        "connection": "close",
+        "x-pod": "b284c47e1589"
+      }
+    },
+    {
+      "request": "DELETE /referrals/9223372036854775808",
+      "method": "DELETE",
+      "path": "/referrals/9223372036854775808",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "less_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be less than or equal to 9223372036854775807",
+            "input": "9223372036854775808",
+            "ctx": {
+              "le": 9223372036854775807
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "197",
+        "connection": "close",
+        "x-pod": "64038b65437b"
+      }
+    },
+    {
+      "request": "GET /referrals/-9223372036854775809",
+      "method": "GET",
+      "path": "/referrals/-9223372036854775809",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "-9223372036854775809",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "168",
+        "connection": "close",
+        "x-pod": "f14881541ae8"
+      }
+    },
+    {
+      "request": "PUT /referrals/-9223372036854775809",
+      "method": "PUT",
+      "path": "/referrals/-9223372036854775809",
+      "payload": {
+        "patient_code": "AUTO-8F350855",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-24",
+        "status": "scheduled"
+      },
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "-9223372036854775809",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "168",
+        "connection": "close",
+        "x-pod": "86ca6345d547"
+      }
+    },
+    {
+      "request": "DELETE /referrals/-9223372036854775809",
+      "method": "DELETE",
+      "path": "/referrals/-9223372036854775809",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be greater than or equal to 1",
+            "input": "-9223372036854775809",
+            "ctx": {
+              "ge": 1
+            }
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "168",
+        "connection": "close",
+        "x-pod": "b284c47e1589"
+      }
+    },
+    {
+      "request": "GET /referrals/abc",
+      "method": "GET",
+      "path": "/referrals/abc",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "abc"
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "156",
+        "connection": "close",
+        "x-pod": "64038b65437b"
+      }
+    },
+    {
+      "request": "PUT /referrals/abc",
+      "method": "PUT",
+      "path": "/referrals/abc",
+      "payload": {
+        "patient_code": "AUTO-8F350855",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Оновлений тестовий лікар",
+        "issued_at": "2026-10-24",
+        "status": "scheduled"
+      },
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "abc"
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "156",
+        "connection": "close",
+        "x-pod": "f14881541ae8"
+      }
+    },
+    {
+      "request": "DELETE /referrals/abc",
+      "method": "DELETE",
+      "path": "/referrals/abc",
+      "payload": null,
+      "status": 400,
+      "body": {
+        "detail": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "path",
+              "referral_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "abc"
+          }
+        ]
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "156",
+        "connection": "close",
+        "x-pod": "86ca6345d547"
+      }
+    },
+    {
+      "request": "DELETE /referrals/334",
+      "method": "DELETE",
+      "path": "/referrals/334",
+      "payload": null,
+      "status": 204,
+      "body": null,
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "connection": "close",
+        "x-pod": "b284c47e1589"
+      }
+    },
+    {
+      "request": "DELETE /referrals/334",
+      "method": "DELETE",
+      "path": "/referrals/334",
+      "payload": null,
+      "status": 404,
+      "body": {
+        "detail": "Направлення не знайдено"
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "57",
+        "connection": "close",
+        "x-pod": "64038b65437b"
+      }
+    },
+    {
+      "request": "GET /referrals/334",
+      "method": "GET",
+      "path": "/referrals/334",
+      "payload": null,
+      "status": 404,
+      "body": {
+        "detail": "Направлення не знайдено"
+      },
+      "headers": {
+        "server": "nginx/1.31.6",
+        "date": "Sat, 24 Oct 2026 09:35:23 GMT",
+        "content-type": "application/json",
+        "content-length": "57",
+        "connection": "close",
+        "x-pod": "f14881541ae8"
+      }
+    }
+  ],
+  "instance": "f14881541ae8"
+}

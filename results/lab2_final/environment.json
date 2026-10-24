@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-24T09:12:35.313362+00:00",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "docker_info": "16 CPUs; 16402022400 bytes RAM\n",
+  "web_cpu_limit": "0.5",
+  "db_pool_size": "15"
+}

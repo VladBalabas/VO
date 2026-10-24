@@ -1,0 +1,769 @@
+{
+  "epoch": 1792834668.580367,
+  "commands": [
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-p",
+        "vo-lab2",
+        "ps",
+        "--format",
+        "table {{.Service}}\t{{.Status}}\t{{.Ports}}"
+      ],
+      "exit_code": 0,
+      "output": "SERVICE             STATUS                        PORTS\ndb                  Up About a minute (healthy)   5432/tcp\npostgres-exporter   Up 47 minutes                 9187/tcp\nprometheus          Up 48 minutes                 0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp\nproxy               Up 28 seconds                 0.0.0.0:8080->80/tcp, [::]:8080->80/tcp\nweb                 Up 5 minutes (healthy)        8000/tcp\nweb                 Up 32 seconds (healthy)       8000/tcp\nweb                 Up 32 seconds (healthy)       8000/tcp\nweb                 Up 32 seconds (healthy)       8000/tcp\n"
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-p",
+        "vo-lab2",
+        "ps",
+        "-q",
+        "web"
+      ],
+      "exit_code": 0,
+      "output": "86ca6345d547da9f0b73d1b7ba9737c981b654abfc4bbe3bb80c7e6ef3e941e8\n26cec98b9336d912adcd9ee197e14f6bb215ac88e072c293ecaabc87fa1c450b\nd4906cb4d4f908a39074f717a68891392ba713e3039565bec0b13638b66fb30a\n7dc450f611cfec5f087a45ae2b4c3dd5d7fd9f1fc3c166cf9970eba88fca4a6d\n"
+    },
+    {
+      "command": [
+        "docker",
+        "info",
+        "--format",
+        "{{.NCPU}} CPUs; {{.MemTotal}} bytes RAM"
+      ],
+      "exit_code": 0,
+      "output": "16 CPUs; 16402022400 bytes RAM\n"
+    },
+    {
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-Command",
+        "Get-CimInstance Win32_ComputerSystem | Select-Object NumberOfLogicalProcessors,TotalPhysicalMemory | ConvertTo-Json -Compress"
+      ],
+      "exit_code": 0,
+      "output": "{\"NumberOfLogicalProcessors\":16,\"TotalPhysicalMemory\":33617924096}\n"
+    },
+    {
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{.Name}}|{{.State.Running}}|{{.HostConfig.NanoCpus}}|{{.HostConfig.Memory}}|{{.State.ExitCode}}",
+        "86ca6345d547da9f0b73d1b7ba9737c981b654abfc4bbe3bb80c7e6ef3e941e8"
+      ],
+      "exit_code": 0,
+      "output": "/vo-lab2-web-1|true|500000000|402653184|0\n"
+    },
+    {
+      "command": [
+        "docker",
+        "top",
+        "86ca6345d547da9f0b73d1b7ba9737c981b654abfc4bbe3bb80c7e6ef3e941e8"
+      ],
+      "exit_code": 0,
+      "output": "UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD\n_rpc                41324               41298               8                   09:31               ?                   00:00:28            /usr/local/bin/python3.12 /usr/local/bin/uvicorn backend.main:app --host 0.0.0.0 --port 8000\n_rpc                49494               41298               61                  09:37               ?                   00:00:00            python -c import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz', timeout=2)\n"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "86ca6345d547da9f0b73d1b7ba9737c981b654abfc4bbe3bb80c7e6ef3e941e8",
+        "python",
+        "-c",
+        "import urllib.request; r=urllib.request.urlopen('http://localhost:8000/metrics'); print(r.status); print(r.read().decode())"
+      ],
+      "exit_code": 0,
+      "output": "200\n# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 932.0\npython_gc_objects_collected_total{generation=\"1\"} 31.0\npython_gc_objects_collected_total{generation=\"2\"} 126.0\n# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC\n# TYPE python_gc_objects_uncollectable_total counter\npython_gc_objects_uncollectable_total{generation=\"0\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"1\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"2\"} 0.0\n# HELP python_gc_collections_total Number of times this generation was collected\n# TYPE python_gc_collections_total counter\npython_gc_collections_total{generation=\"0\"} 1078.0\npython_gc_collections_total{generation=\"1\"} 98.0\npython_gc_collections_total{generation=\"2\"} 8.0\n# HELP python_info Python platform information\n# TYPE python_info gauge\npython_info{implementation=\"CPython\",major=\"3\",minor=\"12\",patchlevel=\"15\",version=\"3.12.15\"} 1.0\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 8.8342528e+07\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 7.5689984e+07\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.79283430754e+09\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 28.92\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 11.0\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 1.048576e+06\n# HELP http_requests_total Completed HTTP requests\n# TYPE http_requests_total counter\nhttp_requests_total{method=\"GET\",path=\"/metrics\",status=\"200\"} 71.0\nhttp_requests_total{method=\"GET\",path=\"/healthz\",status=\"200\"} 56.0\nhttp_requests_total{method=\"GET\",path=\"/referrals/{referral_id}\",status=\"200\"} 10390.0\nhttp_requests_total{method=\"GET\",path=\"/healthz\",status=\"503\"} 4.0\nhttp_requests_total{method=\"GET\",path=\"/livez\",status=\"200\"} 13.0\nhttp_requests_total{method=\"GET\",path=\"/referrals\",status=\"200\"} 1.0\nhttp_requests_total{method=\"DELETE\",path=\"/referrals/{referral_id}\",status=\"400\"} 2.0\nhttp_requests_total{method=\"GET\",path=\"/referrals/{referral_id}\",status=\"400\"} 1.0\nhttp_requests_total{method=\"PUT\",path=\"/referrals/{referral_id}\",status=\"400\"} 1.0\n# HELP http_requests_created Completed HTTP requests\n# TYPE http_requests_created gauge\nhttp_requests_created{method=\"GET\",path=\"/metrics\",status=\"200\"} 1.7928343118208406e+09\nhttp_requests_created{method=\"GET\",path=\"/healthz\",status=\"200\"} 1.7928343139414635e+09\nhttp_requests_created{method=\"GET\",path=\"/referrals/{referral_id}\",status=\"200\"} 1.792834331587492e+09\nhttp_requests_created{method=\"GET\",path=\"/healthz\",status=\"503\"} 1.7928343982260973e+09\nhttp_requests_created{method=\"GET\",path=\"/livez\",status=\"200\"} 1.792834519119776e+09\nhttp_requests_created{method=\"GET\",path=\"/referrals\",status=\"200\"} 1.7928345232048829e+09\nhttp_requests_created{method=\"DELETE\",path=\"/referrals/{referral_id}\",status=\"400\"} 1.7928345233603542e+09\nhttp_requests_created{method=\"GET\",path=\"/referrals/{referral_id}\",status=\"400\"} 1.7928345233726084e+09\nhttp_requests_created{method=\"PUT\",path=\"/referrals/{referral_id}\",status=\"400\"} 1.792834523384355e+09\n# HELP http_request_duration_seconds HTTP request duration in seconds\n# TYPE http_request_duration_seconds histogram\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/metrics\"} 56.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/metrics\"} 57.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/metrics\"} 61.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/metrics\"} 68.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/metrics\"} 70.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/metrics\"} 70.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/metrics\"} 71.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/metrics\"} 71.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/metrics\"} 71.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/metrics\"} 71.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/metrics\"} 0.9807092459996056\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/healthz\"} 49.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/healthz\"} 50.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/healthz\"} 50.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/healthz\"} 50.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/healthz\"} 53.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/healthz\"} 55.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/healthz\"} 56.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/healthz\"} 56.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/healthz\"} 60.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/healthz\"} 60.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/healthz\"} 9.14560267099796\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/referrals/{referral_id}\"} 3886.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/referrals/{referral_id}\"} 4133.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/referrals/{referral_id}\"} 4304.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/referrals/{referral_id}\"} 4382.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/referrals/{referral_id}\"} 4503.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/referrals/{referral_id}\"} 6310.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/referrals/{referral_id}\"} 6731.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/referrals/{referral_id}\"} 7183.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/referrals/{referral_id}\"} 10391.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/referrals/{referral_id}\"} 10391.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/referrals/{referral_id}\"} 13275.613046594975\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/livez\"} 13.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/livez\"} 13.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/livez\"} 13.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/livez\"} 13.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/livez\"} 13.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/livez\"} 13.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/livez\"} 13.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/livez\"} 13.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/livez\"} 13.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/livez\"} 13.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/livez\"} 0.004631074999906559\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/referrals\"} 0.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/referrals\"} 0.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/referrals\"} 0.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/referrals\"} 1.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/referrals\"} 1.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/referrals\"} 1.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/referrals\"} 1.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/referrals\"} 1.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/referrals\"} 1.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/referrals\"} 1.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/referrals\"} 0.038734522000140714\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"DELETE\",path=\"/referrals/{referral_id}\"} 2.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"DELETE\",path=\"/referrals/{referral_id}\"} 2.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"DELETE\",path=\"/referrals/{referral_id}\"} 2.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"DELETE\",path=\"/referrals/{referral_id}\"} 2.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"DELETE\",path=\"/referrals/{referral_id}\"} 2.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"DELETE\",path=\"/referrals/{referral_id}\"} 2.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"DELETE\",path=\"/referrals/{referral_id}\"} 2.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"DELETE\",path=\"/referrals/{referral_id}\"} 2.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"DELETE\",path=\"/referrals/{referral_id}\"} 2.0\nhttp_request_duration_seconds_count{method=\"DELETE\",path=\"/referrals/{referral_id}\"} 2.0\nhttp_request_duration_seconds_sum{method=\"DELETE\",path=\"/referrals/{referral_id}\"} 0.0024037459997998667\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"PUT\",path=\"/referrals/{referral_id}\"} 1.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"PUT\",path=\"/referrals/{referral_id}\"} 1.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"PUT\",path=\"/referrals/{referral_id}\"} 1.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"PUT\",path=\"/referrals/{referral_id}\"} 1.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"PUT\",path=\"/referrals/{referral_id}\"} 1.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"PUT\",path=\"/referrals/{referral_id}\"} 1.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"PUT\",path=\"/referrals/{referral_id}\"} 1.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"PUT\",path=\"/referrals/{referral_id}\"} 1.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"PUT\",path=\"/referrals/{referral_id}\"} 1.0\nhttp_request_duration_seconds_count{method=\"PUT\",path=\"/referrals/{referral_id}\"} 1.0\nhttp_request_duration_seconds_sum{method=\"PUT\",path=\"/referrals/{referral_id}\"} 0.0012814439996873261\n# HELP http_request_duration_seconds_created HTTP request duration in seconds\n# TYPE http_request_duration_seconds_created gauge\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/metrics\"} 1.7928343118208587e+09\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/healthz\"} 1.79283431394148e+09\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/referrals/{referral_id}\"} 1.792834331587513e+09\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/livez\"} 1.7928345191197937e+09\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/referrals\"} 1.792834523204922e+09\nhttp_request_duration_seconds_created{method=\"DELETE\",path=\"/referrals/{referral_id}\"} 1.792834523360371e+09\nhttp_request_duration_seconds_created{method=\"PUT\",path=\"/referrals/{referral_id}\"} 1.7928345233843718e+09\n# HELP http_requests_in_flight HTTP requests in progress\n# TYPE http_requests_in_flight gauge\nhttp_requests_in_flight 1.0\n\n"
+    },
+    {
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{.Name}}|{{.State.Running}}|{{.HostConfig.NanoCpus}}|{{.HostConfig.Memory}}|{{.State.ExitCode}}",
+        "26cec98b9336d912adcd9ee197e14f6bb215ac88e072c293ecaabc87fa1c450b"
+      ],
+      "exit_code": 0,
+      "output": "/vo-lab2-web-2|true|500000000|402653184|0\n"
+    },
+    {
+      "command": [
+        "docker",
+        "top",
+        "26cec98b9336d912adcd9ee197e14f6bb215ac88e072c293ecaabc87fa1c450b"
+      ],
+      "exit_code": 0,
+      "output": "UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD\n_rpc                48634               48608               3                   09:37               ?                   00:00:01            /usr/local/bin/python3.12 /usr/local/bin/uvicorn backend.main:app --host 0.0.0.0 --port 8000\n"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "26cec98b9336d912adcd9ee197e14f6bb215ac88e072c293ecaabc87fa1c450b",
+        "python",
+        "-c",
+        "import urllib.request; r=urllib.request.urlopen('http://localhost:8000/metrics'); print(r.status); print(r.read().decode())"
+      ],
+      "exit_code": 0,
+      "output": "200\n# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 407.0\npython_gc_objects_collected_total{generation=\"1\"} 31.0\npython_gc_objects_collected_total{generation=\"2\"} 0.0\n# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC\n# TYPE python_gc_objects_uncollectable_total counter\npython_gc_objects_uncollectable_total{generation=\"0\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"1\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"2\"} 0.0\n# HELP python_gc_collections_total Number of times this generation was collected\n# TYPE python_gc_collections_total counter\npython_gc_collections_total{generation=\"0\"} 123.0\npython_gc_collections_total{generation=\"1\"} 11.0\npython_gc_collections_total{generation=\"2\"} 1.0\n# HELP python_info Python platform information\n# TYPE python_info gauge\npython_info{implementation=\"CPython\",major=\"3\",minor=\"12\",patchlevel=\"15\",version=\"3.12.15\"} 1.0\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 6.4528384e+07\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 5.3751808e+07\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.79283462927e+09\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 1.37\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 11.0\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 1.048576e+06\n# HELP http_requests_total Completed HTTP requests\n# TYPE http_requests_total counter\nhttp_requests_total{method=\"GET\",path=\"/healthz\",status=\"200\"} 6.0\nhttp_requests_total{method=\"GET\",path=\"/metrics\",status=\"200\"} 6.0\n# HELP http_requests_created Completed HTTP requests\n# TYPE http_requests_created gauge\nhttp_requests_created{method=\"GET\",path=\"/healthz\",status=\"200\"} 1.7928346356592968e+09\nhttp_requests_created{method=\"GET\",path=\"/metrics\",status=\"200\"} 1.7928346378782737e+09\n# HELP http_request_duration_seconds HTTP request duration in seconds\n# TYPE http_request_duration_seconds histogram\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/healthz\"} 5.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/healthz\"} 5.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/healthz\"} 5.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/healthz\"} 5.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/healthz\"} 0.07033251900020332\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/metrics\"} 0.0057011969997802225\n# HELP http_request_duration_seconds_created HTTP request duration in seconds\n# TYPE http_request_duration_seconds_created gauge\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/healthz\"} 1.7928346356593199e+09\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/metrics\"} 1.7928346378782933e+09\n# HELP http_requests_in_flight HTTP requests in progress\n# TYPE http_requests_in_flight gauge\nhttp_requests_in_flight 1.0\n\n"
+    },
+    {
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{.Name}}|{{.State.Running}}|{{.HostConfig.NanoCpus}}|{{.HostConfig.Memory}}|{{.State.ExitCode}}",
+        "d4906cb4d4f908a39074f717a68891392ba713e3039565bec0b13638b66fb30a"
+      ],
+      "exit_code": 0,
+      "output": "/vo-lab2-web-3|true|500000000|402653184|0\n"
+    },
+    {
+      "command": [
+        "docker",
+        "top",
+        "d4906cb4d4f908a39074f717a68891392ba713e3039565bec0b13638b66fb30a"
+      ],
+      "exit_code": 0,
+      "output": "UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD\n_rpc                48524               48500               3                   09:37               ?                   00:00:01            /usr/local/bin/python3.12 /usr/local/bin/uvicorn backend.main:app --host 0.0.0.0 --port 8000\n"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "d4906cb4d4f908a39074f717a68891392ba713e3039565bec0b13638b66fb30a",
+        "python",
+        "-c",
+        "import urllib.request; r=urllib.request.urlopen('http://localhost:8000/metrics'); print(r.status); print(r.read().decode())"
+      ],
+      "exit_code": 0,
+      "output": "200\n# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 407.0\npython_gc_objects_collected_total{generation=\"1\"} 31.0\npython_gc_objects_collected_total{generation=\"2\"} 0.0\n# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC\n# TYPE python_gc_objects_uncollectable_total counter\npython_gc_objects_uncollectable_total{generation=\"0\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"1\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"2\"} 0.0\n# HELP python_gc_collections_total Number of times this generation was collected\n# TYPE python_gc_collections_total counter\npython_gc_collections_total{generation=\"0\"} 123.0\npython_gc_collections_total{generation=\"1\"} 11.0\npython_gc_collections_total{generation=\"2\"} 1.0\n# HELP python_info Python platform information\n# TYPE python_info gauge\npython_info{implementation=\"CPython\",major=\"3\",minor=\"12\",patchlevel=\"15\",version=\"3.12.15\"} 1.0\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 6.4528384e+07\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 5.371904e+07\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.79283462891e+09\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 1.3599999999999999\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 11.0\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 1.048576e+06\n# HELP http_requests_total Completed HTTP requests\n# TYPE http_requests_total counter\nhttp_requests_total{method=\"GET\",path=\"/healthz\",status=\"200\"} 6.0\nhttp_requests_total{method=\"GET\",path=\"/metrics\",status=\"200\"} 6.0\n# HELP http_requests_created Completed HTTP requests\n# TYPE http_requests_created gauge\nhttp_requests_created{method=\"GET\",path=\"/healthz\",status=\"200\"} 1.792834635281593e+09\nhttp_requests_created{method=\"GET\",path=\"/metrics\",status=\"200\"} 1.7928346400411475e+09\n# HELP http_request_duration_seconds HTTP request duration in seconds\n# TYPE http_request_duration_seconds histogram\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/healthz\"} 5.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/healthz\"} 0.01440176599953702\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/metrics\"} 0.005497821000517433\n# HELP http_request_duration_seconds_created HTTP request duration in seconds\n# TYPE http_request_duration_seconds_created gauge\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/healthz\"} 1.7928346352816138e+09\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/metrics\"} 1.7928346400411596e+09\n# HELP http_requests_in_flight HTTP requests in progress\n# TYPE http_requests_in_flight gauge\nhttp_requests_in_flight 1.0\n\n"
+    },
+    {
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{.Name}}|{{.State.Running}}|{{.HostConfig.NanoCpus}}|{{.HostConfig.Memory}}|{{.State.ExitCode}}",
+        "7dc450f611cfec5f087a45ae2b4c3dd5d7fd9f1fc3c166cf9970eba88fca4a6d"
+      ],
+      "exit_code": 0,
+      "output": "/vo-lab2-web-4|true|500000000|402653184|0\n"
+    },
+    {
+      "command": [
+        "docker",
+        "top",
+        "7dc450f611cfec5f087a45ae2b4c3dd5d7fd9f1fc3c166cf9970eba88fca4a6d"
+      ],
+      "exit_code": 0,
+      "output": "UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD\n_rpc                48578               48555               3                   09:37               ?                   00:00:01            /usr/local/bin/python3.12 /usr/local/bin/uvicorn backend.main:app --host 0.0.0.0 --port 8000\n"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "7dc450f611cfec5f087a45ae2b4c3dd5d7fd9f1fc3c166cf9970eba88fca4a6d",
+        "python",
+        "-c",
+        "import urllib.request; r=urllib.request.urlopen('http://localhost:8000/metrics'); print(r.status); print(r.read().decode())"
+      ],
+      "exit_code": 0,
+      "output": "200\n# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 407.0\npython_gc_objects_collected_total{generation=\"1\"} 31.0\npython_gc_objects_collected_total{generation=\"2\"} 0.0\n# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC\n# TYPE python_gc_objects_uncollectable_total counter\npython_gc_objects_uncollectable_total{generation=\"0\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"1\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"2\"} 0.0\n# HELP python_gc_collections_total Number of times this generation was collected\n# TYPE python_gc_collections_total counter\npython_gc_collections_total{generation=\"0\"} 123.0\npython_gc_collections_total{generation=\"1\"} 11.0\npython_gc_collections_total{generation=\"2\"} 1.0\n# HELP python_info Python platform information\n# TYPE python_info gauge\npython_info{implementation=\"CPython\",major=\"3\",minor=\"12\",patchlevel=\"15\",version=\"3.12.15\"} 1.0\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 6.4528384e+07\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 5.3489664e+07\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.7928346291e+09\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 1.38\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 11.0\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 1.048576e+06\n# HELP http_requests_total Completed HTTP requests\n# TYPE http_requests_total counter\nhttp_requests_total{method=\"GET\",path=\"/healthz\",status=\"200\"} 6.0\nhttp_requests_total{method=\"GET\",path=\"/metrics\",status=\"200\"} 6.0\n# HELP http_requests_created Completed HTTP requests\n# TYPE http_requests_created gauge\nhttp_requests_created{method=\"GET\",path=\"/healthz\",status=\"200\"} 1.7928346354767246e+09\nhttp_requests_created{method=\"GET\",path=\"/metrics\",status=\"200\"} 1.7928346413878415e+09\n# HELP http_request_duration_seconds HTTP request duration in seconds\n# TYPE http_request_duration_seconds histogram\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/healthz\"} 5.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/healthz\"} 6.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/healthz\"} 0.014654307999535376\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/metrics\"} 6.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/metrics\"} 0.00694798299946342\n# HELP http_request_duration_seconds_created HTTP request duration in seconds\n# TYPE http_request_duration_seconds_created gauge\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/healthz\"} 1.7928346354767444e+09\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/metrics\"} 1.7928346413878548e+09\n# HELP http_requests_in_flight HTTP requests in progress\n# TYPE http_requests_in_flight gauge\nhttp_requests_in_flight 1.0\n\n"
+    }
+  ],
+  "http": [
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "d4906cb4d4f9"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/healthz",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "27",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"готовий\"}"
+    },
+    {
+      "url": "http://localhost:8080/noop",
+      "status": 204,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Connection": "close"
+      },
+      "body": ""
+    },
+    {
+      "url": "http://localhost:9090/api/v1/query?query=up",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Origin",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Length": "569",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"success\",\"data\":{\"resultType\":\"vector\",\"result\":[{\"metric\":{\"__name__\":\"up\",\"instance\":\"postgres-exporter:9187\",\"job\":\"postgres\"},\"value\":[1792834668.131,\"1\"]},{\"metric\":{\"__name__\":\"up\",\"instance\":\"172.21.0.7:8000\",\"job\":\"web\"},\"value\":[1792834668.131,\"1\"]},{\"metric\":{\"__name__\":\"up\",\"instance\":\"172.21.0.8:8000\",\"job\":\"web\"},\"value\":[1792834668.131,\"1\"]},{\"metric\":{\"__name__\":\"up\",\"instance\":\"172.21.0.9:8000\",\"job\":\"web\"},\"value\":[1792834668.131,\"1\"]},{\"metric\":{\"__name__\":\"up\",\"instance\":\"172.21.0.6:8000\",\"job\":\"web\"},\"value\":[1792834668.131,\"1\"]}]}}"
+    },
+    {
+      "url": "http://localhost:9090/api/v1/targets?state=active",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Origin",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "body": "{\"status\":\"success\",\"data\":{\"activeTargets\":[{\"discoveredLabels\":{\"__address__\":\"postgres-exporter:9187\",\"__metrics_path__\":\"/metrics\",\"__scheme__\":\"http\",\"__scrape_interval__\":\"5s\",\"__scrape_timeout__\":\"5s\",\"job\":\"postgres\"},\"labels\":{\"instance\":\"postgres-exporter:9187\",\"job\":\"postgres\"},\"scrapePool\":\"postgres\",\"scrapeUrl\":\"http://postgres-exporter:9187/metrics\",\"globalUrl\":\"http://postgres-exporter:9187/metrics\",\"lastError\":\"\",\"lastScrape\":\"2026-10-24T09:37:46.953830268Z\",\"lastScrapeDuration\":0.030460453,\"health\":\"up\",\"scrapeInterval\":\"5s\",\"scrapeTimeout\":\"5s\"},{\"discoveredLabels\":{\"__address__\":\"172.21.0.8:8000\",\"__meta_dns_name\":\"web\",\"__metrics_path__\":\"/metrics\",\"__scheme__\":\"http\",\"__scrape_interval__\":\"5s\",\"__scrape_timeout__\":\"5s\",\"job\":\"web\"},\"labels\":{\"instance\":\"172.21.0.8:8000\",\"job\":\"web\"},\"scrapePool\":\"web\",\"scrapeUrl\":\"http://172.21.0.8:8000/metrics\",\"globalUrl\":\"http://172.21.0.8:8000/metrics\",\"lastError\":\"\",\"lastScrape\":\"2026-10-24T09:37:46.384468756Z\",\"lastScrapeDuration\":0.002090847,\"health\":\"up\",\"scrapeInterval\":\"5s\",\"scrapeTimeout\":\"5s\"},{\"discoveredLabels\":{\"__address__\":\"172.21.0.9:8000\",\"__meta_dns_name\":\"web\",\"__metrics_path__\":\"/metrics\",\"__scheme__\":\"http\",\"__scrape_interval__\":\"5s\",\"__scrape_timeout__\":\"5s\",\"job\":\"web\"},\"labels\":{\"instance\":\"172.21.0.9:8000\",\"job\":\"web\"},\"scrapePool\":\"web\",\"scrapeUrl\":\"http://172.21.0.9:8000/metrics\",\"globalUrl\":\"http://172.21.0.9:8000/metrics\",\"lastError\":\"\",\"lastScrape\":\"2026-10-24T09:37:47.874534912Z\",\"lastScrapeDuration\":0.002630888,\"health\":\"up\",\"scrapeInterval\":\"5s\",\"scrapeTimeout\":\"5s\"},{\"discoveredLabels\":{\"__address__\":\"172.21.0.6:8000\",\"__meta_dns_name\":\"web\",\"__metrics_path__\":\"/metrics\",\"__scheme__\":\"http\",\"__scrape_interval__\":\"5s\",\"__scrape_timeout__\":\"5s\",\"job\":\"web\"},\"labels\":{\"instance\":\"172.21.0.6:8000\",\"job\":\"web\"},\"scrapePool\":\"web\",\"scrapeUrl\":\"http://172.21.0.6:8000/metrics\",\"globalUrl\":\"http://172.21.0.6:8000/metrics\",\"lastError\":\"\",\"lastScrape\":\"2026-10-24T09:37:45.039067226Z\",\"lastScrapeDuration\":0.00198429,\"health\":\"up\",\"scrapeInterval\":\"5s\",\"scrapeTimeout\":\"5s\"},{\"discoveredLabels\":{\"__address__\":\"172.21.0.7:8000\",\"__meta_dns_name\":\"web\",\"__metrics_path__\":\"/metrics\",\"__scheme__\":\"http\",\"__scrape_interval__\":\"5s\",\"__scrape_timeout__\":\"5s\",\"job\":\"web\"},\"labels\":{\"instance\":\"172.21.0.7:8000\",\"job\":\"web\"},\"scrapePool\":\"web\",\"scrapeUrl\":\"http://172.21.0.7:8000/metrics\",\"globalUrl\":\"http://172.21.0.7:8000/metrics\",\"lastError\":\"\",\"lastScrape\":\"2026-10-24T09:37:46.764915546Z\",\"lastScrapeDuration\":0.002646888,\"health\":\"up\",\"scrapeInterval\":\"5s\",\"scrapeTimeout\":\"5s\"}],\"droppedTargets\":[],\"droppedTargetCounts\":null}}"
+    }
+  ],
+  "distribution_requests": [
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "7dc450f611cf"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "26cec98b9336"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "d4906cb4d4f9"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "7dc450f611cf"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "26cec98b9336"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "d4906cb4d4f9"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "7dc450f611cf"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "26cec98b9336"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "d4906cb4d4f9"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "7dc450f611cf"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "26cec98b9336"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "d4906cb4d4f9"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "7dc450f611cf"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "26cec98b9336"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "d4906cb4d4f9"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "7dc450f611cf"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "26cec98b9336"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "d4906cb4d4f9"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "7dc450f611cf"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "26cec98b9336"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "d4906cb4d4f9"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "7dc450f611cf"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "26cec98b9336"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "d4906cb4d4f9"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "7dc450f611cf"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "26cec98b9336"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "d4906cb4d4f9"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "7dc450f611cf"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "26cec98b9336"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "d4906cb4d4f9"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:37:48 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"alive\"}"
+    }
+  ],
+  "pod_counts": {
+    "7dc450f611cf": 10,
+    "26cec98b9336": 10,
+    "d4906cb4d4f9": 10,
+    "86ca6345d547": 10
+  }
+}

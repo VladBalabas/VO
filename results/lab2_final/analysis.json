@@ -1,0 +1,542 @@
+{
+  "usl": {
+    "sigma": 0.0,
+    "kappa": 0.041271520766211066,
+    "N_star": 4.9223757666288535,
+    "no_finite_maximum": false,
+    "predicted_x": {
+      "1": 200.0,
+      "2": 369.50031975982176,
+      "3": 480.91214622268416,
+      "4": 535.0246356647388
+    },
+    "rmse_x": 192.9237245011821
+  },
+  "G": 4000.0,
+  "raw_verification": [
+    {
+      "name": "noop_200",
+      "verified_x": 200.0,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_400",
+      "verified_x": 400.0,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_600",
+      "verified_x": 600.0,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_800",
+      "verified_x": 799.9333333333333,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_1000",
+      "verified_x": 1000.0666666666667,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_1200",
+      "verified_x": 1200.0,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_1400",
+      "verified_x": 1400.0,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_1600",
+      "verified_x": 1600.1333333333334,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_1800",
+      "verified_x": 1800.1333333333334,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_2000",
+      "verified_x": 1999.9333333333334,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_2200",
+      "verified_x": 2200.133333333333,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_2400",
+      "verified_x": 2399.9333333333334,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_2600",
+      "verified_x": 2600.0,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_2800",
+      "verified_x": 2812.133333333333,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_3000",
+      "verified_x": 2999.8,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_3200",
+      "verified_x": 3199.9333333333334,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_3400",
+      "verified_x": 3400.0,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_3600",
+      "verified_x": 3599.866666666667,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_3800",
+      "verified_x": 3799.6666666666665,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_4000",
+      "verified_x": 4000.0,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_4200",
+      "verified_x": 101.93333333333334,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "noop_4400",
+      "verified_x": 0.0,
+      "planned": 1014000,
+      "sent": 1014000
+    },
+    {
+      "name": "n1_200",
+      "verified_x": 200.0,
+      "planned": 26000,
+      "sent": 26000
+    },
+    {
+      "name": "n1_400",
+      "verified_x": 30.666666666666668,
+      "planned": 26000,
+      "sent": 26000
+    },
+    {
+      "name": "n1_600",
+      "verified_x": 7.2,
+      "planned": 26000,
+      "sent": 26000
+    },
+    {
+      "name": "n2_200",
+      "verified_x": 200.06666666666666,
+      "planned": 42000,
+      "sent": 42000
+    },
+    {
+      "name": "n2_400",
+      "verified_x": 403.4,
+      "planned": 42000,
+      "sent": 42000
+    },
+    {
+      "name": "n2_600",
+      "verified_x": 401.06666666666666,
+      "planned": 42000,
+      "sent": 42000
+    },
+    {
+      "name": "n2_800",
+      "verified_x": 189.73333333333332,
+      "planned": 42000,
+      "sent": 42000
+    },
+    {
+      "name": "n3_200",
+      "verified_x": 200.0,
+      "planned": 86000,
+      "sent": 86000
+    },
+    {
+      "name": "n3_400",
+      "verified_x": 401.4,
+      "planned": 86000,
+      "sent": 86000
+    },
+    {
+      "name": "n3_600",
+      "verified_x": 604.8666666666667,
+      "planned": 86000,
+      "sent": 86000
+    },
+    {
+      "name": "n3_800",
+      "verified_x": 803.4,
+      "planned": 86000,
+      "sent": 86000
+    },
+    {
+      "name": "n3_1000",
+      "verified_x": 658.6,
+      "planned": 86000,
+      "sent": 86000
+    },
+    {
+      "name": "n3_1200",
+      "verified_x": 604.1333333333333,
+      "planned": 86000,
+      "sent": 86000
+    },
+    {
+      "name": "n4_200",
+      "verified_x": 200.0,
+      "planned": 42000,
+      "sent": 42000
+    },
+    {
+      "name": "n4_400",
+      "verified_x": 400.3333333333333,
+      "planned": 42000,
+      "sent": 42000
+    },
+    {
+      "name": "n4_600",
+      "verified_x": 394.6,
+      "planned": 42000,
+      "sent": 42000
+    },
+    {
+      "name": "n4_800",
+      "verified_x": 454.3333333333333,
+      "planned": 42000,
+      "sent": 42000
+    }
+  ],
+  "table": [
+    {
+      "n": 1,
+      "rate": 200,
+      "x": 200.0,
+      "stddev": 19.845834395588987,
+      "client_p99_ms": 517.3309667670765,
+      "client_2xx_p99_ms": 517.3309667670765,
+      "server_p99_ms": 494.56521739130415,
+      "server_p99_bucket": {
+        "label": "(0.25, 0.5] s",
+        "max_error_ms": 250.0
+      },
+      "non_2xx_fraction": 0.0,
+      "timeouts": 0,
+      "connection_errors": 0,
+      "web_cpu_mean_cores": 0.39500020262000185,
+      "web_in_flight_mean": 27.0,
+      "db_connections": 17.0,
+      "db_tps": 105.85315939186493,
+      "generator_limited": false,
+      "last_step_rate": 600,
+      "last_step_x": 7.2,
+      "generator_peak_active": 125,
+      "generator_capacity": null,
+      "dispatch_ratio": 1.0,
+      "schedule_lag_p95_ms": 1.1639087670118897
+    },
+    {
+      "n": 2,
+      "rate": 400,
+      "x": 403.4,
+      "stddev": 98.24880951659705,
+      "client_p99_ms": 754.9546926047697,
+      "client_2xx_p99_ms": 754.9546926047697,
+      "server_p99_ms": 875.1130878620368,
+      "server_p99_bucket": {
+        "label": "(0.5, 1] s",
+        "max_error_ms": 500.0
+      },
+      "non_2xx_fraction": 0.0,
+      "timeouts": 0,
+      "connection_errors": 0,
+      "web_cpu_mean_cores": 0.3585130513051305,
+      "web_in_flight_mean": 25.333333333333332,
+      "db_connections": 32.0,
+      "db_tps": 188.08333333333334,
+      "generator_limited": false,
+      "last_step_rate": 800,
+      "last_step_x": 189.73333333333332,
+      "generator_peak_active": 275,
+      "generator_capacity": null,
+      "dispatch_ratio": 1.0,
+      "schedule_lag_p95_ms": 1.1365306045263424
+    },
+    {
+      "n": 3,
+      "rate": 800,
+      "x": 803.4,
+      "stddev": 185.21061370388963,
+      "client_p99_ms": 2693.684684929849,
+      "client_2xx_p99_ms": 2693.684684929849,
+      "server_p99_ms": 1000.0,
+      "server_p99_bucket": {
+        "label": ">1 s",
+        "max_error_ms": null
+      },
+      "non_2xx_fraction": 0.0,
+      "timeouts": 0,
+      "connection_errors": 0,
+      "web_cpu_mean_cores": 0.4294895111410974,
+      "web_in_flight_mean": 120.33333333333333,
+      "db_connections": 47.0,
+      "db_tps": 385.24685551888524,
+      "generator_limited": false,
+      "last_step_rate": 1200,
+      "last_step_x": 604.1333333333333,
+      "generator_peak_active": 786,
+      "generator_capacity": null,
+      "dispatch_ratio": 1.0,
+      "schedule_lag_p95_ms": 1.1376279298929148
+    },
+    {
+      "n": 4,
+      "rate": 800,
+      "x": 454.3333333333333,
+      "stddev": 137.4786563521078,
+      "client_p99_ms": 5994.624584186113,
+      "client_2xx_p99_ms": 5642.276226185913,
+      "server_p99_ms": 1000.0,
+      "server_p99_bucket": {
+        "label": ">1 s",
+        "max_error_ms": null
+      },
+      "non_2xx_fraction": 0.28302190721649484,
+      "timeouts": 3497,
+      "connection_errors": 2087,
+      "web_cpu_mean_cores": 0.430586767746701,
+      "web_in_flight_mean": 692.4166666666666,
+      "db_connections": 62.0,
+      "db_tps": 291.74437384259863,
+      "generator_limited": false,
+      "last_step_rate": 800,
+      "last_step_x": 454.3333333333333,
+      "generator_peak_active": 2050,
+      "generator_capacity": null,
+      "dispatch_ratio": 1.0,
+      "schedule_lag_p95_ms": 32.44051318597485
+    }
+  ],
+  "n4_winning_resource_samples": [
+    {
+      "epoch": 1792834410.8598216,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-bdb7ebe2060c|77.52%|84.09MiB / 15.28GiB|2\nvo-lab2-web-3|49.95%|82.42MiB / 384MiB|42\nvo-lab2-web-1|48.62%|73.36MiB / 384MiB|44\nvo-lab2-web-4|52.20%|74.97MiB / 384MiB|42\nvo-lab2-web-2|48.32%|85.77MiB / 384MiB|43\nvo-lab2-db-1|16.17%|141MiB / 15.28GiB|67\nvo-lab2-proxy-1|19.24%|37.53MiB / 15.28GiB|2\nvo-lab2-postgres-exporter-1|0.00%|8.324MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.21%|28.18MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "59"
+    },
+    {
+      "epoch": 1792834418.6821153,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-bdb7ebe2060c|73.84%|90.48MiB / 15.28GiB|2\nvo-lab2-web-3|51.42%|83.19MiB / 384MiB|42\nvo-lab2-web-1|53.38%|70.64MiB / 384MiB|38\nvo-lab2-web-4|49.86%|74.72MiB / 384MiB|41\nvo-lab2-web-2|50.54%|91.83MiB / 384MiB|43\nvo-lab2-db-1|18.45%|140.7MiB / 15.28GiB|67\nvo-lab2-proxy-1|19.80%|37.71MiB / 15.28GiB|2\nvo-lab2-postgres-exporter-1|2.29%|7.738MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.36%|28.18MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "69"
+    }
+  ],
+  "n1_p99_comparison": [
+    {
+      "rate": 200,
+      "client_p99_ms": 517.3309667670765,
+      "client_2xx_p99_ms": 517.3309667670765,
+      "server_p99_ms": 494.56521739130415,
+      "bucket": {
+        "label": "(0.25, 0.5] s",
+        "max_error_ms": 250.0
+      }
+    },
+    {
+      "rate": 400,
+      "client_p99_ms": 5994.864498767583,
+      "client_2xx_p99_ms": 5726.8614587674165,
+      "server_p99_ms": 1000.0,
+      "bucket": {
+        "label": ">1 s",
+        "max_error_ms": null
+      }
+    },
+    {
+      "rate": 600,
+      "client_p99_ms": 5995.618879434005,
+      "client_2xx_p99_ms": 5931.840445433863,
+      "server_p99_ms": 1000.0,
+      "bucket": {
+        "label": ">1 s",
+        "max_error_ms": null
+      }
+    }
+  ],
+  "n1_db_by_rate": {
+    "connections": [
+      [
+        200,
+        17.0
+      ],
+      [
+        400,
+        17.0
+      ],
+      [
+        600,
+        17.0
+      ]
+    ],
+    "active": [
+      [
+        200,
+        1.6666666666666667
+      ],
+      [
+        400,
+        1.3333333333333333
+      ],
+      [
+        600,
+        1.6666666666666667
+      ]
+    ],
+    "idle": [
+      [
+        200,
+        15.333333333333334
+      ],
+      [
+        400,
+        15.0
+      ],
+      [
+        600,
+        15.333333333333334
+      ]
+    ],
+    "tps": [
+      [
+        200,
+        105.85315939186493
+      ],
+      [
+        400,
+        69.45049594788897
+      ],
+      [
+        600,
+        31.757976868329767
+      ]
+    ]
+  },
+  "n4_db_by_rate": {
+    "connections": [
+      [
+        200,
+        15.666666666666666
+      ],
+      [
+        400,
+        32.0
+      ],
+      [
+        600,
+        62.0
+      ],
+      [
+        800,
+        62.0
+      ]
+    ],
+    "active": [
+      [
+        200,
+        2.0
+      ],
+      [
+        400,
+        1.3333333333333333
+      ],
+      [
+        600,
+        1.6666666666666667
+      ],
+      [
+        800,
+        1.3333333333333333
+      ]
+    ],
+    "idle": [
+      [
+        200,
+        13.666666666666666
+      ],
+      [
+        400,
+        30.333333333333332
+      ],
+      [
+        600,
+        60.333333333333336
+      ],
+      [
+        800,
+        60.0
+      ]
+    ],
+    "tps": [
+      [
+        200,
+        99.91519785819044
+      ],
+      [
+        400,
+        183.62986766963203
+      ],
+      [
+        600,
+        216.86666666666667
+      ],
+      [
+        800,
+        291.74437384259863
+      ]
+    ]
+  }
+}

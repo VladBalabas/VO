@@ -1,0 +1,22 @@
+{
+  "replicas": 1,
+  "query": "sum(http_requests_in_flight{job=\"web\"})",
+  "status": "drained",
+  "samples": [
+    {
+      "epoch": 1792833161.1386716,
+      "in_flight": 1.0,
+      "idle_threshold": 1.1
+    },
+    {
+      "epoch": 1792833166.142656,
+      "in_flight": 1.0,
+      "idle_threshold": 1.1
+    },
+    {
+      "epoch": 1792833171.1674042,
+      "in_flight": 1.0,
+      "idle_threshold": 1.1
+    }
+  ]
+}

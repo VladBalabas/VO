@@ -1,0 +1,112 @@
+{
+  "before": [
+    {
+      "path": "/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:35:54 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "path": "/healthz",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:35:54 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "27",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"готовий\"}"
+    }
+  ],
+  "during_db_stop": [
+    {
+      "path": "/livez",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:35:58 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "18",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "path": "/healthz",
+      "status": 503,
+      "headers": {
+        "Server": "nginx/1.31.6",
+        "Date": "Sat, 24 Oct 2026 09:36:00 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "53",
+        "Connection": "close",
+        "x-pod": "86ca6345d547"
+      },
+      "body": "{\"status\":\"база даних недоступна\"}"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-p",
+        "vo-lab2",
+        "up",
+        "-d",
+        "--scale",
+        "web=1",
+        "web"
+      ],
+      "exit_code": 0,
+      "output": " Container vo-lab2-web-1 Running \n Container vo-lab2-db-1 Running \n Container vo-lab2-web-2 Stopping \n Container vo-lab2-web-2 Stopped \n Container vo-lab2-web-2 Removing \n Container vo-lab2-web-2 Removed \n Container vo-lab2-db-1 Waiting \n Container vo-lab2-db-1 Healthy \n"
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-p",
+        "vo-lab2",
+        "restart",
+        "proxy"
+      ],
+      "exit_code": 0,
+      "output": " Container vo-lab2-proxy-1 Restarting \n Container vo-lab2-proxy-1 Started \n"
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-p",
+        "vo-lab2",
+        "stop",
+        "db"
+      ],
+      "exit_code": 0,
+      "output": " Container vo-lab2-db-1 Stopping \n Container vo-lab2-db-1 Stopped \n"
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-p",
+        "vo-lab2",
+        "up",
+        "-d",
+        "db"
+      ],
+      "exit_code": 0,
+      "output": " Container vo-lab2-db-1 Starting \n Container vo-lab2-db-1 Started \n"
+    }
+  ]
+}

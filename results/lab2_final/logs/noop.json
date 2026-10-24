@@ -1,0 +1,30 @@
+{
+  "command": [
+    "docker",
+    "compose",
+    "-p",
+    "vo-lab2",
+    "--profile",
+    "load",
+    "run",
+    "--rm",
+    "--no-deps",
+    "--entrypoint",
+    "python",
+    "load-generator",
+    "/load/lab2_async_generator.py",
+    "profile",
+    "--path",
+    "/noop",
+    "--timeout",
+    "5",
+    "--sample-interval-ms",
+    "100",
+    "--output",
+    "/results/lab2_final/raw/noop_profile.json"
+  ],
+  "started_epoch": 1792833172.9919007,
+  "ended_epoch": 1792833813.4851415,
+  "exit_code": 0,
+  "stdout": " Container vo-lab2-load-generator-run-90a200d7e3f6 Creating \n Container vo-lab2-load-generator-run-90a200d7e3f6 Created \n{\"step\": 200, \"x\": 200.0, \"sent\": 4000, \"non_2xx\": 0}\n{\"step\": 400, \"x\": 400.0, \"sent\": 8000, \"non_2xx\": 0}\n{\"step\": 600, \"x\": 600.0, \"sent\": 12000, \"non_2xx\": 0}\n{\"step\": 800, \"x\": 799.9333333333333, \"sent\": 16000, \"non_2xx\": 0}\n{\"step\": 1000, \"x\": 1000.0666666666667, \"sent\": 20000, \"non_2xx\": 0}\n{\"step\": 1200, \"x\": 1200.0, \"sent\": 24000, \"non_2xx\": 0}\n{\"step\": 1400, \"x\": 1400.0, \"sent\": 27999, \"non_2xx\": 0}\n{\"step\": 1600, \"x\": 1600.1333333333334, \"sent\": 32001, \"non_2xx\": 0}\n{\"step\": 1800, \"x\": 1800.1333333333334, \"sent\": 36000, \"non_2xx\": 0}\n{\"step\": 2000, \"x\": 1999.9333333333334, \"sent\": 39998, \"non_2xx\": 0}\n{\"step\": 2200, \"x\": 2200.133333333333, \"sent\": 44002, \"non_2xx\": 0}\n{\"step\": 2400, \"x\": 2399.9333333333334, \"sent\": 47998, \"non_2xx\": 0}\n{\"step\": 2600, \"x\": 2600.0, \"sent\": 52000, \"non_2xx\": 0}\n{\"step\": 2800, \"x\": 2812.133333333333, \"sent\": 56002, \"non_2xx\": 0}\n{\"step\": 3000, \"x\": 2999.8, \"sent\": 59998, \"non_2xx\": 0}\n{\"step\": 3200, \"x\": 3199.9333333333334, \"sent\": 64002, \"non_2xx\": 0}\n{\"step\": 3400, \"x\": 3400.0, \"sent\": 67999, \"non_2xx\": 0}\n{\"step\": 3600, \"x\": 3599.866666666667, \"sent\": 71999, \"non_2xx\": 0}\n{\"step\": 3800, \"x\": 3799.6666666666665, \"sent\": 75998, \"non_2xx\": 0}\n{\"step\": 4000, \"x\": 4000.0, \"sent\": 80004, \"non_2xx\": 0}\n{\"step\": 4200, \"x\": 101.93333333333334, \"sent\": 35084, \"non_2xx\": 8156}\n{\"step\": 4400, \"x\": 0.0, \"sent\": 20556, \"non_2xx\": 829}\n{\"schema_version\": 4, \"generator_implementation\": \"aiohttp_continuous_open_loop\", \"latency_origin\": \"scheduled_at\", \"generated_at\": \"2026-10-24T09:23:12.969921+00:00\", \"started_at_epoch\": 1792833175.2518585, \"requested_rate_rps\": null, \"nominal_duration_seconds\": 450, \"timeout_seconds\": 5.0, \"path_template\": \"/noop\", \"mode\": \"profile\", \"g_ceiling\": null, \"stop_two_misses\": true, \"requests_scheduled\": 1014000, \"requests_sent\": 1014000, \"responses_2xx\": 854068, \"responses_non_2xx\": 150028, \"request_timeouts\": 150028, \"connection_errors\": 9904, \"request_exceptions\": 159932, \"worker_capacity\": null, \"worker_peak_active_by_process\": [143974], \"schedule_lag_p95_ms\": 33605.44637278417, \"latency_p50_ms\": 0.7943668447296659, \"latency_p95_ms\": 412.9461571956199, \"latency_p99_ms\": 1196.235885563965, \"observation_seconds\": 616.9382093795114, \"status_counts\": {\"204\": 854068, \"None\": 159932}}\n"
+}

@@ -1,0 +1,105 @@
+{
+  "started_epoch": 1792834534.0434108,
+  "stopped_container": "b284c47e1589cc6980a343b5a35368a959df09f2c87428c7dd39d0940cee768e",
+  "docker_stop_output": "b284c47e1589cc6980a343b5a35368a959df09f2c87428c7dd39d0940cee768e",
+  "web_exit_code": "0",
+  "generator_exit_code": 0,
+  "responses_2xx": 1000,
+  "responses_non_2xx": 0,
+  "request_timeouts": 0,
+  "connection_errors": 0,
+  "request_exceptions": 0,
+  "trace": [
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-p",
+        "vo-lab2",
+        "up",
+        "-d",
+        "--scale",
+        "web=2",
+        "web"
+      ],
+      "output": " Container vo-lab2-db-1 Running \n Container vo-lab2-web-1 Running \n Container vo-lab2-web-2 Running \n Container vo-lab2-web-3 Stopping \n Container vo-lab2-web-4 Stopping \n Container vo-lab2-web-4 Stopped \n Container vo-lab2-web-4 Removing \n Container vo-lab2-web-4 Removed \n Container vo-lab2-web-3 Stopped \n Container vo-lab2-web-3 Removing \n Container vo-lab2-web-3 Removed \n Container vo-lab2-db-1 Waiting \n Container vo-lab2-db-1 Healthy \n"
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-p",
+        "vo-lab2",
+        "restart",
+        "proxy"
+      ],
+      "output": " Container vo-lab2-proxy-1 Restarting \n Container vo-lab2-proxy-1 Started \n"
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-p",
+        "vo-lab2",
+        "ps",
+        "-q",
+        "web"
+      ],
+      "output": "86ca6345d547da9f0b73d1b7ba9737c981b654abfc4bbe3bb80c7e6ef3e941e8\nb284c47e1589cc6980a343b5a35368a959df09f2c87428c7dd39d0940cee768e\n"
+    },
+    {
+      "command": [
+        "docker",
+        "stop",
+        "--timeout",
+        "10",
+        "b284c47e1589cc6980a343b5a35368a959df09f2c87428c7dd39d0940cee768e"
+      ],
+      "output": "b284c47e1589cc6980a343b5a35368a959df09f2c87428c7dd39d0940cee768e\n"
+    },
+    {
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{.State.ExitCode}}",
+        "b284c47e1589cc6980a343b5a35368a959df09f2c87428c7dd39d0940cee768e"
+      ],
+      "output": "0\n"
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-p",
+        "vo-lab2",
+        "--profile",
+        "load",
+        "run",
+        "--rm",
+        "--no-deps",
+        "--entrypoint",
+        "python",
+        "load-generator",
+        "/load/lab2_async_generator.py",
+        "open",
+        "--path",
+        "/referrals/{id}",
+        "--seed-file",
+        "/results/lab2_final/seed.json",
+        "--rate",
+        "100",
+        "--duration",
+        "10",
+        "--timeout",
+        "5",
+        "--sample-interval-ms",
+        "100",
+        "--output",
+        "/results/lab2_final/raw/graceful_stop_r100.json"
+      ],
+      "output": " Container vo-lab2-load-generator-run-c1e150b82272 Creating \n Container vo-lab2-load-generator-run-c1e150b82272 Created \n{\"schema_version\": 4, \"generator_implementation\": \"aiohttp_continuous_open_loop\", \"latency_origin\": \"scheduled_at\", \"generated_at\": \"2026-10-24T09:35:46.540683+00:00\", \"started_at_epoch\": 1792834536.4698663, \"requested_rate_rps\": 100, \"nominal_duration_seconds\": 10, \"timeout_seconds\": 5.0, \"path_template\": \"/referrals/{id}\", \"mode\": \"open\", \"g_ceiling\": null, \"stop_two_misses\": false, \"requests_scheduled\": 1000, \"requests_sent\": 1000, \"responses_2xx\": 1000, \"responses_non_2xx\": 0, \"request_timeouts\": 0, \"connection_errors\": 0, \"request_exceptions\": 0, \"worker_capacity\": null, \"worker_peak_active_by_process\": [9], \"schedule_lag_p95_ms\": 1.3831233486598649, \"latency_p50_ms\": 3.957263348638662, \"latency_p95_ms\": 46.84983534843923, \"latency_p99_ms\": 72.36166834854885, \"observation_seconds\": 10.032361668348585, \"status_counts\": {\"200\": 1000}}\n",
+      "exit_code": 0
+    }
+  ]
+}

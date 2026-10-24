@@ -1,0 +1,38 @@
+{
+  "resultType": "vector",
+  "result": [
+    {
+      "metric": {
+        "__name__": "up",
+        "instance": "172.21.0.5:8000",
+        "job": "web"
+      },
+      "value": [
+        1792834158.047,
+        "1"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "up",
+        "instance": "172.21.0.7:8000",
+        "job": "web"
+      },
+      "value": [
+        1792834158.047,
+        "1"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "up",
+        "instance": "172.21.0.8:8000",
+        "job": "web"
+      },
+      "value": [
+        1792834158.047,
+        "1"
+      ]
+    }
+  ]
+}

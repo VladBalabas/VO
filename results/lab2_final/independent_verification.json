@@ -1,0 +1,452 @@
+{
+  "verification_passed": true,
+  "definitions": {
+    "X": "mean successful completions/s in seconds 6..20 of each step",
+    "timeout": "counted in non_2xx, separately reported",
+    "connection_error": "status is null and error type is not TimeoutError"
+  },
+  "profiles": [
+    {
+      "profile": "noop",
+      "sha256": "e851384e422c4cce88608d53eb9a8d40c94521813ce643dea7c1e6593ecf5119",
+      "scheduled": 1014000,
+      "stop_two_misses": true,
+      "steps": [
+        {
+          "rate": 200,
+          "x": 200.0,
+          "stddev": 0.0,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 4000,
+          "sent_during_step": 4000
+        },
+        {
+          "rate": 400,
+          "x": 400.0,
+          "stddev": 0.0,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 8000,
+          "sent_during_step": 8000
+        },
+        {
+          "rate": 600,
+          "x": 600.0,
+          "stddev": 0.0,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 12000,
+          "sent_during_step": 12000
+        },
+        {
+          "rate": 800,
+          "x": 799.9333333333333,
+          "stddev": 0.7988086367179802,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 16000,
+          "sent_during_step": 16000
+        },
+        {
+          "rate": 1000,
+          "x": 1000.0666666666667,
+          "stddev": 0.7988086367179802,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 20000,
+          "sent_during_step": 20000
+        },
+        {
+          "rate": 1200,
+          "x": 1200.0,
+          "stddev": 0.7559289460184545,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 24000,
+          "sent_during_step": 24000
+        },
+        {
+          "rate": 1400,
+          "x": 1400.0,
+          "stddev": 0.8451542547285166,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 28000,
+          "sent_during_step": 27999
+        },
+        {
+          "rate": 1600,
+          "x": 1600.1333333333334,
+          "stddev": 0.990430401872025,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 32000,
+          "sent_during_step": 32001
+        },
+        {
+          "rate": 1800,
+          "x": 1800.1333333333334,
+          "stddev": 1.245945806357946,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 36000,
+          "sent_during_step": 36000
+        },
+        {
+          "rate": 2000,
+          "x": 1999.9333333333334,
+          "stddev": 1.3345232785352157,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 40000,
+          "sent_during_step": 39998
+        },
+        {
+          "rate": 2200,
+          "x": 2200.133333333333,
+          "stddev": 1.245945806357946,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 44000,
+          "sent_during_step": 44002
+        },
+        {
+          "rate": 2400,
+          "x": 2399.9333333333334,
+          "stddev": 1.3345232785352157,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 48000,
+          "sent_during_step": 47998
+        },
+        {
+          "rate": 2600,
+          "x": 2600.0,
+          "stddev": 2.23606797749979,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 52000,
+          "sent_during_step": 52000
+        },
+        {
+          "rate": 2800,
+          "x": 2812.133333333333,
+          "stddev": 46.733081991036634,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 56000,
+          "sent_during_step": 56002
+        },
+        {
+          "rate": 3000,
+          "x": 2999.8,
+          "stddev": 1.740279123753264,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 60000,
+          "sent_during_step": 59998
+        },
+        {
+          "rate": 3200,
+          "x": 3199.9333333333334,
+          "stddev": 1.8309508328682538,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 64000,
+          "sent_during_step": 64002
+        },
+        {
+          "rate": 3400,
+          "x": 3400.0,
+          "stddev": 9.0,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 68000,
+          "sent_during_step": 67999
+        },
+        {
+          "rate": 3600,
+          "x": 3599.866666666667,
+          "stddev": 0.990430401872025,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 72000,
+          "sent_during_step": 71999
+        },
+        {
+          "rate": 3800,
+          "x": 3799.6666666666665,
+          "stddev": 180.86366873052935,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 76000,
+          "sent_during_step": 75998
+        },
+        {
+          "rate": 4000,
+          "x": 4000.0,
+          "stddev": 61.45497771307289,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 80000,
+          "sent_during_step": 80004
+        },
+        {
+          "rate": 4200,
+          "x": 101.93333333333334,
+          "stddev": 394.7861024234094,
+          "non_2xx": 8156,
+          "timeouts": 8156,
+          "connection_errors": 0,
+          "scheduled": 84000,
+          "sent_during_step": 35084
+        },
+        {
+          "rate": 4400,
+          "x": 0.0,
+          "stddev": 0.0,
+          "non_2xx": 829,
+          "timeouts": 829,
+          "connection_errors": 0,
+          "scheduled": 88000,
+          "sent_during_step": 20556
+        }
+      ]
+    },
+    {
+      "profile": "n1",
+      "sha256": "445c75a2dd127f395c015b3ee5a82709272056ffec46fb69b705996d10f002a7",
+      "scheduled": 26000,
+      "stop_two_misses": true,
+      "steps": [
+        {
+          "rate": 200,
+          "x": 200.0,
+          "stddev": 19.845834395588987,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 4000,
+          "sent_during_step": 4000
+        },
+        {
+          "rate": 400,
+          "x": 30.666666666666668,
+          "stddev": 29.79613269888433,
+          "non_2xx": 4159,
+          "timeouts": 4159,
+          "connection_errors": 610,
+          "scheduled": 8000,
+          "sent_during_step": 8000
+        },
+        {
+          "rate": 600,
+          "x": 7.2,
+          "stddev": 13.224436255875496,
+          "non_2xx": 4989,
+          "timeouts": 4989,
+          "connection_errors": 3902,
+          "scheduled": 12000,
+          "sent_during_step": 12000
+        }
+      ]
+    },
+    {
+      "profile": "n2",
+      "sha256": "5e1e2cbdc9f04b1127db14f53903e3af0dfd54d921970f21176811f213e6d8c9",
+      "scheduled": 42000,
+      "stop_two_misses": true,
+      "steps": [
+        {
+          "rate": 200,
+          "x": 200.06666666666666,
+          "stddev": 0.25819888974716115,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 4000,
+          "sent_during_step": 4000
+        },
+        {
+          "rate": 400,
+          "x": 403.4,
+          "stddev": 98.24880951659705,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 8000,
+          "sent_during_step": 8000
+        },
+        {
+          "rate": 600,
+          "x": 401.06666666666666,
+          "stddev": 156.9688170427793,
+          "non_2xx": 1527,
+          "timeouts": 1493,
+          "connection_errors": 618,
+          "scheduled": 12000,
+          "sent_during_step": 12000
+        },
+        {
+          "rate": 800,
+          "x": 189.73333333333332,
+          "stddev": 100.94798283321583,
+          "non_2xx": 4556,
+          "timeouts": 4319,
+          "connection_errors": 4673,
+          "scheduled": 16000,
+          "sent_during_step": 16000
+        }
+      ]
+    },
+    {
+      "profile": "n3",
+      "sha256": "324800bdfbacda57692a55fa9f1edf8f1518e4b944078fcb11769468a0ba0277",
+      "scheduled": 86000,
+      "stop_two_misses": true,
+      "steps": [
+        {
+          "rate": 200,
+          "x": 200.0,
+          "stddev": 0.0,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 4000,
+          "sent_during_step": 4000
+        },
+        {
+          "rate": 400,
+          "x": 401.4,
+          "stddev": 5.448459808580245,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 8000,
+          "sent_during_step": 8000
+        },
+        {
+          "rate": 600,
+          "x": 604.8666666666667,
+          "stddev": 91.79158587852831,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 12000,
+          "sent_during_step": 12000
+        },
+        {
+          "rate": 800,
+          "x": 803.4,
+          "stddev": 185.21061370388963,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 16000,
+          "sent_during_step": 16000
+        },
+        {
+          "rate": 1000,
+          "x": 658.6,
+          "stddev": 109.86277154445254,
+          "non_2xx": 1292,
+          "timeouts": 1239,
+          "connection_errors": 3749,
+          "scheduled": 20000,
+          "sent_during_step": 20000
+        },
+        {
+          "rate": 1200,
+          "x": 604.1333333333333,
+          "stddev": 97.37986493746074,
+          "non_2xx": 1844,
+          "timeouts": 1808,
+          "connection_errors": 7083,
+          "scheduled": 24000,
+          "sent_during_step": 23999
+        }
+      ]
+    },
+    {
+      "profile": "n4",
+      "sha256": "153527737d2bfebd4b9e53955171d27832d90e73cba3c4e0ee6fbccd131c905b",
+      "scheduled": 42000,
+      "stop_two_misses": true,
+      "steps": [
+        {
+          "rate": 200,
+          "x": 200.0,
+          "stddev": 2.618614682831909,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 4000,
+          "sent_during_step": 4000
+        },
+        {
+          "rate": 400,
+          "x": 400.3333333333333,
+          "stddev": 86.53625719618228,
+          "non_2xx": 0,
+          "timeouts": 0,
+          "connection_errors": 0,
+          "scheduled": 8000,
+          "sent_during_step": 8000
+        },
+        {
+          "rate": 600,
+          "x": 394.6,
+          "stddev": 223.9205216142549,
+          "non_2xx": 2182,
+          "timeouts": 2181,
+          "connection_errors": 640,
+          "scheduled": 12000,
+          "sent_during_step": 12000
+        },
+        {
+          "rate": 800,
+          "x": 454.3333333333333,
+          "stddev": 137.4786563521078,
+          "non_2xx": 3514,
+          "timeouts": 3497,
+          "connection_errors": 2087,
+          "scheduled": 16000,
+          "sent_during_step": 16000
+        }
+      ]
+    }
+  ],
+  "independent_usl": {
+    "sigma": 0.0,
+    "kappa": 0.041271520766211066
+  },
+  "checks": [
+    "continuous offsets and exact scheduled counts",
+    "all scheduled requests dispatched",
+    "X and sample standard deviation recomputed from completion timestamps",
+    "timeouts and connection errors recomputed independently",
+    "raw SHA-256 recorded",
+    "USL parameters recomputed without the analysis module"
+  ]
+}

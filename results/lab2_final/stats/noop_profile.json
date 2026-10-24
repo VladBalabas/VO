@@ -1,0 +1,599 @@
+{
+  "samples": [
+    {
+      "epoch": 1792833175.8960252,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-db-1|0.02%|65.1MiB / 15.28GiB|22\nvo-lab2-proxy-1|0.00%|3.922MiB / 15.28GiB|2\nvo-lab2-web-1|0.16%|240.6MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.391MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.85MiB / 15.28GiB|20\nvo-lab2-load-generator-run-90a200d7e3f6|36.56%|22.77MiB / 15.28GiB|1\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "16"
+    },
+    {
+      "epoch": 1792833183.633197,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|10.26%|24.24MiB / 15.28GiB|2\nvo-lab2-db-1|2.77%|65.1MiB / 15.28GiB|22\nvo-lab2-proxy-1|2.39%|3.957MiB / 15.28GiB|2\nvo-lab2-web-1|30.77%|240.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.574MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.14%|27.84MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "19"
+    },
+    {
+      "epoch": 1792833191.3452897,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|9.95%|25.48MiB / 15.28GiB|2\nvo-lab2-db-1|2.81%|65.61MiB / 15.28GiB|22\nvo-lab2-proxy-1|2.39%|3.957MiB / 15.28GiB|2\nvo-lab2-web-1|0.13%|240.6MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.367MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.85MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "4"
+    },
+    {
+      "epoch": 1792833199.0776253,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|10.11%|26.89MiB / 15.28GiB|2\nvo-lab2-db-1|0.74%|65.15MiB / 15.28GiB|22\nvo-lab2-proxy-1|2.45%|3.957MiB / 15.28GiB|2\nvo-lab2-web-1|25.01%|251.9MiB / 384MiB|4\nvo-lab2-postgres-exporter-1|0.00%|7.676MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.27%|27.86MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "5"
+    },
+    {
+      "epoch": 1792833206.554036,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|14.62%|28.49MiB / 15.28GiB|2\nvo-lab2-db-1|2.82%|65.35MiB / 15.28GiB|22\nvo-lab2-proxy-1|3.42%|3.945MiB / 15.28GiB|2\nvo-lab2-web-1|0.13%|240.6MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.48MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.84MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "3"
+    },
+    {
+      "epoch": 1792833214.2847242,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|17.80%|30.49MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|65.11MiB / 15.28GiB|22\nvo-lab2-proxy-1|4.48%|3.934MiB / 15.28GiB|2\nvo-lab2-web-1|0.15%|240.6MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.57%|8.184MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.85MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "31"
+    },
+    {
+      "epoch": 1792833222.013794,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|15.58%|33.79MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|65.15MiB / 15.28GiB|22\nvo-lab2-proxy-1|3.90%|3.934MiB / 15.28GiB|2\nvo-lab2-web-1|29.74%|251.8MiB / 384MiB|4\nvo-lab2-postgres-exporter-1|0.00%|8.25MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.86MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "14"
+    },
+    {
+      "epoch": 1792833229.7237787,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|23.98%|36.68MiB / 15.28GiB|2\nvo-lab2-db-1|0.01%|65.25MiB / 15.28GiB|22\nvo-lab2-proxy-1|5.43%|3.984MiB / 15.28GiB|2\nvo-lab2-web-1|0.32%|240.6MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.434MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.20%|27.29MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "16"
+    },
+    {
+      "epoch": 1792833236.573325,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|20.46%|40.86MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|65.14MiB / 15.28GiB|22\nvo-lab2-proxy-1|5.50%|3.984MiB / 15.28GiB|2\nvo-lab2-web-1|0.12%|240.6MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.102MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.43MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "7"
+    },
+    {
+      "epoch": 1792833244.3109581,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|23.54%|44.65MiB / 15.28GiB|2\nvo-lab2-db-1|5.80%|65.41MiB / 15.28GiB|22\nvo-lab2-proxy-1|5.88%|3.938MiB / 15.28GiB|2\nvo-lab2-web-1|10.34%|246.8MiB / 384MiB|4\nvo-lab2-postgres-exporter-1|0.00%|7.84MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.9MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "30"
+    },
+    {
+      "epoch": 1792833252.035424,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|24.19%|50.53MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|65.34MiB / 15.28GiB|22\nvo-lab2-proxy-1|6.87%|4.062MiB / 15.28GiB|2\nvo-lab2-web-1|0.12%|240.8MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.973MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.9MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "12"
+    },
+    {
+      "epoch": 1792833259.7652323,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|28.11%|54.79MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|65.15MiB / 15.28GiB|22\nvo-lab2-proxy-1|7.12%|4.062MiB / 15.28GiB|2\nvo-lab2-web-1|0.39%|240.6MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.184MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.16%|28.17MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "8"
+    },
+    {
+      "epoch": 1792833266.5717528,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|31.22%|60.71MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|65.11MiB / 15.28GiB|22\nvo-lab2-proxy-1|7.55%|4.121MiB / 15.28GiB|2\nvo-lab2-web-1|0.13%|240.6MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.195MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.9MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "13"
+    },
+    {
+      "epoch": 1792833274.3033915,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|31.81%|67.16MiB / 15.28GiB|2\nvo-lab2-db-1|2.90%|65.1MiB / 15.28GiB|22\nvo-lab2-proxy-1|7.86%|4.121MiB / 15.28GiB|2\nvo-lab2-web-1|5.63%|240.6MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.35%|8.312MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.9MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "36"
+    },
+    {
+      "epoch": 1792833282.013265,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|27.43%|72.87MiB / 15.28GiB|2\nvo-lab2-db-1|2.72%|65.38MiB / 15.28GiB|22\nvo-lab2-proxy-1|7.73%|3.992MiB / 15.28GiB|2\nvo-lab2-web-1|0.12%|240.6MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.859MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.9MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "6"
+    },
+    {
+      "epoch": 1792833289.729494,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|33.59%|82.28MiB / 15.28GiB|2\nvo-lab2-db-1|2.83%|65.28MiB / 15.28GiB|22\nvo-lab2-proxy-1|8.32%|4.195MiB / 15.28GiB|2\nvo-lab2-web-1|0.34%|240.6MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.336MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.17%|27.91MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "7"
+    },
+    {
+      "epoch": 1792833296.6111228,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|34.01%|89.45MiB / 15.28GiB|2\nvo-lab2-db-1|3.27%|65.13MiB / 15.28GiB|22\nvo-lab2-proxy-1|8.46%|4.191MiB / 15.28GiB|2\nvo-lab2-web-1|31.09%|240.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.863MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.9MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "20"
+    },
+    {
+      "epoch": 1792833304.3563173,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|37.29%|97.53MiB / 15.28GiB|2\nvo-lab2-db-1|2.94%|65.55MiB / 15.28GiB|22\nvo-lab2-proxy-1|8.89%|4.195MiB / 15.28GiB|2\nvo-lab2-web-1|0.13%|240.6MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.258MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.24%|27.91MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "24"
+    },
+    {
+      "epoch": 1792833312.1087315,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|35.46%|106.7MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|65.14MiB / 15.28GiB|22\nvo-lab2-proxy-1|8.99%|4.191MiB / 15.28GiB|2\nvo-lab2-web-1|0.12%|240.6MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.277MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.91MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "15"
+    },
+    {
+      "epoch": 1792833319.8211515,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|35.74%|116.4MiB / 15.28GiB|2\nvo-lab2-db-1|0.03%|65.1MiB / 15.28GiB|22\nvo-lab2-proxy-1|8.98%|4.195MiB / 15.28GiB|2\nvo-lab2-web-1|11.31%|241MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.086MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.15%|27.91MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "4"
+    },
+    {
+      "epoch": 1792833326.651379,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|46.94%|125.1MiB / 15.28GiB|2\nvo-lab2-db-1|2.75%|65.96MiB / 15.28GiB|22\nvo-lab2-proxy-1|10.07%|4.238MiB / 15.28GiB|2\nvo-lab2-web-1|0.12%|240.6MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.117MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.9MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "9"
+    },
+    {
+      "epoch": 1792833334.3896518,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|39.28%|134.2MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|65.1MiB / 15.28GiB|22\nvo-lab2-proxy-1|10.80%|4.238MiB / 15.28GiB|2\nvo-lab2-web-1|0.35%|240.9MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.277MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.09%|27.91MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "18"
+    },
+    {
+      "epoch": 1792833342.10889,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|40.79%|146.3MiB / 15.28GiB|2\nvo-lab2-db-1|0.02%|41.09MiB / 15.28GiB|8\nvo-lab2-proxy-1|11.00%|4.234MiB / 15.28GiB|2\nvo-lab2-web-1|36.39%|239.8MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.945MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.02%|27.91MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "19"
+    },
+    {
+      "epoch": 1792833349.8484416,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|47.12%|158.6MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.14MiB / 15.28GiB|8\nvo-lab2-proxy-1|11.93%|4.621MiB / 15.28GiB|2\nvo-lab2-web-1|0.34%|240MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.148MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.54MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "13"
+    },
+    {
+      "epoch": 1792833356.6510036,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|43.22%|169.3MiB / 15.28GiB|2\nvo-lab2-db-1|0.01%|41.09MiB / 15.28GiB|8\nvo-lab2-proxy-1|11.42%|4.625MiB / 15.28GiB|2\nvo-lab2-web-1|0.13%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.996MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.69MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "8"
+    },
+    {
+      "epoch": 1792833364.5308242,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|70.78%|181.4MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.08MiB / 15.28GiB|8\nvo-lab2-proxy-1|16.00%|4.371MiB / 15.28GiB|2\nvo-lab2-web-1|0.19%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.98MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.29%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "61"
+    },
+    {
+      "epoch": 1792833372.3244092,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|67.67%|196.8MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.36MiB / 15.28GiB|8\nvo-lab2-proxy-1|16.42%|4.727MiB / 15.28GiB|2\nvo-lab2-web-1|0.14%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.414MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.04%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "16"
+    },
+    {
+      "epoch": 1792833380.0652764,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|53.03%|210.3MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.32MiB / 15.28GiB|8\nvo-lab2-proxy-1|13.91%|4.973MiB / 15.28GiB|2\nvo-lab2-web-1|0.32%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.902MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.15%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "15"
+    },
+    {
+      "epoch": 1792833387.7531555,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|60.28%|224.2MiB / 15.28GiB|2\nvo-lab2-db-1|7.19%|41.11MiB / 15.28GiB|8\nvo-lab2-proxy-1|18.27%|4.73MiB / 15.28GiB|2\nvo-lab2-web-1|20.51%|246.7MiB / 384MiB|4\nvo-lab2-postgres-exporter-1|1.33%|8.559MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.29%|27.95MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "26"
+    },
+    {
+      "epoch": 1792833395.5018702,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|59.65%|236.8MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.07MiB / 15.28GiB|8\nvo-lab2-proxy-1|14.93%|4.727MiB / 15.28GiB|2\nvo-lab2-web-1|0.12%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.559MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "32"
+    },
+    {
+      "epoch": 1792833403.2312925,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|52.65%|253.6MiB / 15.28GiB|2\nvo-lab2-db-1|3.00%|41.45MiB / 15.28GiB|8\nvo-lab2-proxy-1|14.40%|4.973MiB / 15.28GiB|2\nvo-lab2-web-1|0.14%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.62%|8.457MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.29%|27.72MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "41"
+    },
+    {
+      "epoch": 1792833410.949663,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|57.99%|267.5MiB / 15.28GiB|2\nvo-lab2-db-1|0.04%|41.08MiB / 15.28GiB|8\nvo-lab2-proxy-1|15.39%|4.914MiB / 15.28GiB|2\nvo-lab2-web-1|36.04%|240.4MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.23MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "17"
+    },
+    {
+      "epoch": 1792833417.738159,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|56.83%|283.5MiB / 15.28GiB|2\nvo-lab2-db-1|3.04%|41.3MiB / 15.28GiB|8\nvo-lab2-proxy-1|15.67%|4.668MiB / 15.28GiB|2\nvo-lab2-web-1|0.13%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.60%|8.547MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.28%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "10"
+    },
+    {
+      "epoch": 1792833425.4874654,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|60.42%|299.6MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.12MiB / 15.28GiB|8\nvo-lab2-proxy-1|16.46%|4.668MiB / 15.28GiB|2\nvo-lab2-web-1|0.12%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.629MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.15%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "28"
+    },
+    {
+      "epoch": 1792833433.2022316,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|56.85%|321.9MiB / 15.28GiB|2\nvo-lab2-db-1|6.14%|41.08MiB / 15.28GiB|8\nvo-lab2-proxy-1|19.10%|5.785MiB / 15.28GiB|2\nvo-lab2-web-1|10.83%|247.4MiB / 384MiB|4\nvo-lab2-postgres-exporter-1|1.25%|7.941MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "36"
+    },
+    {
+      "epoch": 1792833440.9273245,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|55.79%|337.3MiB / 15.28GiB|2\nvo-lab2-db-1|2.86%|41.3MiB / 15.28GiB|8\nvo-lab2-proxy-1|18.95%|5.809MiB / 15.28GiB|2\nvo-lab2-web-1|0.13%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.531MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.16%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "16"
+    },
+    {
+      "epoch": 1792833447.7432516,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|62.98%|356.7MiB / 15.28GiB|2\nvo-lab2-db-1|3.34%|41.34MiB / 15.28GiB|8\nvo-lab2-proxy-1|20.76%|5.793MiB / 15.28GiB|2\nvo-lab2-web-1|0.13%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.68%|8.527MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.25%|27.71MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "9"
+    },
+    {
+      "epoch": 1792833455.4914033,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|61.63%|372.2MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.08MiB / 15.28GiB|8\nvo-lab2-proxy-1|21.25%|5.762MiB / 15.28GiB|2\nvo-lab2-web-1|0.13%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.496MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.71MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "30"
+    },
+    {
+      "epoch": 1792833463.2636435,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|64.49%|391.3MiB / 15.28GiB|2\nvo-lab2-db-1|6.34%|41.36MiB / 15.28GiB|8\nvo-lab2-proxy-1|21.01%|6.227MiB / 15.28GiB|2\nvo-lab2-web-1|5.66%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.36%|7.68MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.31%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "46"
+    },
+    {
+      "epoch": 1792833470.9958906,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|65.93%|415MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.1MiB / 15.28GiB|8\nvo-lab2-proxy-1|22.88%|6.215MiB / 15.28GiB|2\nvo-lab2-web-1|0.13%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.012MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.19%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "14"
+    },
+    {
+      "epoch": 1792833478.7792745,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|63.99%|432.7MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.21MiB / 15.28GiB|8\nvo-lab2-proxy-1|21.33%|6.289MiB / 15.28GiB|2\nvo-lab2-web-1|0.15%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.20%|7.617MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.26%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "17"
+    },
+    {
+      "epoch": 1792833485.7664106,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|69.75%|453.4MiB / 15.28GiB|2\nvo-lab2-db-1|3.24%|41.11MiB / 15.28GiB|8\nvo-lab2-proxy-1|22.31%|6.105MiB / 15.28GiB|2\nvo-lab2-web-1|25.03%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.355MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.71MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "28"
+    },
+    {
+      "epoch": 1792833493.5334837,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|67.08%|487MiB / 15.28GiB|2\nvo-lab2-db-1|6.04%|41.34MiB / 15.28GiB|8\nvo-lab2-proxy-1|22.91%|8.223MiB / 15.28GiB|2\nvo-lab2-web-1|0.12%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.61%|8.199MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.15%|27.71MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "18"
+    },
+    {
+      "epoch": 1792833501.3051105,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|68.15%|508.6MiB / 15.28GiB|2\nvo-lab2-db-1|3.30%|41.53MiB / 15.28GiB|8\nvo-lab2-proxy-1|22.93%|8.625MiB / 15.28GiB|2\nvo-lab2-web-1|0.12%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.785MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "22"
+    },
+    {
+      "epoch": 1792833509.060498,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|74.60%|531.9MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.11MiB / 15.28GiB|8\nvo-lab2-proxy-1|25.26%|8.684MiB / 15.28GiB|2\nvo-lab2-web-1|36.40%|250.1MiB / 384MiB|4\nvo-lab2-postgres-exporter-1|0.00%|8.223MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "19"
+    },
+    {
+      "epoch": 1792833516.8100643,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|78.86%|553.8MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.1MiB / 15.28GiB|8\nvo-lab2-proxy-1|25.79%|8.438MiB / 15.28GiB|2\nvo-lab2-web-1|0.12%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.184MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.71MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "31"
+    },
+    {
+      "epoch": 1792833524.5593436,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|77.76%|576.7MiB / 15.28GiB|2\nvo-lab2-db-1|3.52%|41.09MiB / 15.28GiB|8\nvo-lab2-proxy-1|25.47%|8.234MiB / 15.28GiB|2\nvo-lab2-web-1|0.12%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.238MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.13%|27.7MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "24"
+    },
+    {
+      "epoch": 1792833532.28826,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|97.67%|606MiB / 15.28GiB|2\nvo-lab2-db-1|0.03%|41.08MiB / 15.28GiB|8\nvo-lab2-proxy-1|25.23%|9.57MiB / 15.28GiB|2\nvo-lab2-web-1|0.12%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.387MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.03%|27.71MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "19"
+    },
+    {
+      "epoch": 1792833540.0419676,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|96.71%|627.1MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.09MiB / 15.28GiB|8\nvo-lab2-proxy-1|25.43%|9.602MiB / 15.28GiB|2\nvo-lab2-web-1|0.35%|240MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.883MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.71MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "22"
+    },
+    {
+      "epoch": 1792833546.820169,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|100.07%|664.1MiB / 15.28GiB|2\nvo-lab2-db-1|3.02%|41.51MiB / 15.28GiB|8\nvo-lab2-proxy-1|16.83%|9.617MiB / 15.28GiB|2\nvo-lab2-web-1|0.16%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.094MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.71MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "38"
+    },
+    {
+      "epoch": 1792833554.5501726,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|100.89%|686.6MiB / 15.28GiB|2\nvo-lab2-db-1|2.93%|41.07MiB / 15.28GiB|8\nvo-lab2-proxy-1|25.06%|11.41MiB / 15.28GiB|2\nvo-lab2-web-1|10.07%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.781MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.14%|27.71MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "23"
+    },
+    {
+      "epoch": 1792833562.3002594,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|100.33%|712MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.14MiB / 15.28GiB|8\nvo-lab2-proxy-1|25.38%|10.92MiB / 15.28GiB|2\nvo-lab2-web-1|0.12%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.211MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.71MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "22"
+    },
+    {
+      "epoch": 1792833570.0592966,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|100.72%|749.7MiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.13MiB / 15.28GiB|8\nvo-lab2-proxy-1|26.87%|12.23MiB / 15.28GiB|2\nvo-lab2-web-1|0.35%|240MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.602MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.71MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "26"
+    },
+    {
+      "epoch": 1792833576.850083,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|100.01%|766.4MiB / 15.28GiB|2\nvo-lab2-db-1|0.03%|41.1MiB / 15.28GiB|8\nvo-lab2-proxy-1|27.55%|11.98MiB / 15.28GiB|2\nvo-lab2-web-1|40.80%|240.1MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.109MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.71MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "42"
+    },
+    {
+      "epoch": 1792833584.585808,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.92%|793MiB / 15.28GiB|2\nvo-lab2-db-1|0.49%|41.07MiB / 15.28GiB|8\nvo-lab2-proxy-1|27.66%|12.23MiB / 15.28GiB|2\nvo-lab2-web-1|0.34%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.125MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.15%|27.71MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "27"
+    },
+    {
+      "epoch": 1792833592.3144445,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.09%|934.9MiB / 15.28GiB|2\nvo-lab2-db-1|3.11%|41.32MiB / 15.28GiB|8\nvo-lab2-proxy-1|13.30%|12.29MiB / 15.28GiB|2\nvo-lab2-web-1|0.14%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.68MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.03%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "14"
+    },
+    {
+      "epoch": 1792833600.0471277,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.67%|1.065GiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.12MiB / 15.28GiB|8\nvo-lab2-proxy-1|4.24%|12.08MiB / 15.28GiB|2\nvo-lab2-web-1|10.37%|248MiB / 384MiB|4\nvo-lab2-postgres-exporter-1|0.00%|8.52MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "13"
+    },
+    {
+      "epoch": 1792833606.8706586,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|100.38%|1.081GiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.09MiB / 15.28GiB|8\nvo-lab2-proxy-1|1.76%|11.71MiB / 15.28GiB|2\nvo-lab2-web-1|0.16%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.086MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "34"
+    },
+    {
+      "epoch": 1792833614.5983899,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.33%|1.19GiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.08MiB / 15.28GiB|8\nvo-lab2-proxy-1|1.75%|11.78MiB / 15.28GiB|2\nvo-lab2-web-1|0.37%|240MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.367MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.15%|27.39MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "14"
+    },
+    {
+      "epoch": 1792833622.34596,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.00%|1.208GiB / 15.28GiB|2\nvo-lab2-db-1|2.93%|41.09MiB / 15.28GiB|8\nvo-lab2-proxy-1|1.77%|11.86MiB / 15.28GiB|2\nvo-lab2-web-1|32.92%|250.9MiB / 384MiB|4\nvo-lab2-postgres-exporter-1|0.00%|8.445MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "17"
+    },
+    {
+      "epoch": 1792833630.1330547,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.92%|1.28GiB / 15.28GiB|2\nvo-lab2-db-1|0.03%|41.17MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.00%|11.73MiB / 15.28GiB|2\nvo-lab2-web-1|0.46%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.336MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "14"
+    },
+    {
+      "epoch": 1792833637.9115446,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.66%|1.375GiB / 15.28GiB|2\nvo-lab2-db-1|3.03%|41.16MiB / 15.28GiB|8\nvo-lab2-proxy-1|1.82%|11.86MiB / 15.28GiB|2\nvo-lab2-web-1|0.17%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.60%|8.441MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "20"
+    },
+    {
+      "epoch": 1792833645.6907628,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.88%|1.584GiB / 15.28GiB|2\nvo-lab2-db-1|0.02%|41.09MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.00%|11.71MiB / 15.28GiB|2\nvo-lab2-web-1|38.64%|240.1MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.988MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.18%|27.67MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "17"
+    },
+    {
+      "epoch": 1792833653.4368136,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.62%|1.756GiB / 15.28GiB|2\nvo-lab2-db-1|2.89%|41.06MiB / 15.28GiB|8\nvo-lab2-proxy-1|16.23%|4.09MiB / 15.28GiB|2\nvo-lab2-web-1|0.14%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.29%|9.16MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.16%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "28"
+    },
+    {
+      "epoch": 1792833661.1815886,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|98.88%|1.829GiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.12MiB / 15.28GiB|8\nvo-lab2-proxy-1|1.73%|11.89MiB / 15.28GiB|2\nvo-lab2-web-1|0.15%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|9.34MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "9"
+    },
+    {
+      "epoch": 1792833668.9013212,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|98.87%|1.843GiB / 15.28GiB|2\nvo-lab2-db-1|2.84%|41.28MiB / 15.28GiB|8\nvo-lab2-proxy-1|1.72%|11.71MiB / 15.28GiB|2\nvo-lab2-web-1|23.04%|239.8MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.484MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.30%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "10"
+    },
+    {
+      "epoch": 1792833675.8994265,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.43%|1.855GiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.11MiB / 15.28GiB|8\nvo-lab2-proxy-1|1.75%|11.72MiB / 15.28GiB|2\nvo-lab2-web-1|0.14%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.453MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "11"
+    },
+    {
+      "epoch": 1792833683.7169561,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.79%|1.867GiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.33MiB / 15.28GiB|8\nvo-lab2-proxy-1|1.68%|11.86MiB / 15.28GiB|2\nvo-lab2-web-1|0.16%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.25%|8.699MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.16%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "17"
+    },
+    {
+      "epoch": 1792833691.4345965,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|97.28%|1.88GiB / 15.28GiB|2\nvo-lab2-db-1|2.72%|41.23MiB / 15.28GiB|8\nvo-lab2-proxy-1|1.63%|11.86MiB / 15.28GiB|2\nvo-lab2-web-1|35.55%|239.8MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.172MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "10"
+    },
+    {
+      "epoch": 1792833699.1675413,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|100.15%|1.893GiB / 15.28GiB|2\nvo-lab2-db-1|2.97%|42.28MiB / 15.28GiB|8\nvo-lab2-proxy-1|1.65%|11.97MiB / 15.28GiB|2\nvo-lab2-web-1|0.16%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.312MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.25%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "18"
+    },
+    {
+      "epoch": 1792833706.9026997,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|100.01%|1.902GiB / 15.28GiB|2\nvo-lab2-db-1|0.00%|41.23MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.00%|11.86MiB / 15.28GiB|2\nvo-lab2-web-1|0.15%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.867MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "15"
+    },
+    {
+      "epoch": 1792833714.6156545,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|100.31%|1.913GiB / 15.28GiB|2\nvo-lab2-db-1|0.03%|41.07MiB / 15.28GiB|8\nvo-lab2-proxy-1|7.30%|11.99MiB / 15.28GiB|2\nvo-lab2-web-1|14.82%|239.8MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.273MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.15%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "16"
+    },
+    {
+      "epoch": 1792833722.328945,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.60%|1.926GiB / 15.28GiB|2\nvo-lab2-db-1|2.80%|41.45MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.60%|12.01MiB / 15.28GiB|2\nvo-lab2-web-1|0.14%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.457MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "12"
+    },
+    {
+      "epoch": 1792833730.9265397,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.46%|1.925GiB / 15.28GiB|2\nvo-lab2-db-1|2.89%|41.63MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.00%|11.7MiB / 15.28GiB|2\nvo-lab2-web-1|0.35%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.863MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.41MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "13"
+    },
+    {
+      "epoch": 1792833737.9465008,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|98.78%|1.924GiB / 15.28GiB|2\nvo-lab2-db-1|5.90%|42.14MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.00%|11.7MiB / 15.28GiB|2\nvo-lab2-web-1|0.15%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.33%|9.141MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.28%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "12"
+    },
+    {
+      "epoch": 1792833745.6912503,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|100.07%|1.921GiB / 15.28GiB|2\nvo-lab2-db-1|0.01%|41.14MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.00%|11.7MiB / 15.28GiB|2\nvo-lab2-web-1|0.15%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|9.281MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.19%|27.92MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "19"
+    },
+    {
+      "epoch": 1792833753.4339404,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|98.36%|1.92GiB / 15.28GiB|2\nvo-lab2-db-1|3.21%|41.08MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.00%|11.7MiB / 15.28GiB|2\nvo-lab2-web-1|13.19%|248.2MiB / 384MiB|4\nvo-lab2-postgres-exporter-1|1.34%|8.258MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.14%|27.4MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "34"
+    },
+    {
+      "epoch": 1792833760.7214978,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.06%|1.919GiB / 15.28GiB|2\nvo-lab2-db-1|2.83%|41.48MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.00%|11.7MiB / 15.28GiB|2\nvo-lab2-web-1|1.17%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|7.867MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.00%|27.41MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "12"
+    },
+    {
+      "epoch": 1792833767.9396844,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.70%|1.917GiB / 15.28GiB|2\nvo-lab2-db-1|2.86%|41.19MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.00%|11.7MiB / 15.28GiB|2\nvo-lab2-web-1|0.16%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.20%|8.492MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.35%|27.91MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "16"
+    },
+    {
+      "epoch": 1792833775.696496,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|97.86%|1.923GiB / 15.28GiB|2\nvo-lab2-db-1|0.01%|41.16MiB / 15.28GiB|8\nvo-lab2-proxy-1|1.85%|7.133MiB / 15.28GiB|2\nvo-lab2-web-1|0.16%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.41MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.16%|27.65MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "22"
+    },
+    {
+      "epoch": 1792833783.454905,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.09%|1.928GiB / 15.28GiB|2\nvo-lab2-db-1|6.01%|41.16MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.00%|3.965MiB / 15.28GiB|2\nvo-lab2-web-1|3.65%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.43%|8.324MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.15%|27.41MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "43"
+    },
+    {
+      "epoch": 1792833791.1852882,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|98.64%|1.92GiB / 15.28GiB|2\nvo-lab2-db-1|2.74%|41.57MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.00%|3.965MiB / 15.28GiB|2\nvo-lab2-web-1|0.15%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.457MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.16%|27.92MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "7"
+    },
+    {
+      "epoch": 1792833798.020486,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.79%|1.761GiB / 15.28GiB|2\nvo-lab2-db-1|3.02%|41.19MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.00%|3.965MiB / 15.28GiB|2\nvo-lab2-web-1|0.16%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.37%|8.648MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.26%|27.43MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "15"
+    },
+    {
+      "epoch": 1792833805.7522404,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-load-generator-run-90a200d7e3f6|99.54%|2.636GiB / 15.28GiB|2\nvo-lab2-db-1|3.18%|41.32MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.00%|3.965MiB / 15.28GiB|2\nvo-lab2-web-1|38.16%|240.2MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|0.00%|8.246MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.17%|27.41MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "15"
+    },
+    {
+      "epoch": 1792833813.4831421,
+      "docker_exit_code": 0,
+      "docker_output": "vo-lab2-db-1|5.80%|41.92MiB / 15.28GiB|8\nvo-lab2-proxy-1|0.00%|3.965MiB / 15.28GiB|2\nvo-lab2-web-1|0.18%|239.7MiB / 384MiB|3\nvo-lab2-postgres-exporter-1|1.53%|8.055MiB / 15.28GiB|12\nvo-lab2-prometheus-1|0.16%|27.41MiB / 15.28GiB|20\n",
+      "host_cpu_exit_code": 0,
+      "host_cpu_percent": "14"
+    }
+  ]
+}

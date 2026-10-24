@@ -6,4 +6,14 @@ __pycache__/
 .venv/
 .env
 .idea/
+AGENTS.md
+
+# Generated load-test payloads are kept locally; individual raw JSON files can
+# exceed GitHub's 100 MiB limit. Compact analyses, evidence and figures remain
+# versioned. README files document how to reproduce and verify the omitted raw.
+/results/lab2/
+/results/lab2_final/raw/*
+!/results/lab2_final/raw/README.md
+/results/lab2_excluded_no_drain/*
+!/results/lab2_excluded_no_drain/README.md
 

@@ -1,4 +1,5 @@
 import socket
+import time
 from contextlib import AbstractAsyncContextManager
 from typing import Callable
 
@@ -6,6 +7,7 @@ from fastapi import FastAPI, Request
 from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
+from prometheus_client import Counter, Gauge, Histogram
 
 from backend.application.referrals import ReferralService
 from backend.domain.ports import ReadinessProbe
@@ -14,6 +16,15 @@ from backend.ui.api.routes.system import router as system_router
 
 
 Lifespan = Callable[[FastAPI], AbstractAsyncContextManager[None]]
+
+HTTP_REQUESTS = Counter(
+    "http_requests_total", "Completed HTTP requests", ["method", "path", "status"]
+)
+HTTP_DURATION = Histogram(
+    "http_request_duration_seconds", "HTTP request duration in seconds",
+    ["method", "path"], buckets=(.005, .010, .025, .050, .100, .250, .500, 1.0),
+)
+HTTP_IN_FLIGHT = Gauge("http_requests_in_flight", "HTTP requests in progress")
 
 
 def create_http_app(
@@ -46,8 +57,19 @@ def create_http_app(
 
     @app.middleware("http")
     async def add_instance_header(request: Request, call_next):
-        response = await call_next(request)
-        response.headers["X-Pod"] = request.app.state.instance_name
-        return response
+        started = time.perf_counter()
+        HTTP_IN_FLIGHT.inc()
+        status = 500
+        try:
+            response = await call_next(request)
+            status = response.status_code
+            response.headers["X-Pod"] = request.app.state.instance_name
+            return response
+        finally:
+            route = request.scope.get("route")
+            path = getattr(route, "path", "unmatched")
+            HTTP_REQUESTS.labels(request.method, path, str(status)).inc()
+            HTTP_DURATION.labels(request.method, path).observe(time.perf_counter() - started)
+            HTTP_IN_FLIGHT.dec()
 
     return app

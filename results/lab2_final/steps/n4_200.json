@@ -1,0 +1,33 @@
+{
+  "rate": 200,
+  "step_index": 0,
+  "start_offset_ms": 10000,
+  "start_epoch": 1792834341.5595858,
+  "x": 200.0,
+  "stddev": 2.618614682831909,
+  "counts_last_15s": [
+    200,
+    195,
+    205,
+    200,
+    200,
+    200,
+    198,
+    197,
+    205,
+    200,
+    200,
+    200,
+    198,
+    200,
+    202
+  ],
+  "completed_window": 3000,
+  "non_2xx": 0,
+  "timeouts": 0,
+  "connection_errors": 0,
+  "sent_during_step": 4000,
+  "scheduled": 4000,
+  "schedule_lag_p95_ms": 1.1346381857038068,
+  "client_p99_ms": 55.18905318604084
+}

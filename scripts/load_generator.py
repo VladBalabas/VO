@@ -504,6 +504,7 @@ def run_open(args: argparse.Namespace) -> dict[str, Any]:
         for _ in processes:
             ready_queue.get(timeout=60)
         start_at = time.perf_counter() + 1.0
+        start_at_epoch = time.time() + 1.0
         sampler = InFlightSampler(
             counters, start_at, args.duration, args.sample_interval_ms / 1000,
             args.rate, max(1, math.floor(args.rate * args.duration)),
@@ -554,6 +555,7 @@ def run_open(args: argparse.Namespace) -> dict[str, Any]:
             "worker_capacity_covers_rate_times_timeout": worker_capacity >= args.rate * args.timeout,
             "sample_interval_ms": args.sample_interval_ms,
             "path_template": args.path,
+            "started_at_epoch": start_at_epoch,
         },
         occupancy_samples=occupancy_samples,
     )
