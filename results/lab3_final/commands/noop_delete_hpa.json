@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-10-24T21:12:00.374626+00:00",
+  "finished_at": "2026-10-24T21:12:00.471244+00:00",
+  "command": [
+    "kubectl",
+    "-n",
+    "lab3",
+    "delete",
+    "hpa",
+    "web",
+    "--ignore-not-found"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

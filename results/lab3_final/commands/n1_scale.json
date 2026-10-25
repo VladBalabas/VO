@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-10-24T21:19:59.334796+00:00",
+  "finished_at": "2026-10-24T21:19:59.433357+00:00",
+  "command": [
+    "kubectl",
+    "-n",
+    "lab3",
+    "scale",
+    "deployment/web",
+    "--replicas=1"
+  ],
+  "exit_code": 0,
+  "stdout": "deployment.apps/web scaled\n",
+  "stderr": ""
+}

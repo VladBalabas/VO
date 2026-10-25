@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-10-24T21:11:44.870297+00:00",
+  "finished_at": "2026-10-24T21:11:44.998452+00:00",
+  "command": [
+    "kubectl",
+    "-n",
+    "lab3",
+    "exec",
+    "postgres-0",
+    "--",
+    "sh",
+    "-ec",
+    "psql -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\" -Atc \"show max_connections\""
+  ],
+  "exit_code": 0,
+  "stdout": "100\n",
+  "stderr": ""
+}

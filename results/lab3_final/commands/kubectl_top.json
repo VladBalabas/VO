@@ -1,0 +1,14 @@
+{
+  "started_at": "2026-10-24T21:11:44.771911+00:00",
+  "finished_at": "2026-10-24T21:11:44.861783+00:00",
+  "command": [
+    "kubectl",
+    "top",
+    "pods",
+    "-n",
+    "lab3"
+  ],
+  "exit_code": 0,
+  "stdout": "NAME                                CPU(cores)   MEMORY(bytes)   \npostgres-0                          17m          25Mi            \npostgres-exporter-7cd74b8b5-sxpfk   4m           8Mi             \nweb-7d86b4989f-zvwbq                5m           39Mi            \n",
+  "stderr": ""
+}

@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-25T07:43:35.442502+00:00",
+  "passed": true,
+  "password_value_redacted": true,
+  "tracked_file_matches": [],
+  "repository_file_scope": "tracked plus untracked non-ignored files",
+  "password_in_image_inspect": false,
+  "password_in_web_configmap": false,
+  "password_in_deployment_spec": false,
+  "env_ignored": true,
+  "evidence": "The secret value was compared in memory and is not included in this output."
+}

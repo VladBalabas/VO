@@ -1,0 +1,26 @@
+**********************
+PowerShell transcript start
+Start time: 20261025094401
+Username: VLADISLAV\vladi
+RunAs User: VLADISLAV\vladi
+Configuration Name: 
+Machine: VLADISLAV (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Users\vladi\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+& '.\scripts\delete_lab3.ps1'
+Process ID: 48868
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+
+Cluster vo-lab3 deleted and absence verified
+**********************
+PowerShell transcript end
+End time: 20261025094404
+**********************

@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "samples": [
+    {
+      "epoch": 1792878939.0277555,
+      "desired": 0,
+      "current": null,
+      "ready": 1
+    },
+    {
+      "epoch": 1792878944.2134824,
+      "desired": 0,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792878949.39464,
+      "desired": 0,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792878954.5905123,
+      "desired": 0,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792878959.7957807,
+      "desired": 0,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792878964.978748,
+      "desired": 0,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792878970.1653311,
+      "desired": 0,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792878975.352652,
+      "desired": 0,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792878980.5418658,
+      "desired": 0,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792878985.722625,
+      "desired": 1,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792878990.9080586,
+      "desired": 1,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792878996.0996068,
+      "desired": 1,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792879001.2830045,
+      "desired": 1,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792879006.4747481,
+      "desired": 1,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792879011.6631746,
+      "desired": 1,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792879016.8523636,
+      "desired": 1,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792879022.035,
+      "desired": 1,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792879027.214714,
+      "desired": 1,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792879032.3960419,
+      "desired": 1,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792879037.579734,
+      "desired": 1,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792879042.7616837,
+      "desired": 1,
+      "current": 1,
+      "ready": 1
+    },
+    {
+      "epoch": 1792879047.9407606,
+      "desired": 1,
+      "current": 1,
+      "ready": 1
+    }
+  ]
+}

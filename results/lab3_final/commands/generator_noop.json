@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-10-24T21:12:40.731440+00:00",
+  "finished_at": "2026-10-24T21:19:40.722589+00:00",
+  "command": [
+    "D:\\Projects\\Python\\VO\\.venv\\Scripts\\python.exe",
+    "-B",
+    "D:\\Projects\\Python\\VO\\scripts\\lab3_generator.py",
+    "--base-url",
+    "http://localhost:8080",
+    "--path",
+    "/bench/noop",
+    "--output",
+    "D:\\Projects\\Python\\VO\\results\\lab3_final\\raw\\noop"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"step\": 200, \"x\": 200.0, \"p99_ms\": 69.5378000382334, \"non_2xx\": 0}\n{\"step\": 400, \"x\": 400.05, \"p99_ms\": 182.17819998972118, \"non_2xx\": 0}\n{\"step\": 600, \"x\": 600.0, \"p99_ms\": 237.86923324223608, \"non_2xx\": 0}\n{\"step\": 800, \"x\": 800.0, \"p99_ms\": 243.29909996595234, \"non_2xx\": 0}\n{\"step\": 1000, \"x\": 1000.15, \"p99_ms\": 253.23909998405725, \"non_2xx\": 0}\n{\"step\": 1200, \"x\": 1200.0, \"p99_ms\": 261.5245000924915, \"non_2xx\": 0}\n{\"step\": 1400, \"x\": 1411.85, \"p99_ms\": 288.3237286005169, \"non_2xx\": 0}\n{\"step\": 1600, \"x\": 1603.6, \"p99_ms\": 315.28869993053377, \"non_2xx\": 0}\n{\"step\": 1800, \"x\": 1803.6, \"p99_ms\": 831.3058777712286, \"non_2xx\": 0}\n{\"step\": 2000, \"x\": 2010.55, \"p99_ms\": 1537.9748999839649, \"non_2xx\": 0}\n{\"step\": 2200, \"x\": 2190.7, \"p99_ms\": 6158.069409080781, \"non_2xx\": 0}\n{\"step\": 2400, \"x\": 1976.2, \"p99_ms\": 15428.980933385901, \"non_2xx\": 0}\n{\"step\": 2600, \"x\": 2102.8, \"p99_ms\": 21840.575233334675, \"non_2xx\": 0}\n{\n  \"counts\": {\n    \"scheduled\": 548000,\n    \"sent\": 548000,\n    \"completed\": 548000,\n    \"successful\": 548000,\n    \"non_2xx\": 0,\n    \"connection_errors\": 0,\n    \"active\": 0,\n    \"peak_active\": 40\n  },\n  \"raw_sha256\": \"cef16c322551201fe389193835e212086af81c3b15007c8204d895be6d1165d6\",\n  \"stop_two_misses\": true\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,324 @@
+{
+  "verification_passed": true,
+  "definitions": {
+    "X": "2xx completions in each actual second of the last 20 seconds",
+    "raw": "newline-delimited request records hashed before verification",
+    "connections": "40 workers; ordered session counters 1..100; every non-final session has 100 attempts"
+  },
+  "runs": [
+    {
+      "run": "noop",
+      "raw_records": 548000,
+      "sha256": "cef16c322551201fe389193835e212086af81c3b15007c8204d895be6d1165d6",
+      "observed_sessions": 5480,
+      "steps": [
+        {
+          "rate": 200,
+          "x": 200.0,
+          "stddev": 1.1697953037312037
+        },
+        {
+          "rate": 400,
+          "x": 400.05,
+          "stddev": 2.114486375359025
+        },
+        {
+          "rate": 600,
+          "x": 600.0,
+          "stddev": 8.783956667518465
+        },
+        {
+          "rate": 800,
+          "x": 800.0,
+          "stddev": 1.3377121081198773
+        },
+        {
+          "rate": 1000,
+          "x": 1000.15,
+          "stddev": 1.1367080817685316
+        },
+        {
+          "rate": 1200,
+          "x": 1200.0,
+          "stddev": 89.96081018099521
+        },
+        {
+          "rate": 1400,
+          "x": 1411.85,
+          "stddev": 147.1638095528424
+        },
+        {
+          "rate": 1600,
+          "x": 1603.6,
+          "stddev": 245.43546691758434
+        },
+        {
+          "rate": 1800,
+          "x": 1803.6,
+          "stddev": 191.31935275042645
+        },
+        {
+          "rate": 2000,
+          "x": 2010.55,
+          "stddev": 188.64683656867513
+        },
+        {
+          "rate": 2200,
+          "x": 2190.7,
+          "stddev": 138.71519478109778
+        },
+        {
+          "rate": 2400,
+          "x": 1976.2,
+          "stddev": 140.8596165653853
+        },
+        {
+          "rate": 2600,
+          "x": 2102.8,
+          "stddev": 104.57915662310535
+        }
+      ],
+      "statuses_within_nominal_profile": {
+        "success": 516282
+      }
+    },
+    {
+      "run": "n1",
+      "raw_records": 38000,
+      "sha256": "07b681ec009c27b383cc2bd33ad7d370ef134edf4b2f57a15ef8e4633dfcee80",
+      "observed_sessions": 400,
+      "steps": [
+        {
+          "rate": 200,
+          "x": 200.0,
+          "stddev": 0.9733285267845753
+        },
+        {
+          "rate": 400,
+          "x": 326.65,
+          "stddev": 7.902531240052139
+        },
+        {
+          "rate": 600,
+          "x": 316.8,
+          "stddev": 16.16884593739975
+        }
+      ],
+      "statuses_within_nominal_profile": {
+        "success": 27323
+      }
+    },
+    {
+      "run": "n2",
+      "raw_records": 92000,
+      "sha256": "8ed638486bfb1cf8c1c55812b032110ad5cd7ad0758eed7bef6233efb3f888e8",
+      "observed_sessions": 920,
+      "steps": [
+        {
+          "rate": 200,
+          "x": 200.15,
+          "stddev": 1.1367080817685316
+        },
+        {
+          "rate": 400,
+          "x": 400.0,
+          "stddev": 0.6488856845230502
+        },
+        {
+          "rate": 600,
+          "x": 585.55,
+          "stddev": 64.2720165022318
+        },
+        {
+          "rate": 800,
+          "x": 585.2,
+          "stddev": 50.986685568520315
+        },
+        {
+          "rate": 1000,
+          "x": 637.3,
+          "stddev": 30.286526446763855
+        }
+      ],
+      "statuses_within_nominal_profile": {
+        "success": 74944
+      }
+    },
+    {
+      "run": "n3",
+      "raw_records": 128000,
+      "sha256": "2052111c0335619bd548a8d779ee550e82c7a3f3f8cf0d48ed1ca61b7e2a09b6",
+      "observed_sessions": 1280,
+      "steps": [
+        {
+          "rate": 200,
+          "x": 200.05,
+          "stddev": 1.190974832912761
+        },
+        {
+          "rate": 400,
+          "x": 399.95,
+          "stddev": 0.6048053188292994
+        },
+        {
+          "rate": 600,
+          "x": 600.0,
+          "stddev": 35.96489516473705
+        },
+        {
+          "rate": 800,
+          "x": 818.25,
+          "stddev": 82.82376661194222
+        },
+        {
+          "rate": 1000,
+          "x": 795.1,
+          "stddev": 97.37442655732778
+        },
+        {
+          "rate": 1200,
+          "x": 765.05,
+          "stddev": 80.3639582740527
+        }
+      ],
+      "statuses_within_nominal_profile": {
+        "success": 109148
+      }
+    },
+    {
+      "run": "n5",
+      "raw_records": 218000,
+      "sha256": "7492dd67c5b25010af1fbcad9271a462cd6226a67bd32a65a94b0b11aaf6760b",
+      "observed_sessions": 2200,
+      "steps": [
+        {
+          "rate": 200,
+          "x": 200.0,
+          "stddev": 0.8583950752789521
+        },
+        {
+          "rate": 400,
+          "x": 400.0,
+          "stddev": 0.7947194142390263
+        },
+        {
+          "rate": 600,
+          "x": 600.0,
+          "stddev": 30.393905206212157
+        },
+        {
+          "rate": 800,
+          "x": 800.0,
+          "stddev": 41.96615177421969
+        },
+        {
+          "rate": 1000,
+          "x": 998.15,
+          "stddev": 62.57734161987489
+        },
+        {
+          "rate": 1200,
+          "x": 1158.5,
+          "stddev": 86.59433553858139
+        },
+        {
+          "rate": 1400,
+          "x": 1217.5,
+          "stddev": 102.4384282334875
+        },
+        {
+          "rate": 1600,
+          "x": 1244.8,
+          "stddev": 98.18382330045381
+        }
+      ],
+      "statuses_within_nominal_profile": {
+        "success": 199767
+      }
+    },
+    {
+      "run": "fixed_profile",
+      "raw_records": 60755,
+      "sha256": "3c5941c8c694eca245cc796091db22690f4ab26933d503cdfc22ded540600998",
+      "observed_sessions": 640,
+      "steps": [],
+      "statuses_within_nominal_profile": {
+        "success": 60755
+      }
+    },
+    {
+      "run": "hpa30_profile",
+      "raw_records": 60755,
+      "sha256": "5b0b2d4707b6b55a79266a92760e58d2f307429a97f11681de80bd48076bc9df",
+      "observed_sessions": 640,
+      "steps": [],
+      "statuses_within_nominal_profile": {
+        "success": 60755
+      }
+    },
+    {
+      "run": "d5_hpa30",
+      "raw_records": 87214,
+      "sha256": "16450e88379b804b82840d9fbcde14d0b330ad837f602d5149319db7133f0fdc",
+      "observed_sessions": 880,
+      "steps": [],
+      "statuses_within_nominal_profile": {
+        "success": 87214
+      }
+    },
+    {
+      "run": "d5_hpa300",
+      "raw_records": 87214,
+      "sha256": "068044c057146ed7abcdc8f3926fc5b06d154e9fcfe899a11cd6c5fe8368b584",
+      "observed_sessions": 880,
+      "steps": [],
+      "statuses_within_nominal_profile": {
+        "success": 87214
+      }
+    }
+  ],
+  "independent_usl": {
+    "sigma": 0.0775411898876319,
+    "kappa": 0.0004277373008346532
+  },
+  "independent_elasticity": {
+    "fixed_profile": {
+      "theta_U": 0.0,
+      "theta_O": 1.0,
+      "a_U": 0.0,
+      "a_O": 3.3333333333333335,
+      "W_replica_seconds": 900
+    },
+    "hpa30_profile": {
+      "theta_U": 0.2777777777777778,
+      "theta_O": 0.5,
+      "a_U": 0.4722222222222222,
+      "a_O": 1.6111111111111112,
+      "W_replica_seconds": 505
+    },
+    "d5_hpa30": {
+      "theta_U": 0.1111111111111111,
+      "theta_O": 0.2,
+      "a_U": 0.18888888888888888,
+      "a_O": 0.6444444444444445,
+      "W_replica_seconds": 775
+    },
+    "d5_hpa300": {
+      "theta_U": 0.1111111111111111,
+      "theta_O": 0.8,
+      "a_U": 0.18888888888888888,
+      "a_O": 3.077777777777778,
+      "W_replica_seconds": 1870
+    }
+  },
+  "checks": [
+    "all raw SHA-256 values match summaries",
+    "raw record counts equal scheduled/sent/completed counts",
+    "X and sample SD recomputed from completion timestamps",
+    "per-pod counts recomputed from X-Pod",
+    "40 connection workers and rotation after 100 attempts verified",
+    "per-second success/error counts recomputed from raw",
+    "USL refit without NumPy or analyzer import",
+    "elasticity formulas recomputed independently"
+  ]
+}

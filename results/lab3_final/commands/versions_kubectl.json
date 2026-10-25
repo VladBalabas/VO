@@ -1,0 +1,13 @@
+{
+  "started_at": "2026-10-24T21:11:45.218072+00:00",
+  "finished_at": "2026-10-24T21:11:45.309459+00:00",
+  "command": [
+    "kubectl",
+    "version",
+    "-o",
+    "json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"clientVersion\": {\n    \"major\": \"1\",\n    \"minor\": \"36\",\n    \"gitVersion\": \"v1.36.1\",\n    \"gitCommit\": \"756939600b9a7180fc2df6550a4585b638875e67\",\n    \"gitTreeState\": \"clean\",\n    \"buildDate\": \"2026-05-12T09:54:35Z\",\n    \"goVersion\": \"go1.26.2\",\n    \"compiler\": \"gc\",\n    \"platform\": \"windows/amd64\"\n  },\n  \"kustomizeVersion\": \"v5.8.1\",\n  \"serverVersion\": {\n    \"major\": \"1\",\n    \"minor\": \"36\",\n    \"emulationMajor\": \"1\",\n    \"emulationMinor\": \"36\",\n    \"minCompatibilityMajor\": \"1\",\n    \"minCompatibilityMinor\": \"35\",\n    \"gitVersion\": \"v1.36.1\",\n    \"gitCommit\": \"756939600b9a7180fc2df6550a4585b638875e67\",\n    \"gitTreeState\": \"clean\",\n    \"buildDate\": \"2026-05-12T09:51:34Z\",\n    \"goVersion\": \"go1.26.2\",\n    \"compiler\": \"gc\",\n    \"platform\": \"linux/amd64\"\n  }\n}\n",
+  "stderr": ""
+}

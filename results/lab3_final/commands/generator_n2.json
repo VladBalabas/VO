@@ -1,0 +1,20 @@
+{
+  "started_at": "2026-10-24T21:23:10.795106+00:00",
+  "finished_at": "2026-10-24T21:26:23.059024+00:00",
+  "command": [
+    "D:\\Projects\\Python\\VO\\.venv\\Scripts\\python.exe",
+    "-B",
+    "D:\\Projects\\Python\\VO\\scripts\\lab3_generator.py",
+    "--base-url",
+    "http://localhost:8080",
+    "--path",
+    "/referrals/{id}",
+    "--output",
+    "D:\\Projects\\Python\\VO\\results\\lab3_final\\raw\\n2",
+    "--seed-file",
+    "D:\\Projects\\Python\\VO\\results\\lab3_final\\seed.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"step\": 200, \"x\": 200.15, \"p99_ms\": 80.42729995213449, \"non_2xx\": 0}\n{\"step\": 400, \"x\": 400.0, \"p99_ms\": 263.6968999868259, \"non_2xx\": 0}\n{\"step\": 600, \"x\": 585.55, \"p99_ms\": 2352.514166617766, \"non_2xx\": 0}\n{\"step\": 800, \"x\": 585.2, \"p99_ms\": 11220.427199965343, \"non_2xx\": 0}\n{\"step\": 1000, \"x\": 637.3, \"p99_ms\": 24424.35259988997, \"non_2xx\": 0}\n{\n  \"counts\": {\n    \"scheduled\": 92000,\n    \"sent\": 92000,\n    \"completed\": 92000,\n    \"successful\": 92000,\n    \"non_2xx\": 0,\n    \"connection_errors\": 0,\n    \"active\": 0,\n    \"peak_active\": 40\n  },\n  \"raw_sha256\": \"8ed638486bfb1cf8c1c55812b032110ad5cd7ad0758eed7bef6233efb3f888e8\",\n  \"stop_two_misses\": true\n}\n",
+  "stderr": ""
+}

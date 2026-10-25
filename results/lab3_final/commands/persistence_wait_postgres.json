@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-10-24T21:08:10.977580+00:00",
+  "finished_at": "2026-10-24T21:08:14.006139+00:00",
+  "command": [
+    "kubectl",
+    "-n",
+    "lab3",
+    "rollout",
+    "status",
+    "statefulset/postgres",
+    "--timeout=300s"
+  ],
+  "exit_code": 0,
+  "stdout": "Waiting for 1 pods to be ready...\npartitioned roll out complete: 1 new pods have been updated...\n",
+  "stderr": ""
+}

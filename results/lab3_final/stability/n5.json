@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-24T21:31:37.238254+00:00",
+  "state": {
+    "replicas": 5,
+    "ready": 5,
+    "available": 5,
+    "updated": 5
+  }
+}

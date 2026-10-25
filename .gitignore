@@ -17,3 +17,8 @@ AGENTS.md
 /results/lab2_excluded_no_drain/*
 !/results/lab2_excluded_no_drain/README.md
 
+# Lab 3 per-request JSON Lines are immutable local primary data and can be
+# hundreds of megabytes. Compact summaries, hashes, metrics and figures stay
+# versioned so every omitted raw file remains identifiable and reproducible.
+/results/lab3_final/raw/*.jsonl
+

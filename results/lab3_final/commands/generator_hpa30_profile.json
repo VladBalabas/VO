@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-10-24T21:42:26.727436+00:00",
+  "finished_at": "2026-10-24T21:45:28.173546+00:00",
+  "command": [
+    "D:\\Projects\\Python\\VO\\.venv\\Scripts\\python.exe",
+    "-B",
+    "D:\\Projects\\Python\\VO\\scripts\\lab3_generator.py",
+    "--base-url",
+    "http://localhost:8080",
+    "--path",
+    "/referrals/{id}",
+    "--output",
+    "D:\\Projects\\Python\\VO\\results\\lab3_final\\raw\\hpa30_profile",
+    "--seed-file",
+    "D:\\Projects\\Python\\VO\\results\\lab3_final\\seed.json",
+    "--profile-file",
+    "D:\\Projects\\Python\\VO\\results\\lab3_final\\profiles\\short.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"counts\": {\n    \"scheduled\": 60755,\n    \"sent\": 60755,\n    \"completed\": 60755,\n    \"successful\": 60755,\n    \"non_2xx\": 0,\n    \"connection_errors\": 0,\n    \"active\": 0,\n    \"peak_active\": 40\n  },\n  \"raw_sha256\": \"5b0b2d4707b6b55a79266a92760e58d2f307429a97f11681de80bd48076bc9df\",\n  \"stop_two_misses\": false\n}\n",
+  "stderr": ""
+}

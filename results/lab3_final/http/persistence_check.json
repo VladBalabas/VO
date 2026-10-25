@@ -1,0 +1,62 @@
+{
+  "before_uid": "34238a35-96be-4697-94aa-5902eb19d8f5",
+  "after_uid": "40816f4b-2226-4931-8bda-50c0ac11b483",
+  "different_pod_instance": true,
+  "requests": [
+    {
+      "at": "2026-10-24T21:08:07.625535+00:00",
+      "method": "POST",
+      "path": "/referrals",
+      "request_body": {
+        "patient_code": "LAB3-9100",
+        "modality": "CT",
+        "priority": 1,
+        "doctor": "Doctor 9100",
+        "issued_at": "2026-10-25",
+        "status": "created"
+      },
+      "status": 201,
+      "response_body": "{\"patient_code\":\"LAB3-9100\",\"modality\":\"CT\",\"priority\":1,\"doctor\":\"Doctor 9100\",\"issued_at\":\"2026-10-25\",\"status\":\"created\",\"id\":2}",
+      "response_headers": {
+        "date": "Sat, 24 Oct 2026 21:08:07 GMT",
+        "server": "uvicorn",
+        "content-length": "131",
+        "content-type": "application/json",
+        "x-pod": "web-7d86b4989f-zvwbq",
+        "Connection": "close"
+      }
+    },
+    {
+      "at": "2026-10-24T21:08:09.651268+00:00",
+      "method": "GET",
+      "path": "/referrals/2",
+      "request_body": null,
+      "status": 200,
+      "response_body": "{\"patient_code\":\"LAB3-9100\",\"modality\":\"CT\",\"priority\":1,\"doctor\":\"Doctor 9100\",\"issued_at\":\"2026-10-25\",\"status\":\"created\",\"id\":2}",
+      "response_headers": {
+        "date": "Sat, 24 Oct 2026 21:08:09 GMT",
+        "server": "uvicorn",
+        "content-length": "131",
+        "content-type": "application/json",
+        "x-pod": "web-7d86b4989f-zvwbq",
+        "Connection": "close"
+      }
+    },
+    {
+      "at": "2026-10-24T21:08:21.121215+00:00",
+      "method": "GET",
+      "path": "/referrals/2",
+      "request_body": null,
+      "status": 200,
+      "response_body": "{\"patient_code\":\"LAB3-9100\",\"modality\":\"CT\",\"priority\":1,\"doctor\":\"Doctor 9100\",\"issued_at\":\"2026-10-25\",\"status\":\"created\",\"id\":2}",
+      "response_headers": {
+        "date": "Sat, 24 Oct 2026 21:08:20 GMT",
+        "server": "uvicorn",
+        "content-length": "131",
+        "content-type": "application/json",
+        "x-pod": "web-7d86b4989f-zvwbq",
+        "Connection": "close"
+      }
+    }
+  ]
+}

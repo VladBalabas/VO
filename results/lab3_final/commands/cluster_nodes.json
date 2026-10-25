@@ -1,0 +1,14 @@
+{
+  "started_at": "2026-10-24T21:11:45.006453+00:00",
+  "finished_at": "2026-10-24T21:11:45.097073+00:00",
+  "command": [
+    "kubectl",
+    "get",
+    "nodes",
+    "-o",
+    "wide"
+  ],
+  "exit_code": 0,
+  "stdout": "NAME                    STATUS   ROLES           AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION                             CONTAINER-RUNTIME\nvo-lab3-control-plane   Ready    control-plane   13m   v1.36.1   172.21.0.3    <none>        Debian GNU/Linux 13 (trixie)   6.6.87.2-microsoft-standard-WSL2 (amd64)   containerd://2.3.1\nvo-lab3-worker          Ready    <none>          13m   v1.36.1   172.21.0.2    <none>        Debian GNU/Linux 13 (trixie)   6.6.87.2-microsoft-standard-WSL2 (amd64)   containerd://2.3.1\nvo-lab3-worker2         Ready    <none>          13m   v1.36.1   172.21.0.4    <none>        Debian GNU/Linux 13 (trixie)   6.6.87.2-microsoft-standard-WSL2 (amd64)   containerd://2.3.1\n",
+  "stderr": ""
+}

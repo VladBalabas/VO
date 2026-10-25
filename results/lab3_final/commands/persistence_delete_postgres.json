@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-10-24T21:08:09.752938+00:00",
+  "finished_at": "2026-10-24T21:08:10.966607+00:00",
+  "command": [
+    "kubectl",
+    "-n",
+    "lab3",
+    "delete",
+    "pod",
+    "postgres-0",
+    "--wait=true",
+    "--timeout=120s"
+  ],
+  "exit_code": 0,
+  "stdout": "pod \"postgres-0\" deleted from lab3 namespace\n",
+  "stderr": ""
+}

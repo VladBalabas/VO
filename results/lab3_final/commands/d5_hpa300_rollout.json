@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-10-24T21:55:32.383349+00:00",
+  "finished_at": "2026-10-24T21:55:38.622665+00:00",
+  "command": [
+    "kubectl",
+    "-n",
+    "lab3",
+    "rollout",
+    "status",
+    "deployment/web",
+    "--timeout=300s"
+  ],
+  "exit_code": 0,
+  "stdout": "Waiting for deployment \"web\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"web\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"web\" successfully rolled out\n",
+  "stderr": ""
+}

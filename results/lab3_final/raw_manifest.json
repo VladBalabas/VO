@@ -1,0 +1,84 @@
+{
+  "purpose": "immutable per-request primary data omitted from Git because of size",
+  "generated_from": "raw files and their generator summaries",
+  "files": [
+    {
+      "run": "noop",
+      "file": "raw/noop.jsonl",
+      "bytes": 218640566,
+      "records": 548000,
+      "sha256": "cef16c322551201fe389193835e212086af81c3b15007c8204d895be6d1165d6",
+      "summary": "raw/noop.summary.json"
+    },
+    {
+      "run": "n1",
+      "file": "raw/n1.jsonl",
+      "bytes": 15027359,
+      "records": 38000,
+      "sha256": "07b681ec009c27b383cc2bd33ad7d370ef134edf4b2f57a15ef8e4633dfcee80",
+      "summary": "raw/n1.summary.json"
+    },
+    {
+      "run": "n2",
+      "file": "raw/n2.jsonl",
+      "bytes": 36576559,
+      "records": 92000,
+      "sha256": "8ed638486bfb1cf8c1c55812b032110ad5cd7ad0758eed7bef6233efb3f888e8",
+      "summary": "raw/n2.summary.json"
+    },
+    {
+      "run": "n3",
+      "file": "raw/n3.jsonl",
+      "bytes": 50973212,
+      "records": 128000,
+      "sha256": "2052111c0335619bd548a8d779ee550e82c7a3f3f8cf0d48ed1ca61b7e2a09b6",
+      "summary": "raw/n3.summary.json"
+    },
+    {
+      "run": "n5",
+      "file": "raw/n5.jsonl",
+      "bytes": 86945299,
+      "records": 218000,
+      "sha256": "7492dd67c5b25010af1fbcad9271a462cd6226a67bd32a65a94b0b11aaf6760b",
+      "summary": "raw/n5.summary.json"
+    },
+    {
+      "run": "fixed_profile",
+      "file": "raw/fixed_profile.jsonl",
+      "bytes": 24113044,
+      "records": 60755,
+      "sha256": "3c5941c8c694eca245cc796091db22690f4ab26933d503cdfc22ded540600998",
+      "summary": "raw/fixed_profile.summary.json"
+    },
+    {
+      "run": "hpa30_profile",
+      "file": "raw/hpa30_profile.jsonl",
+      "bytes": 24062439,
+      "records": 60755,
+      "sha256": "5b0b2d4707b6b55a79266a92760e58d2f307429a97f11681de80bd48076bc9df",
+      "summary": "raw/hpa30_profile.summary.json"
+    },
+    {
+      "run": "d5_hpa30",
+      "file": "raw/d5_hpa30.jsonl",
+      "bytes": 34653993,
+      "records": 87214,
+      "sha256": "16450e88379b804b82840d9fbcde14d0b330ad837f602d5149319db7133f0fdc",
+      "summary": "raw/d5_hpa30.summary.json"
+    },
+    {
+      "run": "d5_hpa300",
+      "file": "raw/d5_hpa300.jsonl",
+      "bytes": 34399254,
+      "records": 87214,
+      "sha256": "068044c057146ed7abcdc8f3926fc5b06d154e9fcfe899a11cd6c5fe8368b584",
+      "summary": "raw/d5_hpa300.summary.json"
+    }
+  ],
+  "reproduce": [
+    ".\\.venv\\Scripts\\python.exe scripts\\run_lab3.py --phase stairs",
+    ".\\.venv\\Scripts\\python.exe scripts\\run_lab3.py --phase profiles",
+    ".\\.venv\\Scripts\\python.exe scripts\\analyze_lab3.py",
+    ".\\.venv\\Scripts\\python.exe scripts\\verify_lab3_results.py"
+  ]
+}

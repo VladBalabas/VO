@@ -1,0 +1,70 @@
+**********************
+PowerShell transcript start
+Start time: 20261025092853
+Username: VLADISLAV\vladi
+RunAs User: VLADISLAV\vladi
+Configuration Name: 
+Machine: VLADISLAV (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Users\vladi\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+& '.\scripts\deploy_lab3.ps1' -KeepExistingCluster
+Process ID: 25232
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+> kubectl config use-context kind-vo-lab3
+
+> kubectl label node vo-lab3-control-plane role=infra --overwrite
+
+> kubectl apply -f D:\Projects\Python\VO\k8s\namespace.yaml
+
+secret/postgres-secret unchanged
+configmap/db-schema unchanged
+> kubectl apply -f D:\Projects\Python\VO\k8s\postgres.yaml
+
+> kubectl -n lab3 rollout status statefulset/postgres --timeout=300s
+
+> kubectl apply -f D:\Projects\Python\VO\k8s\migration-job.yaml
+
+> kubectl -n lab3 wait --for=condition=complete job/db-migration --timeout=300s
+
+> docker build -t vo-web:lab3 D:\Projects\Python\VO
+
+> kind load docker-image vo-web:lab3 --name vo-lab3
+
+> kubectl apply -f D:\Projects\Python\VO\k8s\web.yaml
+
+> kubectl -n lab3 rollout status deployment/web --timeout=300s
+
+> helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/ --force-update
+
+> helm repo update metrics-server
+
+> helm upgrade --install metrics-server metrics-server/metrics-server --version 3.14.0 --namespace kube-system --values D:\Projects\Python\VO\k8s\metrics-server-values.yaml --wait --timeout 10m
+
+namespace/monitoring unchanged
+> helm upgrade --install monitoring oci://ghcr.io/prometheus-community/charts/kube-prometheus-stack --version 92.7.0 --namespace monitoring --values D:\Projects\Python\VO\k8s\monitoring-values.yaml --wait --timeout 15m
+
+> kubectl apply -f D:\Projects\Python\VO\k8s\monitoring-resources.yaml
+
+> kubectl -n lab3 rollout status deployment/postgres-exporter --timeout=300s
+
+> kubectl get nodes --output=wide
+
+> kubectl get pods --all-namespaces --output=wide
+
+> kubectl -n lab3 get statefulset,deployment,service,pvc,job
+
+> kubectl -n monitoring get pods,service
+
+Lab 3 cluster is ready: http://localhost:8080 and http://localhost:9090
+**********************
+PowerShell transcript end
+End time: 20261025092923
+**********************

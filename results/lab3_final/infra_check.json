@@ -1,0 +1,842 @@
+{
+  "checked_at": "2026-10-25T07:35:17.630112+00:00",
+  "checks_passed": true,
+  "checks": {
+    "commands_succeeded": true,
+    "health_endpoints": true,
+    "all_distribution_requests_have_x_pod": true,
+    "required_lab_targets_up": true,
+    "web_request_series": true,
+    "web_cfs_series": true,
+    "ready_replica_series": true,
+    "desired_replica_series": true,
+    "postgres_exporter_series": true,
+    "kubectl_top": true
+  },
+  "commands": [
+    {
+      "command": [
+        "kubectl",
+        "config",
+        "use-context",
+        "kind-vo-lab3"
+      ],
+      "exit_code": 0,
+      "output": "Switched to context \"kind-vo-lab3\".\n"
+    },
+    {
+      "command": [
+        "kubectl",
+        "apply",
+        "-f",
+        "k8s/hpa-30.yaml"
+      ],
+      "exit_code": 0,
+      "output": "horizontalpodautoscaler.autoscaling/web created\n"
+    },
+    {
+      "command": [
+        "kind",
+        "get",
+        "clusters"
+      ],
+      "exit_code": 0,
+      "output": "vo-lab3\n"
+    },
+    {
+      "command": [
+        "kubectl",
+        "get",
+        "nodes",
+        "-o",
+        "wide"
+      ],
+      "exit_code": 0,
+      "output": "NAME                    STATUS   ROLES           AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION                             CONTAINER-RUNTIME\nvo-lab3-control-plane   Ready    control-plane   10h   v1.36.1   172.21.0.4    <none>        Debian GNU/Linux 13 (trixie)   6.6.87.2-microsoft-standard-WSL2 (amd64)   containerd://2.3.1\nvo-lab3-worker          Ready    <none>          10h   v1.36.1   172.21.0.3    <none>        Debian GNU/Linux 13 (trixie)   6.6.87.2-microsoft-standard-WSL2 (amd64)   containerd://2.3.1\nvo-lab3-worker2         Ready    <none>          10h   v1.36.1   172.21.0.2    <none>        Debian GNU/Linux 13 (trixie)   6.6.87.2-microsoft-standard-WSL2 (amd64)   containerd://2.3.1\n"
+    },
+    {
+      "command": [
+        "kubectl",
+        "get",
+        "pods",
+        "-A",
+        "-o",
+        "wide"
+      ],
+      "exit_code": 0,
+      "output": "NAMESPACE            NAME                                                   READY   STATUS      RESTARTS      AGE   IP            NODE                    NOMINATED NODE   READINESS GATES\nkube-system          coredns-589f44dc88-6gkk4                               1/1     Running     1 (11m ago)   10h   10.244.0.6    vo-lab3-control-plane   <none>           <none>\nkube-system          coredns-589f44dc88-7r7zg                               1/1     Running     1 (11m ago)   10h   10.244.0.8    vo-lab3-control-plane   <none>           <none>\nkube-system          etcd-vo-lab3-control-plane                             1/1     Running     0             11m   172.21.0.4    vo-lab3-control-plane   <none>           <none>\nkube-system          kindnet-hzh56                                          1/1     Running     1 (11m ago)   10h   172.21.0.4    vo-lab3-control-plane   <none>           <none>\nkube-system          kindnet-mpmlr                                          1/1     Running     1 (11m ago)   10h   172.21.0.2    vo-lab3-worker2         <none>           <none>\nkube-system          kindnet-wrndq                                          1/1     Running     1 (11m ago)   10h   172.21.0.3    vo-lab3-worker          <none>           <none>\nkube-system          kube-apiserver-vo-lab3-control-plane                   1/1     Running     0             11m   172.21.0.4    vo-lab3-control-plane   <none>           <none>\nkube-system          kube-controller-manager-vo-lab3-control-plane          1/1     Running     1 (11m ago)   10h   172.21.0.4    vo-lab3-control-plane   <none>           <none>\nkube-system          kube-proxy-f79f9                                       1/1     Running     1 (11m ago)   10h   172.21.0.3    vo-lab3-worker          <none>           <none>\nkube-system          kube-proxy-lq8hx                                       1/1     Running     1 (11m ago)   10h   172.21.0.4    vo-lab3-control-plane   <none>           <none>\nkube-system          kube-proxy-m4mwk                                       1/1     Running     1 (11m ago)   10h   172.21.0.2    vo-lab3-worker2         <none>           <none>\nkube-system          kube-scheduler-vo-lab3-control-plane                   1/1     Running     1 (11m ago)   10h   172.21.0.4    vo-lab3-control-plane   <none>           <none>\nkube-system          metrics-server-b6f49dfcd-zb86s                         1/1     Running     3 (10m ago)   10h   10.244.0.9    vo-lab3-control-plane   <none>           <none>\nlab3                 db-migration-86mjw                                     0/1     Completed   0             10h   <none>        vo-lab3-control-plane   <none>           <none>\nlab3                 postgres-0                                             1/1     Running     1 (11m ago)   10h   10.244.0.3    vo-lab3-control-plane   <none>           <none>\nlab3                 postgres-exporter-7cd74b8b5-sxpfk                      1/1     Running     1 (11m ago)   10h   10.244.0.4    vo-lab3-control-plane   <none>           <none>\nlab3                 web-6dcb697-bp2hk                                      1/1     Running     2 (10m ago)   9h    10.244.1.2    vo-lab3-worker2         <none>           <none>\nlocal-path-storage   local-path-provisioner-855c7b7774-p22gc                1/1     Running     2 (10m ago)   10h   10.244.0.7    vo-lab3-control-plane   <none>           <none>\nmonitoring           monitoring-kube-prometheus-operator-7b8956bdff-j7xmv   1/1     Running     2 (10m ago)   10h   10.244.0.10   vo-lab3-control-plane   <none>           <none>\nmonitoring           monitoring-kube-state-metrics-55bd4d44dd-b8nw5         1/1     Running     2 (10m ago)   10h   10.244.0.2    vo-lab3-control-plane   <none>           <none>\nmonitoring           monitoring-prometheus-node-exporter-tn9vp              1/1     Running     1 (11m ago)   10h   172.21.0.4    vo-lab3-control-plane   <none>           <none>\nmonitoring           monitoring-prometheus-node-exporter-vf5gl              1/1     Running     1 (11m ago)   10h   172.21.0.3    vo-lab3-worker          <none>           <none>\nmonitoring           monitoring-prometheus-node-exporter-z5995              1/1     Running     1 (11m ago)   10h   172.21.0.2    vo-lab3-worker2         <none>           <none>\nmonitoring           prometheus-monitoring-kube-prometheus-prometheus-0     2/2     Running     2 (11m ago)   10h   10.244.0.5    vo-lab3-control-plane   <none>           <none>\n"
+    },
+    {
+      "command": [
+        "kubectl",
+        "-n",
+        "lab3",
+        "get",
+        "statefulset,deployment,service,pvc,job,hpa"
+      ],
+      "exit_code": 0,
+      "output": "NAME                        READY   AGE\nstatefulset.apps/postgres   1/1     10h\n\nNAME                                READY   UP-TO-DATE   AVAILABLE   AGE\ndeployment.apps/postgres-exporter   1/1     1            1           10h\ndeployment.apps/web                 1/1     1            1           10h\n\nNAME                        TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE\nservice/postgres-headless   ClusterIP   None           <none>        5432/TCP         10h\nservice/web                 NodePort    10.96.181.94   <none>        8000:30080/TCP   10h\n\nNAME                                    STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE\npersistentvolumeclaim/data-postgres-0   Bound    pvc-6f361459-a30e-4e71-87dd-8f13510f5520   1Gi        RWO            standard       <unset>                 10h\n\nNAME                     STATUS     COMPLETIONS   DURATION   AGE\njob.batch/db-migration   Complete   1/1           4s         10h\n\nNAME                                      REFERENCE        TARGETS       MINPODS   MAXPODS   REPLICAS   AGE\nhorizontalpodautoscaler.autoscaling/web   Deployment/web   cpu: 1%/80%   1         5         1          62s\n"
+    },
+    {
+      "command": [
+        "kubectl",
+        "-n",
+        "monitoring",
+        "get",
+        "podmonitor"
+      ],
+      "exit_code": 0,
+      "output": "NAME                AGE\npostgres-exporter   10h\nweb                 10h\n"
+    },
+    {
+      "command": [
+        "kubectl",
+        "-n",
+        "lab3",
+        "top",
+        "pods"
+      ],
+      "exit_code": 0,
+      "output": "NAME                                CPU(cores)   MEMORY(bytes)   \npostgres-0                          15m          38Mi            \npostgres-exporter-7cd74b8b5-sxpfk   3m           7Mi             \nweb-6dcb697-bp2hk                   4m           38Mi            \n"
+    },
+    {
+      "command": [
+        "kubectl",
+        "-n",
+        "lab3",
+        "get",
+        "hpa",
+        "web",
+        "-o",
+        "wide"
+      ],
+      "exit_code": 0,
+      "output": "NAME   REFERENCE        TARGETS       MINPODS   MAXPODS   REPLICAS   AGE\nweb    Deployment/web   cpu: 1%/80%   1         5         1          63s\n"
+    },
+    {
+      "command": [
+        "kubectl",
+        "-n",
+        "lab3",
+        "delete",
+        "hpa",
+        "web",
+        "--ignore-not-found"
+      ],
+      "exit_code": 0,
+      "output": "horizontalpodautoscaler.autoscaling \"web\" deleted from lab3 namespace\n"
+    }
+  ],
+  "health": [
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:35:14 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/healthz",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:35:16 GMT",
+        "server": "uvicorn",
+        "content-length": "27",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"готовий\"}"
+    }
+  ],
+  "distribution_requests": [
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:00 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:02 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:04 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:06 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:08 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:10 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:12 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:14 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:16 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:18 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:20 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:23 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:25 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:27 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:29 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:31 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:33 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:35 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:37 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    },
+    {
+      "url": "http://localhost:8080/livez",
+      "status": 200,
+      "headers": {
+        "date": "Sun, 25 Oct 2026 07:34:39 GMT",
+        "server": "uvicorn",
+        "content-length": "18",
+        "content-type": "application/json",
+        "x-pod": "web-6dcb697-bp2hk",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"alive\"}"
+    }
+  ],
+  "queries": {
+    "web_requests": {
+      "url": "http://localhost:9090/api/v1/query?query=http_requests_total%7Bnamespace%3D%22lab3%22%2Cpod%3D~%22web-.%2A%22%7D",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding",
+        "Date": "Sun, 25 Oct 2026 07:35:03 GMT",
+        "Content-Length": "834",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"success\",\"data\":{\"resultType\":\"vector\",\"result\":[{\"metric\":{\"__name__\":\"http_requests_total\",\"container\":\"web\",\"endpoint\":\"http\",\"instance\":\"10.244.1.2:8000\",\"job\":\"monitoring/web\",\"method\":\"GET\",\"namespace\":\"lab3\",\"path\":\"/livez\",\"pod\":\"web-6dcb697-bp2hk\",\"status\":\"200\"},\"value\":[1792913703.105,\"166\"]},{\"metric\":{\"__name__\":\"http_requests_total\",\"container\":\"web\",\"endpoint\":\"http\",\"instance\":\"10.244.1.2:8000\",\"job\":\"monitoring/web\",\"method\":\"GET\",\"namespace\":\"lab3\",\"path\":\"/healthz\",\"pod\":\"web-6dcb697-bp2hk\",\"status\":\"200\"},\"value\":[1792913703.105,\"126\"]},{\"metric\":{\"__name__\":\"http_requests_total\",\"container\":\"web\",\"endpoint\":\"http\",\"instance\":\"10.244.1.2:8000\",\"job\":\"monitoring/web\",\"method\":\"GET\",\"namespace\":\"lab3\",\"path\":\"/metrics\",\"pod\":\"web-6dcb697-bp2hk\",\"status\":\"200\"},\"value\":[1792913703.105,\"124\"]}]}}",
+      "expression": "http_requests_total{namespace=\"lab3\",pod=~\"web-.*\"}",
+      "parsed": {
+        "status": "success",
+        "data": {
+          "resultType": "vector",
+          "result": [
+            {
+              "metric": {
+                "__name__": "http_requests_total",
+                "container": "web",
+                "endpoint": "http",
+                "instance": "10.244.1.2:8000",
+                "job": "monitoring/web",
+                "method": "GET",
+                "namespace": "lab3",
+                "path": "/livez",
+                "pod": "web-6dcb697-bp2hk",
+                "status": "200"
+              },
+              "value": [
+                1792913703.105,
+                "166"
+              ]
+            },
+            {
+              "metric": {
+                "__name__": "http_requests_total",
+                "container": "web",
+                "endpoint": "http",
+                "instance": "10.244.1.2:8000",
+                "job": "monitoring/web",
+                "method": "GET",
+                "namespace": "lab3",
+                "path": "/healthz",
+                "pod": "web-6dcb697-bp2hk",
+                "status": "200"
+              },
+              "value": [
+                1792913703.105,
+                "126"
+              ]
+            },
+            {
+              "metric": {
+                "__name__": "http_requests_total",
+                "container": "web",
+                "endpoint": "http",
+                "instance": "10.244.1.2:8000",
+                "job": "monitoring/web",
+                "method": "GET",
+                "namespace": "lab3",
+                "path": "/metrics",
+                "pod": "web-6dcb697-bp2hk",
+                "status": "200"
+              },
+              "value": [
+                1792913703.105,
+                "124"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "web_cfs_periods": {
+      "url": "http://localhost:9090/api/v1/query?query=container_cpu_cfs_periods_total%7Bnamespace%3D%22lab3%22%2Ccontainer%3D%22web%22%2Cmetrics_path%3D%22%2Fmetrics%2Fcadvisor%22%7D",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding",
+        "Date": "Sun, 25 Oct 2026 07:35:05 GMT",
+        "Content-Length": "746",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"success\",\"data\":{\"resultType\":\"vector\",\"result\":[{\"metric\":{\"__name__\":\"container_cpu_cfs_periods_total\",\"container\":\"web\",\"endpoint\":\"https-metrics\",\"id\":\"/kubelet.slice/kubelet-kubepods.slice/kubelet-kubepods-burstable.slice/kubelet-kubepods-burstable-pod93780a92_e46c_4989_aa1f_b49aafacff0c.slice/cri-containerd-835ac1f882cfae86e8b1e82564a91563d11a7fe74abad34a09c2e23187603de1.scope\",\"image\":\"docker.io/library/vo-web:lab3\",\"instance\":\"172.21.0.2:10250\",\"job\":\"kubelet\",\"metrics_path\":\"/metrics/cadvisor\",\"name\":\"835ac1f882cfae86e8b1e82564a91563d11a7fe74abad34a09c2e23187603de1\",\"namespace\":\"lab3\",\"node\":\"vo-lab3-worker2\",\"pod\":\"web-6dcb697-bp2hk\",\"service\":\"monitoring-kube-prometheus-kubelet\"},\"value\":[1792913705.175,\"2242\"]}]}}",
+      "expression": "container_cpu_cfs_periods_total{namespace=\"lab3\",container=\"web\",metrics_path=\"/metrics/cadvisor\"}",
+      "parsed": {
+        "status": "success",
+        "data": {
+          "resultType": "vector",
+          "result": [
+            {
+              "metric": {
+                "__name__": "container_cpu_cfs_periods_total",
+                "container": "web",
+                "endpoint": "https-metrics",
+                "id": "/kubelet.slice/kubelet-kubepods.slice/kubelet-kubepods-burstable.slice/kubelet-kubepods-burstable-pod93780a92_e46c_4989_aa1f_b49aafacff0c.slice/cri-containerd-835ac1f882cfae86e8b1e82564a91563d11a7fe74abad34a09c2e23187603de1.scope",
+                "image": "docker.io/library/vo-web:lab3",
+                "instance": "172.21.0.2:10250",
+                "job": "kubelet",
+                "metrics_path": "/metrics/cadvisor",
+                "name": "835ac1f882cfae86e8b1e82564a91563d11a7fe74abad34a09c2e23187603de1",
+                "namespace": "lab3",
+                "node": "vo-lab3-worker2",
+                "pod": "web-6dcb697-bp2hk",
+                "service": "monitoring-kube-prometheus-kubelet"
+              },
+              "value": [
+                1792913705.175,
+                "2242"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "ready_replicas": {
+      "url": "http://localhost:9090/api/v1/query?query=kube_deployment_status_replicas_ready%7Bnamespace%3D%22lab3%22%2Cdeployment%3D%22web%22%7D",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding",
+        "Date": "Sun, 25 Oct 2026 07:35:07 GMT",
+        "Content-Length": "397",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"success\",\"data\":{\"resultType\":\"vector\",\"result\":[{\"metric\":{\"__name__\":\"kube_deployment_status_replicas_ready\",\"container\":\"kube-state-metrics\",\"deployment\":\"web\",\"endpoint\":\"http\",\"instance\":\"10.244.0.2:8080\",\"job\":\"kube-state-metrics\",\"namespace\":\"lab3\",\"pod\":\"monitoring-kube-state-metrics-55bd4d44dd-b8nw5\",\"service\":\"monitoring-kube-state-metrics\"},\"value\":[1792913707.215,\"1\"]}]}}",
+      "expression": "kube_deployment_status_replicas_ready{namespace=\"lab3\",deployment=\"web\"}",
+      "parsed": {
+        "status": "success",
+        "data": {
+          "resultType": "vector",
+          "result": [
+            {
+              "metric": {
+                "__name__": "kube_deployment_status_replicas_ready",
+                "container": "kube-state-metrics",
+                "deployment": "web",
+                "endpoint": "http",
+                "instance": "10.244.0.2:8080",
+                "job": "kube-state-metrics",
+                "namespace": "lab3",
+                "pod": "monitoring-kube-state-metrics-55bd4d44dd-b8nw5",
+                "service": "monitoring-kube-state-metrics"
+              },
+              "value": [
+                1792913707.215,
+                "1"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "desired_replicas": {
+      "url": "http://localhost:9090/api/v1/query?query=kube_horizontalpodautoscaler_status_desired_replicas%7Bnamespace%3D%22lab3%22%2Chorizontalpodautoscaler%3D%22web%22%7D",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding",
+        "Date": "Sun, 25 Oct 2026 07:35:09 GMT",
+        "Content-Length": "425",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"success\",\"data\":{\"resultType\":\"vector\",\"result\":[{\"metric\":{\"__name__\":\"kube_horizontalpodautoscaler_status_desired_replicas\",\"container\":\"kube-state-metrics\",\"endpoint\":\"http\",\"horizontalpodautoscaler\":\"web\",\"instance\":\"10.244.0.2:8080\",\"job\":\"kube-state-metrics\",\"namespace\":\"lab3\",\"pod\":\"monitoring-kube-state-metrics-55bd4d44dd-b8nw5\",\"service\":\"monitoring-kube-state-metrics\"},\"value\":[1792913709.260,\"1\"]}]}}",
+      "expression": "kube_horizontalpodautoscaler_status_desired_replicas{namespace=\"lab3\",horizontalpodautoscaler=\"web\"}",
+      "parsed": {
+        "status": "success",
+        "data": {
+          "resultType": "vector",
+          "result": [
+            {
+              "metric": {
+                "__name__": "kube_horizontalpodautoscaler_status_desired_replicas",
+                "container": "kube-state-metrics",
+                "endpoint": "http",
+                "horizontalpodautoscaler": "web",
+                "instance": "10.244.0.2:8080",
+                "job": "kube-state-metrics",
+                "namespace": "lab3",
+                "pod": "monitoring-kube-state-metrics-55bd4d44dd-b8nw5",
+                "service": "monitoring-kube-state-metrics"
+              },
+              "value": [
+                1792913709.26,
+                "1"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "postgres_exporter": {
+      "url": "http://localhost:9090/api/v1/query?query=pg_up%7Bnamespace%3D%22lab3%22%7D",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding",
+        "Date": "Sun, 25 Oct 2026 07:35:11 GMT",
+        "Content-Length": "294",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"success\",\"data\":{\"resultType\":\"vector\",\"result\":[{\"metric\":{\"__name__\":\"pg_up\",\"container\":\"exporter\",\"endpoint\":\"metrics\",\"instance\":\"10.244.0.4:9187\",\"job\":\"monitoring/postgres-exporter\",\"namespace\":\"lab3\",\"pod\":\"postgres-exporter-7cd74b8b5-sxpfk\"},\"value\":[1792913711.332,\"1\"]}]}}",
+      "expression": "pg_up{namespace=\"lab3\"}",
+      "parsed": {
+        "status": "success",
+        "data": {
+          "resultType": "vector",
+          "result": [
+            {
+              "metric": {
+                "__name__": "pg_up",
+                "container": "exporter",
+                "endpoint": "metrics",
+                "instance": "10.244.0.4:9187",
+                "job": "monitoring/postgres-exporter",
+                "namespace": "lab3",
+                "pod": "postgres-exporter-7cd74b8b5-sxpfk"
+              },
+              "value": [
+                1792913711.332,
+                "1"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "required_lab_targets": [
+    {
+      "discoveredLabels": {
+        "__address__": "10.244.0.4:9187",
+        "__always_scrape_classic_histograms__": "false",
+        "__convert_classic_histograms_to_nhcb__": "false",
+        "__meta_kubernetes_namespace": "lab3",
+        "__meta_kubernetes_pod_container_id": "containerd://89d908c802d93c1e5ad8b877d588f8814929f3aa5f5ca982eb3b2398d68e466f",
+        "__meta_kubernetes_pod_container_image": "quay.io/prometheuscommunity/postgres-exporter:v0.17.1",
+        "__meta_kubernetes_pod_container_init": "false",
+        "__meta_kubernetes_pod_container_name": "exporter",
+        "__meta_kubernetes_pod_container_port_name": "metrics",
+        "__meta_kubernetes_pod_container_port_number": "9187",
+        "__meta_kubernetes_pod_container_port_protocol": "TCP",
+        "__meta_kubernetes_pod_controller_kind": "ReplicaSet",
+        "__meta_kubernetes_pod_controller_name": "postgres-exporter-7cd74b8b5",
+        "__meta_kubernetes_pod_host_ip": "172.21.0.4",
+        "__meta_kubernetes_pod_ip": "10.244.0.4",
+        "__meta_kubernetes_pod_label_app": "postgres-exporter",
+        "__meta_kubernetes_pod_label_pod_template_hash": "7cd74b8b5",
+        "__meta_kubernetes_pod_labelpresent_app": "true",
+        "__meta_kubernetes_pod_labelpresent_pod_template_hash": "true",
+        "__meta_kubernetes_pod_name": "postgres-exporter-7cd74b8b5-sxpfk",
+        "__meta_kubernetes_pod_node_name": "vo-lab3-control-plane",
+        "__meta_kubernetes_pod_phase": "Running",
+        "__meta_kubernetes_pod_ready": "true",
+        "__meta_kubernetes_pod_uid": "e1ab91a4-70e8-4605-8857-b89fadf876f2",
+        "__metrics_path__": "/metrics",
+        "__scheme__": "http",
+        "__scrape_interval__": "5s",
+        "__scrape_native_histograms__": "false",
+        "__scrape_timeout__": "5s",
+        "job": "podMonitor/monitoring/postgres-exporter/0"
+      },
+      "labels": {
+        "container": "exporter",
+        "endpoint": "metrics",
+        "instance": "10.244.0.4:9187",
+        "job": "monitoring/postgres-exporter",
+        "namespace": "lab3",
+        "pod": "postgres-exporter-7cd74b8b5-sxpfk"
+      },
+      "scrapePool": "podMonitor/monitoring/postgres-exporter/0",
+      "scrapeUrl": "http://10.244.0.4:9187/metrics",
+      "globalUrl": "http://10.244.0.4:9187/metrics",
+      "lastError": "",
+      "lastScrape": "2026-10-25T07:35:12.78046425Z",
+      "lastScrapeDuration": 0.030384335,
+      "health": "up",
+      "scrapeInterval": "5s",
+      "scrapeTimeout": "5s"
+    },
+    {
+      "discoveredLabels": {
+        "__address__": "10.244.1.2:8000",
+        "__always_scrape_classic_histograms__": "false",
+        "__convert_classic_histograms_to_nhcb__": "false",
+        "__meta_kubernetes_namespace": "lab3",
+        "__meta_kubernetes_pod_annotation_kubectl_kubernetes_io_restartedAt": "2026-10-25T00:55:32+03:00",
+        "__meta_kubernetes_pod_annotationpresent_kubectl_kubernetes_io_restartedAt": "true",
+        "__meta_kubernetes_pod_container_id": "containerd://835ac1f882cfae86e8b1e82564a91563d11a7fe74abad34a09c2e23187603de1",
+        "__meta_kubernetes_pod_container_image": "vo-web:lab3",
+        "__meta_kubernetes_pod_container_init": "false",
+        "__meta_kubernetes_pod_container_name": "web",
+        "__meta_kubernetes_pod_container_port_name": "http",
+        "__meta_kubernetes_pod_container_port_number": "8000",
+        "__meta_kubernetes_pod_container_port_protocol": "TCP",
+        "__meta_kubernetes_pod_controller_kind": "ReplicaSet",
+        "__meta_kubernetes_pod_controller_name": "web-6dcb697",
+        "__meta_kubernetes_pod_host_ip": "172.21.0.2",
+        "__meta_kubernetes_pod_ip": "10.244.1.2",
+        "__meta_kubernetes_pod_label_app": "web",
+        "__meta_kubernetes_pod_label_pod_template_hash": "6dcb697",
+        "__meta_kubernetes_pod_labelpresent_app": "true",
+        "__meta_kubernetes_pod_labelpresent_pod_template_hash": "true",
+        "__meta_kubernetes_pod_name": "web-6dcb697-bp2hk",
+        "__meta_kubernetes_pod_node_name": "vo-lab3-worker2",
+        "__meta_kubernetes_pod_phase": "Running",
+        "__meta_kubernetes_pod_ready": "true",
+        "__meta_kubernetes_pod_uid": "93780a92-e46c-4989-aa1f-b49aafacff0c",
+        "__metrics_path__": "/metrics",
+        "__scheme__": "http",
+        "__scrape_interval__": "5s",
+        "__scrape_native_histograms__": "false",
+        "__scrape_timeout__": "5s",
+        "job": "podMonitor/monitoring/web/0"
+      },
+      "labels": {
+        "container": "web",
+        "endpoint": "http",
+        "instance": "10.244.1.2:8000",
+        "job": "monitoring/web",
+        "namespace": "lab3",
+        "pod": "web-6dcb697-bp2hk"
+      },
+      "scrapePool": "podMonitor/monitoring/web/0",
+      "scrapeUrl": "http://10.244.1.2:8000/metrics",
+      "globalUrl": "http://10.244.1.2:8000/metrics",
+      "lastError": "",
+      "lastScrape": "2026-10-25T07:35:09.144577835Z",
+      "lastScrapeDuration": 0.002198568,
+      "health": "up",
+      "scrapeInterval": "5s",
+      "scrapeTimeout": "5s"
+    }
+  ],
+  "required_lab_targets_down": [],
+  "unrelated_targets_down": [
+    {
+      "scrapePool": "serviceMonitor/monitoring/monitoring-kube-prometheus-kube-controller-manager/0",
+      "labels": {
+        "container": "kube-controller-manager",
+        "endpoint": "http-metrics",
+        "instance": "172.21.0.4:10257",
+        "job": "kube-controller-manager",
+        "namespace": "kube-system",
+        "pod": "kube-controller-manager-vo-lab3-control-plane",
+        "service": "monitoring-kube-prometheus-kube-controller-manager"
+      },
+      "health": "down",
+      "lastError": "Get \"https://172.21.0.4:10257/metrics\": dial tcp 172.21.0.4:10257: connect: connection refused"
+    },
+    {
+      "scrapePool": "serviceMonitor/monitoring/monitoring-kube-prometheus-kube-etcd/0",
+      "labels": {
+        "container": "etcd",
+        "endpoint": "http-metrics",
+        "instance": "172.21.0.4:2381",
+        "job": "kube-etcd",
+        "namespace": "kube-system",
+        "pod": "etcd-vo-lab3-control-plane",
+        "service": "monitoring-kube-prometheus-kube-etcd"
+      },
+      "health": "down",
+      "lastError": "Get \"http://172.21.0.4:2381/metrics\": dial tcp 172.21.0.4:2381: connect: connection refused"
+    },
+    {
+      "scrapePool": "serviceMonitor/monitoring/monitoring-kube-prometheus-kube-proxy/0",
+      "labels": {
+        "endpoint": "http-metrics",
+        "instance": "172.21.0.2:10249",
+        "job": "kube-proxy",
+        "namespace": "kube-system",
+        "pod": "kube-proxy-m4mwk",
+        "service": "monitoring-kube-prometheus-kube-proxy"
+      },
+      "health": "down",
+      "lastError": "Get \"http://172.21.0.2:10249/metrics\": dial tcp 172.21.0.2:10249: connect: connection refused"
+    },
+    {
+      "scrapePool": "serviceMonitor/monitoring/monitoring-kube-prometheus-kube-proxy/0",
+      "labels": {
+        "endpoint": "http-metrics",
+        "instance": "172.21.0.3:10249",
+        "job": "kube-proxy",
+        "namespace": "kube-system",
+        "pod": "kube-proxy-f79f9",
+        "service": "monitoring-kube-prometheus-kube-proxy"
+      },
+      "health": "down",
+      "lastError": "Get \"http://172.21.0.3:10249/metrics\": dial tcp 172.21.0.3:10249: connect: connection refused"
+    },
+    {
+      "scrapePool": "serviceMonitor/monitoring/monitoring-kube-prometheus-kube-proxy/0",
+      "labels": {
+        "endpoint": "http-metrics",
+        "instance": "172.21.0.4:10249",
+        "job": "kube-proxy",
+        "namespace": "kube-system",
+        "pod": "kube-proxy-lq8hx",
+        "service": "monitoring-kube-prometheus-kube-proxy"
+      },
+      "health": "down",
+      "lastError": "Get \"http://172.21.0.4:10249/metrics\": dial tcp 172.21.0.4:10249: connect: connection refused"
+    },
+    {
+      "scrapePool": "serviceMonitor/monitoring/monitoring-kube-prometheus-kube-scheduler/0",
+      "labels": {
+        "container": "kube-scheduler",
+        "endpoint": "http-metrics",
+        "instance": "172.21.0.4:10259",
+        "job": "kube-scheduler",
+        "namespace": "kube-system",
+        "pod": "kube-scheduler-vo-lab3-control-plane",
+        "service": "monitoring-kube-prometheus-kube-scheduler"
+      },
+      "health": "down",
+      "lastError": "Get \"https://172.21.0.4:10259/metrics\": dial tcp 172.21.0.4:10259: connect: connection refused"
+    }
+  ],
+  "scope_note": "Only web and postgres-exporter are Lab 3 application targets. Unrelated kind control-plane targets are reported, not hidden."
+}

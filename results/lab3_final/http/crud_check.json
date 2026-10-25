@@ -1,0 +1,142 @@
+[
+  {
+    "at": "2026-10-24T21:07:51.189184+00:00",
+    "method": "GET",
+    "path": "/livez",
+    "request_body": null,
+    "status": 200,
+    "response_body": "{\"status\":\"alive\"}",
+    "response_headers": {
+      "date": "Sat, 24 Oct 2026 21:07:51 GMT",
+      "server": "uvicorn",
+      "content-length": "18",
+      "content-type": "application/json",
+      "x-pod": "web-7d86b4989f-zvwbq",
+      "Connection": "close"
+    }
+  },
+  {
+    "at": "2026-10-24T21:07:53.240907+00:00",
+    "method": "GET",
+    "path": "/healthz",
+    "request_body": null,
+    "status": 200,
+    "response_body": "{\"status\":\"готовий\"}",
+    "response_headers": {
+      "date": "Sat, 24 Oct 2026 21:07:53 GMT",
+      "server": "uvicorn",
+      "content-length": "27",
+      "content-type": "application/json",
+      "x-pod": "web-7d86b4989f-zvwbq",
+      "Connection": "close"
+    }
+  },
+  {
+    "at": "2026-10-24T21:07:55.300469+00:00",
+    "method": "GET",
+    "path": "/metrics",
+    "request_body": null,
+    "status": 200,
+    "response_body": "# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 407.0\npython_gc_objects_collected_total{generation=\"1\"} 31.0\npython_gc_objects_collected_total{generation=\"2\"} 0.0\n# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC\n# TYPE python_gc_objects_uncollectable_total counter\npython_gc_objects_uncollectable_total{generation=\"0\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"1\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"2\"} 0.0\n# HELP python_gc_collections_total Number of times this generation was collected\n# TYPE python_gc_collections_total counter\npython_gc_collections_total{generation=\"0\"} 127.0\npython_gc_collections_total{generation=\"1\"} 11.0\npython_gc_collections_total{generation=\"2\"} 1.0\n# HELP python_info Python platform information\n# TYPE python_info gauge\npython_info{implementation=\"CPython\",major=\"3\",minor=\"12\",patchlevel=\"15\",version=\"3.12.15\"} 1.0\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 6.4544768e+07\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 5.4345728e+07\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.79287553886e+09\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 2.6399999999999997\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 11.0\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 1.073741816e+09\n# HELP http_requests_total Completed HTTP requests\n# TYPE http_requests_total counter\nhttp_requests_total{method=\"GET\",path=\"/livez\",status=\"200\"} 109.0\nhttp_requests_total{method=\"GET\",path=\"/healthz\",status=\"200\"} 108.0\nhttp_requests_total{method=\"GET\",path=\"/metrics\",status=\"200\"} 78.0\nhttp_requests_total{method=\"GET\",path=\"/bench/noop\",status=\"200\"} 40.0\n# HELP http_requests_created Completed HTTP requests\n# TYPE http_requests_created gauge\nhttp_requests_created{method=\"GET\",path=\"/livez\",status=\"200\"} 1.7928755440128174e+09\nhttp_requests_created{method=\"GET\",path=\"/healthz\",status=\"200\"} 1.7928755452481744e+09\nhttp_requests_created{method=\"GET\",path=\"/metrics\",status=\"200\"} 1.7928756871908e+09\nhttp_requests_created{method=\"GET\",path=\"/bench/noop\",status=\"200\"} 1.7928758540933874e+09\n# HELP http_request_duration_seconds HTTP request duration in seconds\n# TYPE http_request_duration_seconds histogram\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/livez\"} 108.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/livez\"} 109.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/livez\"} 109.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/livez\"} 109.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/livez\"} 109.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/livez\"} 109.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/livez\"} 109.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/livez\"} 109.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/livez\"} 109.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/livez\"} 109.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/livez\"} 0.04161550800020564\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/healthz\"} 108.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/healthz\"} 108.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/healthz\"} 108.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/healthz\"} 108.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/healthz\"} 108.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/healthz\"} 108.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/healthz\"} 108.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/healthz\"} 108.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/healthz\"} 108.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/healthz\"} 108.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/healthz\"} 0.15071485399991502\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/metrics\"} 78.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/metrics\"} 78.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/metrics\"} 78.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/metrics\"} 78.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/metrics\"} 78.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/metrics\"} 78.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/metrics\"} 78.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/metrics\"} 78.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/metrics\"} 78.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/metrics\"} 78.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/metrics\"} 0.07355412999967825\nhttp_request_duration_seconds_bucket{le=\"0.005\",method=\"GET\",path=\"/bench/noop\"} 40.0\nhttp_request_duration_seconds_bucket{le=\"0.01\",method=\"GET\",path=\"/bench/noop\"} 40.0\nhttp_request_duration_seconds_bucket{le=\"0.025\",method=\"GET\",path=\"/bench/noop\"} 40.0\nhttp_request_duration_seconds_bucket{le=\"0.05\",method=\"GET\",path=\"/bench/noop\"} 40.0\nhttp_request_duration_seconds_bucket{le=\"0.1\",method=\"GET\",path=\"/bench/noop\"} 40.0\nhttp_request_duration_seconds_bucket{le=\"0.25\",method=\"GET\",path=\"/bench/noop\"} 40.0\nhttp_request_duration_seconds_bucket{le=\"0.5\",method=\"GET\",path=\"/bench/noop\"} 40.0\nhttp_request_duration_seconds_bucket{le=\"1.0\",method=\"GET\",path=\"/bench/noop\"} 40.0\nhttp_request_duration_seconds_bucket{le=\"+Inf\",method=\"GET\",path=\"/bench/noop\"} 40.0\nhttp_request_duration_seconds_count{method=\"GET\",path=\"/bench/noop\"} 40.0\nhttp_request_duration_seconds_sum{method=\"GET\",path=\"/bench/noop\"} 0.01302272000020821\n# HELP http_request_duration_seconds_created HTTP request duration in seconds\n# TYPE http_request_duration_seconds_created gauge\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/livez\"} 1.7928755440128372e+09\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/healthz\"} 1.792875545248191e+09\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/metrics\"} 1.7928756871908355e+09\nhttp_request_duration_seconds_created{method=\"GET\",path=\"/bench/noop\"} 1.7928758540934243e+09\n# HELP http_requests_in_flight HTTP requests in progress\n# TYPE http_requests_in_flight gauge\nhttp_requests_in_flight 1.0\n",
+    "response_headers": {
+      "date": "Sat, 24 Oct 2026 21:07:55 GMT",
+      "server": "uvicorn",
+      "content-length": "7045",
+      "content-type": "text/plain; version=0.0.4; charset=utf-8",
+      "x-pod": "web-7d86b4989f-zvwbq",
+      "Connection": "close"
+    }
+  },
+  {
+    "at": "2026-10-24T21:07:57.359717+00:00",
+    "method": "POST",
+    "path": "/referrals",
+    "request_body": {
+      "patient_code": "LAB3-9000",
+      "modality": "CT",
+      "priority": 1,
+      "doctor": "Doctor 9000",
+      "issued_at": "2026-10-25",
+      "status": "created"
+    },
+    "status": 201,
+    "response_body": "{\"patient_code\":\"LAB3-9000\",\"modality\":\"CT\",\"priority\":1,\"doctor\":\"Doctor 9000\",\"issued_at\":\"2026-10-25\",\"status\":\"created\",\"id\":1}",
+    "response_headers": {
+      "date": "Sat, 24 Oct 2026 21:07:57 GMT",
+      "server": "uvicorn",
+      "content-length": "131",
+      "content-type": "application/json",
+      "x-pod": "web-7d86b4989f-zvwbq",
+      "Connection": "close"
+    }
+  },
+  {
+    "at": "2026-10-24T21:07:59.412248+00:00",
+    "method": "GET",
+    "path": "/referrals/1",
+    "request_body": null,
+    "status": 200,
+    "response_body": "{\"patient_code\":\"LAB3-9000\",\"modality\":\"CT\",\"priority\":1,\"doctor\":\"Doctor 9000\",\"issued_at\":\"2026-10-25\",\"status\":\"created\",\"id\":1}",
+    "response_headers": {
+      "date": "Sat, 24 Oct 2026 21:07:59 GMT",
+      "server": "uvicorn",
+      "content-length": "131",
+      "content-type": "application/json",
+      "x-pod": "web-7d86b4989f-zvwbq",
+      "Connection": "close"
+    }
+  },
+  {
+    "at": "2026-10-24T21:08:01.480812+00:00",
+    "method": "PUT",
+    "path": "/referrals/1",
+    "request_body": {
+      "patient_code": "LAB3-9001",
+      "modality": "MRI",
+      "priority": 2,
+      "doctor": "Doctor 9001",
+      "issued_at": "2026-10-25",
+      "status": "scheduled"
+    },
+    "status": 200,
+    "response_body": "{\"patient_code\":\"LAB3-9001\",\"modality\":\"MRI\",\"priority\":2,\"doctor\":\"Doctor 9001\",\"issued_at\":\"2026-10-25\",\"status\":\"scheduled\",\"id\":1}",
+    "response_headers": {
+      "date": "Sat, 24 Oct 2026 21:08:01 GMT",
+      "server": "uvicorn",
+      "content-length": "134",
+      "content-type": "application/json",
+      "x-pod": "web-7d86b4989f-zvwbq",
+      "Connection": "close"
+    }
+  },
+  {
+    "at": "2026-10-24T21:08:03.519591+00:00",
+    "method": "DELETE",
+    "path": "/referrals/1",
+    "request_body": null,
+    "status": 204,
+    "response_body": "",
+    "response_headers": {
+      "date": "Sat, 24 Oct 2026 21:08:03 GMT",
+      "server": "uvicorn",
+      "x-pod": "web-7d86b4989f-zvwbq",
+      "Connection": "close"
+    }
+  },
+  {
+    "at": "2026-10-24T21:08:05.570950+00:00",
+    "method": "GET",
+    "path": "/referrals/1",
+    "request_body": null,
+    "status": 404,
+    "response_body": "{\"detail\":\"Направлення не знайдено\"}",
+    "response_headers": {
+      "date": "Sat, 24 Oct 2026 21:08:05 GMT",
+      "server": "uvicorn",
+      "content-length": "57",
+      "content-type": "application/json",
+      "x-pod": "web-7d86b4989f-zvwbq",
+      "Connection": "close"
+    }
+  }
+]

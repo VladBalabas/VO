@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-10-24T21:57:27.941813+00:00",
+  "finished_at": "2026-10-24T22:04:59.700565+00:00",
+  "command": [
+    "D:\\Projects\\Python\\VO\\.venv\\Scripts\\python.exe",
+    "-B",
+    "D:\\Projects\\Python\\VO\\scripts\\lab3_generator.py",
+    "--base-url",
+    "http://localhost:8080",
+    "--path",
+    "/referrals/{id}",
+    "--output",
+    "D:\\Projects\\Python\\VO\\results\\lab3_final\\raw\\d5_hpa300",
+    "--seed-file",
+    "D:\\Projects\\Python\\VO\\results\\lab3_final\\seed.json",
+    "--profile-file",
+    "D:\\Projects\\Python\\VO\\results\\lab3_final\\profiles\\d5_long.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"counts\": {\n    \"scheduled\": 87214,\n    \"sent\": 87214,\n    \"completed\": 87214,\n    \"successful\": 87214,\n    \"non_2xx\": 0,\n    \"connection_errors\": 0,\n    \"active\": 0,\n    \"peak_active\": 40\n  },\n  \"raw_sha256\": \"068044c057146ed7abcdc8f3926fc5b06d154e9fcfe899a11cd6c5fe8368b584\",\n  \"stop_two_misses\": false\n}\n",
+  "stderr": ""
+}

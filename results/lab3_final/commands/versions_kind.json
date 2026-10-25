@@ -1,0 +1,11 @@
+{
+  "started_at": "2026-10-24T21:11:45.321308+00:00",
+  "finished_at": "2026-10-24T21:11:45.378437+00:00",
+  "command": [
+    "C:\\Users\\vladi\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Kubernetes.kind_Microsoft.Winget.Source_8wekyb3d8bbwe\\kind.exe",
+    "version"
+  ],
+  "exit_code": 0,
+  "stdout": "kind v0.33.0 go1.26.7 windows/amd64\n",
+  "stderr": ""
+}

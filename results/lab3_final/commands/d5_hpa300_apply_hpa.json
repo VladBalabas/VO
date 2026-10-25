@@ -1,0 +1,13 @@
+{
+  "started_at": "2026-10-24T21:55:38.724973+00:00",
+  "finished_at": "2026-10-24T21:55:38.843113+00:00",
+  "command": [
+    "kubectl",
+    "apply",
+    "-f",
+    "D:\\Projects\\Python\\VO\\k8s\\hpa-300.yaml"
+  ],
+  "exit_code": 0,
+  "stdout": "horizontalpodautoscaler.autoscaling/web created\n",
+  "stderr": ""
+}
