@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import gzip
 import math
 import os
 import re
@@ -24,7 +25,14 @@ FIG = DATA / "figures"
 
 @lru_cache(maxsize=12)
 def read(path: str):
-    return json.loads((DATA / path).read_text(encoding="utf-8"))
+    source = DATA / path
+    if source.exists():
+        return json.loads(source.read_text(encoding="utf-8"))
+    compressed = source.with_suffix(source.suffix + ".gz")
+    if compressed.exists():
+        with gzip.open(compressed, "rt", encoding="utf-8") as stream:
+            return json.load(stream)
+    raise FileNotFoundError(source)
 
 
 def series_values(prom_data, key, start, end, *, include_inf=False):
@@ -50,22 +58,54 @@ def metric_latest(prom_data, key, start, end):
 
 
 def fit_usl(points):
-    # Unconstrained two-parameter least squares, followed by boundary refit.
-    rows = [(n-1, n*(n-1), n*x1/x-1) for n, x, x1 in points if n > 1]
+    """Fit USL and retain the normal-equation inputs for reproducibility."""
+    rows = [
+        {
+            "n": n,
+            "c": x / x1,
+            "y": n * x1 / x - 1,
+            "u": n - 1,
+            "v": n * (n - 1),
+        }
+        for n, x, x1 in points
+        if n > 1
+    ]
     if len(rows) < 2:
         return None
-    matrix = np.array([[u, v] for u, v, _ in rows], dtype=float)
-    y = np.array([z for _, _, z in rows], dtype=float)
-    sigma, kappa = np.linalg.lstsq(matrix, y, rcond=None)[0]
+    sums = {
+        "sum_u2": sum(row["u"] ** 2 for row in rows),
+        "sum_v2": sum(row["v"] ** 2 for row in rows),
+        "sum_uv": sum(row["u"] * row["v"] for row in rows),
+        "sum_uy": sum(row["u"] * row["y"] for row in rows),
+        "sum_vy": sum(row["v"] * row["y"] for row in rows),
+    }
+    determinant = sums["sum_u2"] * sums["sum_v2"] - sums["sum_uv"] ** 2
+    if determinant == 0:
+        raise ValueError("USL normal-equation matrix is singular")
+    initial_sigma = (
+        sums["sum_v2"] * sums["sum_uy"] - sums["sum_uv"] * sums["sum_vy"]
+    ) / determinant
+    initial_kappa = (
+        sums["sum_u2"] * sums["sum_vy"] - sums["sum_uv"] * sums["sum_uy"]
+    ) / determinant
+    sigma, kappa = initial_sigma, initial_kappa
+    constraint = "none"
     if sigma < 0 and kappa < 0:
         sigma = kappa = 0.0
+        constraint = "sigma=0,kappa=0"
     elif sigma < 0:
         sigma = 0.0
-        kappa = max(0.0, float(np.dot(matrix[:, 1], y) / np.dot(matrix[:, 1], matrix[:, 1])))
+        kappa = max(0.0, sums["sum_vy"] / sums["sum_v2"])
+        constraint = "sigma=0; refit kappa=sum_vy/sum_v2"
     elif kappa < 0:
         kappa = 0.0
-        sigma = max(0.0, float(np.dot(matrix[:, 0], y) / np.dot(matrix[:, 0], matrix[:, 0])))
+        sigma = max(0.0, sums["sum_uy"] / sums["sum_u2"])
+        constraint = "kappa=0; refit sigma=sum_uy/sum_u2"
     return {"sigma": float(sigma), "kappa": float(kappa),
+            "unconstrained_sigma": float(initial_sigma),
+            "unconstrained_kappa": float(initial_kappa),
+            "constraint": constraint, "rows": rows, "sums": sums,
+            "determinant": determinant,
             "N_star": math.sqrt((1-sigma)/kappa) if kappa > 0 and sigma < 1 else None,
             "no_finite_maximum": bool(kappa == 0)}
 

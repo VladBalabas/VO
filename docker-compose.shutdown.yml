@@ -1,0 +1,5 @@
+services:
+  proxy:
+    volumes:
+      - ${SHUTDOWN_NGINX_CONF:-./nginx/nginx.shutdown.conf}:/etc/nginx/nginx.conf:ro
+      - ./frontend:/usr/share/nginx/html:ro

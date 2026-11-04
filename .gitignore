@@ -14,6 +14,10 @@ AGENTS.md
 /results/lab2/
 /results/lab2_final/raw/*
 !/results/lab2_final/raw/README.md
+!/results/lab2_final/raw/n1_profile.json.gz
+!/results/lab2_final/raw/n2_profile.json.gz
+!/results/lab2_final/raw/n3_profile.json.gz
+!/results/lab2_final/raw/n4_profile.json.gz
 /results/lab2_excluded_no_drain/*
 !/results/lab2_excluded_no_drain/README.md
 

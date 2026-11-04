@@ -1,7 +1,11 @@
 {
-  "started_epoch": 1792834534.0434108,
-  "stopped_container": "b284c47e1589cc6980a343b5a35368a959df09f2c87428c7dd39d0940cee768e",
-  "docker_stop_output": "b284c47e1589cc6980a343b5a35368a959df09f2c87428c7dd39d0940cee768e",
+  "started_epoch": 1793823381.682592,
+  "stopped_container": "c802cd2f13e9d1202e5821f6a8e714c191367039b533e15d48e667859efca8ed",
+  "compose_project": "vo-lab2-fixcheck",
+  "proxy_retries_disabled": true,
+  "load_balancer_drain": true,
+  "surviving_upstream_ip": "172.22.0.4",
+  "docker_stop_output": "c802cd2f13e9d1202e5821f6a8e714c191367039b533e15d48e667859efca8ed",
   "web_exit_code": "0",
   "generator_exit_code": 0,
   "responses_2xx": 1000,
@@ -9,43 +13,159 @@
   "request_timeouts": 0,
   "connection_errors": 0,
   "request_exceptions": 0,
+  "unhandled_error_check": {
+    "database_stopped": true,
+    "status": 500,
+    "x_pod": "4165b1d93b35",
+    "body": "{\"detail\":\"Внутрішня помилка сервера\"}"
+  },
   "trace": [
     {
       "command": [
         "docker",
         "compose",
+        "-f",
+        "docker-compose.yml",
+        "-f",
+        "docker-compose.shutdown.yml",
         "-p",
-        "vo-lab2",
+        "vo-lab2-fixcheck",
         "up",
+        "--build",
         "-d",
         "--scale",
         "web=2",
-        "web"
-      ],
-      "output": " Container vo-lab2-db-1 Running \n Container vo-lab2-web-1 Running \n Container vo-lab2-web-2 Running \n Container vo-lab2-web-3 Stopping \n Container vo-lab2-web-4 Stopping \n Container vo-lab2-web-4 Stopped \n Container vo-lab2-web-4 Removing \n Container vo-lab2-web-4 Removed \n Container vo-lab2-web-3 Stopped \n Container vo-lab2-web-3 Removing \n Container vo-lab2-web-3 Removed \n Container vo-lab2-db-1 Waiting \n Container vo-lab2-db-1 Healthy \n"
-    },
-    {
-      "command": [
-        "docker",
-        "compose",
-        "-p",
-        "vo-lab2",
-        "restart",
+        "db",
+        "web",
         "proxy"
       ],
-      "output": " Container vo-lab2-proxy-1 Restarting \n Container vo-lab2-proxy-1 Started \n"
+      "output": " Image vo-lab2-fixcheck-web Building \n#1 [internal] load local bake definitions\n#1 reading from stdin 507B 0.0s done\n#1 DONE 0.0s\n\n#2 [internal] load build definition from Dockerfile\n#2 transferring dockerfile: 664B done\n#2 DONE 0.0s\n\n#3 [internal] load metadata for docker.io/library/python:3.12-alpine\n#3 DONE 0.6s\n\n#4 [internal] load .dockerignore\n#4 transferring context: 118B done\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 1.27kB done\n#5 DONE 0.0s\n\n#6 [builder 1/5] FROM docker.io/library/python:3.12-alpine@sha256:e6dae589c1c05976188fd3bd019afd091445fc533ed2ea29001beddc7368a9c8\n#6 resolve docker.io/library/python:3.12-alpine@sha256:e6dae589c1c05976188fd3bd019afd091445fc533ed2ea29001beddc7368a9c8 0.0s done\n#6 DONE 0.0s\n\n#7 [builder 3/5] RUN apk add --no-cache build-base\n#7 CACHED\n\n#8 [runtime 2/7] RUN addgroup -S app && adduser -S -G app app\n#8 CACHED\n\n#9 [builder 2/5] WORKDIR /build\n#9 CACHED\n\n#10 [runtime 5/7] COPY requirements.txt .\n#10 CACHED\n\n#11 [runtime 3/7] WORKDIR /app\n#11 CACHED\n\n#12 [builder 5/5] RUN pip wheel --no-cache-dir --wheel-dir /wheels -r requirements.txt\n#12 CACHED\n\n#13 [builder 4/5] COPY requirements.txt .\n#13 CACHED\n\n#14 [runtime 4/7] COPY --from=builder /wheels /wheels\n#14 CACHED\n\n#15 [runtime 6/7] RUN pip install --no-cache-dir --no-index --find-links=/wheels -r requirements.txt     && rm -rf /wheels\n#15 CACHED\n\n#16 [runtime 7/7] COPY backend ./backend\n#16 CACHED\n\n#17 exporting to image\n#17 exporting layers done\n#17 exporting manifest sha256:122c573a2284413c25605a812f923e38f32ac5d931daabb1bdfa5c776dc62e77 done\n#17 exporting config sha256:9bfbee478c97371629c5469d06affb8a4e1cf1780352770382b679bc44f63d1e done\n#17 exporting attestation manifest sha256:a23ae6213d66c18a4a05165f9728430675c7a051eec798c9a175d59105b0cfda 0.0s done\n#17 exporting manifest list sha256:3efe89c6a355bc8cda08285c2007d73daac308ef09d98e6a51ecf105c380154d 0.0s done\n#17 naming to docker.io/library/vo-lab2-fixcheck-web:latest done\n#17 unpacking to docker.io/library/vo-lab2-fixcheck-web:latest done\n#17 DONE 0.1s\n\n#18 resolving provenance for metadata file\n#18 DONE 0.0s\n Image vo-lab2-fixcheck-web Built \n Container vo-lab2-fixcheck-web-1 Running \n Container vo-lab2-fixcheck-db-1 Running \n Container vo-lab2-fixcheck-proxy-1 Recreate \n Container vo-lab2-fixcheck-proxy-1 Recreated \n Container vo-lab2-fixcheck-db-1 Waiting \n Container vo-lab2-fixcheck-db-1 Healthy \n Container vo-lab2-fixcheck-web-2 Starting \n Container vo-lab2-fixcheck-web-2 Started \n Container vo-lab2-fixcheck-web-2 Waiting \n Container vo-lab2-fixcheck-web-1 Waiting \n Container vo-lab2-fixcheck-web-2 Healthy \n Container vo-lab2-fixcheck-web-1 Healthy \n Container vo-lab2-fixcheck-proxy-1 Starting \n Container vo-lab2-fixcheck-proxy-1 Started \n"
     },
     {
       "command": [
         "docker",
         "compose",
+        "-f",
+        "docker-compose.yml",
+        "-f",
+        "docker-compose.shutdown.yml",
         "-p",
-        "vo-lab2",
+        "vo-lab2-fixcheck",
+        "exec",
+        "-T",
+        "proxy",
+        "nginx",
+        "-T"
+      ],
+      "output": "nginx: the configuration file /etc/nginx/nginx.conf syntax is ok\n# configuration file /etc/nginx/nginx.conf:\nevents { worker_connections 4096; }\n\nhttp {\n    include /etc/nginx/mime.types;\n    default_type application/octet-stream;\n\n    upstream web_backend {\n        server web:8000;\n        keepalive 32;\n    }\n\n    server {\n        listen 80;\n        root /usr/share/nginx/html;\n        index index.html;\n\n        location = /noop { return 204; }\n\n        location = /livez {\n            proxy_pass http://web_backend;\n        }\n\n        location = /healthz {\n            proxy_http_version 1.1;\n            proxy_set_header Connection \"\";\n            proxy_set_header Host $host;\n            proxy_set_header X-Real-IP $remote_addr;\n            proxy_pass http://web_backend;\n        }\n\n        location ^~ /referrals {\n            proxy_http_version 1.1;\n            proxy_set_header Connection \"\";\n            proxy_set_header Host $host;\n            proxy_set_header X-Real-IP $remote_addr;\n            proxy_connect_timeout 1s;\n            # The shutdown check must expose a failed first upstream attempt.\n            proxy_next_upstream off;\n            proxy_next_upstream_tries 1;\n            proxy_pass http://web_backend;\n        }\n\n        location ^~ /bench/ {\n            proxy_http_version 1.1;\n            proxy_set_header Connection \"\";\n            proxy_set_header Host $host;\n            proxy_set_header X-Real-IP $remote_addr;\n            proxy_pass http://web_backend;\n        }\n\n        location = /openapi.json {\n            proxy_pass http://web_backend;\n        }\n\n        location ^~ /docs {\n            proxy_pass http://web_backend;\n        }\n\n        location ^~ /redoc {\n            proxy_pass http://web_backend;\n        }\n\n        location / {\n            add_header Cache-Control \"no-store\";\n            try_files $uri $uri/ /index.html;\n        }\n    }\n}\n\n# configuration file /etc/nginx/mime.types:\n\ntypes {\n    text/html                                        html htm shtml;\n    text/css                                         css;\n    text/xml                                         xml;\n    image/gif                                        gif;\n    image/jpeg                                       jpeg jpg;\n    application/javascript                           js;\n    application/atom+xml                             atom;\n    application/rss+xml                              rss;\n\n    text/mathml                                      mml;\n    text/plain                                       txt;\n    text/vnd.sun.j2me.app-descriptor                 jad;\n    text/vnd.wap.wml                                 wml;\n    text/x-component                                 htc;\n\n    image/avif                                       avif;\n    image/png                                        png;\n    image/svg+xml                                    svg svgz;\n    image/tiff                                       tif tiff;\n    image/vnd.wap.wbmp                               wbmp;\n    image/webp                                       webp;\n    image/x-icon                                     ico;\n    image/x-jng                                      jng;\n    image/x-ms-bmp                                   bmp;\n\n    font/woff                                        woff;\n    font/woff2                                       woff2;\n\n    application/java-archive                         jar war ear;\n    application/json                                 json;\n    application/mac-binhex40                         hqx;\n    application/msword                               doc;\n    application/pdf                                  pdf;\n    application/postscript                           ps eps ai;\n    application/rtf                                  rtf;\n    application/vnd.apple.mpegurl                    m3u8;\n    application/vnd.google-earth.kml+xml             kml;\n    application/vnd.google-earth.kmz                 kmz;\n    application/vnd.ms-excel                         xls;\n    application/vnd.ms-fontobject                    eot;\n    application/vnd.ms-powerpoint                    ppt;\n    application/vnd.oasis.opendocument.graphics      odg;\n    application/vnd.oasis.opendocument.presentation  odp;\n    application/vnd.oasis.opendocument.spreadsheet   ods;\n    application/vnd.oasis.opendocument.text          odt;\n    application/vnd.openxmlformats-officedocument.presentationml.presentation\n                                                     pptx;\n    application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\n                                                     xlsx;\n    application/vnd.openxmlformats-officedocument.wordprocessingml.document\n                                                     docx;\n    application/vnd.wap.wmlc                         wmlc;\n    application/wasm                                 wasm;\n    application/x-7z-compressed                      7z;\n    application/x-cocoa                              cco;\n    application/x-java-archive-diff                  jardiff;\n    application/x-java-jnlp-file                     jnlp;\n    application/x-makeself                           run;\n    application/x-perl                               pl pm;\n    application/x-pilot                              prc pdb;\n    application/x-rar-compressed                     rar;\n    application/x-redhat-package-manager             rpm;\n    application/x-sea                                sea;\n    application/x-shockwave-flash                    swf;\n    application/x-stuffit                            sit;\n    application/x-tcl                                tcl tk;\n    application/x-x509-ca-cert                       der pem crt;\n    application/x-xpinstall                          xpi;\n    application/xhtml+xml                            xhtml;\n    application/xspf+xml                             xspf;\n    application/zip                                  zip;\n\n    application/octet-stream                         bin exe dll;\n    application/octet-stream                         deb;\n    application/octet-stream                         dmg;\n    application/octet-stream                         iso img;\n    application/octet-stream                         msi msp msm;\n\n    audio/midi                                       mid midi kar;\n    audio/mpeg                                       mp3;\n    audio/ogg                                        ogg;\n    audio/x-m4a                                      m4a;\n    audio/x-realaudio                                ra;\n\n    video/3gpp                                       3gpp 3gp;\n    video/mp2t                                       ts;\n    video/mp4                                        mp4;\n    video/mpeg                                       mpeg mpg;\n    video/quicktime                                  mov;\n    video/webm                                       webm;\n    video/x-flv                                      flv;\n    video/x-m4v                                      m4v;\n    video/x-mng                                      mng;\n    video/x-ms-asf                                   asx asf;\n    video/x-ms-wmv                                   wmv;\n    video/x-msvideo                                  avi;\n}\n\nnginx: configuration file /etc/nginx/nginx.conf test is successful\n"
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "docker-compose.yml",
+        "-f",
+        "docker-compose.shutdown.yml",
+        "-p",
+        "vo-lab2-fixcheck",
+        "--profile",
+        "load",
+        "run",
+        "--rm",
+        "--no-deps",
+        "--entrypoint",
+        "python",
+        "load-generator",
+        "/load/load_generator.py",
+        "seed",
+        "--count",
+        "100",
+        "--output",
+        "/results/lab2_final/shutdown_seed.json"
+      ],
+      "output": " Container vo-lab2-fixcheck-load-generator-run-135408e92558 Creating \n Container vo-lab2-fixcheck-load-generator-run-135408e92558 Created \n{\n  \"generated_at\": \"2026-11-04T20:16:20.706172+00:00\",\n  \"count\": 100,\n  \"ids\": [\n    101,\n    102,\n    103,\n    104,\n    105,\n    106,\n    107,\n    108,\n    109,\n    110,\n    111,\n    112,\n    113,\n    114,\n    115,\n    116,\n    117,\n    118,\n    119,\n    120,\n    121,\n    122,\n    123,\n    124,\n    125,\n    126,\n    127,\n    128,\n    129,\n    130,\n    131,\n    132,\n    133,\n    134,\n    135,\n    136,\n    137,\n    138,\n    139,\n    140,\n    141,\n    142,\n    143,\n    144,\n    145,\n    146,\n    147,\n    148,\n    149,\n    150,\n    151,\n    152,\n    153,\n    154,\n    155,\n    156,\n    157,\n    158,\n    159,\n    160,\n    161,\n    162,\n    163,\n    164,\n    165,\n    166,\n    167,\n    168,\n    169,\n    170,\n    171,\n    172,\n    173,\n    174,\n    175,\n    176,\n    177,\n    178,\n    179,\n    180,\n    181,\n    182,\n    183,\n    184,\n    185,\n    186,\n    187,\n    188,\n    189,\n    190,\n    191,\n    192,\n    193,\n    194,\n    195,\n    196,\n    197,\n    198,\n    199,\n    200\n  ]\n}\n"
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "docker-compose.yml",
+        "-f",
+        "docker-compose.shutdown.yml",
+        "-p",
+        "vo-lab2-fixcheck",
         "ps",
         "-q",
         "web"
       ],
-      "output": "86ca6345d547da9f0b73d1b7ba9737c981b654abfc4bbe3bb80c7e6ef3e941e8\nb284c47e1589cc6980a343b5a35368a959df09f2c87428c7dd39d0940cee768e\n"
+      "output": "4165b1d93b35b07208e5582db68ad32ce290eae7fbb433e3c29f9e266e2e1803\nc802cd2f13e9d1202e5821f6a8e714c191367039b533e15d48e667859efca8ed\n"
+    },
+    {
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}",
+        "4165b1d93b35b07208e5582db68ad32ce290eae7fbb433e3c29f9e266e2e1803"
+      ],
+      "output": "172.22.0.4\n"
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "docker-compose.yml",
+        "-f",
+        "docker-compose.shutdown.yml",
+        "-p",
+        "vo-lab2-fixcheck",
+        "exec",
+        "-T",
+        "proxy",
+        "nginx",
+        "-t"
+      ],
+      "output": "nginx: the configuration file /etc/nginx/nginx.conf syntax is ok\nnginx: configuration file /etc/nginx/nginx.conf test is successful\n"
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "docker-compose.yml",
+        "-f",
+        "docker-compose.shutdown.yml",
+        "-p",
+        "vo-lab2-fixcheck",
+        "exec",
+        "-T",
+        "proxy",
+        "nginx",
+        "-s",
+        "reload"
+      ],
+      "output": "2026/11/04 20:16:26 [notice] 43#43: signal process started\n"
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "docker-compose.yml",
+        "-f",
+        "docker-compose.shutdown.yml",
+        "-p",
+        "vo-lab2-fixcheck",
+        "exec",
+        "-T",
+        "proxy",
+        "nginx",
+        "-T"
+      ],
+      "output": "nginx: the configuration file /etc/nginx/nginx.conf syntax is ok\n# configuration file /etc/nginx/nginx.conf:\nevents { worker_connections 4096; }\n\nhttp {\n    include /etc/nginx/mime.types;\n    default_type application/octet-stream;\n\n    upstream web_backend {\n        server 172.22.0.4:8000;\n        keepalive 32;\n    }\n\n    server {\n        listen 80;\n        root /usr/share/nginx/html;\n        index index.html;\n\n        location = /noop { return 204; }\n\n        location = /livez {\n            proxy_pass http://web_backend;\n        }\n\n        location = /healthz {\n            proxy_http_version 1.1;\n            proxy_set_header Connection \"\";\n            proxy_set_header Host $host;\n            proxy_set_header X-Real-IP $remote_addr;\n            proxy_pass http://web_backend;\n        }\n\n        location ^~ /referrals {\n            proxy_http_version 1.1;\n            proxy_set_header Connection \"\";\n            proxy_set_header Host $host;\n            proxy_set_header X-Real-IP $remote_addr;\n            proxy_connect_timeout 1s;\n            # The shutdown check must expose a failed first upstream attempt.\n            proxy_next_upstream off;\n            proxy_next_upstream_tries 1;\n            proxy_pass http://web_backend;\n        }\n\n        location ^~ /bench/ {\n            proxy_http_version 1.1;\n            proxy_set_header Connection \"\";\n            proxy_set_header Host $host;\n            proxy_set_header X-Real-IP $remote_addr;\n            proxy_pass http://web_backend;\n        }\n\n        location = /openapi.json {\n            proxy_pass http://web_backend;\n        }\n\n        location ^~ /docs {\n            proxy_pass http://web_backend;\n        }\n\n        location ^~ /redoc {\n            proxy_pass http://web_backend;\n        }\n\n        location / {\n            add_header Cache-Control \"no-store\";\n            try_files $uri $uri/ /index.html;\n        }\n    }\n}\n\n# configuration file /etc/nginx/mime.types:\n\ntypes {\n    text/html                                        html htm shtml;\n    text/css                                         css;\n    text/xml                                         xml;\n    image/gif                                        gif;\n    image/jpeg                                       jpeg jpg;\n    application/javascript                           js;\n    application/atom+xml                             atom;\n    application/rss+xml                              rss;\n\n    text/mathml                                      mml;\n    text/plain                                       txt;\n    text/vnd.sun.j2me.app-descriptor                 jad;\n    text/vnd.wap.wml                                 wml;\n    text/x-component                                 htc;\n\n    image/avif                                       avif;\n    image/png                                        png;\n    image/svg+xml                                    svg svgz;\n    image/tiff                                       tif tiff;\n    image/vnd.wap.wbmp                               wbmp;\n    image/webp                                       webp;\n    image/x-icon                                     ico;\n    image/x-jng                                      jng;\n    image/x-ms-bmp                                   bmp;\n\n    font/woff                                        woff;\n    font/woff2                                       woff2;\n\n    application/java-archive                         jar war ear;\n    application/json                                 json;\n    application/mac-binhex40                         hqx;\n    application/msword                               doc;\n    application/pdf                                  pdf;\n    application/postscript                           ps eps ai;\n    application/rtf                                  rtf;\n    application/vnd.apple.mpegurl                    m3u8;\n    application/vnd.google-earth.kml+xml             kml;\n    application/vnd.google-earth.kmz                 kmz;\n    application/vnd.ms-excel                         xls;\n    application/vnd.ms-fontobject                    eot;\n    application/vnd.ms-powerpoint                    ppt;\n    application/vnd.oasis.opendocument.graphics      odg;\n    application/vnd.oasis.opendocument.presentation  odp;\n    application/vnd.oasis.opendocument.spreadsheet   ods;\n    application/vnd.oasis.opendocument.text          odt;\n    application/vnd.openxmlformats-officedocument.presentationml.presentation\n                                                     pptx;\n    application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\n                                                     xlsx;\n    application/vnd.openxmlformats-officedocument.wordprocessingml.document\n                                                     docx;\n    application/vnd.wap.wmlc                         wmlc;\n    application/wasm                                 wasm;\n    application/x-7z-compressed                      7z;\n    application/x-cocoa                              cco;\n    application/x-java-archive-diff                  jardiff;\n    application/x-java-jnlp-file                     jnlp;\n    application/x-makeself                           run;\n    application/x-perl                               pl pm;\n    application/x-pilot                              prc pdb;\n    application/x-rar-compressed                     rar;\n    application/x-redhat-package-manager             rpm;\n    application/x-sea                                sea;\n    application/x-shockwave-flash                    swf;\n    application/x-stuffit                            sit;\n    application/x-tcl                                tcl tk;\n    application/x-x509-ca-cert                       der pem crt;\n    application/x-xpinstall                          xpi;\n    application/xhtml+xml                            xhtml;\n    application/xspf+xml                             xspf;\n    application/zip                                  zip;\n\n    application/octet-stream                         bin exe dll;\n    application/octet-stream                         deb;\n    application/octet-stream                         dmg;\n    application/octet-stream                         iso img;\n    application/octet-stream                         msi msp msm;\n\n    audio/midi                                       mid midi kar;\n    audio/mpeg                                       mp3;\n    audio/ogg                                        ogg;\n    audio/x-m4a                                      m4a;\n    audio/x-realaudio                                ra;\n\n    video/3gpp                                       3gpp 3gp;\n    video/mp2t                                       ts;\n    video/mp4                                        mp4;\n    video/mpeg                                       mpeg mpg;\n    video/quicktime                                  mov;\n    video/webm                                       webm;\n    video/x-flv                                      flv;\n    video/x-m4v                                      m4v;\n    video/x-mng                                      mng;\n    video/x-ms-asf                                   asx asf;\n    video/x-ms-wmv                                   wmv;\n    video/x-msvideo                                  avi;\n}\n\nnginx: configuration file /etc/nginx/nginx.conf test is successful\n"
     },
     {
       "command": [
@@ -53,9 +173,9 @@
         "stop",
         "--timeout",
         "10",
-        "b284c47e1589cc6980a343b5a35368a959df09f2c87428c7dd39d0940cee768e"
+        "c802cd2f13e9d1202e5821f6a8e714c191367039b533e15d48e667859efca8ed"
       ],
-      "output": "b284c47e1589cc6980a343b5a35368a959df09f2c87428c7dd39d0940cee768e\n"
+      "output": "c802cd2f13e9d1202e5821f6a8e714c191367039b533e15d48e667859efca8ed\n"
     },
     {
       "command": [
@@ -63,7 +183,7 @@
         "inspect",
         "--format",
         "{{.State.ExitCode}}",
-        "b284c47e1589cc6980a343b5a35368a959df09f2c87428c7dd39d0940cee768e"
+        "c802cd2f13e9d1202e5821f6a8e714c191367039b533e15d48e667859efca8ed"
       ],
       "output": "0\n"
     },
@@ -71,8 +191,12 @@
       "command": [
         "docker",
         "compose",
+        "-f",
+        "docker-compose.yml",
+        "-f",
+        "docker-compose.shutdown.yml",
         "-p",
-        "vo-lab2",
+        "vo-lab2-fixcheck",
         "--profile",
         "load",
         "run",
@@ -86,7 +210,7 @@
         "--path",
         "/referrals/{id}",
         "--seed-file",
-        "/results/lab2_final/seed.json",
+        "/results/lab2_final/shutdown_seed.json",
         "--rate",
         "100",
         "--duration",
@@ -98,8 +222,38 @@
         "--output",
         "/results/lab2_final/raw/graceful_stop_r100.json"
       ],
-      "output": " Container vo-lab2-load-generator-run-c1e150b82272 Creating \n Container vo-lab2-load-generator-run-c1e150b82272 Created \n{\"schema_version\": 4, \"generator_implementation\": \"aiohttp_continuous_open_loop\", \"latency_origin\": \"scheduled_at\", \"generated_at\": \"2026-10-24T09:35:46.540683+00:00\", \"started_at_epoch\": 1792834536.4698663, \"requested_rate_rps\": 100, \"nominal_duration_seconds\": 10, \"timeout_seconds\": 5.0, \"path_template\": \"/referrals/{id}\", \"mode\": \"open\", \"g_ceiling\": null, \"stop_two_misses\": false, \"requests_scheduled\": 1000, \"requests_sent\": 1000, \"responses_2xx\": 1000, \"responses_non_2xx\": 0, \"request_timeouts\": 0, \"connection_errors\": 0, \"request_exceptions\": 0, \"worker_capacity\": null, \"worker_peak_active_by_process\": [9], \"schedule_lag_p95_ms\": 1.3831233486598649, \"latency_p50_ms\": 3.957263348638662, \"latency_p95_ms\": 46.84983534843923, \"latency_p99_ms\": 72.36166834854885, \"observation_seconds\": 10.032361668348585, \"status_counts\": {\"200\": 1000}}\n",
+      "output": " Container vo-lab2-fixcheck-load-generator-run-65023e1bca93 Creating \n Container vo-lab2-fixcheck-load-generator-run-65023e1bca93 Created \n{\"schema_version\": 4, \"generator_implementation\": \"aiohttp_continuous_open_loop\", \"latency_origin\": \"scheduled_at\", \"generated_at\": \"2026-11-04T20:16:33.944636+00:00\", \"started_at_epoch\": 1793823383.8727343, \"requested_rate_rps\": 100, \"nominal_duration_seconds\": 10, \"timeout_seconds\": 5.0, \"path_template\": \"/referrals/{id}\", \"mode\": \"open\", \"g_ceiling\": null, \"stop_two_misses\": false, \"requests_scheduled\": 1000, \"requests_sent\": 1000, \"responses_2xx\": 1000, \"responses_non_2xx\": 0, \"request_timeouts\": 0, \"connection_errors\": 0, \"request_exceptions\": 0, \"worker_capacity\": null, \"worker_peak_active_by_process\": [8], \"schedule_lag_p95_ms\": 1.3035055114869465, \"latency_p50_ms\": 3.0664435114999833, \"latency_p95_ms\": 38.274167511417545, \"latency_p99_ms\": 64.60513751142116, \"observation_seconds\": 10, \"status_counts\": {\"200\": 1000}}\n",
       "exit_code": 0
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "docker-compose.yml",
+        "-f",
+        "docker-compose.shutdown.yml",
+        "-p",
+        "vo-lab2-fixcheck",
+        "stop",
+        "db"
+      ],
+      "output": " Container vo-lab2-fixcheck-db-1 Stopping \n Container vo-lab2-fixcheck-db-1 Stopped \n"
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "docker-compose.yml",
+        "-f",
+        "docker-compose.shutdown.yml",
+        "-p",
+        "vo-lab2-fixcheck",
+        "start",
+        "db"
+      ],
+      "output": " Container vo-lab2-fixcheck-db-1 Starting \n Container vo-lab2-fixcheck-db-1 Started \n"
     }
   ]
 }

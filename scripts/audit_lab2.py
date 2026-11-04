@@ -22,8 +22,14 @@ def main() -> None:
     shutdown = load("graceful_stop_r100.json")
     checks["graceful_shutdown"] = (
         shutdown["web_exit_code"] == "0"
+        and shutdown["proxy_retries_disabled"]
+        and shutdown["load_balancer_drain"]
         and shutdown["responses_non_2xx"] == 0
         and shutdown["connection_errors"] == 0
+    )
+    checks["x_pod_on_unhandled_500"] = (
+        shutdown["unhandled_error_check"]["status"] == 500
+        and bool(shutdown["unhandled_error_check"]["x_pod"])
     )
     liveness = load("liveness_check.json")
     checks["liveness_independent"] = (
@@ -45,7 +51,10 @@ def main() -> None:
         and ceiling["steps"][-2]["x"] < .9 * ceiling["steps"][-2]["rate"]
     )
     checks["four_final_series"] = all(
-        (DATA / "raw" / f"n{n}_profile.json").exists()
+        (
+            (DATA / "raw" / f"n{n}_profile.json").exists()
+            or (DATA / "raw" / f"n{n}_profile.json.gz").exists()
+        )
         and (DATA / "series" / f"n{n}.json").exists()
         for n in range(1, 5)
     )
@@ -62,7 +71,8 @@ def main() -> None:
               "report_link_count": len(links), "missing_links": missing,
               "explicit_limitations": [
                   "USL fit has high RMSE",
-                  "single common cause of N=4 degradation is not causally isolated",
+                  "N=4 shared-connection-capacity conclusion is an engineering inference",
+                  "final protocol prose requires the student's own wording",
               ]}
     (DATA / "requirements_audit.json").write_text(
         json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"

@@ -7,6 +7,7 @@ machine-readable verification record.
 from __future__ import annotations
 
 import hashlib
+import gzip
 import json
 import math
 import statistics
@@ -18,7 +19,25 @@ DATA = ROOT / "results" / "lab2_final"
 
 
 def load(path: Path):
-    return json.loads(path.read_text(encoding="utf-8"))
+    if path.exists():
+        return json.loads(path.read_text(encoding="utf-8"))
+    compressed = path.with_suffix(path.suffix + ".gz")
+    if compressed.exists():
+        with gzip.open(compressed, "rt", encoding="utf-8") as stream:
+            return json.load(stream)
+    raise FileNotFoundError(path)
+
+
+def uncompressed_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    if path.exists():
+        stream = path.open("rb")
+    else:
+        stream = gzip.open(path.with_suffix(path.suffix + ".gz"), "rb")
+    with stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def is_success(record: dict) -> bool:
@@ -35,8 +54,9 @@ def refit_usl(rows: list[tuple[int, float]], x1: float) -> dict[str, float]:
     suy = sum(u * y for u, _, y in design)
     svy = sum(v * y for _, v, y in design)
     determinant = suu * svv - suv * suv
-    sigma = (suy * svv - svy * suv) / determinant
-    kappa = (svy * suu - suy * suv) / determinant
+    initial_sigma = (suy * svv - svy * suv) / determinant
+    initial_kappa = (svy * suu - suy * suv) / determinant
+    sigma, kappa = initial_sigma, initial_kappa
     if sigma < 0 and kappa < 0:
         sigma = kappa = 0.0
     elif sigma < 0:
@@ -45,7 +65,20 @@ def refit_usl(rows: list[tuple[int, float]], x1: float) -> dict[str, float]:
     elif kappa < 0:
         kappa = 0.0
         sigma = max(0.0, suy / suu)
-    return {"sigma": sigma, "kappa": kappa}
+    return {
+        "sigma": sigma,
+        "kappa": kappa,
+        "unconstrained_sigma": initial_sigma,
+        "unconstrained_kappa": initial_kappa,
+        "sums": {
+            "sum_u2": suu,
+            "sum_v2": svv,
+            "sum_uv": suv,
+            "sum_uy": suy,
+            "sum_vy": svy,
+        },
+        "determinant": determinant,
+    }
 
 
 def verify_profile(name: str) -> dict:
@@ -93,7 +126,7 @@ def verify_profile(name: str) -> dict:
                              "connection_errors": connection_errors,
                              "scheduled": step["scheduled"],
                              "sent_during_step": sent_during_step})
-    digest = hashlib.sha256(path.read_bytes()).hexdigest()
+    digest = uncompressed_sha256(path)
     return {"profile": name, "sha256": digest, "scheduled": expected,
             "stop_two_misses": raw["stop_two_misses"], "steps": recalculated}
 

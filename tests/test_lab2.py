@@ -40,6 +40,50 @@ class Lab2AnalysisTests(unittest.TestCase):
         self.assertGreaterEqual(fit["sigma"], 0)
         self.assertAlmostEqual(fit["kappa"], .08)
 
+    def test_saved_series_usl_normal_equation_terms(self):
+        points = [
+            (1, 200.0, 200.0),
+            (2, 403.4, 200.0),
+            (3, 803.4, 200.0),
+            (4, 454.3333333333333, 200.0),
+        ]
+        fit = fit_usl(points)
+        self.assertEqual(fit["sums"]["sum_u2"], 14)
+        self.assertEqual(fit["sums"]["sum_v2"], 184)
+        self.assertEqual(fit["sums"]["sum_uv"], 50)
+        self.assertAlmostEqual(fit["sums"]["sum_uy"], 1.7676887705434603)
+        self.assertAlmostEqual(fit["sums"]["sum_vy"], 7.593959820982837)
+        self.assertAlmostEqual(fit["unconstrained_sigma"], -0.7163586482782263)
+        self.assertAlmostEqual(fit["unconstrained_kappa"], 0.23593419692877235)
+        self.assertEqual(fit["constraint"], "sigma=0; refit kappa=sum_vy/sum_v2")
+        self.assertAlmostEqual(fit["kappa"], 7.593959820982837 / 184)
+
+    def test_unhandled_exception_is_caught_before_x_pod_header_assignment(self):
+        source = Path("backend/ui/api/factory.py").read_text(encoding="utf-8")
+        module = ast.parse(source)
+        middleware = next(
+            node
+            for node in ast.walk(module)
+            if isinstance(node, ast.AsyncFunctionDef) and node.name == "add_instance_header"
+        )
+        handlers = [node for node in ast.walk(middleware) if isinstance(node, ast.ExceptHandler)]
+        self.assertTrue(
+            any(isinstance(handler.type, ast.Name) and handler.type.id == "Exception"
+                for handler in handlers)
+        )
+        x_pod_assignments = [
+            node
+            for node in ast.walk(middleware)
+            if isinstance(node, ast.Assign)
+            and any(
+                isinstance(target, ast.Subscript)
+                and isinstance(target.slice, ast.Constant)
+                and target.slice.value == "X-Pod"
+                for target in node.targets
+            )
+        ]
+        self.assertTrue(x_pod_assignments)
+
     def test_histogram_bucket_error_bound(self):
         data = {"server_buckets":{"result":[
             {"metric":{"le":"0.1"},"values":[[10,"90"]]},

@@ -439,7 +439,17 @@
   ],
   "independent_usl": {
     "sigma": 0.0,
-    "kappa": 0.041271520766211066
+    "kappa": 0.041271520766211066,
+    "unconstrained_sigma": -0.7163586482782263,
+    "unconstrained_kappa": 0.23593419692877235,
+    "sums": {
+      "sum_u2": 14.0,
+      "sum_v2": 184.0,
+      "sum_uv": 50.0,
+      "sum_uy": 1.76768877054346,
+      "sum_vy": 7.593959820982836
+    },
+    "determinant": 76.0
   },
   "checks": [
     "continuous offsets and exact scheduled counts",

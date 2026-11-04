@@ -5,6 +5,7 @@
     "regression_tests": true,
     "api_full_log": true,
     "graceful_shutdown": true,
+    "x_pod_on_unhandled_500": true,
     "liveness_independent": true,
     "four_targets_up": true,
     "four_pods_receive_requests": true,
@@ -13,10 +14,11 @@
     "required_figures": true,
     "report_links": true
   },
-  "report_link_count": 42,
+  "report_link_count": 28,
   "missing_links": [],
   "explicit_limitations": [
     "USL fit has high RMSE",
-    "single common cause of N=4 degradation is not causally isolated"
+    "N=4 shared-connection-capacity conclusion is an engineering inference",
+    "final protocol prose requires the student's own wording"
   ]
 }

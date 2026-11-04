@@ -1,5 +1,6 @@
 import socket
 import time
+import logging
 from contextlib import AbstractAsyncContextManager
 from typing import Callable
 
@@ -25,6 +26,7 @@ HTTP_DURATION = Histogram(
     ["method", "path"], buckets=(.005, .010, .025, .050, .100, .250, .500, 1.0),
 )
 HTTP_IN_FLIGHT = Gauge("http_requests_in_flight", "HTTP requests in progress")
+LOGGER = logging.getLogger(__name__)
 
 
 def create_http_app(
@@ -61,8 +63,19 @@ def create_http_app(
         HTTP_IN_FLIGHT.inc()
         status = 500
         try:
-            response = await call_next(request)
-            status = response.status_code
+            try:
+                response = await call_next(request)
+                status = response.status_code
+            except Exception:
+                LOGGER.exception(
+                    "Unhandled exception while processing %s %s",
+                    request.method,
+                    request.url.path,
+                )
+                response = JSONResponse(
+                    status_code=500,
+                    content={"detail": "Внутрішня помилка сервера"},
+                )
             response.headers["X-Pod"] = request.app.state.instance_name
             return response
         finally:
