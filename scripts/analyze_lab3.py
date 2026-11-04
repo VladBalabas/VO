@@ -1,6 +1,7 @@
 """Rebuild Lab 3 tables, elasticity metrics and figures from immutable raw."""
 from __future__ import annotations
 
+import gzip
 import json
 import math
 import statistics
@@ -31,8 +32,37 @@ def summary(name: str) -> dict[str, Any]:
     return read(DATA / "raw" / f"{name}.summary.json")
 
 
+def raw_source(name: str, raw_dir: Path | None = None) -> Path:
+    directory = raw_dir or DATA / "raw"
+    plain = directory / f"{name}.jsonl"
+    compressed = directory / f"{name}.jsonl.gz"
+    if compressed.exists():
+        return compressed
+    if plain.exists():
+        return plain
+    raise FileNotFoundError(f"Neither {plain} nor {compressed} exists")
+
+
+def open_raw_text(path: Path):
+    if path.suffix == ".gz":
+        return gzip.open(path, "rt", encoding="utf-8")
+    return path.open(encoding="utf-8")
+
+
+def uncompressed_size(path: Path) -> int:
+    total = 0
+    if path.suffix == ".gz":
+        stream = gzip.open(path, "rb")
+    else:
+        stream = path.open("rb")
+    with stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            total += len(block)
+    return total
+
+
 def raw_records(name: str) -> Iterable[dict[str, Any]]:
-    with (DATA / "raw" / f"{name}.jsonl").open(encoding="utf-8") as stream:
+    with open_raw_text(raw_source(name)) as stream:
         for line in stream:
             if line.strip():
                 yield json.loads(line)
@@ -419,26 +449,31 @@ def plot_profile_pair(names: tuple[str, str], results: dict[str, dict[str, Any]]
 
 
 def write_raw_manifest() -> None:
-    """Describe the intentionally untracked primary files without modifying them."""
+    """Describe immutable primary files and their versioned gzip packages."""
     rows = []
     for name in RUNS:
-        raw = DATA / "raw" / f"{name}.jsonl"
+        raw = raw_source(name)
+        archive = DATA / "raw" / f"{name}.jsonl.gz"
         run_summary = summary(name)
-        rows.append({
+        row = {
             "run": name,
             "file": f"raw/{name}.jsonl",
-            "bytes": raw.stat().st_size,
+            "bytes": uncompressed_size(raw),
             "records": run_summary["raw_records"],
             "sha256": run_summary["raw_sha256"],
             "summary": f"raw/{name}.summary.json",
-        })
+            "versioned_archive": f"raw/{name}.jsonl.gz" if archive.exists() else None,
+            "archive_bytes": archive.stat().st_size if archive.exists() else None,
+        }
+        rows.append(row)
     manifest = {
-        "purpose": "immutable per-request primary data omitted from Git because of size",
+        "purpose": "immutable per-request primary data; all experiment runs except noop are versioned as deterministic gzip archives",
         "generated_from": "raw files and their generator summaries",
         "files": rows,
         "reproduce": [
             ".\\.venv\\Scripts\\python.exe scripts\\run_lab3.py --phase stairs",
             ".\\.venv\\Scripts\\python.exe scripts\\run_lab3.py --phase profiles",
+            ".\\.venv\\Scripts\\python.exe scripts\\package_lab3_raw.py",
             ".\\.venv\\Scripts\\python.exe scripts\\analyze_lab3.py",
             ".\\.venv\\Scripts\\python.exe scripts\\verify_lab3_results.py",
         ],
@@ -449,8 +484,9 @@ def write_raw_manifest() -> None:
     lines = [
         "# Первинні raw-дані лабораторної №3",
         "",
-        "Файли `*.jsonl` є незмінюваними записами кожної HTTP-спроби й локально виключені",
-        "з Git через розмір. Їхні компактні summaries та цей маніфест версіонуються.",
+        "Файли `*.jsonl` є незмінюваними записами кожної HTTP-спроби. Прогони N=1,2,3,5",
+        "і профілі fixed/HPA/Д5 версіонуються як детерміновані `*.jsonl.gz`; великий noop",
+        "залишається локальним, а в Git зберігаються його summary, SHA-256 і per-second дані.",
         "",
         "| Прогін | Записів | Розмір, байт | SHA-256 |",
         "| --- | ---: | ---: | --- |",
@@ -467,8 +503,8 @@ def write_raw_manifest() -> None:
         *manifest["reproduce"],
         "```",
         "",
-        "Незалежна перевірка повторно читає кожен JSONL, звіряє SHA-256 і кількість записів,",
-        "перераховує X, SD, pod-розподіл, USL та метрики еластичності.",
+        "Аналізатор і незалежна перевірка читають JSONL або JSONL.GZ, звіряють SHA-256 і кількість записів,",
+        "перераховують X, SD, pod-розподіл, USL та метрики еластичності.",
         "",
     ])
     (DATA / "raw" / "README.md").write_text("\n".join(lines), encoding="utf-8")

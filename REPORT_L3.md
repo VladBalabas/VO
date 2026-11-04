@@ -9,7 +9,7 @@
 
 Сервіс лабораторної №2 разом із PostgreSQL і моніторингом перенесено до локального Kubernetes. Робота виконувалась у послідовності завдання: спочатку зафіксовано [проєктування](LAB3_DESIGN.md), далі створено кластер і маніфести, перевірено інфраструктуру й API, окремо перевірено генератор, виконано фіксовані прогони `N=1,2,3,5`, побудовано USL, потім виконано короткі fixed/HPA-профілі та два однакові 450-секундні прогони Д5.
 
-Первинні HTTP-спроби є локальними незмінюваними JSONL. Через розмір вони виключені з Git, але кожен файл однозначно ідентифікований кількістю записів та SHA-256 у [raw-маніфесті](results/lab3_final/raw_manifest.json) і [README raw-даних](results/lab3_final/raw/README.md). Компактні summaries, метрики, розрахунки та графіки версіонуються.
+Первинні HTTP-спроби є незмінюваними JSONL. Прогони N=1,2,3,5 і профілі fixed/HPA/Д5 додано до репозиторію як стиснені `*.jsonl.gz`; аналізатор і незалежний verifier читають їх без розпакування. Великий noop-файл залишається локальним, але однозначно ідентифікований кількістю записів та SHA-256 у [raw-маніфесті](results/lab3_final/raw_manifest.json) і [README raw-даних](results/lab3_final/raw/README.md).
 
 ## 2. Визначення метрик
 
@@ -41,6 +41,8 @@
 | metrics-server chart | 3.14.0 |
 
 Повторне розгортання з `-KeepExistingCluster` завершилося без помилок; у [повному transcript](results/lab3_final/commands/deploy.log) є `PowerShell transcript end` і рядок `Lab 3 cluster is ready`.
+
+Docker Desktop надав стенду **16 CPU** і **16 017 596 KiB пам'яті**, тобто приблизно **15,28 GiB**. Кожен kind-вузол показував цю саму місткість спільного Docker-хоста; значення трьох вузлів не підсумовуються. Фактичні `capacity` та `allocatable` усіх вузлів збережено в [infra_objects.json](results/lab3_final/infra_objects.json).
 
 ### PostgreSQL
 
@@ -110,7 +112,37 @@ Prometheus має scrape interval 5 с; Prometheus Operator, Prometheus і kube-
 
 ## 6. Універсальний закон масштабованості
 
-За точками N=1,2,3,5 отримано:
+Використано `C(N)=X(N)/X(1)` та лінеаризовану форму
+
+`y(N)=N/C(N)-1=σu(N)+κv(N)`, де `u(N)=N-1`, `v(N)=N(N-1)`.
+
+Підстановка виміряних значень дає:
+
+| N | X(N), 2xx/с | C(N) | y(N) | u(N) | v(N) |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 2 | 637,300 | 1,951018 | 0,025106 | 1 | 2 |
+| 3 | 818,250 | 2,504975 | 0,197617 | 2 | 6 |
+| 5 | 1244,800 | 3,810807 | 0,312058 | 4 | 20 |
+
+Суми нормальних рівнянь МНК без вільного члена (обчислено з невокруглених `y`):
+
+- `Σu² = 1²+2²+4² = 21`;
+- `Σv² = 2²+6²+20² = 440`;
+- `Σuv = 1·2+2·6+4·20 = 94`;
+- `Σuy ≈ 1·0,025106+2·0,197617+4·0,312058 = 1,668572`;
+- `Σvy ≈ 2·0,025106+6·0,197617+20·0,312058 = 7,477076`.
+
+Знаменник двопараметричної оцінки:
+
+`D = Σu²·Σv²−(Σuv)² = 21·440−94² = 404`.
+
+Обидві початкові оцінки невід'ємні, тому фіксація параметра на нулі та повторний однопараметричний fit не потрібні:
+
+`σ = (Σv²·Σuy−Σuv·Σvy)/D ≈ (440·1,668572−94·7,477076)/404 = 0,0775412`;
+
+`κ = (Σu²·Σvy−Σuv·Σuy)/D ≈ (21·7,477076−94·1,668572)/404 = 0,000427737`.
+
+Звідси отримано:
 
 ```text
 lambda = X(1) = 326.65 1/s
@@ -174,17 +206,7 @@ Fixed досяг у spike в середньому 816.58 2xx/s; HPA — 495.72 2
 
 ![Д5: вікно 300 секунд](results/lab3_final/figures/d5_d5_hpa300.png)
 
-## 9. Альтернативи проєктування
-
-**Альтернатива 1 — окремі маніфести Prometheus, kube-state-metrics і RBAC замість kube-prometheus-stack.** Це допустимо, але відхилено через більший обсяг ручної RBAC/TLS-конфігурації та ризик несумісних kubelet/cAdvisor endpoint. Обраний chart усе одно доповнено власними PodMonitor і placement values.
-
-**Альтернатива 2 — власний migration image замість стандартного postgres image + ConfigMap.** Такий image краще версіонує складні міграції, але для єдиного ідемпотентного `init.sql` створював би ще один build/load artifact без нового доказу. Обраний Job явно відокремлений від старту StatefulSet.
-
-**Альтернатива 3 — статичний hostPath PersistentVolume замість default StorageClass kind.** Це дає явний host path, але жорстко прив’язує маніфест до конкретного kind-node. PVC через default provisioner достатній для перевірки видалення pod і краще переноситься між локальними кластерами.
-
-**Альтернатива 4 — Prometheus annotations/additionalScrapeConfigs замість PodMonitor.** Допустима, але відхилена, бо PodMonitor зберігає селектор namespace/pod у декларативному Kubernetes-об’єкті й простіше перевіряється командою `kubectl get podmonitor`.
-
-## 10. Відтворення
+## 9. Відтворення
 
 ```powershell
 python -m venv .venv
@@ -193,34 +215,17 @@ python -m venv .venv
 .\.venv\Scripts\python.exe scripts\run_lab3.py --phase checks
 .\.venv\Scripts\python.exe scripts\run_lab3.py --phase stairs
 .\.venv\Scripts\python.exe scripts\run_lab3.py --phase profiles
+.\.venv\Scripts\python.exe scripts\package_lab3_raw.py
 .\.venv\Scripts\python.exe scripts\analyze_lab3.py
 .\.venv\Scripts\python.exe scripts\verify_lab3_results.py
 .\.venv\Scripts\python.exe scripts\check_lab3_security.py
 .\.venv\Scripts\python.exe scripts\check_lab3_tests.py
-.\.venv\Scripts\python.exe scripts\audit_lab3.py
 .\scripts\delete_lab3.ps1
 ```
 
-Аналізатор не змінює JSONL. [raw_manifest.json](results/lab3_final/raw_manifest.json) дозволяє перед аналізом перевірити локальні SHA-256. Підсумковий [requirements audit](results/lab3_final/requirements_audit.json) перевіряє маніфести, докази, розрахунки, тести, графіки та всі локальні посилання звіту.
+Аналізатор не змінює JSONL. [raw_manifest.json](results/lab3_final/raw_manifest.json) містить кількість записів, SHA-256 первинного вмісту та ім'я стисненого файла для кожного версіонованого прогону. Незалежний verifier повторно читає запити й відтворює X, SD, розподіл за pod, USL і метрики еластичності без імпорту основного аналізатора.
 
-## 11. Матриця вимог і доказів
-
-| Крок | Вимога | Прямий доказ |
-| ---: | --- | --- |
-| 1–2 | kind 1+2, ports, deploy/delete | [kind config](k8s/kind-cluster.yaml), [deploy log](results/lab3_final/commands/deploy.log), [delete command](scripts/delete_lab3.ps1), [delete log](results/lab3_final/commands/delete.log) |
-| 3 | StatefulSet/PVC/headless/Secret/100/Job | [postgres](k8s/postgres.yaml), [migration](k8s/migration-job.yaml), [object dump](results/lab3_final/infra_objects.json), [SQL output](results/lab3_final/commands/max_connections.json) |
-| 3 | Дані після delete pod | [persistence HTTP + UID](results/lab3_final/http/persistence_check.json) |
-| 4 | Web config/resources/probes/shutdown | [web manifest](k8s/web.yaml), [sanitized objects](results/lab3_final/infra_objects.json) |
-| 4 | CRUD і X-Pod | [повний HTTP-журнал](results/lab3_final/http/crud_check.json) |
-| 4 | Пароль відсутній | [security check](results/lab3_final/security_check.json) |
-| 5 | Prometheus/cAdvisor/KSM/exporter/top | [monitoring values](k8s/monitoring-values.yaml), [live evidence](results/lab3_final/infra_check.json) |
-| 6 | 40 connections, rotation/100, 30/20 с | [generator](scripts/lab3_generator.py), [independent verification](results/lab3_final/independent_verification.json), [tests](results/lab3_final/tests.json) |
-| 7–8 | N=1,2,3,5, X/SD/p99/CFS/I/per-pod | [analysis](results/lab3_final/analysis.json), [metrics](results/lab3_final/metrics/n5.json), [raw manifest](results/lab3_final/raw_manifest.json) |
-| 9 | USL і Compose comparison | [analysis](results/lab3_final/analysis.json), [common figure](results/lab3_final/figures/usl_compose_kubernetes.png) |
-| 10–12 | Fixed/HPA profile, події, elasticity | [profiles](results/lab3_final/profiles/short.json), [analysis](results/lab3_final/analysis.json), [HPA stability](results/lab3_final/stability/hpa30_profile.json) |
-| 13, Д5 | 30 vs 300, однакове T=450 | [long profile](results/lab3_final/profiles/d5_long.json), [30 s metrics](results/lab3_final/metrics/d5_hpa30.json), [300 s metrics](results/lab3_final/metrics/d5_hpa300.json) |
-
-## 12. Обмеження та висновок
+## 10. Обмеження та висновок
 
 Факти: усі дев’ять прогонів завершилися без HTTP не-2xx, timeout і transport errors; Kubernetes-точки зростали до 1244.8 2xx/s при N=5; HPA знизив replica·seconds, але не встиг набрати максимум під час 60-секундного spike; 300-секундне scale-down window значно збільшило overprovisioning.
 
@@ -228,6 +233,6 @@ python -m venv .venv
 
 Обмеження: великий schedule lag показує вплив обов’язкової 40-з’єднаннєвої моделі; причина всього client p99 не зводиться до Kubernetes або CPU. CFS має дискретне 10–15-секундне оновлення. `N*` — далека екстраполяція. Дві події HPA чесно записані як «не досягнуто». Шість несуттєвих для застосунку control-plane targets kind були down. Ці обмеження не скасовують виміряні факти, але обмежують силу узагальнення поза цим стендом і профілем.
 
-## 13. Використання генеративних моделей
+## 11. Використання генеративної моделі
 
-Генеративна модель використовувалась для підготовки Kubernetes-маніфестів, скриптів генератора/аналізу, тестів і тексту звіту. Після цього незалежно перевірено: застосування маніфестів реальним kind-кластером; фактичні HTTP bodies/codes/`X-Pod`; збереження даних після заміни pod; Prometheus series і `kubectl top`; відсутність секрету; SHA-256 та 1 319 938 raw-записів; повторний розрахунок `X`, SD, USL і elasticity без імпорту основного аналізатора; 23 автоматичні тести; фінальний аудит відповідності вимогам.
+OpenAI Codex використовувався як допоміжний інструмент під час підготовки Kubernetes-маніфестів, скриптів розгортання, генератора навантаження, аналізатора та автоматичних тестів. Згенеровані варіанти не приймалися без перевірки: маніфести застосовано в реальному kind-кластері, роботу API перевірено прямими HTTP-запитами, стан інфраструктури — командами Kubernetes і Prometheus, а розрахунки — регресійними тестами та незалежним перерахунком первинних raw-даних. Числа в таблицях і висновки спираються на збережені вимірювання та фактичний вивід команд.

@@ -1,7 +1,8 @@
 # Первинні raw-дані лабораторної №3
 
-Файли `*.jsonl` є незмінюваними записами кожної HTTP-спроби й локально виключені
-з Git через розмір. Їхні компактні summaries та цей маніфест версіонуються.
+Файли `*.jsonl` є незмінюваними записами кожної HTTP-спроби. Прогони N=1,2,3,5
+і профілі fixed/HPA/Д5 версіонуються як детерміновані `*.jsonl.gz`; великий noop
+залишається локальним, а в Git зберігаються його summary, SHA-256 і per-second дані.
 
 | Прогін | Записів | Розмір, байт | SHA-256 |
 | --- | ---: | ---: | --- |
@@ -20,9 +21,10 @@
 ```powershell
 .\.venv\Scripts\python.exe scripts\run_lab3.py --phase stairs
 .\.venv\Scripts\python.exe scripts\run_lab3.py --phase profiles
+.\.venv\Scripts\python.exe scripts\package_lab3_raw.py
 .\.venv\Scripts\python.exe scripts\analyze_lab3.py
 .\.venv\Scripts\python.exe scripts\verify_lab3_results.py
 ```
 
-Незалежна перевірка повторно читає кожен JSONL, звіряє SHA-256 і кількість записів,
-перераховує X, SD, pod-розподіл, USL та метрики еластичності.
+Аналізатор і незалежна перевірка читають JSONL або JSONL.GZ, звіряють SHA-256 і кількість записів,
+перераховують X, SD, pod-розподіл, USL та метрики еластичності.

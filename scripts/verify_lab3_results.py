@@ -1,6 +1,7 @@
 """Independent Lab 3 verification without importing the main analyzer."""
 from __future__ import annotations
 
+import gzip
 import hashlib
 import json
 import math
@@ -24,9 +25,27 @@ def success(row: dict[str, Any]) -> bool:
     return row["status"] is not None and 200 <= row["status"] < 300
 
 
+def raw_source(name: str, raw_dir: Path | None = None) -> Path:
+    directory = raw_dir or DATA / "raw"
+    plain = directory / f"{name}.jsonl"
+    compressed = directory / f"{name}.jsonl.gz"
+    if compressed.exists():
+        return compressed
+    if plain.exists():
+        return plain
+    raise FileNotFoundError(f"Neither {plain} nor {compressed} exists")
+
+
+def open_raw_text(path: Path):
+    if path.suffix == ".gz":
+        return gzip.open(path, "rt", encoding="utf-8")
+    return path.open(encoding="utf-8")
+
+
 def raw_sha256(path: Path) -> str:
     digest = hashlib.sha256()
-    with path.open("rb") as stream:
+    stream = gzip.open(path, "rb") if path.suffix == ".gz" else path.open("rb")
+    with stream:
         while block := stream.read(1024 * 1024):
             digest.update(block)
     return digest.hexdigest()
@@ -34,7 +53,7 @@ def raw_sha256(path: Path) -> str:
 
 def verify_run(name: str) -> dict[str, Any]:
     summary = load(DATA / "raw" / f"{name}.summary.json")
-    raw = DATA / "raw" / f"{name}.jsonl"
+    raw = raw_source(name)
     steps = summary.get("steps", [])
     step_counts = [[0] * 20 for _ in steps]
     step_latencies: list[list[float]] = [[] for _ in steps]
@@ -46,7 +65,7 @@ def verify_run(name: str) -> dict[str, Any]:
     connection_sequences: dict[tuple[int, int], list[int]] = defaultdict(list)
     status_counts = Counter()
     record_count = 0
-    for line in raw.open(encoding="utf-8"):
+    for line in open_raw_text(raw):
         if not line.strip():
             continue
         row = json.loads(line)

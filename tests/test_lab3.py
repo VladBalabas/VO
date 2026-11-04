@@ -1,13 +1,24 @@
+import gzip
 import tempfile
 import unittest
 from collections import deque
 from pathlib import Path
 
-from scripts.analyze_lab3 import hpa_events
+from scripts.analyze_lab3 import hpa_events, raw_source as analyzer_raw_source
 from scripts.lab3_generator import classification, parser, step_summary
+from scripts.verify_lab3_results import raw_source as verifier_raw_source
 
 
 class Lab3GeneratorTests(unittest.TestCase):
+    def test_analyzer_and_verifier_accept_gzip_raw_fallback(self):
+        with tempfile.TemporaryDirectory() as directory:
+            raw_dir = Path(directory)
+            archive = raw_dir / "sample.jsonl.gz"
+            with gzip.open(archive, "wt", encoding="utf-8") as stream:
+                stream.write('{"status": 200}\n')
+            self.assertEqual(analyzer_raw_source("sample", raw_dir), archive)
+            self.assertEqual(verifier_raw_source("sample", raw_dir), archive)
+
     def test_required_connection_defaults(self):
         args = parser().parse_args(["--output", "unused"])
         self.assertEqual(args.connections, 40)
@@ -60,6 +71,18 @@ class Lab3GeneratorTests(unittest.TestCase):
         self.assertIsNone(result["maximum_ready_after_jump_seconds"])
         self.assertEqual(result["maximum_ready_observed_at_profile_second"], 110)
         self.assertEqual(result["first_ready_decrease_after_jump_end_seconds"], 75)
+
+    def test_saved_kubernetes_usl_normal_equation_terms(self):
+        values = {1: 326.65, 2: 637.30, 3: 818.25, 5: 1244.80}
+        rows = []
+        for n in (2, 3, 5):
+            c = values[n] / values[1]
+            rows.append((n / c - 1, n - 1, n * (n - 1)))
+        self.assertEqual(sum(u * u for _, u, _ in rows), 21)
+        self.assertEqual(sum(v * v for _, _, v in rows), 440)
+        self.assertEqual(sum(u * v for _, u, v in rows), 94)
+        self.assertAlmostEqual(sum(y * u for y, u, _ in rows), 1.6685722939187249)
+        self.assertAlmostEqual(sum(y * v for y, _, v in rows), 7.477076261804635)
 
 
 if __name__ == "__main__":
