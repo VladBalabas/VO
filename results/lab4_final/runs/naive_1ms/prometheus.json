@@ -1,0 +1,401 @@
+{
+  "db_cpu": [
+    {
+      "metric": {
+        "container": "postgres",
+        "cpu": "total",
+        "endpoint": "https-metrics",
+        "id": "/kubelet.slice/kubelet-kubepods.slice/kubelet-kubepods-burstable.slice/kubelet-kubepods-burstable-pod2c0a9cc5_8252_456c_9643_39fc915a3122.slice/cri-containerd-03c852711a25a9b9200fb0deb6560f5d4819af92d50fc2d75ddcc775d4d7caa9.scope",
+        "image": "docker.io/library/postgres:17-alpine",
+        "instance": "172.21.0.4:10250",
+        "job": "kubelet",
+        "metrics_path": "/metrics/cadvisor",
+        "name": "03c852711a25a9b9200fb0deb6560f5d4819af92d50fc2d75ddcc775d4d7caa9",
+        "namespace": "lab4",
+        "node": "vo-lab4-control-plane",
+        "pod": "postgres-0",
+        "service": "monitoring-kube-prometheus-kubelet"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "0.6321147088946676"
+        ],
+        [
+          1794209673.315,
+          "0.42135712970403705"
+        ]
+      ]
+    }
+  ],
+  "db_transactions": [
+    {
+      "metric": {
+        "container": "exporter",
+        "datid": "16384",
+        "datname": "referrals",
+        "endpoint": "metrics",
+        "instance": "10.244.0.7:9187",
+        "job": "monitoring/lab4-postgres-exporter",
+        "namespace": "lab4",
+        "pod": "postgres-exporter-64cc99dbd6-jnssc"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "2731.16"
+        ],
+        [
+          1794209673.315,
+          "1852.2340893635744"
+        ]
+      ]
+    }
+  ],
+  "claim_buckets": [
+    {
+      "metric": {
+        "le": "+Inf"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "1164.5339365779912"
+        ],
+        [
+          1794209673.315,
+          "790.0438902620524"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.0005"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "0.05430666666666668"
+        ],
+        [
+          1794209673.315,
+          "0.05"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.001"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "521.2299274977497"
+        ],
+        [
+          1794209673.315,
+          "353.7894498526372"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.0025"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "1151.2341082218222"
+        ],
+        [
+          1794209673.315,
+          "778.399358072948"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.005"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "1152.0564016141614"
+        ],
+        [
+          1794209673.315,
+          "778.8398121851037"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.01"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "1152.8902809840984"
+        ],
+        [
+          1794209673.315,
+          "779.3736168527039"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.025"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "1164.3156832446577"
+        ],
+        [
+          1794209673.315,
+          "789.8438902620525"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.05"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "1164.5339365779912"
+        ],
+        [
+          1794209673.315,
+          "790.0438902620524"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.1"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "1164.5339365779912"
+        ],
+        [
+          1794209673.315,
+          "790.0438902620524"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.25"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "1164.5339365779912"
+        ],
+        [
+          1794209673.315,
+          "790.0438902620524"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.5"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "1164.5339365779912"
+        ],
+        [
+          1794209673.315,
+          "790.0438902620524"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "1.0"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "1164.5339365779912"
+        ],
+        [
+          1794209673.315,
+          "790.0438902620524"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "2.5"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "1164.5339365779912"
+        ],
+        [
+          1794209673.315,
+          "790.0438902620524"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "5.0"
+      },
+      "values": [
+        [
+          1794209668.315,
+          "1164.5339365779912"
+        ],
+        [
+          1794209673.315,
+          "790.0438902620524"
+        ]
+      ]
+    }
+  ],
+  "claim_p99_seconds": [
+    {
+      "metric": {},
+      "values": [
+        [
+          1794209668.315,
+          "0.009989903984031281"
+        ],
+        [
+          1794209673.315,
+          "0.013968140656558534"
+        ]
+      ]
+    }
+  ],
+  "claims_task_total": [
+    {
+      "metric": {},
+      "values": [
+        [
+          1794209668.315,
+          "238"
+        ]
+      ]
+    }
+  ],
+  "claims_empty_total": [
+    {
+      "metric": {},
+      "values": [
+        [
+          1794209668.315,
+          "16"
+        ]
+      ]
+    }
+  ],
+  "worker_restarts": [
+    {
+      "metric": {
+        "__name__": "kube_pod_container_status_restarts_total",
+        "container": "worker",
+        "endpoint": "http",
+        "instance": "10.244.0.3:8080",
+        "job": "kube-state-metrics",
+        "namespace": "lab4",
+        "pod": "worker-6686557b76-7tdkt",
+        "service": "monitoring-kube-state-metrics",
+        "uid": "8a19b652-6c49-4fb1-a5ed-1357959ede04"
+      },
+      "values": [
+        [
+          1794209673.315,
+          "0"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "kube_pod_container_status_restarts_total",
+        "container": "worker",
+        "endpoint": "http",
+        "instance": "10.244.0.3:8080",
+        "job": "kube-state-metrics",
+        "namespace": "lab4",
+        "pod": "worker-6686557b76-rzn4c",
+        "service": "monitoring-kube-state-metrics",
+        "uid": "f2709ebb-4655-4a7c-b533-dff3dea0e6c6"
+      },
+      "values": [
+        [
+          1794209673.315,
+          "0"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "kube_pod_container_status_restarts_total",
+        "container": "worker",
+        "endpoint": "http",
+        "instance": "10.244.0.3:8080",
+        "job": "kube-state-metrics",
+        "namespace": "lab4",
+        "pod": "worker-6686557b76-sc9l4",
+        "service": "monitoring-kube-state-metrics",
+        "uid": "332d979d-8490-4666-8018-f5be563287a4"
+      },
+      "values": [
+        [
+          1794209673.315,
+          "0"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "kube_pod_container_status_restarts_total",
+        "container": "worker",
+        "endpoint": "http",
+        "instance": "10.244.0.3:8080",
+        "job": "kube-state-metrics",
+        "namespace": "lab4",
+        "pod": "worker-6686557b76-tlph9",
+        "service": "monitoring-kube-state-metrics",
+        "uid": "a14ee3b9-a73c-4ca0-97cf-c8a05fe1dc28"
+      },
+      "values": [
+        [
+          1794209673.315,
+          "0"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "kube_pod_container_status_restarts_total",
+        "container": "worker",
+        "endpoint": "http",
+        "instance": "10.244.0.3:8080",
+        "job": "kube-state-metrics",
+        "namespace": "lab4",
+        "pod": "worker-6686557b76-tqj6c",
+        "service": "monitoring-kube-state-metrics",
+        "uid": "7bf9b57c-e2b2-49d4-aa85-8f737da79e5f"
+      },
+      "values": [
+        [
+          1794209673.315,
+          "0"
+        ]
+      ]
+    }
+  ]
+}

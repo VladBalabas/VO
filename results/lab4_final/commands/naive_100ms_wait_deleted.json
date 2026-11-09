@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-11-09T07:34:13.012028+00:00",
+  "finished_at": "2026-11-09T07:34:13.938689+00:00",
+  "command": [
+    "kubectl",
+    "-n",
+    "lab4",
+    "wait",
+    "--for=delete",
+    "pod",
+    "-l",
+    "app=worker",
+    "--timeout=90s"
+  ],
+  "exit_code": 0,
+  "stdout": "pod/worker-7bc58f8578-4cdgm condition met\npod/worker-7bc58f8578-7dnfq condition met\npod/worker-7bc58f8578-sv8g8 condition met\npod/worker-7bc58f8578-sz47h condition met\npod/worker-7bc58f8578-t6pv4 condition met\n",
+  "stderr": ""
+}

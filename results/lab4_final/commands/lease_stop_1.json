@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-11-08T23:08:12.390286+00:00",
+  "finished_at": "2026-11-08T23:08:12.635334+00:00",
+  "command": [
+    "docker",
+    "exec",
+    "vo-lab4-worker2",
+    "kill",
+    "-STOP",
+    "6807"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

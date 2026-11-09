@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-11-08T23:09:15.010772+00:00",
+  "finished_at": "2026-11-08T23:09:15.114971+00:00",
+  "command": [
+    "kubectl",
+    "-n",
+    "lab4",
+    "patch",
+    "configmap",
+    "worker-config",
+    "--type=merge",
+    "-p",
+    "{\"data\": {\"CLAIM_MODE\": \"skip_locked\", \"POLL_INTERVAL_MS\": \"100\", \"FAIL_RATE\": \"0\", \"CLAIM_BATCH_SIZE\": \"1\", \"IDEMPOTENT_RESULTS\": \"true\"}}"
+  ],
+  "exit_code": 0,
+  "stdout": "configmap/worker-config patched (no change)\n",
+  "stderr": ""
+}

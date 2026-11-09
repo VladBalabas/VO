@@ -1,0 +1,224 @@
+{
+  "db_cpu": [
+    {
+      "metric": {
+        "container": "postgres",
+        "cpu": "total",
+        "endpoint": "https-metrics",
+        "id": "/kubelet.slice/kubelet-kubepods.slice/kubelet-kubepods-burstable.slice/kubelet-kubepods-burstable-pod2c0a9cc5_8252_456c_9643_39fc915a3122.slice/cri-containerd-9898b3bc681e7020d9b0f06cad0b2f85fe4c09d996eea586f9c6b50608686582.scope",
+        "image": "docker.io/library/postgres:17-alpine",
+        "instance": "172.21.0.4:10250",
+        "job": "kubelet",
+        "metrics_path": "/metrics/cadvisor",
+        "name": "9898b3bc681e7020d9b0f06cad0b2f85fe4c09d996eea586f9c6b50608686582",
+        "namespace": "lab4",
+        "node": "vo-lab4-control-plane",
+        "pod": "postgres-0",
+        "service": "monitoring-kube-prometheus-kubelet"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "0.02066938721779766"
+        ]
+      ]
+    }
+  ],
+  "db_transactions": [
+    {
+      "metric": {
+        "container": "exporter",
+        "datid": "16384",
+        "datname": "referrals",
+        "endpoint": "metrics",
+        "instance": "10.244.0.12:9187",
+        "job": "monitoring/lab4-postgres-exporter",
+        "namespace": "lab4",
+        "pod": "postgres-exporter-64cc99dbd6-jnssc"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "36.44"
+        ]
+      ]
+    }
+  ],
+  "claim_buckets": [
+    {
+      "metric": {
+        "le": "+Inf"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "9.84"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.0005"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "0"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.001"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "0"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.0025"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "9.76"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.005"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "9.84"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.01"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "9.84"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.025"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "9.84"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.05"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "9.84"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.1"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "9.84"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.25"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "9.84"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.5"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "9.84"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "1.0"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "9.84"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "2.5"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "9.84"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "5.0"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "9.84"
+        ]
+      ]
+    }
+  ],
+  "worker_restarts": [
+    {
+      "metric": {
+        "__name__": "kube_pod_container_status_restarts_total",
+        "container": "worker",
+        "endpoint": "http",
+        "instance": "10.244.0.9:8080",
+        "job": "kube-state-metrics",
+        "namespace": "lab4",
+        "pod": "worker-5f8c8fc7fb-w9kvb",
+        "service": "monitoring-kube-state-metrics",
+        "uid": "563e7fe2-d4c5-4a3a-a88f-138e2bcf2724"
+      },
+      "values": [
+        [
+          1794178749.306,
+          "0"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 4523.0
+python_gc_objects_collected_total{generation="1"} 517.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 135.0
+python_gc_collections_total{generation="1"} 12.0
+python_gc_collections_total{generation="2"} 1.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="16",version="3.12.16"} 1.0
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 6.4483328e+07
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 5.4321152e+07
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.79417854041e+09
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 2.0300000000000002
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 13.0
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1.073741816e+09
+# HELP tasks_queued Кількість задач у стані queued
+# TYPE tasks_queued gauge
+tasks_queued 0.0
+# HELP tasks_running Кількість задач у стані running
+# TYPE tasks_running gauge
+tasks_running 0.0
+# HELP http_requests_total Completed HTTP requests
+# TYPE http_requests_total counter
+http_requests_total{method="GET",path="/livez",status="200"} 37.0
+http_requests_total{method="GET",path="/healthz",status="200"} 37.0
+http_requests_total{method="GET",path="/metrics",status="200"} 9.0
+http_requests_total{method="GET",path="/referrals",status="200"} 1.0
+http_requests_total{method="POST",path="/referrals",status="201"} 100.0
+http_requests_total{method="POST",path="/referrals/{referral_id}/tasks",status="202"} 1.0
+http_requests_total{method="GET",path="/tasks",status="200"} 1.0
+http_requests_total{method="GET",path="/tasks/{task_id}",status="200"} 1.0
+http_requests_total{method="POST",path="/referrals/{referral_id}/tasks",status="404"} 1.0
+http_requests_total{method="POST",path="/referrals/{referral_id}/tasks",status="400"} 3.0
+http_requests_total{method="GET",path="/referrals/{referral_id}",status="200"} 1.0
+http_requests_total{method="GET",path="/tasks/{task_id}",status="400"} 1.0
+# HELP http_requests_created Completed HTTP requests
+# TYPE http_requests_created gauge
+http_requests_created{method="GET",path="/livez",status="200"} 1.794178545621931e+09
+http_requests_created{method="GET",path="/healthz",status="200"} 1.7941785462504702e+09
+http_requests_created{method="GET",path="/metrics",status="200"} 1.7941786831535847e+09
+http_requests_created{method="GET",path="/referrals",status="200"} 1.7941787258151314e+09
+http_requests_created{method="POST",path="/referrals",status="201"} 1.7941787258428009e+09
+http_requests_created{method="POST",path="/referrals/{referral_id}/tasks",status="202"} 1.7941787273722727e+09
+http_requests_created{method="GET",path="/tasks",status="200"} 1.7941787273845258e+09
+http_requests_created{method="GET",path="/tasks/{task_id}",status="200"} 1.7941787274075987e+09
+http_requests_created{method="POST",path="/referrals/{referral_id}/tasks",status="404"} 1.794178727422504e+09
+http_requests_created{method="POST",path="/referrals/{referral_id}/tasks",status="400"} 1.7941787274258137e+09
+http_requests_created{method="GET",path="/referrals/{referral_id}",status="200"} 1.7941787274749877e+09
+http_requests_created{method="GET",path="/tasks/{task_id}",status="400"} 1.7941787274825332e+09
+# HELP http_request_duration_seconds HTTP request duration in seconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.005",method="GET",path="/livez"} 36.0
+http_request_duration_seconds_bucket{le="0.01",method="GET",path="/livez"} 37.0
+http_request_duration_seconds_bucket{le="0.025",method="GET",path="/livez"} 37.0
+http_request_duration_seconds_bucket{le="0.05",method="GET",path="/livez"} 37.0
+http_request_duration_seconds_bucket{le="0.1",method="GET",path="/livez"} 37.0
+http_request_duration_seconds_bucket{le="0.25",method="GET",path="/livez"} 37.0
+http_request_duration_seconds_bucket{le="0.5",method="GET",path="/livez"} 37.0
+http_request_duration_seconds_bucket{le="1.0",method="GET",path="/livez"} 37.0
+http_request_duration_seconds_bucket{le="+Inf",method="GET",path="/livez"} 37.0
+http_request_duration_seconds_count{method="GET",path="/livez"} 37.0
+http_request_duration_seconds_sum{method="GET",path="/livez"} 0.01933071100015127
+http_request_duration_seconds_bucket{le="0.005",method="GET",path="/healthz"} 36.0
+http_request_duration_seconds_bucket{le="0.01",method="GET",path="/healthz"} 37.0
+http_request_duration_seconds_bucket{le="0.025",method="GET",path="/healthz"} 37.0
+http_request_duration_seconds_bucket{le="0.05",method="GET",path="/healthz"} 37.0
+http_request_duration_seconds_bucket{le="0.1",method="GET",path="/healthz"} 37.0
+http_request_duration_seconds_bucket{le="0.25",method="GET",path="/healthz"} 37.0
+http_request_duration_seconds_bucket{le="0.5",method="GET",path="/healthz"} 37.0
+http_request_duration_seconds_bucket{le="1.0",method="GET",path="/healthz"} 37.0
+http_request_duration_seconds_bucket{le="+Inf",method="GET",path="/healthz"} 37.0
+http_request_duration_seconds_count{method="GET",path="/healthz"} 37.0
+http_request_duration_seconds_sum{method="GET",path="/healthz"} 0.058612886000176445
+http_request_duration_seconds_bucket{le="0.005",method="GET",path="/metrics"} 9.0
+http_request_duration_seconds_bucket{le="0.01",method="GET",path="/metrics"} 9.0
+http_request_duration_seconds_bucket{le="0.025",method="GET",path="/metrics"} 9.0
+http_request_duration_seconds_bucket{le="0.05",method="GET",path="/metrics"} 9.0
+http_request_duration_seconds_bucket{le="0.1",method="GET",path="/metrics"} 9.0
+http_request_duration_seconds_bucket{le="0.25",method="GET",path="/metrics"} 9.0
+http_request_duration_seconds_bucket{le="0.5",method="GET",path="/metrics"} 9.0
+http_request_duration_seconds_bucket{le="1.0",method="GET",path="/metrics"} 9.0
+http_request_duration_seconds_bucket{le="+Inf",method="GET",path="/metrics"} 9.0
+http_request_duration_seconds_count{method="GET",path="/metrics"} 9.0
+http_request_duration_seconds_sum{method="GET",path="/metrics"} 0.008658879999870805
+http_request_duration_seconds_bucket{le="0.005",method="GET",path="/referrals"} 1.0
+http_request_duration_seconds_bucket{le="0.01",method="GET",path="/referrals"} 1.0
+http_request_duration_seconds_bucket{le="0.025",method="GET",path="/referrals"} 1.0
+http_request_duration_seconds_bucket{le="0.05",method="GET",path="/referrals"} 1.0
+http_request_duration_seconds_bucket{le="0.1",method="GET",path="/referrals"} 1.0
+http_request_duration_seconds_bucket{le="0.25",method="GET",path="/referrals"} 1.0
+http_request_duration_seconds_bucket{le="0.5",method="GET",path="/referrals"} 1.0
+http_request_duration_seconds_bucket{le="1.0",method="GET",path="/referrals"} 1.0
+http_request_duration_seconds_bucket{le="+Inf",method="GET",path="/referrals"} 1.0
+http_request_duration_seconds_count{method="GET",path="/referrals"} 1.0
+http_request_duration_seconds_sum{method="GET",path="/referrals"} 0.004626960999985386
+http_request_duration_seconds_bucket{le="0.005",method="POST",path="/referrals"} 99.0
+http_request_duration_seconds_bucket{le="0.01",method="POST",path="/referrals"} 100.0
+http_request_duration_seconds_bucket{le="0.025",method="POST",path="/referrals"} 100.0
+http_request_duration_seconds_bucket{le="0.05",method="POST",path="/referrals"} 100.0
+http_request_duration_seconds_bucket{le="0.1",method="POST",path="/referrals"} 100.0
+http_request_duration_seconds_bucket{le="0.25",method="POST",path="/referrals"} 100.0
+http_request_duration_seconds_bucket{le="0.5",method="POST",path="/referrals"} 100.0
+http_request_duration_seconds_bucket{le="1.0",method="POST",path="/referrals"} 100.0
+http_request_duration_seconds_bucket{le="+Inf",method="POST",path="/referrals"} 100.0
+http_request_duration_seconds_count{method="POST",path="/referrals"} 100.0
+http_request_duration_seconds_sum{method="POST",path="/referrals"} 0.2501609109999663
+http_request_duration_seconds_bucket{le="0.005",method="POST",path="/referrals/{referral_id}/tasks"} 4.0
+http_request_duration_seconds_bucket{le="0.01",method="POST",path="/referrals/{referral_id}/tasks"} 5.0
+http_request_duration_seconds_bucket{le="0.025",method="POST",path="/referrals/{referral_id}/tasks"} 5.0
+http_request_duration_seconds_bucket{le="0.05",method="POST",path="/referrals/{referral_id}/tasks"} 5.0
+http_request_duration_seconds_bucket{le="0.1",method="POST",path="/referrals/{referral_id}/tasks"} 5.0
+http_request_duration_seconds_bucket{le="0.25",method="POST",path="/referrals/{referral_id}/tasks"} 5.0
+http_request_duration_seconds_bucket{le="0.5",method="POST",path="/referrals/{referral_id}/tasks"} 5.0
+http_request_duration_seconds_bucket{le="1.0",method="POST",path="/referrals/{referral_id}/tasks"} 5.0
+http_request_duration_seconds_bucket{le="+Inf",method="POST",path="/referrals/{referral_id}/tasks"} 5.0
+http_request_duration_seconds_count{method="POST",path="/referrals/{referral_id}/tasks"} 5.0
+http_request_duration_seconds_sum{method="POST",path="/referrals/{referral_id}/tasks"} 0.012908904999960669
+http_request_duration_seconds_bucket{le="0.005",method="GET",path="/tasks"} 0.0
+http_request_duration_seconds_bucket{le="0.01",method="GET",path="/tasks"} 1.0
+http_request_duration_seconds_bucket{le="0.025",method="GET",path="/tasks"} 1.0
+http_request_duration_seconds_bucket{le="0.05",method="GET",path="/tasks"} 1.0
+http_request_duration_seconds_bucket{le="0.1",method="GET",path="/tasks"} 1.0
+http_request_duration_seconds_bucket{le="0.25",method="GET",path="/tasks"} 1.0
+http_request_duration_seconds_bucket{le="0.5",method="GET",path="/tasks"} 1.0
+http_request_duration_seconds_bucket{le="1.0",method="GET",path="/tasks"} 1.0
+http_request_duration_seconds_bucket{le="+Inf",method="GET",path="/tasks"} 1.0
+http_request_duration_seconds_count{method="GET",path="/tasks"} 1.0
+http_request_duration_seconds_sum{method="GET",path="/tasks"} 0.008701290000033168
+http_request_duration_seconds_bucket{le="0.005",method="GET",path="/tasks/{task_id}"} 2.0
+http_request_duration_seconds_bucket{le="0.01",method="GET",path="/tasks/{task_id}"} 2.0
+http_request_duration_seconds_bucket{le="0.025",method="GET",path="/tasks/{task_id}"} 2.0
+http_request_duration_seconds_bucket{le="0.05",method="GET",path="/tasks/{task_id}"} 2.0
+http_request_duration_seconds_bucket{le="0.1",method="GET",path="/tasks/{task_id}"} 2.0
+http_request_duration_seconds_bucket{le="0.25",method="GET",path="/tasks/{task_id}"} 2.0
+http_request_duration_seconds_bucket{le="0.5",method="GET",path="/tasks/{task_id}"} 2.0
+http_request_duration_seconds_bucket{le="1.0",method="GET",path="/tasks/{task_id}"} 2.0
+http_request_duration_seconds_bucket{le="+Inf",method="GET",path="/tasks/{task_id}"} 2.0
+http_request_duration_seconds_count{method="GET",path="/tasks/{task_id}"} 2.0
+http_request_duration_seconds_sum{method="GET",path="/tasks/{task_id}"} 0.0029209749999949963
+http_request_duration_seconds_bucket{le="0.005",method="GET",path="/referrals/{referral_id}"} 1.0
+http_request_duration_seconds_bucket{le="0.01",method="GET",path="/referrals/{referral_id}"} 1.0
+http_request_duration_seconds_bucket{le="0.025",method="GET",path="/referrals/{referral_id}"} 1.0
+http_request_duration_seconds_bucket{le="0.05",method="GET",path="/referrals/{referral_id}"} 1.0
+http_request_duration_seconds_bucket{le="0.1",method="GET",path="/referrals/{referral_id}"} 1.0
+http_request_duration_seconds_bucket{le="0.25",method="GET",path="/referrals/{referral_id}"} 1.0
+http_request_duration_seconds_bucket{le="0.5",method="GET",path="/referrals/{referral_id}"} 1.0
+http_request_duration_seconds_bucket{le="1.0",method="GET",path="/referrals/{referral_id}"} 1.0
+http_request_duration_seconds_bucket{le="+Inf",method="GET",path="/referrals/{referral_id}"} 1.0
+http_request_duration_seconds_count{method="GET",path="/referrals/{referral_id}"} 1.0
+http_request_duration_seconds_sum{method="GET",path="/referrals/{referral_id}"} 0.002342224000017268
+# HELP http_request_duration_seconds_created HTTP request duration in seconds
+# TYPE http_request_duration_seconds_created gauge
+http_request_duration_seconds_created{method="GET",path="/livez"} 1.79417854562197e+09
+http_request_duration_seconds_created{method="GET",path="/healthz"} 1.7941785462504878e+09
+http_request_duration_seconds_created{method="GET",path="/metrics"} 1.794178683153598e+09
+http_request_duration_seconds_created{method="GET",path="/referrals"} 1.79417872581515e+09
+http_request_duration_seconds_created{method="POST",path="/referrals"} 1.7941787258428192e+09
+http_request_duration_seconds_created{method="POST",path="/referrals/{referral_id}/tasks"} 1.7941787273723032e+09
+http_request_duration_seconds_created{method="GET",path="/tasks"} 1.794178727384546e+09
+http_request_duration_seconds_created{method="GET",path="/tasks/{task_id}"} 1.7941787274076161e+09
+http_request_duration_seconds_created{method="GET",path="/referrals/{referral_id}"} 1.7941787274750066e+09
+# HELP http_requests_in_flight HTTP requests in progress
+# TYPE http_requests_in_flight gauge
+http_requests_in_flight 1.0

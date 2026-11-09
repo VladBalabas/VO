@@ -1,0 +1,178 @@
+[
+  {
+    "db_at": "2026-11-08T23:09:33.171641+00:00",
+    "queued": 400,
+    "running": 0,
+    "done": 0,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 193172,
+    "host_at": "2026-11-08T23:09:33.180007+00:00",
+    "sample_duration_ms": 144.32920003309846
+  },
+  {
+    "db_at": "2026-11-08T23:09:33.683972+00:00",
+    "queued": 400,
+    "running": 0,
+    "done": 0,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 193175,
+    "host_at": "2026-11-08T23:09:33.692905+00:00",
+    "sample_duration_ms": 146.52720000594854
+  },
+  {
+    "db_at": "2026-11-08T23:09:34.233247+00:00",
+    "queued": 400,
+    "running": 0,
+    "done": 0,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 193177,
+    "host_at": "2026-11-08T23:09:34.244301+00:00",
+    "sample_duration_ms": 189.64689993299544
+  },
+  {
+    "db_at": "2026-11-08T23:09:34.716025+00:00",
+    "queued": 400,
+    "running": 0,
+    "done": 0,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 193183,
+    "host_at": "2026-11-08T23:09:34.727681+00:00",
+    "sample_duration_ms": 165.84349994082004
+  },
+  {
+    "db_at": "2026-11-08T23:09:35.218842+00:00",
+    "queued": 400,
+    "running": 0,
+    "done": 0,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 193187,
+    "host_at": "2026-11-08T23:09:35.229906+00:00",
+    "sample_duration_ms": 155.8523999992758
+  },
+  {
+    "db_at": "2026-11-08T23:09:35.734256+00:00",
+    "queued": 400,
+    "running": 0,
+    "done": 0,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 193190,
+    "host_at": "2026-11-08T23:09:35.744259+00:00",
+    "sample_duration_ms": 157.53810002934188
+  },
+  {
+    "db_at": "2026-11-08T23:09:36.247737+00:00",
+    "queued": 386,
+    "running": 5,
+    "done": 9,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 193259,
+    "host_at": "2026-11-08T23:09:36.258746+00:00",
+    "sample_duration_ms": 162.10710001178086
+  },
+  {
+    "db_at": "2026-11-08T23:09:36.755951+00:00",
+    "queued": 344,
+    "running": 4,
+    "done": 52,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 193263,
+    "host_at": "2026-11-08T23:09:36.766246+00:00",
+    "sample_duration_ms": 161.31110000424087
+  },
+  {
+    "db_at": "2026-11-08T23:09:37.268124+00:00",
+    "queued": 298,
+    "running": 4,
+    "done": 98,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 193822,
+    "host_at": "2026-11-08T23:09:37.279397+00:00",
+    "sample_duration_ms": 162.48910001013428
+  },
+  {
+    "db_at": "2026-11-08T23:09:37.776006+00:00",
+    "queued": 252,
+    "running": 5,
+    "done": 143,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 193877,
+    "host_at": "2026-11-08T23:09:37.786602+00:00",
+    "sample_duration_ms": 157.28929999750108
+  },
+  {
+    "db_at": "2026-11-08T23:09:38.287046+00:00",
+    "queued": 207,
+    "running": 5,
+    "done": 188,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 194237,
+    "host_at": "2026-11-08T23:09:38.298058+00:00",
+    "sample_duration_ms": 156.44339995924383
+  },
+  {
+    "db_at": "2026-11-08T23:09:38.811981+00:00",
+    "queued": 161,
+    "running": 5,
+    "done": 234,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 194402,
+    "host_at": "2026-11-08T23:09:38.821886+00:00",
+    "sample_duration_ms": 167.79520001728088
+  },
+  {
+    "db_at": "2026-11-08T23:09:39.316252+00:00",
+    "queued": 118,
+    "running": 4,
+    "done": 278,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 194750,
+    "host_at": "2026-11-08T23:09:39.326130+00:00",
+    "sample_duration_ms": 160.44729994609952
+  },
+  {
+    "db_at": "2026-11-08T23:09:39.837328+00:00",
+    "queued": 74,
+    "running": 5,
+    "done": 321,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 194959,
+    "host_at": "2026-11-08T23:09:39.846500+00:00",
+    "sample_duration_ms": 168.41529996600002
+  },
+  {
+    "db_at": "2026-11-08T23:09:40.33344+00:00",
+    "queued": 29,
+    "running": 5,
+    "done": 366,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 195327,
+    "host_at": "2026-11-08T23:09:40.343236+00:00",
+    "sample_duration_ms": 154.0375999175012
+  },
+  {
+    "db_at": "2026-11-08T23:09:40.83904+00:00",
+    "queued": 0,
+    "running": 0,
+    "done": 400,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 195491,
+    "host_at": "2026-11-08T23:09:40.849022+00:00",
+    "sample_duration_ms": 150.83259996026754
+  }
+]

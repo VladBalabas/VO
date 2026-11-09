@@ -1,0 +1,489 @@
+===== worker-7859f64df5-4qj28 previous=False exit=0 =====
+{"at": "2026-11-09T07:50:43.897373+00:00", "event": "worker_started", "worker_id": "worker-7859f64df5-4qj28", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-09T07:50:43.906648+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [9016], "duration_ms": 9.090716000173416}
+{"at": "2026-11-09T07:50:43.910386+00:00", "event": "step", "task_id": 9016, "step": "fetch", "duration_ms": 3.598800999498053}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/app/worker/main.py", line 330, in <module>
+    asyncio.run(async_main())
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/app/worker/main.py", line 326, in async_main
+    await worker.run()
+  File "/app/worker/main.py", line 310, in run
+    await self.process(task)
+  File "/app/worker/main.py", line 271, in process
+    await self.retry_or_fail(task, error)
+  File "/app/worker/main.py", line 229, in retry_or_fail
+    command = await self.pool.execute(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/pool.py", line 709, in execute
+    return await con.execute(query, *args, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 380, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2054, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 466, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 161, in prepare
+asyncpg.exceptions.AmbiguousParameterError: inconsistent types deduced for parameter $1
+DETAIL:  text versus character varying
+
+===== worker-7859f64df5-4qj28 previous=True exit=0 =====
+{"at": "2026-11-09T07:50:43.897373+00:00", "event": "worker_started", "worker_id": "worker-7859f64df5-4qj28", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-09T07:50:43.906648+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [9016], "duration_ms": 9.090716000173416}
+{"at": "2026-11-09T07:50:43.910386+00:00", "event": "step", "task_id": 9016, "step": "fetch", "duration_ms": 3.598800999498053}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/app/worker/main.py", line 330, in <module>
+    asyncio.run(async_main())
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/app/worker/main.py", line 326, in async_main
+    await worker.run()
+  File "/app/worker/main.py", line 310, in run
+    await self.process(task)
+  File "/app/worker/main.py", line 271, in process
+    await self.retry_or_fail(task, error)
+  File "/app/worker/main.py", line 229, in retry_or_fail
+    command = await self.pool.execute(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/pool.py", line 709, in execute
+    return await con.execute(query, *args, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 380, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2054, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 466, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 161, in prepare
+asyncpg.exceptions.AmbiguousParameterError: inconsistent types deduced for parameter $1
+DETAIL:  text versus character varying
+
+===== worker-7859f64df5-8bh9c previous=False exit=0 =====
+{"at": "2026-11-09T07:50:48.876367+00:00", "event": "worker_started", "worker_id": "worker-7859f64df5-8bh9c", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-09T07:50:48.886576+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [9018], "duration_ms": 9.821693999583658}
+{"at": "2026-11-09T07:50:48.891225+00:00", "event": "step", "task_id": 9018, "step": "fetch", "duration_ms": 4.464483000447217}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/app/worker/main.py", line 330, in <module>
+    asyncio.run(async_main())
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/app/worker/main.py", line 326, in async_main
+    await worker.run()
+  File "/app/worker/main.py", line 310, in run
+    await self.process(task)
+  File "/app/worker/main.py", line 271, in process
+    await self.retry_or_fail(task, error)
+  File "/app/worker/main.py", line 229, in retry_or_fail
+    command = await self.pool.execute(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/pool.py", line 709, in execute
+    return await con.execute(query, *args, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 380, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2054, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 466, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 161, in prepare
+asyncpg.exceptions.AmbiguousParameterError: inconsistent types deduced for parameter $1
+DETAIL:  text versus character varying
+
+===== worker-7859f64df5-8bh9c previous=True exit=0 =====
+{"at": "2026-11-09T07:50:48.876367+00:00", "event": "worker_started", "worker_id": "worker-7859f64df5-8bh9c", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-09T07:50:48.886576+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [9018], "duration_ms": 9.821693999583658}
+{"at": "2026-11-09T07:50:48.891225+00:00", "event": "step", "task_id": 9018, "step": "fetch", "duration_ms": 4.464483000447217}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/app/worker/main.py", line 330, in <module>
+    asyncio.run(async_main())
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/app/worker/main.py", line 326, in async_main
+    await worker.run()
+  File "/app/worker/main.py", line 310, in run
+    await self.process(task)
+  File "/app/worker/main.py", line 271, in process
+    await self.retry_or_fail(task, error)
+  File "/app/worker/main.py", line 229, in retry_or_fail
+    command = await self.pool.execute(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/pool.py", line 709, in execute
+    return await con.execute(query, *args, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 380, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2054, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 466, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 161, in prepare
+asyncpg.exceptions.AmbiguousParameterError: inconsistent types deduced for parameter $1
+DETAIL:  text versus character varying
+
+===== worker-7859f64df5-9spmt previous=False exit=0 =====
+{"at": "2026-11-09T07:50:44.961110+00:00", "event": "worker_started", "worker_id": "worker-7859f64df5-9spmt", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-09T07:50:44.970178+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [9017], "duration_ms": 8.830552000290481}
+{"at": "2026-11-09T07:50:44.974342+00:00", "event": "step", "task_id": 9017, "step": "fetch", "duration_ms": 3.946492000068247}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/app/worker/main.py", line 330, in <module>
+    asyncio.run(async_main())
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/app/worker/main.py", line 326, in async_main
+    await worker.run()
+  File "/app/worker/main.py", line 310, in run
+    await self.process(task)
+  File "/app/worker/main.py", line 271, in process
+    await self.retry_or_fail(task, error)
+  File "/app/worker/main.py", line 229, in retry_or_fail
+    command = await self.pool.execute(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/pool.py", line 709, in execute
+    return await con.execute(query, *args, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 380, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2054, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 466, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 161, in prepare
+asyncpg.exceptions.AmbiguousParameterError: inconsistent types deduced for parameter $1
+DETAIL:  text versus character varying
+
+===== worker-7859f64df5-9spmt previous=True exit=0 =====
+{"at": "2026-11-09T07:50:44.961110+00:00", "event": "worker_started", "worker_id": "worker-7859f64df5-9spmt", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-09T07:50:44.970178+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [9017], "duration_ms": 8.830552000290481}
+{"at": "2026-11-09T07:50:44.974342+00:00", "event": "step", "task_id": 9017, "step": "fetch", "duration_ms": 3.946492000068247}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/app/worker/main.py", line 330, in <module>
+    asyncio.run(async_main())
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/app/worker/main.py", line 326, in async_main
+    await worker.run()
+  File "/app/worker/main.py", line 310, in run
+    await self.process(task)
+  File "/app/worker/main.py", line 271, in process
+    await self.retry_or_fail(task, error)
+  File "/app/worker/main.py", line 229, in retry_or_fail
+    command = await self.pool.execute(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/pool.py", line 709, in execute
+    return await con.execute(query, *args, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 380, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2054, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 466, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 161, in prepare
+asyncpg.exceptions.AmbiguousParameterError: inconsistent types deduced for parameter $1
+DETAIL:  text versus character varying
+
+===== worker-7859f64df5-cbzxf previous=False exit=0 =====
+{"at": "2026-11-09T07:50:32.899533+00:00", "event": "worker_started", "worker_id": "worker-7859f64df5-cbzxf", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-09T07:50:32.908228+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [9015], "duration_ms": 8.52286500048649}
+{"at": "2026-11-09T07:50:32.912273+00:00", "event": "step", "task_id": 9015, "step": "fetch", "duration_ms": 3.8923709998925915}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/app/worker/main.py", line 330, in <module>
+    asyncio.run(async_main())
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/app/worker/main.py", line 326, in async_main
+    await worker.run()
+  File "/app/worker/main.py", line 310, in run
+    await self.process(task)
+  File "/app/worker/main.py", line 271, in process
+    await self.retry_or_fail(task, error)
+  File "/app/worker/main.py", line 229, in retry_or_fail
+    command = await self.pool.execute(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/pool.py", line 709, in execute
+    return await con.execute(query, *args, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 380, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2054, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 466, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 161, in prepare
+asyncpg.exceptions.AmbiguousParameterError: inconsistent types deduced for parameter $1
+DETAIL:  text versus character varying
+
+===== worker-7859f64df5-cbzxf previous=True exit=0 =====
+{"at": "2026-11-09T07:50:32.899533+00:00", "event": "worker_started", "worker_id": "worker-7859f64df5-cbzxf", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-09T07:50:32.908228+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [9015], "duration_ms": 8.52286500048649}
+{"at": "2026-11-09T07:50:32.912273+00:00", "event": "step", "task_id": 9015, "step": "fetch", "duration_ms": 3.8923709998925915}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/app/worker/main.py", line 330, in <module>
+    asyncio.run(async_main())
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/app/worker/main.py", line 326, in async_main
+    await worker.run()
+  File "/app/worker/main.py", line 310, in run
+    await self.process(task)
+  File "/app/worker/main.py", line 271, in process
+    await self.retry_or_fail(task, error)
+  File "/app/worker/main.py", line 229, in retry_or_fail
+    command = await self.pool.execute(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/pool.py", line 709, in execute
+    return await con.execute(query, *args, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 380, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2054, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 466, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 161, in prepare
+asyncpg.exceptions.AmbiguousParameterError: inconsistent types deduced for parameter $1
+DETAIL:  text versus character varying
+
+===== worker-7859f64df5-rq8gk previous=False exit=0 =====
+{"at": "2026-11-09T07:50:42.852846+00:00", "event": "worker_started", "worker_id": "worker-7859f64df5-rq8gk", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-09T07:50:42.862282+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [9015], "duration_ms": 9.254175000023679}
+{"at": "2026-11-09T07:50:42.866597+00:00", "event": "step", "task_id": 9015, "step": "fetch", "duration_ms": 4.1157539999403525}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/app/worker/main.py", line 330, in <module>
+    asyncio.run(async_main())
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/app/worker/main.py", line 326, in async_main
+    await worker.run()
+  File "/app/worker/main.py", line 310, in run
+    await self.process(task)
+  File "/app/worker/main.py", line 271, in process
+    await self.retry_or_fail(task, error)
+  File "/app/worker/main.py", line 229, in retry_or_fail
+    command = await self.pool.execute(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/pool.py", line 709, in execute
+    return await con.execute(query, *args, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 380, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2054, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 466, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 161, in prepare
+asyncpg.exceptions.AmbiguousParameterError: inconsistent types deduced for parameter $1
+DETAIL:  text versus character varying
+
+===== worker-7859f64df5-rq8gk previous=True exit=0 =====
+{"at": "2026-11-09T07:50:42.852846+00:00", "event": "worker_started", "worker_id": "worker-7859f64df5-rq8gk", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-09T07:50:42.862282+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [9015], "duration_ms": 9.254175000023679}
+{"at": "2026-11-09T07:50:42.866597+00:00", "event": "step", "task_id": 9015, "step": "fetch", "duration_ms": 4.1157539999403525}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/app/worker/main.py", line 330, in <module>
+    asyncio.run(async_main())
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/app/worker/main.py", line 326, in async_main
+    await worker.run()
+  File "/app/worker/main.py", line 310, in run
+    await self.process(task)
+  File "/app/worker/main.py", line 271, in process
+    await self.retry_or_fail(task, error)
+  File "/app/worker/main.py", line 229, in retry_or_fail
+    command = await self.pool.execute(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/pool.py", line 709, in execute
+    return await con.execute(query, *args, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 380, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2054, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 466, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 161, in prepare
+asyncpg.exceptions.AmbiguousParameterError: inconsistent types deduced for parameter $1
+DETAIL:  text versus character varying

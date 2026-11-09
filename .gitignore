@@ -25,3 +25,6 @@ AGENTS.md
 # for all experiment runs except the large noop control are versioned.
 /results/lab3_final/raw/*.jsonl
 
+# ЛР4: первинні JSONL зберігаються локально, детерміновані gzip-копії версіонуються.
+/results/lab4_final/runs/*/*.jsonl
+

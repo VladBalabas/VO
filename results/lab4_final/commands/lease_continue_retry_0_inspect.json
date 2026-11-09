@@ -1,0 +1,19 @@
+{
+  "started_at": "2026-11-08T23:08:11.490527+00:00",
+  "finished_at": "2026-11-08T23:08:11.746621+00:00",
+  "command": [
+    "docker",
+    "exec",
+    "vo-lab4-worker",
+    "crictl",
+    "inspect",
+    "--output",
+    "go-template",
+    "--template",
+    "{{.info.pid}}",
+    "18ad6d67639366c864f811118abedc73338c2064d9c16ec8f2c335ce276329bf"
+  ],
+  "exit_code": 0,
+  "stdout": "6973\n",
+  "stderr": ""
+}

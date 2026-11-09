@@ -1,0 +1,508 @@
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.615020+00:00", "event": "worker_started", "worker_id": "worker-57978f97f-2vmzc", "mode": "skip_locked", "batch": 1}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.624293+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [14], "duration_ms": 9.0467830000307}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.628061+00:00", "event": "step", "task_id": 14, "step": "fetch", "duration_ms": 3.5715160000791}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.692220+00:00", "event": "step", "task_id": 14, "step": "process", "duration_ms": 63.99013299994749}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.696747+00:00", "event": "step", "task_id": 14, "step": "store", "duration_ms": 4.366882999988775}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.696832+00:00", "event": "task_done", "task_id": 14, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.698982+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [15], "duration_ms": 2.101661999972748}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.701902+00:00", "event": "step", "task_id": 15, "step": "fetch", "duration_ms": 2.844593999952849}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.732131+00:00", "event": "step", "task_id": 15, "step": "process", "duration_ms": 30.095143999915308}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.735382+00:00", "event": "step", "task_id": 15, "step": "store", "duration_ms": 3.1209439999884125}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.735473+00:00", "event": "task_done", "task_id": 15, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.738180+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [16], "duration_ms": 2.6438810000399826}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.741109+00:00", "event": "step", "task_id": 16, "step": "fetch", "duration_ms": 2.816616000018257}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.796668+00:00", "event": "step", "task_id": 16, "step": "process", "duration_ms": 55.43734000002587}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.799806+00:00", "event": "step", "task_id": 16, "step": "store", "duration_ms": 3.0234450000534707}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.799866+00:00", "event": "task_done", "task_id": 16, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.801877+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [17], "duration_ms": 1.9706260000020848}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.804279+00:00", "event": "step", "task_id": 17, "step": "fetch", "duration_ms": 2.3391489999085024}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.837963+00:00", "event": "step", "task_id": 17, "step": "process", "duration_ms": 33.525414999985514}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.840825+00:00", "event": "step", "task_id": 17, "step": "store", "duration_ms": 2.7464239999517304}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.840901+00:00", "event": "task_done", "task_id": 17, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.842941+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [18], "duration_ms": 1.992166999912115}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.845443+00:00", "event": "step", "task_id": 18, "step": "fetch", "duration_ms": 2.4282860000539586}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.897916+00:00", "event": "step", "task_id": 18, "step": "process", "duration_ms": 52.3759229999996}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.900576+00:00", "event": "step", "task_id": 18, "step": "store", "duration_ms": 2.535638000040308}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.900634+00:00", "event": "task_done", "task_id": 18, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.902718+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [19], "duration_ms": 1.9496160000471718}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.905280+00:00", "event": "step", "task_id": 19, "step": "fetch", "duration_ms": 2.495001999932356}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.937926+00:00", "event": "step", "task_id": 19, "step": "process", "duration_ms": 32.5411730000269}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.940568+00:00", "event": "step", "task_id": 19, "step": "store", "duration_ms": 2.528384000015649}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.940639+00:00", "event": "task_done", "task_id": 19, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.942267+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [20], "duration_ms": 1.587491999998747}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:12.945122+00:00", "event": "step", "task_id": 20, "step": "fetch", "duration_ms": 2.7832289999878412}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.000739+00:00", "event": "step", "task_id": 20, "step": "process", "duration_ms": 55.50392599991483}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.004035+00:00", "event": "step", "task_id": 20, "step": "store", "duration_ms": 3.1526470000926565}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.004109+00:00", "event": "task_done", "task_id": 20, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.006291+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [21], "duration_ms": 2.133541999910449}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.010023+00:00", "event": "step", "task_id": 21, "step": "fetch", "duration_ms": 3.646075999995446}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.040224+00:00", "event": "step", "task_id": 21, "step": "process", "duration_ms": 30.074055000000044}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.043009+00:00", "event": "step", "task_id": 21, "step": "store", "duration_ms": 2.62103800002933}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.043087+00:00", "event": "task_done", "task_id": 21, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.044758+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [22], "duration_ms": 1.6261879999319717}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.047391+00:00", "event": "step", "task_id": 22, "step": "fetch", "duration_ms": 2.5549339999315634}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.104413+00:00", "event": "step", "task_id": 22, "step": "process", "duration_ms": 56.902344000036464}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.107710+00:00", "event": "step", "task_id": 22, "step": "store", "duration_ms": 3.1796700000086275}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.107811+00:00", "event": "task_done", "task_id": 22, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.110161+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [23], "duration_ms": 2.2845450000659184}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.113691+00:00", "event": "step", "task_id": 23, "step": "fetch", "duration_ms": 3.429148999998688}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.146674+00:00", "event": "step", "task_id": 23, "step": "process", "duration_ms": 32.77274499998839}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.149162+00:00", "event": "step", "task_id": 23, "step": "store", "duration_ms": 2.3731630000156656}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.149253+00:00", "event": "task_done", "task_id": 23, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.151102+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [24], "duration_ms": 1.8020879999767203}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.153577+00:00", "event": "step", "task_id": 24, "step": "fetch", "duration_ms": 2.4015669999926104}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.206026+00:00", "event": "step", "task_id": 24, "step": "process", "duration_ms": 52.361286000063956}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.208778+00:00", "event": "step", "task_id": 24, "step": "store", "duration_ms": 2.6348839999172924}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.208858+00:00", "event": "task_done", "task_id": 24, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.210743+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [25], "duration_ms": 1.8345610000096713}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.213288+00:00", "event": "step", "task_id": 25, "step": "fetch", "duration_ms": 2.4537100000543433}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.246057+00:00", "event": "step", "task_id": 25, "step": "process", "duration_ms": 32.64984299994467}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.248722+00:00", "event": "step", "task_id": 25, "step": "store", "duration_ms": 2.534926000066662}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.248788+00:00", "event": "task_done", "task_id": 25, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.250361+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [26], "duration_ms": 1.5326319999076077}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.252771+00:00", "event": "step", "task_id": 26, "step": "fetch", "duration_ms": 2.3473840000178825}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.305571+00:00", "event": "step", "task_id": 26, "step": "process", "duration_ms": 52.70791599991753}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.308630+00:00", "event": "step", "task_id": 26, "step": "store", "duration_ms": 2.9361719999769775}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.308714+00:00", "event": "task_done", "task_id": 26, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.310761+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [27], "duration_ms": 1.9971659999100666}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.313369+00:00", "event": "step", "task_id": 27, "step": "fetch", "duration_ms": 2.5205509999750575}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.347690+00:00", "event": "step", "task_id": 27, "step": "process", "duration_ms": 34.21474999993279}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.350388+00:00", "event": "step", "task_id": 27, "step": "store", "duration_ms": 2.5805630000377278}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.350466+00:00", "event": "task_done", "task_id": 27, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.352143+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [28], "duration_ms": 1.6355160000784963}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.354563+00:00", "event": "step", "task_id": 28, "step": "fetch", "duration_ms": 2.352383000015834}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.412404+00:00", "event": "step", "task_id": 28, "step": "process", "duration_ms": 57.745419999946535}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.414993+00:00", "event": "step", "task_id": 28, "step": "store", "duration_ms": 2.4577020000151606}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.415062+00:00", "event": "task_done", "task_id": 28, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.519667+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [29], "duration_ms": 3.1486310000445883}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.522557+00:00", "event": "step", "task_id": 29, "step": "fetch", "duration_ms": 2.7806589999954667}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.545555+00:00", "event": "step", "task_id": 29, "step": "process", "duration_ms": 22.875947999978052}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.548313+00:00", "event": "step", "task_id": 29, "step": "store", "duration_ms": 2.633939000020291}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.548460+00:00", "event": "task_done", "task_id": 29, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.550308+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [30], "duration_ms": 1.7872959999749582}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.552786+00:00", "event": "step", "task_id": 30, "step": "fetch", "duration_ms": 2.3902400000679336}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.590828+00:00", "event": "step", "task_id": 30, "step": "process", "duration_ms": 37.93126499999744}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.594549+00:00", "event": "step", "task_id": 30, "step": "store", "duration_ms": 3.6049600000751525}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.594625+00:00", "event": "task_done", "task_id": 30, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.698863+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [31], "duration_ms": 2.874796000014612}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.701510+00:00", "event": "step", "task_id": 31, "step": "fetch", "duration_ms": 2.5554149999607034}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.724146+00:00", "event": "step", "task_id": 31, "step": "process", "duration_ms": 22.54101799996988}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.726678+00:00", "event": "step", "task_id": 31, "step": "store", "duration_ms": 2.420913000037217}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.726757+00:00", "event": "task_done", "task_id": 31, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.728493+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [32], "duration_ms": 1.6907299999502357}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.730834+00:00", "event": "step", "task_id": 32, "step": "fetch", "duration_ms": 2.2725530000116123}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.753549+00:00", "event": "step", "task_id": 32, "step": "process", "duration_ms": 22.621739999976853}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.756134+00:00", "event": "step", "task_id": 32, "step": "store", "duration_ms": 2.4753440000040428}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.756195+00:00", "event": "task_done", "task_id": 32, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.895035+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [33], "duration_ms": 2.998247999926207}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.897768+00:00", "event": "step", "task_id": 33, "step": "fetch", "duration_ms": 2.63502499990409}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.921364+00:00", "event": "step", "task_id": 33, "step": "process", "duration_ms": 23.496865999959482}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.923549+00:00", "event": "step", "task_id": 33, "step": "store", "duration_ms": 2.0698929999980464}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.923618+00:00", "event": "task_done", "task_id": 33, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.925537+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [34], "duration_ms": 1.8661889999975756}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.927803+00:00", "event": "step", "task_id": 34, "step": "fetch", "duration_ms": 2.1871380000675344}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.950478+00:00", "event": "step", "task_id": 34, "step": "process", "duration_ms": 22.552163999989716}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.993120+00:00", "event": "step", "task_id": 34, "step": "store", "duration_ms": 42.512565000038194}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:13.993198+00:00", "event": "task_done", "task_id": 34, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.097423+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [35], "duration_ms": 2.930586000047697}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.100126+00:00", "event": "step", "task_id": 35, "step": "fetch", "duration_ms": 2.610493000020142}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.124230+00:00", "event": "step", "task_id": 35, "step": "process", "duration_ms": 24.003068000070016}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.126684+00:00", "event": "step", "task_id": 35, "step": "store", "duration_ms": 2.316554999993059}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.126743+00:00", "event": "task_done", "task_id": 35, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.128220+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [36], "duration_ms": 1.4369019999094235}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.130671+00:00", "event": "step", "task_id": 36, "step": "fetch", "duration_ms": 2.376880000042547}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.154591+00:00", "event": "step", "task_id": 36, "step": "process", "duration_ms": 23.827817999972467}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.193217+00:00", "event": "step", "task_id": 36, "step": "store", "duration_ms": 38.50922599997375}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.193295+00:00", "event": "task_done", "task_id": 36, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.297523+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [37], "duration_ms": 2.7560030000586266}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.300123+00:00", "event": "step", "task_id": 37, "step": "fetch", "duration_ms": 2.5110409999342664}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.322871+00:00", "event": "step", "task_id": 37, "step": "process", "duration_ms": 22.653269000102227}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.325267+00:00", "event": "step", "task_id": 37, "step": "store", "duration_ms": 2.2849160000077973}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.325327+00:00", "event": "task_done", "task_id": 37, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.326946+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [38], "duration_ms": 1.5785690000029717}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.329439+00:00", "event": "step", "task_id": 38, "step": "fetch", "duration_ms": 2.4300590000621014}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.352707+00:00", "event": "step", "task_id": 38, "step": "process", "duration_ms": 23.160284000027787}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.393567+00:00", "event": "step", "task_id": 38, "step": "store", "duration_ms": 40.74206500001765}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.393653+00:00", "event": "task_done", "task_id": 38, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.497309+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [39], "duration_ms": 2.2783750000598957}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.499974+00:00", "event": "step", "task_id": 39, "step": "fetch", "duration_ms": 2.5688099999570113}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.523198+00:00", "event": "step", "task_id": 39, "step": "process", "duration_ms": 23.106020999989596}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.525895+00:00", "event": "step", "task_id": 39, "step": "store", "duration_ms": 2.5656750000280226}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.525979+00:00", "event": "task_done", "task_id": 39, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.527723+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [40], "duration_ms": 1.693470999953206}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.530108+00:00", "event": "step", "task_id": 40, "step": "fetch", "duration_ms": 2.2979299999406066}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.553186+00:00", "event": "step", "task_id": 40, "step": "process", "duration_ms": 22.944411000025866}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.593344+00:00", "event": "step", "task_id": 40, "step": "store", "duration_ms": 40.03733500007911}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.593432+00:00", "event": "task_done", "task_id": 40, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.701043+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [41], "duration_ms": 6.076366000002054}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.703867+00:00", "event": "step", "task_id": 41, "step": "fetch", "duration_ms": 2.713103000019146}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.727233+00:00", "event": "step", "task_id": 41, "step": "process", "duration_ms": 23.244231000035143}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.729647+00:00", "event": "step", "task_id": 41, "step": "store", "duration_ms": 2.3002560000122685}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.729708+00:00", "event": "task_done", "task_id": 41, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.731456+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [42], "duration_ms": 1.702762000036273}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.734002+00:00", "event": "step", "task_id": 42, "step": "fetch", "duration_ms": 2.473972999951002}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.757835+00:00", "event": "step", "task_id": 42, "step": "process", "duration_ms": 23.724784000023647}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.793282+00:00", "event": "step", "task_id": 42, "step": "store", "duration_ms": 35.321581000062}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.793398+00:00", "event": "task_done", "task_id": 42, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.897584+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [43], "duration_ms": 2.829500999951051}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.900151+00:00", "event": "step", "task_id": 43, "step": "fetch", "duration_ms": 2.465695999944728}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.922877+00:00", "event": "step", "task_id": 43, "step": "process", "duration_ms": 22.62584799996148}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.925865+00:00", "event": "step", "task_id": 43, "step": "store", "duration_ms": 2.8599679999388172}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:14.925942+00:00", "event": "task_done", "task_id": 43, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.029622+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [44], "duration_ms": 2.3765090001006683}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.032850+00:00", "event": "step", "task_id": 44, "step": "fetch", "duration_ms": 3.120849000083581}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.061069+00:00", "event": "step", "task_id": 44, "step": "process", "duration_ms": 28.082238000024518}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.063549+00:00", "event": "step", "task_id": 44, "step": "store", "duration_ms": 2.359207000040442}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.063623+00:00", "event": "task_done", "task_id": 44, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.065655+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [45], "duration_ms": 1.9794080000110625}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.068279+00:00", "event": "step", "task_id": 45, "step": "fetch", "duration_ms": 2.52774800003408}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.133691+00:00", "event": "step", "task_id": 45, "step": "process", "duration_ms": 65.27189400003408}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.136376+00:00", "event": "step", "task_id": 45, "step": "store", "duration_ms": 2.5232440000308998}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.136445+00:00", "event": "task_done", "task_id": 45, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.138150+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [46], "duration_ms": 1.661515000023428}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.140828+00:00", "event": "step", "task_id": 46, "step": "fetch", "duration_ms": 2.600549999897339}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.163934+00:00", "event": "step", "task_id": 46, "step": "process", "duration_ms": 22.99762699999519}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.166592+00:00", "event": "step", "task_id": 46, "step": "store", "duration_ms": 2.551247000042167}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.166650+00:00", "event": "task_done", "task_id": 46, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.270351+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [47], "duration_ms": 2.3919069999465137}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.273050+00:00", "event": "step", "task_id": 47, "step": "fetch", "duration_ms": 2.5870240000358535}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.295223+00:00", "event": "step", "task_id": 47, "step": "process", "duration_ms": 22.056696999925407}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.297921+00:00", "event": "step", "task_id": 47, "step": "store", "duration_ms": 2.588718000083645}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.297989+00:00", "event": "task_done", "task_id": 47, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.402200+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [48], "duration_ms": 2.719493999961742}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.404868+00:00", "event": "step", "task_id": 48, "step": "fetch", "duration_ms": 2.5710249999519874}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.427444+00:00", "event": "step", "task_id": 48, "step": "process", "duration_ms": 22.478911999996853}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.430117+00:00", "event": "step", "task_id": 48, "step": "store", "duration_ms": 2.551908999976149}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.430199+00:00", "event": "task_done", "task_id": 48, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.431841+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [49], "duration_ms": 1.5920339999411226}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.434666+00:00", "event": "step", "task_id": 49, "step": "fetch", "duration_ms": 2.750112000057925}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.458203+00:00", "event": "step", "task_id": 49, "step": "process", "duration_ms": 23.42505000001438}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.491892+00:00", "event": "step", "task_id": 49, "step": "store", "duration_ms": 33.5727639999277}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.491972+00:00", "event": "task_done", "task_id": 49, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.595657+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [50], "duration_ms": 2.2172799999680137}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.598542+00:00", "event": "step", "task_id": 50, "step": "fetch", "duration_ms": 2.781560000016725}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.622256+00:00", "event": "step", "task_id": 50, "step": "process", "duration_ms": 23.609997999983534}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.624764+00:00", "event": "step", "task_id": 50, "step": "store", "duration_ms": 2.3935209999308427}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.624829+00:00", "event": "task_done", "task_id": 50, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.626684+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [51], "duration_ms": 1.7975590000105512}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.629512+00:00", "event": "step", "task_id": 51, "step": "fetch", "duration_ms": 2.7414450000833313}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.652655+00:00", "event": "step", "task_id": 51, "step": "process", "duration_ms": 23.02216300006421}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.692578+00:00", "event": "step", "task_id": 51, "step": "store", "duration_ms": 39.800013999979456}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.692656+00:00", "event": "task_done", "task_id": 51, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.796709+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [52], "duration_ms": 2.680091000001994}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.799380+00:00", "event": "step", "task_id": 52, "step": "fetch", "duration_ms": 2.5751320000608757}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.822650+00:00", "event": "step", "task_id": 52, "step": "process", "duration_ms": 23.142689999986032}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.825159+00:00", "event": "step", "task_id": 52, "step": "store", "duration_ms": 2.370307000091998}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.825227+00:00", "event": "task_done", "task_id": 52, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.930175+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [53], "duration_ms": 3.6817730000393567}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.933215+00:00", "event": "step", "task_id": 53, "step": "fetch", "duration_ms": 2.937493999979779}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.956518+00:00", "event": "step", "task_id": 53, "step": "process", "duration_ms": 23.188193999999385}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.960270+00:00", "event": "step", "task_id": 53, "step": "store", "duration_ms": 3.638043000023572}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.960372+00:00", "event": "task_done", "task_id": 53, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.962706+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [54], "duration_ms": 2.260890999991716}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:15.965060+00:00", "event": "step", "task_id": 54, "step": "fetch", "duration_ms": 2.282261000004837}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.030889+00:00", "event": "step", "task_id": 54, "step": "process", "duration_ms": 65.72205300005862}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.033249+00:00", "event": "stale_heartbeat", "task_id": 53, "token": 1, "updated_rows": 0}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.033338+00:00", "event": "step", "task_id": 54, "step": "store", "duration_ms": 2.340241000069909}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.033364+00:00", "event": "task_done", "task_id": 54, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.035252+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [55], "duration_ms": 1.8270049999955518}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.037893+00:00", "event": "step", "task_id": 55, "step": "fetch", "duration_ms": 2.546037999991313}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.061183+00:00", "event": "step", "task_id": 55, "step": "process", "duration_ms": 23.18173300000126}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.063641+00:00", "event": "step", "task_id": 55, "step": "store", "duration_ms": 2.3408229999404284}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.063705+00:00", "event": "task_done", "task_id": 55, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.167854+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [56], "duration_ms": 2.525259000094593}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.170881+00:00", "event": "step", "task_id": 56, "step": "fetch", "duration_ms": 2.9115959999899133}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.194198+00:00", "event": "step", "task_id": 56, "step": "process", "duration_ms": 23.184186999969825}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.196730+00:00", "event": "step", "task_id": 56, "step": "store", "duration_ms": 2.418438000063361}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.196792+00:00", "event": "task_done", "task_id": 56, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.300777+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [57], "duration_ms": 2.7481769999440075}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.303607+00:00", "event": "step", "task_id": 57, "step": "fetch", "duration_ms": 2.729763000047569}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.326447+00:00", "event": "step", "task_id": 57, "step": "process", "duration_ms": 22.706529000060982}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.329636+00:00", "event": "step", "task_id": 57, "step": "store", "duration_ms": 3.05320200004644}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.329743+00:00", "event": "task_done", "task_id": 57, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.433982+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [58], "duration_ms": 2.3653580000200236}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.437045+00:00", "event": "step", "task_id": 58, "step": "fetch", "duration_ms": 2.952480999965701}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.459825+00:00", "event": "step", "task_id": 58, "step": "process", "duration_ms": 22.672284999998737}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.462420+00:00", "event": "step", "task_id": 58, "step": "store", "duration_ms": 2.4865650000265305}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.462481+00:00", "event": "task_done", "task_id": 58, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.463962+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [59], "duration_ms": 1.4408889999231178}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.466833+00:00", "event": "step", "task_id": 59, "step": "fetch", "duration_ms": 2.804373999993004}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.490191+00:00", "event": "step", "task_id": 59, "step": "process", "duration_ms": 23.24816700001975}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.532913+00:00", "event": "step", "task_id": 59, "step": "store", "duration_ms": 42.60564000003342}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.532989+00:00", "event": "task_done", "task_id": 59, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.534730+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [60], "duration_ms": 1.6966609999826687}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.537350+00:00", "event": "step", "task_id": 60, "step": "fetch", "duration_ms": 2.542120000043724}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.563890+00:00", "event": "step", "task_id": 60, "step": "process", "duration_ms": 26.42739700002039}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.566732+00:00", "event": "step", "task_id": 60, "step": "store", "duration_ms": 2.7120790000481065}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.566825+00:00", "event": "task_done", "task_id": 60, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.670841+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [61], "duration_ms": 2.5309510000397495}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.673522+00:00", "event": "step", "task_id": 61, "step": "fetch", "duration_ms": 2.579590999971515}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.699541+00:00", "event": "step", "task_id": 61, "step": "process", "duration_ms": 25.889835000043604}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.702170+00:00", "event": "step", "task_id": 61, "step": "store", "duration_ms": 2.490613999952984}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.702242+00:00", "event": "task_done", "task_id": 61, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.806905+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [62], "duration_ms": 3.3595169999216523}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.809840+00:00", "event": "step", "task_id": 62, "step": "fetch", "duration_ms": 2.8384280000182116}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.833438+00:00", "event": "step", "task_id": 62, "step": "process", "duration_ms": 23.484051999957956}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.835938+00:00", "event": "step", "task_id": 62, "step": "store", "duration_ms": 2.388192000012168}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.835999+00:00", "event": "task_done", "task_id": 62, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.837602+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [63], "duration_ms": 1.5638810000382364}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.840060+00:00", "event": "step", "task_id": 63, "step": "fetch", "duration_ms": 2.3891319999620464}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.863341+00:00", "event": "step", "task_id": 63, "step": "process", "duration_ms": 23.18580100006784}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.892611+00:00", "event": "step", "task_id": 63, "step": "store", "duration_ms": 29.151599999977407}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.892683+00:00", "event": "task_done", "task_id": 63, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.996551+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [64], "duration_ms": 2.6515750000726257}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:16.999169+00:00", "event": "step", "task_id": 64, "step": "fetch", "duration_ms": 2.5259310000365076}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.022030+00:00", "event": "step", "task_id": 64, "step": "process", "duration_ms": 22.757855999998355}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.024726+00:00", "event": "step", "task_id": 64, "step": "store", "duration_ms": 2.569938000078764}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.024800+00:00", "event": "task_done", "task_id": 64, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.026385+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [65], "duration_ms": 1.5433070000199223}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.028936+00:00", "event": "step", "task_id": 65, "step": "fetch", "duration_ms": 2.4834700000155863}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.051946+00:00", "event": "step", "task_id": 65, "step": "process", "duration_ms": 22.90086599998631}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.092475+00:00", "event": "step", "task_id": 65, "step": "store", "duration_ms": 40.38972300008936}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.092575+00:00", "event": "task_done", "task_id": 65, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.196853+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [66], "duration_ms": 2.896787999929984}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.199368+00:00", "event": "step", "task_id": 66, "step": "fetch", "duration_ms": 2.421312000024045}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.222584+00:00", "event": "step", "task_id": 66, "step": "process", "duration_ms": 23.12209100000473}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.225534+00:00", "event": "step", "task_id": 66, "step": "store", "duration_ms": 2.8220770000189077}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.225637+00:00", "event": "task_done", "task_id": 66, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.329855+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [67], "duration_ms": 2.270128999953158}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.332472+00:00", "event": "step", "task_id": 67, "step": "fetch", "duration_ms": 2.5244060000204627}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.355419+00:00", "event": "step", "task_id": 67, "step": "process", "duration_ms": 22.8391800000054}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.358245+00:00", "event": "step", "task_id": 67, "step": "store", "duration_ms": 2.696830999980193}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.358323+00:00", "event": "task_done", "task_id": 67, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.360039+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [68], "duration_ms": 1.6665939999711554}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.363071+00:00", "event": "step", "task_id": 68, "step": "fetch", "duration_ms": 2.94051900004888}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.385574+00:00", "event": "step", "task_id": 68, "step": "process", "duration_ms": 22.391047000041908}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.387949+00:00", "event": "step", "task_id": 68, "step": "store", "duration_ms": 2.2628550000263203}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.388010+00:00", "event": "task_done", "task_id": 68, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.533262+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [69], "duration_ms": 1.9441660000438787}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.535833+00:00", "event": "step", "task_id": 69, "step": "fetch", "duration_ms": 2.4756640000305197}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.558900+00:00", "event": "step", "task_id": 69, "step": "process", "duration_ms": 22.967651000044498}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.561594+00:00", "event": "step", "task_id": 69, "step": "store", "duration_ms": 2.5797920000059094}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.561688+00:00", "event": "task_done", "task_id": 69, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.563476+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [70], "duration_ms": 1.7281099999308935}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.566060+00:00", "event": "step", "task_id": 70, "step": "fetch", "duration_ms": 2.4997210000492487}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.589687+00:00", "event": "step", "task_id": 70, "step": "process", "duration_ms": 23.519817999954284}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.632820+00:00", "event": "step", "task_id": 70, "step": "store", "duration_ms": 43.01039999995737}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.632905+00:00", "event": "task_done", "task_id": 70, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.634817+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [71], "duration_ms": 1.8612000000075568}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.637373+00:00", "event": "step", "task_id": 71, "step": "fetch", "duration_ms": 2.4816170000576676}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.661558+00:00", "event": "step", "task_id": 71, "step": "process", "duration_ms": 24.08634300002177}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.664162+00:00", "event": "step", "task_id": 71, "step": "store", "duration_ms": 2.491033000069365}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.664235+00:00", "event": "task_done", "task_id": 71, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.768308+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [72], "duration_ms": 2.177286999994976}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.770854+00:00", "event": "step", "task_id": 72, "step": "fetch", "duration_ms": 2.421837000042615}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.794489+00:00", "event": "step", "task_id": 72, "step": "process", "duration_ms": 23.52519700002631}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.797283+00:00", "event": "step", "task_id": 72, "step": "store", "duration_ms": 2.6831440000023576}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.797344+00:00", "event": "task_done", "task_id": 72, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.901542+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [73], "duration_ms": 2.881475999970462}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.904089+00:00", "event": "step", "task_id": 73, "step": "fetch", "duration_ms": 2.4529710000251725}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.927757+00:00", "event": "step", "task_id": 73, "step": "process", "duration_ms": 23.55883799998537}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.930064+00:00", "event": "step", "task_id": 73, "step": "store", "duration_ms": 2.1997459999738567}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.930123+00:00", "event": "task_done", "task_id": 73, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.931720+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [74], "duration_ms": 1.5543010000556023}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.933961+00:00", "event": "step", "task_id": 74, "step": "fetch", "duration_ms": 2.1794969999291425}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.956554+00:00", "event": "step", "task_id": 74, "step": "process", "duration_ms": 22.504408000031617}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.995084+00:00", "event": "step", "task_id": 74, "step": "store", "duration_ms": 38.40035300004274}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:17.995167+00:00", "event": "task_done", "task_id": 74, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.099230+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [75], "duration_ms": 2.7003459999832558}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.101901+00:00", "event": "step", "task_id": 75, "step": "fetch", "duration_ms": 2.5721650000605223}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.126735+00:00", "event": "step", "task_id": 75, "step": "process", "duration_ms": 24.726303000079497}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.129341+00:00", "event": "step", "task_id": 75, "step": "store", "duration_ms": 2.4844100000791514}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.129429+00:00", "event": "task_done", "task_id": 75, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.131167+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [76], "duration_ms": 1.6903760000559487}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.133682+00:00", "event": "step", "task_id": 76, "step": "fetch", "duration_ms": 2.4378420000630285}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.191747+00:00", "event": "step", "task_id": 76, "step": "process", "duration_ms": 57.96110899996165}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.194913+00:00", "event": "step", "task_id": 76, "step": "store", "duration_ms": 3.049421000014263}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.194987+00:00", "event": "task_done", "task_id": 76, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.298666+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [77], "duration_ms": 2.197830999989492}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.301171+00:00", "event": "step", "task_id": 77, "step": "fetch", "duration_ms": 2.4159810000128346}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.324113+00:00", "event": "step", "task_id": 77, "step": "process", "duration_ms": 22.844206000058875}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.326877+00:00", "event": "step", "task_id": 77, "step": "store", "duration_ms": 2.641132999997353}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.326954+00:00", "event": "task_done", "task_id": 77, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.328648+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [78], "duration_ms": 1.6514740000275197}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.331189+00:00", "event": "step", "task_id": 78, "step": "fetch", "duration_ms": 2.469830999984879}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.355967+00:00", "event": "step", "task_id": 78, "step": "process", "duration_ms": 24.672553000073094}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.393214+00:00", "event": "step", "task_id": 78, "step": "store", "duration_ms": 37.129284999991796}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.393288+00:00", "event": "task_done", "task_id": 78, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.496733+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [13], "duration_ms": 2.11419400000068}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.499122+00:00", "event": "step", "task_id": 13, "step": "fetch", "duration_ms": 2.299822000054519}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.521673+00:00", "event": "step", "task_id": 13, "step": "process", "duration_ms": 22.460475999992013}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.524284+00:00", "event": "step", "task_id": 13, "step": "store", "duration_ms": 2.5023619999728908}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.524369+00:00", "event": "task_done", "task_id": 13, "token": 2, "attempts": 2, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.526242+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [79], "duration_ms": 1.8194389999734994}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.528833+00:00", "event": "step", "task_id": 79, "step": "fetch", "duration_ms": 2.5055999999494816}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.552094+00:00", "event": "step", "task_id": 79, "step": "process", "duration_ms": 23.14434999993864}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.593778+00:00", "event": "step", "task_id": 79, "step": "store", "duration_ms": 41.56945199997608}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.593859+00:00", "event": "task_done", "task_id": 79, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.595654+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [80], "duration_ms": 1.746523000065281}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.598224+00:00", "event": "step", "task_id": 80, "step": "fetch", "duration_ms": 2.483026000049904}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.633477+00:00", "event": "step", "task_id": 80, "step": "process", "duration_ms": 35.13680499997918}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.636198+00:00", "event": "step", "task_id": 80, "step": "store", "duration_ms": 2.5938599999335565}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.636274+00:00", "event": "task_done", "task_id": 80, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.637989+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [81], "duration_ms": 1.6706899999689995}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.640687+00:00", "event": "step", "task_id": 81, "step": "fetch", "duration_ms": 2.6221089999580727}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.693236+00:00", "event": "step", "task_id": 81, "step": "process", "duration_ms": 52.43765700004133}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.696420+00:00", "event": "step", "task_id": 81, "step": "store", "duration_ms": 3.0643900000768554}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.696504+00:00", "event": "task_done", "task_id": 81, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.800563+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [82], "duration_ms": 2.62714899997718}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.803293+00:00", "event": "step", "task_id": 82, "step": "fetch", "duration_ms": 2.635252999994009}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.826639+00:00", "event": "step", "task_id": 82, "step": "process", "duration_ms": 23.244678999958523}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.829337+00:00", "event": "step", "task_id": 82, "step": "store", "duration_ms": 2.5871519999327575}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.829396+00:00", "event": "task_done", "task_id": 82, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.932713+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [83], "duration_ms": 2.067426000053274}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.934866+00:00", "event": "step", "task_id": 83, "step": "fetch", "duration_ms": 2.059962999965137}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.957392+00:00", "event": "step", "task_id": 83, "step": "process", "duration_ms": 22.430808999956753}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.959871+00:00", "event": "step", "task_id": 83, "step": "store", "duration_ms": 2.3534239999207784}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.959931+00:00", "event": "task_done", "task_id": 83, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.961529+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [84], "duration_ms": 1.5564750000294225}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.963840+00:00", "event": "step", "task_id": 84, "step": "fetch", "duration_ms": 2.2457800000665884}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.986515+00:00", "event": "step", "task_id": 84, "step": "process", "duration_ms": 22.582474000046204}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.989001+00:00", "event": "step", "task_id": 84, "step": "store", "duration_ms": 2.3713069999757863}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:18.989064+00:00", "event": "task_done", "task_id": 84, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.032486+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [85], "duration_ms": 43.369014000063544}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.035226+00:00", "event": "step", "task_id": 85, "step": "fetch", "duration_ms": 2.6388999999653606}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.058386+00:00", "event": "step", "task_id": 85, "step": "process", "duration_ms": 23.031899000102385}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.060926+00:00", "event": "step", "task_id": 85, "step": "store", "duration_ms": 2.4286139999958323}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.060999+00:00", "event": "task_done", "task_id": 85, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.164448+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [86], "duration_ms": 2.2072479999906136}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.167032+00:00", "event": "step", "task_id": 86, "step": "fetch", "duration_ms": 2.4815749999334002}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.190729+00:00", "event": "step", "task_id": 86, "step": "process", "duration_ms": 23.559480000017174}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.193409+00:00", "event": "step", "task_id": 86, "step": "store", "duration_ms": 2.5530089999392658}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.193543+00:00", "event": "task_done", "task_id": 86, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.298163+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [87], "duration_ms": 3.1037340000921176}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.300873+00:00", "event": "step", "task_id": 87, "step": "fetch", "duration_ms": 2.6254499999822656}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.326886+00:00", "event": "step", "task_id": 87, "step": "process", "duration_ms": 25.897940000049857}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.329383+00:00", "event": "step", "task_id": 87, "step": "store", "duration_ms": 2.377859000034732}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.329442+00:00", "event": "task_done", "task_id": 87, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.433739+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [88], "duration_ms": 2.4004119999290197}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.436571+00:00", "event": "step", "task_id": 88, "step": "fetch", "duration_ms": 2.736394999942604}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.460841+00:00", "event": "step", "task_id": 88, "step": "process", "duration_ms": 24.162974999967446}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.463274+00:00", "event": "step", "task_id": 88, "step": "store", "duration_ms": 2.323186000012356}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.463331+00:00", "event": "task_done", "task_id": 88, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.464829+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [89], "duration_ms": 1.4593230000627955}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.467331+00:00", "event": "step", "task_id": 89, "step": "fetch", "duration_ms": 2.4381119999361545}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.490456+00:00", "event": "step", "task_id": 89, "step": "process", "duration_ms": 23.033402000010028}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.533253+00:00", "event": "step", "task_id": 89, "step": "store", "duration_ms": 42.67637999998897}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.533332+00:00", "event": "task_done", "task_id": 89, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.637072+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [90], "duration_ms": 2.3280359999944267}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.640075+00:00", "event": "step", "task_id": 90, "step": "fetch", "duration_ms": 2.892867000014121}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.667022+00:00", "event": "step", "task_id": 90, "step": "process", "duration_ms": 26.805481999986114}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.669559+00:00", "event": "step", "task_id": 90, "step": "store", "duration_ms": 2.4044890000141095}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.669625+00:00", "event": "task_done", "task_id": 90, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.671562+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [91], "duration_ms": 1.8887100000029022}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.674101+00:00", "event": "step", "task_id": 91, "step": "fetch", "duration_ms": 2.456245999951534}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.736038+00:00", "event": "step", "task_id": 91, "step": "process", "duration_ms": 61.826644000007036}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.738822+00:00", "event": "step", "task_id": 91, "step": "store", "duration_ms": 2.660380000065743}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.738895+00:00", "event": "task_done", "task_id": 91, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.740540+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [92], "duration_ms": 1.6010680000135835}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.743028+00:00", "event": "step", "task_id": 92, "step": "fetch", "duration_ms": 2.4192380000158664}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.766554+00:00", "event": "step", "task_id": 92, "step": "process", "duration_ms": 23.422974000027352}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.768926+00:00", "event": "step", "task_id": 92, "step": "store", "duration_ms": 2.261811999915153}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.768991+00:00", "event": "task_done", "task_id": 92, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.872640+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [93], "duration_ms": 2.3837699999376127}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.875383+00:00", "event": "step", "task_id": 93, "step": "fetch", "duration_ms": 2.637348000007478}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.897647+00:00", "event": "step", "task_id": 93, "step": "process", "duration_ms": 22.15820599997187}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.899961+00:00", "event": "step", "task_id": 93, "step": "store", "duration_ms": 2.207449000025008}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:19.900019+00:00", "event": "task_done", "task_id": 93, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.004900+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [94], "duration_ms": 3.0406739999762067}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.007634+00:00", "event": "step", "task_id": 94, "step": "fetch", "duration_ms": 2.6193029999603823}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.030688+00:00", "event": "step", "task_id": 94, "step": "process", "duration_ms": 22.921050000036303}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.033271+00:00", "event": "step", "task_id": 94, "step": "store", "duration_ms": 2.4483820000114065}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.033359+00:00", "event": "task_done", "task_id": 94, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.035137+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [95], "duration_ms": 1.7197220000753077}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.037674+00:00", "event": "step", "task_id": 95, "step": "fetch", "duration_ms": 2.453400999911537}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.090445+00:00", "event": "step", "task_id": 95, "step": "process", "duration_ms": 52.6578999999856}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.092806+00:00", "event": "step", "task_id": 95, "step": "store", "duration_ms": 2.2471339999583506}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.092867+00:00", "event": "task_done", "task_id": 95, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.196988+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [96], "duration_ms": 2.8999710000334744}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.199664+00:00", "event": "step", "task_id": 96, "step": "fetch", "duration_ms": 2.5531580000688336}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.224463+00:00", "event": "step", "task_id": 96, "step": "process", "duration_ms": 24.65600200002882}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.227286+00:00", "event": "step", "task_id": 96, "step": "store", "duration_ms": 2.7050240000789927}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.227361+00:00", "event": "task_done", "task_id": 96, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.229294+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [97], "duration_ms": 1.8815770000628618}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.231918+00:00", "event": "step", "task_id": 97, "step": "fetch", "duration_ms": 2.5387879999243523}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.256059+00:00", "event": "step", "task_id": 97, "step": "process", "duration_ms": 24.04105999994499}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.293349+00:00", "event": "step", "task_id": 97, "step": "store", "duration_ms": 37.17026200001783}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.293426+00:00", "event": "task_done", "task_id": 97, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.398371+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [98], "duration_ms": 3.1715910000684744}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.401360+00:00", "event": "step", "task_id": 98, "step": "fetch", "duration_ms": 2.858512999978302}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.423960+00:00", "event": "step", "task_id": 98, "step": "process", "duration_ms": 22.481794999976046}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.426609+00:00", "event": "step", "task_id": 98, "step": "store", "duration_ms": 2.5372090000246317}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.426669+00:00", "event": "task_done", "task_id": 98, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.530134+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [99], "duration_ms": 2.1494199999096963}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.532632+00:00", "event": "step", "task_id": 99, "step": "fetch", "duration_ms": 2.396303000068656}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.555482+00:00", "event": "step", "task_id": 99, "step": "process", "duration_ms": 22.74377700007335}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.557928+00:00", "event": "step", "task_id": 99, "step": "store", "duration_ms": 2.326573000004828}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.557993+00:00", "event": "task_done", "task_id": 99, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.559498+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [100], "duration_ms": 1.4655339999762873}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.562279+00:00", "event": "step", "task_id": 100, "step": "fetch", "duration_ms": 2.714622999974381}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.585544+00:00", "event": "step", "task_id": 100, "step": "process", "duration_ms": 23.16517899998871}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.592444+00:00", "event": "step", "task_id": 100, "step": "store", "duration_ms": 6.787999000039235}
+[pod/worker-57978f97f-2vmzc/worker] {"at": "2026-11-08T23:08:20.592508+00:00", "event": "task_done", "task_id": 100, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-2vmzc"}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.779444+00:00", "event": "worker_started", "worker_id": "worker-57978f97f-rpvmq", "mode": "skip_locked", "batch": 1}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.813263+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [1], "duration_ms": 33.62109500005772}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.817479+00:00", "event": "step", "task_id": 1, "step": "fetch", "duration_ms": 4.067387999953098}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.858433+00:00", "event": "step", "task_id": 1, "step": "process", "duration_ms": 40.77305400005571}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.862637+00:00", "event": "step", "task_id": 1, "step": "store", "duration_ms": 4.0315420000069935}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.862727+00:00", "event": "task_done", "task_id": 1, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-rpvmq"}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.865129+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [2], "duration_ms": 2.340812000056758}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.868654+00:00", "event": "step", "task_id": 2, "step": "fetch", "duration_ms": 3.4113100000467966}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.908620+00:00", "event": "step", "task_id": 2, "step": "process", "duration_ms": 39.79859599996871}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.938687+00:00", "event": "step", "task_id": 2, "step": "store", "duration_ms": 29.94021100005284}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.938769+00:00", "event": "task_done", "task_id": 2, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-rpvmq"}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.940850+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [3], "duration_ms": 2.031595000062225}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.943234+00:00", "event": "step", "task_id": 3, "step": "fetch", "duration_ms": 2.3034869999492003}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.965813+00:00", "event": "step", "task_id": 3, "step": "process", "duration_ms": 22.478260000070804}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.968642+00:00", "event": "step", "task_id": 3, "step": "store", "duration_ms": 2.709224999989601}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.968707+00:00", "event": "task_done", "task_id": 3, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-rpvmq"}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.970766+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [4], "duration_ms": 2.0038279999425868}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:11.973917+00:00", "event": "step", "task_id": 4, "step": "fetch", "duration_ms": 3.0313400000068214}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.038481+00:00", "event": "step", "task_id": 4, "step": "process", "duration_ms": 64.43353199995272}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.041952+00:00", "event": "step", "task_id": 4, "step": "store", "duration_ms": 3.3618270000488337}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.042068+00:00", "event": "task_done", "task_id": 4, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-rpvmq"}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.044903+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [5], "duration_ms": 2.7721420000261787}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.048640+00:00", "event": "step", "task_id": 5, "step": "fetch", "duration_ms": 3.6247969999294583}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.074295+00:00", "event": "step", "task_id": 5, "step": "process", "duration_ms": 25.522765000005165}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.077138+00:00", "event": "step", "task_id": 5, "step": "store", "duration_ms": 2.7089840000371623}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.077232+00:00", "event": "task_done", "task_id": 5, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-rpvmq"}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.080316+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [6], "duration_ms": 3.0161729999917952}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.083250+00:00", "event": "step", "task_id": 6, "step": "fetch", "duration_ms": 2.7797770000006494}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.147178+00:00", "event": "step", "task_id": 6, "step": "process", "duration_ms": 63.811046999944665}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.150677+00:00", "event": "step", "task_id": 6, "step": "store", "duration_ms": 3.3702079999784473}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.150772+00:00", "event": "task_done", "task_id": 6, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-rpvmq"}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.152879+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [7], "duration_ms": 2.0522339999615724}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.155828+00:00", "event": "step", "task_id": 7, "step": "fetch", "duration_ms": 2.8426019999869823}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.179520+00:00", "event": "step", "task_id": 7, "step": "process", "duration_ms": 23.55300100009572}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.182429+00:00", "event": "step", "task_id": 7, "step": "store", "duration_ms": 2.7817900000854934}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.182498+00:00", "event": "task_done", "task_id": 7, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-rpvmq"}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.184230+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [8], "duration_ms": 1.688932000092791}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.186958+00:00", "event": "step", "task_id": 8, "step": "fetch", "duration_ms": 2.6578729999755524}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.252234+00:00", "event": "step", "task_id": 8, "step": "process", "duration_ms": 65.17122499997186}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.255059+00:00", "event": "step", "task_id": 8, "step": "store", "duration_ms": 2.6276459999508006}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.255137+00:00", "event": "task_done", "task_id": 8, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-rpvmq"}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.257072+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [9], "duration_ms": 1.883115999930851}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.260077+00:00", "event": "step", "task_id": 9, "step": "fetch", "duration_ms": 2.9147459999876446}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.304991+00:00", "event": "step", "task_id": 9, "step": "process", "duration_ms": 44.80672500005767}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.307678+00:00", "event": "step", "task_id": 9, "step": "store", "duration_ms": 2.5606949999428252}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.307769+00:00", "event": "task_done", "task_id": 9, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-rpvmq"}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.310115+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [10], "duration_ms": 2.289885999971375}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.313559+00:00", "event": "step", "task_id": 10, "step": "fetch", "duration_ms": 3.3445199999277975}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.357230+00:00", "event": "step", "task_id": 10, "step": "process", "duration_ms": 43.561116000091715}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.359651+00:00", "event": "step", "task_id": 10, "step": "store", "duration_ms": 2.3123490000216407}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.359709+00:00", "event": "task_done", "task_id": 10, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-rpvmq"}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.361337+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [11], "duration_ms": 1.5867240000488891}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.364095+00:00", "event": "step", "task_id": 11, "step": "fetch", "duration_ms": 2.694837000035477}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.406907+00:00", "event": "step", "task_id": 11, "step": "process", "duration_ms": 42.71177999999054}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.409928+00:00", "event": "step", "task_id": 11, "step": "store", "duration_ms": 2.9000939999832553}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.410006+00:00", "event": "task_done", "task_id": 11, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-rpvmq"}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.440020+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [12], "duration_ms": 29.94953900008568}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.443484+00:00", "event": "step", "task_id": 12, "step": "fetch", "duration_ms": 3.331576000050518}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.474059+00:00", "event": "step", "task_id": 12, "step": "process", "duration_ms": 30.420867000088947}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.477272+00:00", "event": "step", "task_id": 12, "step": "store", "duration_ms": 3.0293070000197986}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.477391+00:00", "event": "task_done", "task_id": 12, "token": 1, "attempts": 1, "worker_id": "worker-57978f97f-rpvmq"}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.480046+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [13], "duration_ms": 2.591060999975525}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:12.483148+00:00", "event": "step", "task_id": 13, "step": "fetch", "duration_ms": 2.9793530000006285}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:23.386573+00:00", "event": "step", "task_id": 13, "step": "process", "duration_ms": 10903.287111000054}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:23.391409+00:00", "event": "stale_store", "task_id": 13, "token": 1, "updated_rows": 0, "error": "Задача 13 більше не належить воркеру"}
+[pod/worker-57978f97f-rpvmq/worker] {"at": "2026-11-08T23:08:23.400018+00:00", "event": "stale_heartbeat", "task_id": 13, "token": 1, "updated_rows": 0}

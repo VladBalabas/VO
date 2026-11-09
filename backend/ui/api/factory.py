@@ -11,9 +11,11 @@ from fastapi.responses import JSONResponse
 from prometheus_client import Counter, Gauge, Histogram
 
 from backend.application.referrals import ReferralService
+from backend.application.tasks import TaskService
 from backend.domain.ports import ReadinessProbe
 from backend.ui.api.routes.referrals import router as referrals_router
 from backend.ui.api.routes.system import router as system_router
+from backend.ui.api.routes.tasks import router as tasks_router
 
 
 Lifespan = Callable[[FastAPI], AbstractAsyncContextManager[None]]
@@ -31,6 +33,7 @@ LOGGER = logging.getLogger(__name__)
 
 def create_http_app(
     referral_service: ReferralService,
+    task_service: TaskService,
     readiness_probe: ReadinessProbe,
     lifespan: Lifespan,
     instance_name: str | None = None,
@@ -41,10 +44,12 @@ def create_http_app(
         lifespan=lifespan,
     )
     app.state.referral_service = referral_service
+    app.state.task_service = task_service
     app.state.readiness_probe = readiness_probe
     app.state.instance_name = instance_name or socket.gethostname()
 
     app.include_router(referrals_router)
+    app.include_router(tasks_router)
     app.include_router(system_router)
 
     @app.exception_handler(RequestValidationError)

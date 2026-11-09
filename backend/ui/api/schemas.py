@@ -1,9 +1,12 @@
-from datetime import date
+from datetime import date, datetime
+from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from backend.application.referrals import ReferralList
+from backend.application.tasks import TaskList
 from backend.domain.entities import Modality, Referral, ReferralDraft, ReferralStatus
+from backend.domain.tasks import ProcessingTask, TaskStatus
 
 
 class ReferralPayload(BaseModel):
@@ -70,3 +73,47 @@ class ReferralListResponse(BaseModel):
 
 class ErrorResponse(BaseModel):
     detail: object
+
+
+class TaskCreate(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    priority: int = Field(default=2, ge=1, le=3)
+    seed: int | None = Field(default=None, ge=0, le=2**31 - 1)
+
+
+class TaskResponse(BaseModel):
+    id: int
+    record_id: int
+    status: TaskStatus
+    priority: int
+    seed: int
+    attempts: int
+    max_attempts: int
+    token: int
+    lease_until: datetime | None
+    worker_id: str | None
+    created_at: datetime
+    started_at: datetime | None
+    finished_at: datetime | None
+    result: dict[str, Any] | None
+
+    @classmethod
+    def from_domain(cls, task: ProcessingTask) -> "TaskResponse":
+        return cls(**{field: getattr(task, field) for field in cls.model_fields})
+
+
+class TaskListResponse(BaseModel):
+    items: list[TaskResponse]
+    total: int = Field(ge=0)
+    limit: int = Field(ge=1, le=100)
+    offset: int = Field(ge=0)
+
+    @classmethod
+    def from_domain(cls, tasks: TaskList) -> "TaskListResponse":
+        return cls(
+            items=[TaskResponse.from_domain(item) for item in tasks.items],
+            total=tasks.total,
+            limit=tasks.limit,
+            offset=tasks.offset,
+        )

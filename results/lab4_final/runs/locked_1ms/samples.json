@@ -1,0 +1,68 @@
+[
+  {
+    "db_at": "2026-11-09T07:34:51.540766+00:00",
+    "queued": 14,
+    "running": 0,
+    "done": 0,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 1634908,
+    "host_at": "2026-11-09T07:34:51.551529+00:00",
+    "sample_duration_ms": 162.42880001664162
+  },
+  {
+    "db_at": "2026-11-09T07:34:52.547005+00:00",
+    "queued": 115,
+    "running": 0,
+    "done": 0,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 1635065,
+    "host_at": "2026-11-09T07:34:52.557170+00:00",
+    "sample_duration_ms": 154.98270001262426
+  },
+  {
+    "db_at": "2026-11-09T07:34:53.557377+00:00",
+    "queued": 195,
+    "running": 5,
+    "done": 16,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 1635207,
+    "host_at": "2026-11-09T07:34:53.568896+00:00",
+    "sample_duration_ms": 152.87119999993593
+  },
+  {
+    "db_at": "2026-11-09T07:34:54.601771+00:00",
+    "queued": 195,
+    "running": 4,
+    "done": 101,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 1635994,
+    "host_at": "2026-11-09T07:34:54.612881+00:00",
+    "sample_duration_ms": 186.54959998093545
+  },
+  {
+    "db_at": "2026-11-09T07:34:55.560408+00:00",
+    "queued": 110,
+    "running": 4,
+    "done": 186,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 1636559,
+    "host_at": "2026-11-09T07:34:55.569892+00:00",
+    "sample_duration_ms": 140.63099992927164
+  },
+  {
+    "db_at": "2026-11-09T07:34:56.577042+00:00",
+    "queued": 18,
+    "running": 5,
+    "done": 277,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 1637161,
+    "host_at": "2026-11-09T07:34:56.586037+00:00",
+    "sample_duration_ms": 142.91029993910342
+  }
+]

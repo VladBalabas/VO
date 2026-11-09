@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-09T07:37:00.716034+00:00",
+  "command_template": "kubectl get --raw /api/v1/namespaces/lab4/pods/<pod>:9100/proxy/metrics",
+  "pods": {
+    "worker-8bc7b668c-5fgc4": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-8bc7b668c-5fgc4:9100/proxy/metrics",
+      "exit_code": 0,
+      "values": {
+        "task": 795.0,
+        "empty": 6.0
+      },
+      "stderr": ""
+    },
+    "worker-8bc7b668c-62m65": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-8bc7b668c-62m65:9100/proxy/metrics",
+      "exit_code": 0,
+      "values": {
+        "task": 805.0,
+        "empty": 6.0
+      },
+      "stderr": ""
+    }
+  },
+  "totals": {
+    "task": 1600.0,
+    "empty": 12.0
+  }
+}

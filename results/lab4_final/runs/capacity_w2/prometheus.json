@@ -1,0 +1,398 @@
+{
+  "db_cpu": [
+    {
+      "metric": {
+        "container": "postgres",
+        "cpu": "total",
+        "endpoint": "https-metrics",
+        "id": "/kubelet.slice/kubelet-kubepods.slice/kubelet-kubepods-burstable.slice/kubelet-kubepods-burstable-pod2c0a9cc5_8252_456c_9643_39fc915a3122.slice/cri-containerd-9898b3bc681e7020d9b0f06cad0b2f85fe4c09d996eea586f9c6b50608686582.scope",
+        "image": "docker.io/library/postgres:17-alpine",
+        "instance": "172.21.0.4:10250",
+        "job": "kubelet",
+        "metrics_path": "/metrics/cadvisor",
+        "name": "9898b3bc681e7020d9b0f06cad0b2f85fe4c09d996eea586f9c6b50608686582",
+        "namespace": "lab4",
+        "node": "vo-lab4-control-plane",
+        "pod": "postgres-0",
+        "service": "monitoring-kube-prometheus-kubelet"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "0.09217081791472585"
+        ],
+        [
+          1794179359.9,
+          "0.12006270264329293"
+        ],
+        [
+          1794179364.9,
+          "0.12006270264329293"
+        ]
+      ]
+    }
+  ],
+  "db_transactions": [
+    {
+      "metric": {
+        "container": "exporter",
+        "datid": "16384",
+        "datname": "referrals",
+        "endpoint": "metrics",
+        "instance": "10.244.0.12:9187",
+        "job": "monitoring/lab4-postgres-exporter",
+        "namespace": "lab4",
+        "pod": "postgres-exporter-64cc99dbd6-jnssc"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "122.04"
+        ],
+        [
+          1794179359.9,
+          "127.20508820352813"
+        ],
+        [
+          1794179364.9,
+          "133.68"
+        ]
+      ]
+    }
+  ],
+  "claim_buckets": [
+    {
+      "metric": {
+        "le": "+Inf"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "12.577777777777776"
+        ],
+        [
+          1794179359.9,
+          "12.930584444444445"
+        ],
+        [
+          1794179364.9,
+          "9.75156"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.0005"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "0"
+        ],
+        [
+          1794179359.9,
+          "0"
+        ],
+        [
+          1794179364.9,
+          "0"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.001"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "0"
+        ],
+        [
+          1794179359.9,
+          "0"
+        ],
+        [
+          1794179364.9,
+          "0"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.0025"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "11.777777777777777"
+        ],
+        [
+          1794179359.9,
+          "12.108144444444445"
+        ],
+        [
+          1794179364.9,
+          "9.18099"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.005"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "12.044444444444443"
+        ],
+        [
+          1794179359.9,
+          "12.382291111111112"
+        ],
+        [
+          1794179364.9,
+          "9.3366"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.01"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "12.133333333333331"
+        ],
+        [
+          1794179359.9,
+          "12.473673333333334"
+        ],
+        [
+          1794179364.9,
+          "9.440339999999999"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.025"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "12.355555555555554"
+        ],
+        [
+          1794179359.9,
+          "12.70212888888889"
+        ],
+        [
+          1794179364.9,
+          "9.59595"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.05"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "12.577777777777776"
+        ],
+        [
+          1794179359.9,
+          "12.930584444444445"
+        ],
+        [
+          1794179364.9,
+          "9.75156"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.1"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "12.577777777777776"
+        ],
+        [
+          1794179359.9,
+          "12.930584444444445"
+        ],
+        [
+          1794179364.9,
+          "9.75156"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.25"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "12.577777777777776"
+        ],
+        [
+          1794179359.9,
+          "12.930584444444445"
+        ],
+        [
+          1794179364.9,
+          "9.75156"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "0.5"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "12.577777777777776"
+        ],
+        [
+          1794179359.9,
+          "12.930584444444445"
+        ],
+        [
+          1794179364.9,
+          "9.75156"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "1.0"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "12.577777777777776"
+        ],
+        [
+          1794179359.9,
+          "12.930584444444445"
+        ],
+        [
+          1794179364.9,
+          "9.75156"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "2.5"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "12.577777777777776"
+        ],
+        [
+          1794179359.9,
+          "12.930584444444445"
+        ],
+        [
+          1794179364.9,
+          "9.75156"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "le": "5.0"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "12.577777777777776"
+        ],
+        [
+          1794179359.9,
+          "12.930584444444445"
+        ],
+        [
+          1794179364.9,
+          "9.75156"
+        ]
+      ]
+    }
+  ],
+  "worker_restarts": [
+    {
+      "metric": {
+        "__name__": "kube_pod_container_status_restarts_total",
+        "container": "worker",
+        "endpoint": "http",
+        "instance": "10.244.0.9:8080",
+        "job": "kube-state-metrics",
+        "namespace": "lab4",
+        "pod": "worker-78d69c8976-m55g6",
+        "service": "monitoring-kube-state-metrics",
+        "uid": "92b58bd5-9d99-49a2-85d2-bcddfef10535"
+      },
+      "values": [
+        [
+          1794179354.9,
+          "0"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "kube_pod_container_status_restarts_total",
+        "container": "worker",
+        "endpoint": "http",
+        "instance": "10.244.0.9:8080",
+        "job": "kube-state-metrics",
+        "namespace": "lab4",
+        "pod": "worker-7d9bd54d87-6nwf6",
+        "service": "monitoring-kube-state-metrics",
+        "uid": "a0a4c92e-2ea9-468f-b060-cfbf5f750809"
+      },
+      "values": [
+        [
+          1794179359.9,
+          "0"
+        ],
+        [
+          1794179364.9,
+          "0"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "kube_pod_container_status_restarts_total",
+        "container": "worker",
+        "endpoint": "http",
+        "instance": "10.244.0.9:8080",
+        "job": "kube-state-metrics",
+        "namespace": "lab4",
+        "pod": "worker-7d9bd54d87-m2smb",
+        "service": "monitoring-kube-state-metrics",
+        "uid": "1eccea7d-8506-402f-8c59-f1f95f64a8e9"
+      },
+      "values": [
+        [
+          1794179359.9,
+          "0"
+        ],
+        [
+          1794179364.9,
+          "0"
+        ]
+      ]
+    }
+  ]
+}

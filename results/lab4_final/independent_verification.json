@@ -1,0 +1,106 @@
+{
+  "verification_passed": true,
+  "runs": [
+    {
+      "run": "worker20",
+      "requests": 20,
+      "tasks": 20
+    },
+    {
+      "run": "naive_100ms",
+      "requests": 300,
+      "tasks": 300
+    },
+    {
+      "run": "naive_1ms",
+      "requests": 300,
+      "tasks": 300
+    },
+    {
+      "run": "skip_locked_1ms",
+      "requests": 300,
+      "tasks": 300
+    },
+    {
+      "run": "locked_1ms",
+      "requests": 300,
+      "tasks": 300
+    },
+    {
+      "run": "lease_fencing",
+      "requests": 100,
+      "tasks": 100
+    },
+    {
+      "run": "capacity_w1",
+      "requests": 400,
+      "tasks": 400
+    },
+    {
+      "run": "capacity_w2",
+      "requests": 400,
+      "tasks": 400
+    },
+    {
+      "run": "capacity_w5",
+      "requests": 400,
+      "tasks": 400
+    },
+    {
+      "run": "capacity30_w1",
+      "requests": 800,
+      "tasks": 800
+    },
+    {
+      "run": "capacity30_w2",
+      "requests": 1600,
+      "tasks": 1600
+    },
+    {
+      "run": "capacity30_w5",
+      "requests": 4000,
+      "tasks": 4000
+    },
+    {
+      "run": "little_steady",
+      "requests": 10817,
+      "tasks": 10817
+    },
+    {
+      "run": "little_overload",
+      "requests": 13393,
+      "tasks": 13393
+    },
+    {
+      "run": "graceful_restart",
+      "requests": 7212,
+      "tasks": 7212
+    },
+    {
+      "run": "fail_baseline",
+      "requests": 18029,
+      "tasks": 18029
+    },
+    {
+      "run": "fail_poison",
+      "requests": 18029,
+      "tasks": 18029
+    },
+    {
+      "run": "priority_d1",
+      "requests": 13393,
+      "tasks": 13393
+    }
+  ],
+  "total_requests": 89793,
+  "checks": [
+    "SHA-256 усіх первинних JSONL",
+    "кількість запитів і задач",
+    "X(W) з finished_at",
+    "повні 30-секундні capacity-вікна",
+    "точні task/empty claims",
+    "snapshot failure на 300-й секунді",
+    "відсутність дублів у фінальних режимах",
+    "незалежні lambda, W_q і часово-зважене L_q"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-11-08T23:17:49.119895+00:00",
+  "finished_at": "2026-11-08T23:17:49.231942+00:00",
+  "command": [
+    "kubectl",
+    "-n",
+    "lab4",
+    "rollout",
+    "status",
+    "deployment/worker",
+    "--timeout=300s"
+  ],
+  "exit_code": 0,
+  "stdout": "deployment \"worker\" successfully rolled out\n",
+  "stderr": ""
+}

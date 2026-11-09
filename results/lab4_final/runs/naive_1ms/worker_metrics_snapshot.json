@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-09T07:34:37.459913+00:00",
+  "command_template": "kubectl get --raw /api/v1/namespaces/lab4/pods/<pod>:9100/proxy/metrics",
+  "pods": {
+    "worker-6686557b76-7tdkt": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-6686557b76-7tdkt:9100/proxy/metrics",
+      "exit_code": 0,
+      "values": {
+        "task": 112.0,
+        "empty": 345.0
+      },
+      "stderr": ""
+    },
+    "worker-6686557b76-rzn4c": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-6686557b76-rzn4c:9100/proxy/metrics",
+      "exit_code": 0,
+      "values": {
+        "task": 114.0,
+        "empty": 419.0
+      },
+      "stderr": ""
+    },
+    "worker-6686557b76-sc9l4": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-6686557b76-sc9l4:9100/proxy/metrics",
+      "exit_code": 0,
+      "values": {
+        "task": 116.0,
+        "empty": 450.0
+      },
+      "stderr": ""
+    },
+    "worker-6686557b76-tlph9": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-6686557b76-tlph9:9100/proxy/metrics",
+      "exit_code": 0,
+      "values": {
+        "task": 114.0,
+        "empty": 508.0
+      },
+      "stderr": ""
+    },
+    "worker-6686557b76-tqj6c": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-6686557b76-tqj6c:9100/proxy/metrics",
+      "exit_code": 0,
+      "values": {
+        "task": 113.0,
+        "empty": 556.0
+      },
+      "stderr": ""
+    }
+  },
+  "totals": {
+    "task": 569.0,
+    "empty": 2278.0
+  }
+}

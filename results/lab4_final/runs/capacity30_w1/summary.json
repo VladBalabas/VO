@@ -1,0 +1,32 @@
+{
+  "generator_version": "lab4-threaded-open-loop-v1",
+  "config": {
+    "workers": 1,
+    "backlog": 800
+  },
+  "started_at_epoch": 1794209716.6613026,
+  "ended_at_epoch": 1794209763.2682545,
+  "http": {
+    "scheduled": 800,
+    "accepted": 800,
+    "non_2xx": 0,
+    "transport_errors": 0,
+    "schedule_lag_p95_ms": 0.6435998948290944
+  },
+  "database": {
+    "tasks": 800,
+    "done": 800,
+    "failed": 0,
+    "attempts_gt_1": 0,
+    "duplicate_task_ids": 0,
+    "result_rows": 800,
+    "attempts_distribution": {
+      "1": 800
+    }
+  },
+  "primary_sha256": {
+    "requests.jsonl": "993132baefbfc716af704031fae2acff97d44732758492e7366259b4ff18beb8",
+    "tasks.jsonl": "6e42aea07132806f5944560d49d5509bf408bc5ad6b139d0dbeb42ef1cf4dae3",
+    "task_results.jsonl": "f864cdf56f9152a3736aa6f21a4a58eb98447b17e29ca72c980ae0f0c8bc696d"
+  }
+}

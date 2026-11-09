@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-11-09T07:34:14.427666+00:00",
+  "finished_at": "2026-11-09T07:34:14.541294+00:00",
+  "command": [
+    "kubectl",
+    "-n",
+    "lab4",
+    "rollout",
+    "restart",
+    "deployment/worker"
+  ],
+  "exit_code": 0,
+  "stdout": "deployment.apps/worker restarted\n",
+  "stderr": ""
+}

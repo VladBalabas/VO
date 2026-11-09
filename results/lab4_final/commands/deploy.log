@@ -1,0 +1,76 @@
+**********************
+PowerShell transcript start
+Start time: 20261109093159
+Username: VLADISLAV\vladi
+RunAs User: VLADISLAV\vladi
+Configuration Name: 
+Machine: VLADISLAV (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1105-1297-0_26.1105.1297.0_x64__3k8sg7r9htsxt\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+& '.\scripts\deploy_lab4.ps1' -KeepExistingCluster
+Process ID: 34032
+PSVersion: 7.6.9
+PSEdition: Core
+GitCommitId: 7.6.9
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+> kubectl config use-context kind-vo-lab4
+
+> kubectl label node vo-lab4-control-plane role=infra --overwrite
+
+> kubectl apply -f D:\Projects\Python\VO\k8s\lab4\namespace.yaml
+
+secret/postgres-secret unchanged
+configmap/db-schema unchanged
+> kubectl apply -f D:\Projects\Python\VO\k8s\lab4\postgres.yaml
+
+> kubectl -n lab4 rollout status statefulset/postgres --timeout=300s
+
+> kubectl -n lab4 delete job db-migration --ignore-not-found
+
+> kubectl apply -f D:\Projects\Python\VO\k8s\lab4\migration-job.yaml
+
+> kubectl -n lab4 wait --for=condition=complete job/db-migration --timeout=300s
+
+> docker build -t vo-web:lab4 -f D:\Projects\Python\VO\Dockerfile D:\Projects\Python\VO
+
+> docker build -t vo-worker:lab4 -f D:\Projects\Python\VO\Dockerfile.worker D:\Projects\Python\VO
+
+> kind load docker-image vo-web:lab4 vo-worker:lab4 --name vo-lab4
+
+> kubectl apply -f D:\Projects\Python\VO\k8s\lab4\web.yaml
+
+> kubectl apply -f D:\Projects\Python\VO\k8s\lab4\worker.yaml
+
+> kubectl -n lab4 rollout status deployment/web --timeout=300s
+
+> kubectl -n lab4 rollout status deployment/worker --timeout=300s
+
+> helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/ --force-update
+
+> helm repo update metrics-server
+
+> helm upgrade --install metrics-server metrics-server/metrics-server --version 3.14.0 --namespace kube-system --values D:\Projects\Python\VO\k8s\metrics-server-values.yaml --wait --timeout 10m
+
+namespace/monitoring unchanged
+> helm upgrade --install monitoring oci://ghcr.io/prometheus-community/charts/kube-prometheus-stack --version 92.7.0 --namespace monitoring --values D:\Projects\Python\VO\k8s\monitoring-values.yaml --wait --timeout 15m
+
+> kubectl apply -f D:\Projects\Python\VO\k8s\lab4\monitoring-resources.yaml
+
+> kubectl -n lab4 rollout status deployment/postgres-exporter --timeout=300s
+
+> kubectl get nodes --output=wide
+
+> kubectl -n lab4 get pods --output=wide
+
+> kubectl -n lab4 get statefulset,deployments,services,pvc,jobs
+
+ЛР4 готова: http://localhost:8080, Prometheus http://localhost:9090
+**********************
+PowerShell transcript end
+End time: 20261109093232
+**********************

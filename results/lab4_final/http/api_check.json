@@ -1,0 +1,165 @@
+[
+  {
+    "at": "2026-11-08T22:58:47.373940+00:00",
+    "method": "POST",
+    "path": "/referrals/1/tasks",
+    "request_body": {
+      "priority": 3,
+      "seed": 123
+    },
+    "status": 202,
+    "response_body": "{\"id\":1,\"record_id\":1,\"status\":\"queued\",\"priority\":3,\"seed\":123,\"attempts\":0,\"max_attempts\":3,\"token\":0,\"lease_until\":null,\"worker_id\":null,\"created_at\":\"2026-11-08T22:58:47.368492Z\",\"started_at\":null,\"finished_at\":null,\"result\":null}",
+    "response_headers": {
+      "date": "Sun, 08 Nov 2026 22:58:46 GMT",
+      "server": "uvicorn",
+      "content-length": "234",
+      "content-type": "application/json",
+      "x-pod": "web-6f47c58b84-6qpbw",
+      "Connection": "close"
+    },
+    "duration_ms": 12.18179997522384,
+    "error_type": null,
+    "error": null
+  },
+  {
+    "at": "2026-11-08T22:58:47.385774+00:00",
+    "method": "GET",
+    "path": "/tasks?limit=20&offset=0&status=queued",
+    "request_body": null,
+    "status": 200,
+    "response_body": "{\"items\":[{\"id\":1,\"record_id\":1,\"status\":\"queued\",\"priority\":3,\"seed\":123,\"attempts\":0,\"max_attempts\":3,\"token\":0,\"lease_until\":null,\"worker_id\":null,\"created_at\":\"2026-11-08T22:58:47.368492Z\",\"started_at\":null,\"finished_at\":null,\"result\":null}],\"total\":1,\"limit\":20,\"offset\":0}",
+    "response_headers": {
+      "date": "Sun, 08 Nov 2026 22:58:46 GMT",
+      "server": "uvicorn",
+      "content-length": "278",
+      "content-type": "application/json",
+      "x-pod": "web-6f47c58b84-6qpbw",
+      "Connection": "close"
+    },
+    "duration_ms": 11.776099912822247,
+    "error_type": null,
+    "error": null
+  },
+  {
+    "at": "2026-11-08T22:58:47.408376+00:00",
+    "method": "GET",
+    "path": "/tasks/1",
+    "request_body": null,
+    "status": 200,
+    "response_body": "{\"id\":1,\"record_id\":1,\"status\":\"queued\",\"priority\":3,\"seed\":123,\"attempts\":0,\"max_attempts\":3,\"token\":0,\"lease_until\":null,\"worker_id\":null,\"created_at\":\"2026-11-08T22:58:47.368492Z\",\"started_at\":null,\"finished_at\":null,\"result\":null}",
+    "response_headers": {
+      "date": "Sun, 08 Nov 2026 22:58:46 GMT",
+      "server": "uvicorn",
+      "content-length": "234",
+      "content-type": "application/json",
+      "x-pod": "web-6f47c58b84-6qpbw",
+      "Connection": "close"
+    },
+    "duration_ms": 22.83290005289018,
+    "error_type": null,
+    "error": null
+  },
+  {
+    "at": "2026-11-08T22:58:47.423235+00:00",
+    "method": "POST",
+    "path": "/referrals/9223372036854775807/tasks",
+    "request_body": {
+      "priority": 2
+    },
+    "status": 404,
+    "response_body": "{\"detail\":\"Направлення не знайдено\"}",
+    "response_headers": {
+      "date": "Sun, 08 Nov 2026 22:58:46 GMT",
+      "server": "uvicorn",
+      "content-length": "57",
+      "content-type": "application/json",
+      "x-pod": "web-6f47c58b84-6qpbw",
+      "Connection": "close"
+    },
+    "duration_ms": 14.824499958194792,
+    "error_type": null,
+    "error": null
+  },
+  {
+    "at": "2026-11-08T22:58:47.426364+00:00",
+    "method": "POST",
+    "path": "/referrals/1/tasks",
+    "request_body": {
+      "priority": 0
+    },
+    "status": 400,
+    "response_body": "{\"detail\":[{\"type\":\"greater_than_equal\",\"loc\":[\"body\",\"priority\"],\"msg\":\"Input should be greater than or equal to 1\",\"input\":0,\"ctx\":{\"ge\":1}}]}",
+    "response_headers": {
+      "date": "Sun, 08 Nov 2026 22:58:46 GMT",
+      "server": "uvicorn",
+      "content-length": "144",
+      "content-type": "application/json",
+      "x-pod": "web-6f47c58b84-6qpbw",
+      "Connection": "close"
+    },
+    "duration_ms": 3.091900027357042,
+    "error_type": null,
+    "error": null
+  },
+  {
+    "at": "2026-11-08T22:58:47.453223+00:00",
+    "method": "POST",
+    "path": "/referrals/1/tasks",
+    "request_body": {
+      "priority": 4
+    },
+    "status": 400,
+    "response_body": "{\"detail\":[{\"type\":\"less_than_equal\",\"loc\":[\"body\",\"priority\"],\"msg\":\"Input should be less than or equal to 3\",\"input\":4,\"ctx\":{\"le\":3}}]}",
+    "response_headers": {
+      "date": "Sun, 08 Nov 2026 22:58:46 GMT",
+      "server": "uvicorn",
+      "content-length": "138",
+      "content-type": "application/json",
+      "x-pod": "web-6f47c58b84-6qpbw",
+      "Connection": "close"
+    },
+    "duration_ms": 26.854299940168858,
+    "error_type": null,
+    "error": null
+  },
+  {
+    "at": "2026-11-08T22:58:47.456903+00:00",
+    "method": "POST",
+    "path": "/referrals/1/tasks",
+    "request_body": {
+      "seed": 2147483648
+    },
+    "status": 400,
+    "response_body": "{\"detail\":[{\"type\":\"less_than_equal\",\"loc\":[\"body\",\"seed\"],\"msg\":\"Input should be less than or equal to 2147483647\",\"input\":2147483648,\"ctx\":{\"le\":2147483647}}]}",
+    "response_headers": {
+      "date": "Sun, 08 Nov 2026 22:58:46 GMT",
+      "server": "uvicorn",
+      "content-length": "161",
+      "content-type": "application/json",
+      "x-pod": "web-6f47c58b84-6qpbw",
+      "Connection": "close"
+    },
+    "duration_ms": 3.355700056999922,
+    "error_type": null,
+    "error": null
+  },
+  {
+    "at": "2026-11-08T22:58:47.483106+00:00",
+    "method": "GET",
+    "path": "/tasks/9223372036854775808",
+    "request_body": null,
+    "status": 400,
+    "response_body": "{\"detail\":[{\"type\":\"less_than_equal\",\"loc\":[\"path\",\"task_id\"],\"msg\":\"Input should be less than or equal to 9223372036854775807\",\"input\":\"9223372036854775808\",\"ctx\":{\"le\":9223372036854775807}}]}",
+    "response_headers": {
+      "date": "Sun, 08 Nov 2026 22:58:46 GMT",
+      "server": "uvicorn",
+      "content-length": "193",
+      "content-type": "application/json",
+      "x-pod": "web-6f47c58b84-6qpbw",
+      "Connection": "close"
+    },
+    "duration_ms": 26.583999977447093,
+    "error_type": null,
+    "error": null
+  }
+]

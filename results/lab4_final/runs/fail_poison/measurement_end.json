@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-09T07:52:36.146073+00:00",
+  "epoch": 1794210756.1460736,
+  "counts": {
+    "db_at": "2026-11-09T07:52:36.271621+00:00",
+    "queued": 17894,
+    "running": 0,
+    "done": 135,
+    "failed": 0,
+    "total": 18029
+  },
+  "database": {
+    "tasks": 18029,
+    "done": 135,
+    "failed": 0,
+    "attempts_gt_1": 22,
+    "duplicate_task_ids": 0,
+    "result_rows": 135,
+    "attempts_distribution": {
+      "0": 17887,
+      "1": 120,
+      "2": 21,
+      "3": 1
+    }
+  }
+}

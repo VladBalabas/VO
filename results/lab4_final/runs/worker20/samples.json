@@ -1,0 +1,35 @@
+[
+  {
+    "db_at": "2026-11-08T22:59:09.455163+00:00",
+    "queued": 2,
+    "running": 0,
+    "done": 0,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 5063,
+    "host_at": "2026-11-08T22:59:09.463934+00:00",
+    "sample_duration_ms": 157.83399995416403
+  },
+  {
+    "db_at": "2026-11-08T22:59:10.445604+00:00",
+    "queued": 12,
+    "running": 0,
+    "done": 0,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 5087,
+    "host_at": "2026-11-08T22:59:10.454817+00:00",
+    "sample_duration_ms": 138.85720004327595
+  },
+  {
+    "db_at": "2026-11-08T22:59:11.47937+00:00",
+    "queued": 11,
+    "running": 1,
+    "done": 8,
+    "failed": 0,
+    "lock_waiters": 0,
+    "transactions": 5093,
+    "host_at": "2026-11-08T22:59:11.487306+00:00",
+    "sample_duration_ms": 163.7069999706
+  }
+]

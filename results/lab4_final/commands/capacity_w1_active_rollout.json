@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-11-08T23:08:46.435912+00:00",
+  "finished_at": "2026-11-08T23:08:47.058505+00:00",
+  "command": [
+    "kubectl",
+    "-n",
+    "lab4",
+    "rollout",
+    "status",
+    "deployment/worker",
+    "--timeout=300s"
+  ],
+  "exit_code": 0,
+  "stdout": "Waiting for deployment \"worker\" rollout to finish: 0 of 1 updated replicas are available...\ndeployment \"worker\" successfully rolled out\n",
+  "stderr": ""
+}

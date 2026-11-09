@@ -1,0 +1,5 @@
+{
+  "command_exit_code": 0,
+  "observed_proc_state": "State:\tR (running)",
+  "conclusion": "kubectl exec kill -STOP 1 returned 0 but /proc/1 did not enter T (stopped); runtime PID signal used for the measured run"
+}

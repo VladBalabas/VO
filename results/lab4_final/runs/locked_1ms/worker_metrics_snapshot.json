@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-09T07:34:57.376370+00:00",
+  "command_template": "kubectl get --raw /api/v1/namespaces/lab4/pods/<pod>:9100/proxy/metrics",
+  "pods": {
+    "worker-54b64f478b-4x4gx": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-54b64f478b-4x4gx:9100/proxy/metrics",
+      "exit_code": 0,
+      "values": {
+        "task": 60.0,
+        "empty": 268.0
+      },
+      "stderr": ""
+    },
+    "worker-54b64f478b-mdmpm": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-54b64f478b-mdmpm:9100/proxy/metrics",
+      "exit_code": 0,
+      "values": {
+        "task": 62.0,
+        "empty": 278.0
+      },
+      "stderr": ""
+    },
+    "worker-54b64f478b-vtfdt": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-54b64f478b-vtfdt:9100/proxy/metrics",
+      "exit_code": 0,
+      "values": {
+        "task": 59.0,
+        "empty": 355.0
+      },
+      "stderr": ""
+    },
+    "worker-54b64f478b-vx2kc": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-54b64f478b-vx2kc:9100/proxy/metrics",
+      "exit_code": 0,
+      "values": {
+        "task": 60.0,
+        "empty": 383.0
+      },
+      "stderr": ""
+    },
+    "worker-54b64f478b-xkpdp": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-54b64f478b-xkpdp:9100/proxy/metrics",
+      "exit_code": 0,
+      "values": {
+        "task": 59.0,
+        "empty": 427.0
+      },
+      "stderr": ""
+    }
+  },
+  "totals": {
+    "task": 300.0,
+    "empty": 1711.0
+  }
+}

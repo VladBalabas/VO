@@ -1,0 +1,37 @@
+{
+  "generator_version": "lab4-threaded-open-loop-v1",
+  "config": {
+    "rate": 60.096142150500164,
+    "duration": 300,
+    "fail_rate": 0.15,
+    "poison_at": 150,
+    "controlled_drain": true
+  },
+  "started_at_epoch": 1794210455.929295,
+  "ended_at_epoch": 1794211168.0442033,
+  "http": {
+    "scheduled": 18029,
+    "accepted": 18029,
+    "non_2xx": 0,
+    "transport_errors": 0,
+    "schedule_lag_p95_ms": 0.6086797220632434
+  },
+  "database": {
+    "tasks": 18029,
+    "done": 18019,
+    "failed": 10,
+    "attempts_gt_1": 34,
+    "duplicate_task_ids": 0,
+    "result_rows": 18019,
+    "attempts_distribution": {
+      "1": 17995,
+      "2": 23,
+      "3": 11
+    }
+  },
+  "primary_sha256": {
+    "requests.jsonl": "875179ad97195fbe6de622644be4759fa8b3d3d6649c0d3e15a28822fef7de55",
+    "tasks.jsonl": "a435e2c6e95a4a82991c4de185823f8973c73ac7090ba5755f1db6b01de88e81",
+    "task_results.jsonl": "660912f77deb5cd39b891922c31e6a4d25ab7ee08d19b7e8975e8312801edd71"
+  }
+}

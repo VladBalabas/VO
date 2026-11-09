@@ -1,0 +1,51 @@
+{
+  "pod": "worker-57978f97f-rpvmq",
+  "stopped_at": "2026-11-08T23:08:12.780063+00:00",
+  "continued_at": "2026-11-08T23:08:23.910775+00:00",
+  "before": {
+    "id": 13,
+    "record_id": 13,
+    "status": "running",
+    "priority": 2,
+    "seed": 661021311,
+    "attempts": 1,
+    "max_attempts": 3,
+    "token": 1,
+    "lease_until": "2026-11-08T23:08:17.478121+00:00",
+    "worker_id": "worker-57978f97f-rpvmq",
+    "created_at": "2026-11-08T23:08:11.825945+00:00",
+    "started_at": "2026-11-08T23:08:12.478122+00:00",
+    "finished_at": null
+  },
+  "during": {
+    "id": 13,
+    "record_id": 13,
+    "status": "done",
+    "priority": 2,
+    "seed": 661021311,
+    "attempts": 2,
+    "max_attempts": 3,
+    "token": 2,
+    "lease_until": null,
+    "worker_id": "worker-57978f97f-2vmzc",
+    "created_at": "2026-11-08T23:08:11.825945+00:00",
+    "started_at": "2026-11-08T23:08:18.495393+00:00",
+    "finished_at": "2026-11-08T23:08:18.522474+00:00"
+  },
+  "after": {
+    "id": 13,
+    "record_id": 13,
+    "status": "done",
+    "priority": 2,
+    "seed": 661021311,
+    "attempts": 2,
+    "max_attempts": 3,
+    "token": 2,
+    "lease_until": null,
+    "worker_id": "worker-57978f97f-2vmzc",
+    "created_at": "2026-11-08T23:08:11.825945+00:00",
+    "started_at": "2026-11-08T23:08:18.495393+00:00",
+    "finished_at": "2026-11-08T23:08:18.522474+00:00",
+    "result_rows": 1
+  }
+}

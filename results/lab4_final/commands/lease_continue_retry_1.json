@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-11-08T23:05:40.791422+00:00",
+  "finished_at": "2026-11-08T23:05:40.938663+00:00",
+  "command": [
+    "kubectl",
+    "-n",
+    "lab4",
+    "exec",
+    "worker-5556ccbb56-nl486",
+    "--",
+    "kill",
+    "-CONT",
+    "1"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}
