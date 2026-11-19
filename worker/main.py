@@ -61,8 +61,22 @@ class QueueWorker:
         self.pool: asyncpg.Pool | None = None
         self.session: aiohttp.ClientSession | None = None
         self.stopping = asyncio.Event()
+        self.stop_requested_at: float | None = None
         self.owned: dict[int, ClaimedTask] = {}
         self.metrics_runner: web.AppRunner | None = None
+
+    def request_stop(self) -> None:
+        if self.stop_requested_at is None:
+            self.stop_requested_at = time.monotonic()
+            log_event("shutdown_requested",
+                      task_timeout_seconds=self.settings.shutdown_task_timeout_seconds)
+        self.stopping.set()
+
+    def shutdown_time_remaining(self) -> float:
+        if self.stop_requested_at is None:
+            return self.settings.shutdown_task_timeout_seconds
+        elapsed = time.monotonic() - self.stop_requested_at
+        return max(0.0, self.settings.shutdown_task_timeout_seconds - elapsed)
 
     async def connect(self) -> None:
         self.pool = await asyncpg.create_pool(
@@ -105,8 +119,6 @@ class QueueWorker:
                 """,
                 self.settings.claim_batch_size,
             )
-            if records:
-                await asyncio.sleep(0.01)
             claimed = []
             for selected in records:
                 row = await self.pool.fetchrow(
@@ -228,8 +240,8 @@ class QueueWorker:
         status = "failed" if final else "queued"
         command = await self.pool.execute(
             """
-            UPDATE tasks SET status=$1, worker_id=NULL, lease_until=NULL,
-                finished_at=CASE WHEN $1='failed' THEN clock_timestamp() ELSE NULL END
+            UPDATE tasks SET status=$1::varchar, worker_id=NULL, lease_until=NULL,
+                finished_at=CASE WHEN $1::varchar='failed' THEN clock_timestamp() ELSE NULL END
             WHERE id=$2 AND token=$3 AND status='running'
             """,
             status, task.id, task.token,
@@ -273,28 +285,62 @@ class QueueWorker:
             self.owned.pop(task.id, None)
             IN_FLIGHT.set(len(self.owned))
 
-    async def return_owned(self) -> int:
+    async def return_task(self, task: ClaimedTask, reason: str) -> int:
         assert self.pool is not None
+        result = await self.pool.execute(
+            """
+            UPDATE tasks SET status='queued', worker_id=NULL, lease_until=NULL
+            WHERE id=$1 AND token=$2 AND status='running' AND worker_id=$3
+            """, task.id, task.token, self.settings.worker_id,
+        )
+        returned = int(result == "UPDATE 1")
+        if returned:
+            log_event("graceful_return", task_id=task.id, token=task.token,
+                      reason=reason)
+        else:
+            log_event("stale_graceful_return", task_id=task.id, token=task.token,
+                      reason=reason, updated_rows=0)
+        self.owned.pop(task.id, None)
+        IN_FLIGHT.set(len(self.owned))
+        return returned
+
+    async def return_owned(self) -> int:
         returned = 0
         for task in list(self.owned.values()):
-            result = await self.pool.execute(
-                """
-                UPDATE tasks SET status='queued', worker_id=NULL, lease_until=NULL
-                WHERE id=$1 AND token=$2 AND status='running'
-                """, task.id, task.token,
-            )
-            if result == "UPDATE 1":
-                returned += 1
-                log_event("graceful_return", task_id=task.id, token=task.token)
-            self.owned.pop(task.id, None)
-        IN_FLIGHT.set(0)
+            returned += await self.return_task(task, "shutdown_pending")
         return returned
+
+    async def process_until_stopped(self, task: ClaimedTask) -> int:
+        processing = asyncio.create_task(self.process(task))
+        stop_waiter = asyncio.create_task(self.stopping.wait())
+        try:
+            done, _ = await asyncio.wait(
+                (processing, stop_waiter), return_when=asyncio.FIRST_COMPLETED
+            )
+            if processing in done:
+                await processing
+                return 0
+            try:
+                await asyncio.wait_for(
+                    asyncio.shield(processing), timeout=self.shutdown_time_remaining()
+                )
+                return 0
+            except TimeoutError:
+                log_event("shutdown_task_timeout", task_id=task.id, token=task.token,
+                          timeout_seconds=self.settings.shutdown_task_timeout_seconds)
+                processing.cancel()
+                await asyncio.gather(processing, return_exceptions=True)
+                return await self.return_task(task, "shutdown_timeout")
+        finally:
+            stop_waiter.cancel()
+            await asyncio.gather(stop_waiter, return_exceptions=True)
 
     async def run(self) -> None:
         await self.connect()
         heartbeat = asyncio.create_task(self.heartbeat())
         log_event("worker_started", worker_id=self.settings.worker_id,
                   mode=self.settings.claim_mode, batch=self.settings.claim_batch_size)
+        returned = 0
         try:
             while not self.stopping.is_set():
                 tasks = await self.claim()
@@ -307,12 +353,12 @@ class QueueWorker:
                 for task in tasks:
                     if self.stopping.is_set():
                         break
-                    await self.process(task)
-            returned = await self.return_owned()
+                    returned += await self.process_until_stopped(task)
+            returned += await self.return_owned()
             log_event("worker_stopped", worker_id=self.settings.worker_id,
                       returned=returned, exit_code=0)
         finally:
-            self.stopping.set()
+            self.request_stop()
             heartbeat.cancel()
             await asyncio.gather(heartbeat, return_exceptions=True)
             await self.close()
@@ -322,7 +368,7 @@ async def async_main() -> None:
     worker = QueueWorker(load_settings())
     loop = asyncio.get_running_loop()
     for sig in (signal.SIGTERM, signal.SIGINT):
-        loop.add_signal_handler(sig, worker.stopping.set)
+        loop.add_signal_handler(sig, worker.request_stop)
     await worker.run()
 
 

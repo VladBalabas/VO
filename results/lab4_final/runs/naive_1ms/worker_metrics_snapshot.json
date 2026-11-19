@@ -1,55 +1,55 @@
 {
-  "at": "2026-11-09T07:34:37.459913+00:00",
+  "at": "2026-11-18T20:08:19.531191+00:00",
   "command_template": "kubectl get --raw /api/v1/namespaces/lab4/pods/<pod>:9100/proxy/metrics",
   "pods": {
-    "worker-6686557b76-7tdkt": {
-      "endpoint": "/api/v1/namespaces/lab4/pods/worker-6686557b76-7tdkt:9100/proxy/metrics",
+    "worker-79696bf76d-992q7": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-79696bf76d-992q7:9100/proxy/metrics",
       "exit_code": 0,
       "values": {
-        "task": 112.0,
-        "empty": 345.0
+        "task": 68.0,
+        "empty": 299.0
       },
       "stderr": ""
     },
-    "worker-6686557b76-rzn4c": {
-      "endpoint": "/api/v1/namespaces/lab4/pods/worker-6686557b76-rzn4c:9100/proxy/metrics",
+    "worker-79696bf76d-j9l2q": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-79696bf76d-j9l2q:9100/proxy/metrics",
       "exit_code": 0,
       "values": {
-        "task": 114.0,
-        "empty": 419.0
+        "task": 69.0,
+        "empty": 312.0
       },
       "stderr": ""
     },
-    "worker-6686557b76-sc9l4": {
-      "endpoint": "/api/v1/namespaces/lab4/pods/worker-6686557b76-sc9l4:9100/proxy/metrics",
+    "worker-79696bf76d-n2g2x": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-79696bf76d-n2g2x:9100/proxy/metrics",
       "exit_code": 0,
       "values": {
-        "task": 116.0,
-        "empty": 450.0
+        "task": 68.0,
+        "empty": 350.0
       },
       "stderr": ""
     },
-    "worker-6686557b76-tlph9": {
-      "endpoint": "/api/v1/namespaces/lab4/pods/worker-6686557b76-tlph9:9100/proxy/metrics",
+    "worker-79696bf76d-wdf9l": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-79696bf76d-wdf9l:9100/proxy/metrics",
       "exit_code": 0,
       "values": {
-        "task": 114.0,
-        "empty": 508.0
+        "task": 68.0,
+        "empty": 434.0
       },
       "stderr": ""
     },
-    "worker-6686557b76-tqj6c": {
-      "endpoint": "/api/v1/namespaces/lab4/pods/worker-6686557b76-tqj6c:9100/proxy/metrics",
+    "worker-79696bf76d-wfh2b": {
+      "endpoint": "/api/v1/namespaces/lab4/pods/worker-79696bf76d-wfh2b:9100/proxy/metrics",
       "exit_code": 0,
       "values": {
-        "task": 113.0,
-        "empty": 556.0
+        "task": 69.0,
+        "empty": 458.0
       },
       "stderr": ""
     }
   },
   "totals": {
-    "task": 569.0,
-    "empty": 2278.0
+    "task": 342.0,
+    "empty": 1853.0
   }
 }

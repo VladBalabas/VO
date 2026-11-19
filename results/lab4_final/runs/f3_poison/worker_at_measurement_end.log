@@ -1,0 +1,261 @@
+===== worker-64bfc8fb64-7gzv2 previous=False exit=0 =====
+{"at": "2026-11-18T20:58:42.160538+00:00", "event": "worker_started", "worker_id": "worker-64bfc8fb64-7gzv2", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-18T20:58:44.944757+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [2], "duration_ms": 3.3339249998789455}
+{"at": "2026-11-18T20:58:44.949096+00:00", "event": "step", "task_id": 2, "step": "fetch", "duration_ms": 4.087517000243679}
+{"at": "2026-11-18T20:58:44.974970+00:00", "event": "step", "task_id": 2, "step": "process", "duration_ms": 25.640313000167225}
+{"at": "2026-11-18T20:58:44.979087+00:00", "event": "step", "task_id": 2, "step": "store", "duration_ms": 3.9347860001726076}
+{"at": "2026-11-18T20:58:44.979193+00:00", "event": "task_done", "task_id": 2, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T20:59:13.128446+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [6], "duration_ms": 2.992686999732541}
+{"at": "2026-11-18T20:59:13.136591+00:00", "event": "step", "task_id": 6, "step": "fetch", "duration_ms": 7.798186999934842}
+{"at": "2026-11-18T20:59:13.161740+00:00", "event": "step", "task_id": 6, "step": "process", "duration_ms": 24.991746000068815}
+{"at": "2026-11-18T20:59:13.164539+00:00", "event": "step", "task_id": 6, "step": "store", "duration_ms": 2.6233540002067457}
+{"at": "2026-11-18T20:59:13.164615+00:00", "event": "task_done", "task_id": 6, "token": 2, "attempts": 2, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:00:04.946709+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [18], "duration_ms": 3.1371240002044942}
+{"at": "2026-11-18T21:00:04.951455+00:00", "event": "step", "task_id": 18, "step": "fetch", "duration_ms": 4.510354000103689}
+{"at": "2026-11-18T21:00:04.977592+00:00", "event": "step", "task_id": 18, "step": "process", "duration_ms": 26.00722399984079}
+{"at": "2026-11-18T21:00:04.981028+00:00", "event": "step", "task_id": 18, "step": "store", "duration_ms": 3.3091509999394475}
+{"at": "2026-11-18T21:00:04.981113+00:00", "event": "task_done", "task_id": 18, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:00:33.239222+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [22], "duration_ms": 3.3633229995757574}
+{"at": "2026-11-18T21:00:33.243370+00:00", "event": "step", "task_id": 22, "step": "fetch", "duration_ms": 4.011374000128853}
+{"at": "2026-11-18T21:00:33.267240+00:00", "event": "step", "task_id": 22, "step": "process", "duration_ms": 23.753099999794358}
+{"at": "2026-11-18T21:00:33.270604+00:00", "event": "step", "task_id": 22, "step": "store", "duration_ms": 3.220921999854909}
+{"at": "2026-11-18T21:00:33.270741+00:00", "event": "task_done", "task_id": 22, "token": 2, "attempts": 2, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:01:04.965357+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [30], "duration_ms": 2.8126870001869975}
+{"at": "2026-11-18T21:01:04.969071+00:00", "event": "step", "task_id": 30, "step": "fetch", "duration_ms": 3.5767780000242055}
+{"at": "2026-11-18T21:01:04.992309+00:00", "event": "step", "task_id": 30, "step": "process", "duration_ms": 23.1278339997516}
+{"at": "2026-11-18T21:01:04.995108+00:00", "event": "step", "task_id": 30, "step": "store", "duration_ms": 2.643495000029361}
+{"at": "2026-11-18T21:01:04.995182+00:00", "event": "task_done", "task_id": 30, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:01:09.989332+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [33], "duration_ms": 3.081937999922957}
+{"at": "2026-11-18T21:01:10.011444+00:00", "event": "step", "task_id": 33, "step": "fetch", "duration_ms": 21.976645999984612}
+{"at": "2026-11-18T21:01:10.013840+00:00", "event": "process_error", "task_id": 33, "token": 1, "attempts": 1, "new_status": "queued", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.016052+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [32], "duration_ms": 2.0395970000208763}
+{"at": "2026-11-18T21:01:10.021034+00:00", "event": "step", "task_id": 32, "step": "fetch", "duration_ms": 4.862743999638042}
+{"at": "2026-11-18T21:01:10.023143+00:00", "event": "process_error", "task_id": 32, "token": 2, "attempts": 2, "new_status": "queued", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.025166+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [33], "duration_ms": 1.825229000132822}
+{"at": "2026-11-18T21:01:10.028855+00:00", "event": "step", "task_id": 33, "step": "fetch", "duration_ms": 3.5785509999186615}
+{"at": "2026-11-18T21:01:10.030621+00:00", "event": "process_error", "task_id": 33, "token": 3, "attempts": 3, "new_status": "failed", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.032448+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [36], "duration_ms": 1.6922670001804363}
+{"at": "2026-11-18T21:01:10.036347+00:00", "event": "step", "task_id": 36, "step": "fetch", "duration_ms": 3.790946999743028}
+{"at": "2026-11-18T21:01:10.037886+00:00", "event": "process_error", "task_id": 36, "token": 1, "attempts": 1, "new_status": "queued", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.039717+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [35], "duration_ms": 1.6896819997782586}
+{"at": "2026-11-18T21:01:10.042661+00:00", "event": "step", "task_id": 35, "step": "fetch", "duration_ms": 2.8338460001577914}
+{"at": "2026-11-18T21:01:10.044265+00:00", "event": "process_error", "task_id": 35, "token": 2, "attempts": 2, "new_status": "queued", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.047032+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [35], "duration_ms": 2.5712380002005375}
+{"at": "2026-11-18T21:01:10.052466+00:00", "event": "step", "task_id": 35, "step": "fetch", "duration_ms": 5.3052260000185925}
+{"at": "2026-11-18T21:01:10.054597+00:00", "event": "process_error", "task_id": 35, "token": 3, "attempts": 3, "new_status": "failed", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.057076+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [38], "duration_ms": 2.230549999694631}
+{"at": "2026-11-18T21:01:10.061471+00:00", "event": "step", "task_id": 38, "step": "fetch", "duration_ms": 4.26440499995806}
+{"at": "2026-11-18T21:01:10.063142+00:00", "event": "process_error", "task_id": 38, "token": 1, "attempts": 1, "new_status": "queued", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.065101+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [38], "duration_ms": 1.748473000134254}
+{"at": "2026-11-18T21:01:10.069913+00:00", "event": "step", "task_id": 38, "step": "fetch", "duration_ms": 4.687440999987302}
+{"at": "2026-11-18T21:01:10.071505+00:00", "event": "process_error", "task_id": 38, "token": 2, "attempts": 2, "new_status": "queued", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.073707+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [39], "duration_ms": 2.0281750003050547}
+{"at": "2026-11-18T21:01:10.077878+00:00", "event": "step", "task_id": 39, "step": "fetch", "duration_ms": 4.011425000044255}
+{"at": "2026-11-18T21:01:10.079920+00:00", "event": "process_error", "task_id": 39, "token": 3, "attempts": 3, "new_status": "failed", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:18.235067+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [31], "duration_ms": 2.6621490001161874}
+{"at": "2026-11-18T21:01:18.238793+00:00", "event": "step", "task_id": 31, "step": "fetch", "duration_ms": 3.593712000110827}
+{"at": "2026-11-18T21:01:18.261865+00:00", "event": "step", "task_id": 31, "step": "process", "duration_ms": 22.971287000018492}
+{"at": "2026-11-18T21:01:18.264663+00:00", "event": "step", "task_id": 31, "step": "store", "duration_ms": 2.675867000107246}
+{"at": "2026-11-18T21:01:18.264734+00:00", "event": "task_done", "task_id": 31, "token": 2, "attempts": 2, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:01:29.990711+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [45], "duration_ms": 6.047509000381979}
+{"at": "2026-11-18T21:01:29.994895+00:00", "event": "step", "task_id": 45, "step": "fetch", "duration_ms": 4.0362849999837636}
+{"at": "2026-11-18T21:01:30.017725+00:00", "event": "step", "task_id": 45, "step": "process", "duration_ms": 22.71402999986094}
+{"at": "2026-11-18T21:01:30.020567+00:00", "event": "step", "task_id": 45, "step": "store", "duration_ms": 2.7336879998074437}
+{"at": "2026-11-18T21:01:30.020631+00:00", "event": "task_done", "task_id": 45, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:01:34.914462+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [46], "duration_ms": 2.1867770001335884}
+{"at": "2026-11-18T21:01:34.917001+00:00", "event": "step", "task_id": 46, "step": "fetch", "duration_ms": 2.3979990000952967}
+{"at": "2026-11-18T21:01:34.942072+00:00", "event": "step", "task_id": 46, "step": "process", "duration_ms": 24.963880000086647}
+{"at": "2026-11-18T21:01:34.944998+00:00", "event": "step", "task_id": 46, "step": "store", "duration_ms": 2.7581439999266877}
+{"at": "2026-11-18T21:01:34.945087+00:00", "event": "task_done", "task_id": 46, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:01:44.933633+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [48], "duration_ms": 2.5326439999844297}
+{"at": "2026-11-18T21:01:44.937646+00:00", "event": "step", "task_id": 48, "step": "fetch", "duration_ms": 3.8564809997296834}
+{"at": "2026-11-18T21:01:44.960984+00:00", "event": "step", "task_id": 48, "step": "process", "duration_ms": 23.231175000091753}
+{"at": "2026-11-18T21:01:44.963967+00:00", "event": "step", "task_id": 48, "step": "store", "duration_ms": 2.855920000001788}
+{"at": "2026-11-18T21:01:44.964053+00:00", "event": "task_done", "task_id": 48, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:02:04.943783+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [52], "duration_ms": 2.5569619997440896}
+{"at": "2026-11-18T21:02:04.947509+00:00", "event": "step", "task_id": 52, "step": "fetch", "duration_ms": 3.5976700000901474}
+{"at": "2026-11-18T21:02:04.971020+00:00", "event": "step", "task_id": 52, "step": "process", "duration_ms": 23.380565000024944}
+{"at": "2026-11-18T21:02:04.974259+00:00", "event": "step", "task_id": 52, "step": "store", "duration_ms": 3.0838040001981426}
+{"at": "2026-11-18T21:02:04.974342+00:00", "event": "task_done", "task_id": 52, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:02:39.923700+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [59], "duration_ms": 2.2154069997668557}
+{"at": "2026-11-18T21:02:39.927282+00:00", "event": "step", "task_id": 59, "step": "fetch", "duration_ms": 3.4564310003588616}
+{"at": "2026-11-18T21:02:39.950507+00:00", "event": "step", "task_id": 59, "step": "process", "duration_ms": 23.128308999730507}
+{"at": "2026-11-18T21:02:39.953735+00:00", "event": "step", "task_id": 59, "step": "store", "duration_ms": 3.1051160003698897}
+{"at": "2026-11-18T21:02:39.953816+00:00", "event": "task_done", "task_id": 59, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:02:44.949454+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [60], "duration_ms": 2.509143000224867}
+{"at": "2026-11-18T21:02:44.952284+00:00", "event": "step", "task_id": 60, "step": "fetch", "duration_ms": 2.700446999824635}
+{"at": "2026-11-18T21:02:44.975800+00:00", "event": "step", "task_id": 60, "step": "process", "duration_ms": 23.38349499996184}
+{"at": "2026-11-18T21:02:44.978512+00:00", "event": "step", "task_id": 60, "step": "store", "duration_ms": 2.597741000045062}
+{"at": "2026-11-18T21:02:44.978602+00:00", "event": "task_done", "task_id": 60, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:02:54.973175+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [62], "duration_ms": 2.9940500003249326}
+{"at": "2026-11-18T21:02:54.977194+00:00", "event": "step", "task_id": 62, "step": "fetch", "duration_ms": 3.8858650000292982}
+{"at": "2026-11-18T21:02:55.001169+00:00", "event": "step", "task_id": 62, "step": "process", "duration_ms": 23.840236000069126}
+{"at": "2026-11-18T21:02:55.003983+00:00", "event": "step", "task_id": 62, "step": "store", "duration_ms": 2.679984000224067}
+{"at": "2026-11-18T21:02:55.004086+00:00", "event": "task_done", "task_id": 62, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:02:58.273558+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [61], "duration_ms": 3.497877999961929}
+{"at": "2026-11-18T21:02:58.276791+00:00", "event": "step", "task_id": 61, "step": "fetch", "duration_ms": 3.0763559998376877}
+{"at": "2026-11-18T21:02:58.307467+00:00", "event": "step", "task_id": 61, "step": "process", "duration_ms": 30.50721399995382}
+{"at": "2026-11-18T21:02:58.310873+00:00", "event": "step", "task_id": 61, "step": "store", "duration_ms": 3.229077000014513}
+{"at": "2026-11-18T21:02:58.310973+00:00", "event": "task_done", "task_id": 61, "token": 2, "attempts": 2, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:02:59.945970+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [63], "duration_ms": 2.488869999979215}
+{"at": "2026-11-18T21:02:59.948555+00:00", "event": "step", "task_id": 63, "step": "fetch", "duration_ms": 2.4528419999114703}
+{"at": "2026-11-18T21:02:59.971831+00:00", "event": "step", "task_id": 63, "step": "process", "duration_ms": 23.18102299977909}
+{"at": "2026-11-18T21:02:59.974428+00:00", "event": "step", "task_id": 63, "step": "store", "duration_ms": 2.4649130000398145}
+{"at": "2026-11-18T21:02:59.974504+00:00", "event": "task_done", "task_id": 63, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:03:14.975975+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [66], "duration_ms": 2.539618999890081}
+{"at": "2026-11-18T21:03:14.980445+00:00", "event": "step", "task_id": 66, "step": "fetch", "duration_ms": 4.284419000214257}
+{"at": "2026-11-18T21:03:15.004128+00:00", "event": "step", "task_id": 66, "step": "process", "duration_ms": 23.571856999751617}
+{"at": "2026-11-18T21:03:15.006901+00:00", "event": "step", "task_id": 66, "step": "store", "duration_ms": 2.6398389995847538}
+{"at": "2026-11-18T21:03:15.006980+00:00", "event": "task_done", "task_id": 66, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:03:28.271224+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [67], "duration_ms": 2.9681129999516997}
+{"at": "2026-11-18T21:03:28.275633+00:00", "event": "step", "task_id": 67, "step": "fetch", "duration_ms": 4.2320360003031965}
+{"at": "2026-11-18T21:03:28.300495+00:00", "event": "step", "task_id": 67, "step": "process", "duration_ms": 24.74711800005025}
+{"at": "2026-11-18T21:03:28.303644+00:00", "event": "step", "task_id": 67, "step": "store", "duration_ms": 2.994894000039494}
+{"at": "2026-11-18T21:03:28.303734+00:00", "event": "task_done", "task_id": 67, "token": 2, "attempts": 2, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:03:29.938241+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [69], "duration_ms": 2.62897900029202}
+{"at": "2026-11-18T21:03:29.940909+00:00", "event": "step", "task_id": 69, "step": "fetch", "duration_ms": 2.5254619999941497}
+{"at": "2026-11-18T21:03:29.964973+00:00", "event": "step", "task_id": 69, "step": "process", "duration_ms": 23.934112999995705}
+{"at": "2026-11-18T21:03:29.967564+00:00", "event": "step", "task_id": 69, "step": "store", "duration_ms": 2.4700860003576963}
+{"at": "2026-11-18T21:03:29.967641+00:00", "event": "task_done", "task_id": 69, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-7gzv2"}
+{"at": "2026-11-18T21:03:33.335066+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [68], "duration_ms": 2.718569000080606}
+{"at": "2026-11-18T21:03:33.337554+00:00", "event": "step", "task_id": 68, "step": "fetch", "duration_ms": 2.3631429999113607}
+{"at": "2026-11-18T21:03:33.361200+00:00", "event": "step", "task_id": 68, "step": "process", "duration_ms": 23.521990000062942}
+{"at": "2026-11-18T21:03:33.363794+00:00", "event": "step", "task_id": 68, "step": "store", "duration_ms": 2.4686629999450815}
+{"at": "2026-11-18T21:03:33.363861+00:00", "event": "task_done", "task_id": 68, "token": 2, "attempts": 2, "worker_id": "worker-64bfc8fb64-7gzv2"}
+
+===== worker-64bfc8fb64-7gzv2 previous=True exit=1 =====
+Error from server (BadRequest): previous terminated container "worker" in pod "worker-64bfc8fb64-7gzv2" not found
+
+===== worker-64bfc8fb64-j2tbg previous=False exit=0 =====
+{"at": "2026-11-18T21:03:13.566378+00:00", "event": "worker_started", "worker_id": "worker-64bfc8fb64-j2tbg", "mode": "skip_locked", "batch": 1}
+
+===== worker-64bfc8fb64-j2tbg previous=True exit=0 =====
+{"at": "2026-11-18T21:01:51.383052+00:00", "event": "worker_started", "worker_id": "worker-64bfc8fb64-j2tbg", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-18T21:01:59.951157+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [51], "duration_ms": 3.0208839998522308}
+{"at": "2026-11-18T21:01:59.955556+00:00", "event": "step", "task_id": 51, "step": "fetch", "duration_ms": 4.182652000054077}
+{"at": "2026-11-18T21:01:59.982927+00:00", "event": "step", "task_id": 51, "step": "process", "duration_ms": 27.12611700007983}
+{"at": "2026-11-18T21:01:59.986830+00:00", "event": "step", "task_id": 51, "step": "store", "duration_ms": 3.7484270001186815}
+{"at": "2026-11-18T21:01:59.986914+00:00", "event": "task_done", "task_id": 51, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-j2tbg"}
+{"at": "2026-11-18T21:02:24.939897+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [56], "duration_ms": 2.5876089998746465}
+{"at": "2026-11-18T21:02:24.944034+00:00", "event": "step", "task_id": 56, "step": "fetch", "duration_ms": 3.989584000009927}
+{"at": "2026-11-18T21:02:24.967265+00:00", "event": "step", "task_id": 56, "step": "process", "duration_ms": 23.11799199969755}
+{"at": "2026-11-18T21:02:24.967366+00:00", "event": "injected_exit", "task_id": 56, "token": 1, "fail_rate": 0.15}
+
+===== worker-64bfc8fb64-pb66g previous=False exit=0 =====
+{"at": "2026-11-18T21:01:32.446106+00:00", "event": "worker_started", "worker_id": "worker-64bfc8fb64-pb66g", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-18T21:02:19.945028+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [55], "duration_ms": 2.7462009998089343}
+{"at": "2026-11-18T21:02:19.949121+00:00", "event": "step", "task_id": 55, "step": "fetch", "duration_ms": 3.878804000123637}
+{"at": "2026-11-18T21:02:19.973708+00:00", "event": "step", "task_id": 55, "step": "process", "duration_ms": 24.406277999787562}
+{"at": "2026-11-18T21:02:19.977557+00:00", "event": "step", "task_id": 55, "step": "store", "duration_ms": 3.6931310000909434}
+{"at": "2026-11-18T21:02:19.977634+00:00", "event": "task_done", "task_id": 55, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-pb66g"}
+{"at": "2026-11-18T21:02:33.226779+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [56], "duration_ms": 2.305253000031371}
+{"at": "2026-11-18T21:02:33.230986+00:00", "event": "step", "task_id": 56, "step": "fetch", "duration_ms": 4.0712599998187216}
+{"at": "2026-11-18T21:02:33.254494+00:00", "event": "step", "task_id": 56, "step": "process", "duration_ms": 23.37817299985545}
+{"at": "2026-11-18T21:02:33.257148+00:00", "event": "step", "task_id": 56, "step": "store", "duration_ms": 2.532335000068997}
+{"at": "2026-11-18T21:02:33.257216+00:00", "event": "task_done", "task_id": 56, "token": 2, "attempts": 2, "worker_id": "worker-64bfc8fb64-pb66g"}
+{"at": "2026-11-18T21:03:04.969795+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [64], "duration_ms": 4.3389429997660045}
+{"at": "2026-11-18T21:03:04.975624+00:00", "event": "step", "task_id": 64, "step": "fetch", "duration_ms": 5.567927999891253}
+{"at": "2026-11-18T21:03:05.000093+00:00", "event": "step", "task_id": 64, "step": "process", "duration_ms": 24.34452399984366}
+{"at": "2026-11-18T21:03:05.003867+00:00", "event": "step", "task_id": 64, "step": "store", "duration_ms": 3.635325999766792}
+{"at": "2026-11-18T21:03:05.003983+00:00", "event": "task_done", "task_id": 64, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-pb66g"}
+{"at": "2026-11-18T21:03:19.999859+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [67], "duration_ms": 4.0524430000914435}
+{"at": "2026-11-18T21:03:20.005308+00:00", "event": "step", "task_id": 67, "step": "fetch", "duration_ms": 5.178562999844871}
+{"at": "2026-11-18T21:03:20.030619+00:00", "event": "step", "task_id": 67, "step": "process", "duration_ms": 25.150508000024274}
+{"at": "2026-11-18T21:03:20.030732+00:00", "event": "injected_exit", "task_id": 67, "token": 1, "fail_rate": 0.15}
+
+===== worker-64bfc8fb64-pb66g previous=True exit=0 =====
+unable to retrieve container logs for containerd://9df623113f639adb3f6431dd58ded2218ce9c0983bdff4dc7449257aedfb2f3d
+===== worker-64bfc8fb64-s9n58 previous=False exit=0 =====
+{"at": "2026-11-18T21:03:21.578641+00:00", "event": "worker_started", "worker_id": "worker-64bfc8fb64-s9n58", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-18T21:03:24.960016+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [68], "duration_ms": 3.3408300000701274}
+{"at": "2026-11-18T21:03:24.964789+00:00", "event": "step", "task_id": 68, "step": "fetch", "duration_ms": 4.534950000106619}
+{"at": "2026-11-18T21:03:24.989140+00:00", "event": "step", "task_id": 68, "step": "process", "duration_ms": 24.159401999895636}
+{"at": "2026-11-18T21:03:24.989238+00:00", "event": "injected_exit", "task_id": 68, "token": 1, "fail_rate": 0.15}
+
+===== worker-64bfc8fb64-s9n58 previous=True exit=0 =====
+unable to retrieve container logs for containerd://041d2eb49db6858651574a4e8d4e44c862a5017ef747d1217c89d9eb8ffacac7
+===== worker-64bfc8fb64-tvhmj previous=False exit=0 =====
+{"at": "2026-11-18T21:01:42.373684+00:00", "event": "worker_started", "worker_id": "worker-64bfc8fb64-tvhmj", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-18T21:01:49.928985+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [49], "duration_ms": 2.9237290000310168}
+{"at": "2026-11-18T21:01:49.933725+00:00", "event": "step", "task_id": 49, "step": "fetch", "duration_ms": 4.518721999829722}
+{"at": "2026-11-18T21:01:49.957877+00:00", "event": "step", "task_id": 49, "step": "process", "duration_ms": 23.971873999926174}
+{"at": "2026-11-18T21:01:49.962379+00:00", "event": "step", "task_id": 49, "step": "store", "duration_ms": 4.33660399994551}
+{"at": "2026-11-18T21:01:49.962482+00:00", "event": "task_done", "task_id": 49, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-tvhmj"}
+{"at": "2026-11-18T21:02:14.930317+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [54], "duration_ms": 2.388240000072983}
+{"at": "2026-11-18T21:02:14.934320+00:00", "event": "step", "task_id": 54, "step": "fetch", "duration_ms": 3.8673410003866593}
+{"at": "2026-11-18T21:02:14.957393+00:00", "event": "step", "task_id": 54, "step": "process", "duration_ms": 22.9652189996159}
+{"at": "2026-11-18T21:02:14.960041+00:00", "event": "step", "task_id": 54, "step": "store", "duration_ms": 2.5186480002048484}
+{"at": "2026-11-18T21:02:14.960108+00:00", "event": "task_done", "task_id": 54, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-tvhmj"}
+{"at": "2026-11-18T21:02:29.933770+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [57], "duration_ms": 2.3694139999861363}
+{"at": "2026-11-18T21:02:29.937341+00:00", "event": "step", "task_id": 57, "step": "fetch", "duration_ms": 3.443727000103536}
+{"at": "2026-11-18T21:02:29.959183+00:00", "event": "step", "task_id": 57, "step": "process", "duration_ms": 21.742616999745223}
+{"at": "2026-11-18T21:02:29.962338+00:00", "event": "step", "task_id": 57, "step": "store", "duration_ms": 3.036303000044427}
+{"at": "2026-11-18T21:02:29.962424+00:00", "event": "task_done", "task_id": 57, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-tvhmj"}
+{"at": "2026-11-18T21:02:34.961388+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [58], "duration_ms": 2.25411500014161}
+{"at": "2026-11-18T21:02:34.964668+00:00", "event": "step", "task_id": 58, "step": "fetch", "duration_ms": 3.1419729998560797}
+{"at": "2026-11-18T21:02:34.986848+00:00", "event": "step", "task_id": 58, "step": "process", "duration_ms": 22.045047999654344}
+{"at": "2026-11-18T21:02:34.990020+00:00", "event": "step", "task_id": 58, "step": "store", "duration_ms": 3.0328350003401283}
+{"at": "2026-11-18T21:02:34.990099+00:00", "event": "task_done", "task_id": 58, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-tvhmj"}
+{"at": "2026-11-18T21:03:09.967928+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [65], "duration_ms": 2.6912230000561976}
+{"at": "2026-11-18T21:03:09.972714+00:00", "event": "step", "task_id": 65, "step": "fetch", "duration_ms": 4.569432000153029}
+{"at": "2026-11-18T21:03:09.996851+00:00", "event": "step", "task_id": 65, "step": "process", "duration_ms": 23.99705300013011}
+{"at": "2026-11-18T21:03:10.000532+00:00", "event": "step", "task_id": 65, "step": "store", "duration_ms": 3.5096189999421767}
+{"at": "2026-11-18T21:03:10.000622+00:00", "event": "task_done", "task_id": 65, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-tvhmj"}
+{"at": "2026-11-18T21:03:34.986160+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [70], "duration_ms": 3.0389559997274773}
+{"at": "2026-11-18T21:03:34.990708+00:00", "event": "step", "task_id": 70, "step": "fetch", "duration_ms": 4.406353999911516}
+{"at": "2026-11-18T21:03:35.015288+00:00", "event": "step", "task_id": 70, "step": "process", "duration_ms": 24.44748800007801}
+{"at": "2026-11-18T21:03:35.018414+00:00", "event": "step", "task_id": 70, "step": "store", "duration_ms": 2.992347000144946}
+{"at": "2026-11-18T21:03:35.018494+00:00", "event": "task_done", "task_id": 70, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-tvhmj"}
+
+===== worker-64bfc8fb64-tvhmj previous=True exit=0 =====
+{"at": "2026-11-18T20:59:59.564875+00:00", "event": "worker_started", "worker_id": "worker-64bfc8fb64-tvhmj", "mode": "skip_locked", "batch": 1}
+{"at": "2026-11-18T21:00:19.960436+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [21], "duration_ms": 3.7438230001498596}
+{"at": "2026-11-18T21:00:19.966087+00:00", "event": "step", "task_id": 21, "step": "fetch", "duration_ms": 5.322824999893783}
+{"at": "2026-11-18T21:00:19.997262+00:00", "event": "step", "task_id": 21, "step": "process", "duration_ms": 30.96882399995593}
+{"at": "2026-11-18T21:00:20.002502+00:00", "event": "step", "task_id": 21, "step": "store", "duration_ms": 4.991905000224506}
+{"at": "2026-11-18T21:00:20.002624+00:00", "event": "task_done", "task_id": 21, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-tvhmj"}
+{"at": "2026-11-18T21:00:44.982293+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [26], "duration_ms": 3.6954830002287054}
+{"at": "2026-11-18T21:00:44.986667+00:00", "event": "step", "task_id": 26, "step": "fetch", "duration_ms": 4.218446000322729}
+{"at": "2026-11-18T21:00:45.009840+00:00", "event": "step", "task_id": 26, "step": "process", "duration_ms": 23.062741000103415}
+{"at": "2026-11-18T21:00:45.012815+00:00", "event": "step", "task_id": 26, "step": "store", "duration_ms": 2.851900000223395}
+{"at": "2026-11-18T21:00:45.012884+00:00", "event": "task_done", "task_id": 26, "token": 1, "attempts": 1, "worker_id": "worker-64bfc8fb64-tvhmj"}
+{"at": "2026-11-18T21:01:09.989996+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [32], "duration_ms": 3.7841429998479725}
+{"at": "2026-11-18T21:01:10.012095+00:00", "event": "step", "task_id": 32, "step": "fetch", "duration_ms": 21.937862999948265}
+{"at": "2026-11-18T21:01:10.014436+00:00", "event": "process_error", "task_id": 32, "token": 1, "attempts": 1, "new_status": "queued", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.016611+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [33], "duration_ms": 2.004871999815805}
+{"at": "2026-11-18T21:01:10.020950+00:00", "event": "step", "task_id": 33, "step": "fetch", "duration_ms": 4.213650000110647}
+{"at": "2026-11-18T21:01:10.022611+00:00", "event": "process_error", "task_id": 33, "token": 2, "attempts": 2, "new_status": "queued", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.024672+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [32], "duration_ms": 1.9047699997827294}
+{"at": "2026-11-18T21:01:10.029409+00:00", "event": "step", "task_id": 32, "step": "fetch", "duration_ms": 4.613889999745879}
+{"at": "2026-11-18T21:01:10.031119+00:00", "event": "process_error", "task_id": 32, "token": 3, "attempts": 3, "new_status": "failed", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.033015+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [37], "duration_ms": 1.7294979998041526}
+{"at": "2026-11-18T21:01:10.037161+00:00", "event": "step", "task_id": 37, "step": "fetch", "duration_ms": 4.026444999908563}
+{"at": "2026-11-18T21:01:10.038922+00:00", "event": "process_error", "task_id": 37, "token": 1, "attempts": 1, "new_status": "queued", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.040845+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [37], "duration_ms": 1.7810749995987862}
+{"at": "2026-11-18T21:01:10.044205+00:00", "event": "step", "task_id": 37, "step": "fetch", "duration_ms": 3.2463210000059917}
+{"at": "2026-11-18T21:01:10.045808+00:00", "event": "process_error", "task_id": 37, "token": 2, "attempts": 2, "new_status": "queued", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.047947+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [36], "duration_ms": 2.003649000016594}
+{"at": "2026-11-18T21:01:10.053142+00:00", "event": "step", "task_id": 36, "step": "fetch", "duration_ms": 5.049950000284298}
+{"at": "2026-11-18T21:01:10.055467+00:00", "event": "process_error", "task_id": 36, "token": 3, "attempts": 3, "new_status": "failed", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.057551+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [39], "duration_ms": 1.9117629999527708}
+{"at": "2026-11-18T21:01:10.062333+00:00", "event": "step", "task_id": 39, "step": "fetch", "duration_ms": 4.652193000310945}
+{"at": "2026-11-18T21:01:10.064213+00:00", "event": "process_error", "task_id": 39, "token": 1, "attempts": 1, "new_status": "queued", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.066174+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [40], "duration_ms": 1.7969049999919662}
+{"at": "2026-11-18T21:01:10.069232+00:00", "event": "step", "task_id": 40, "step": "fetch", "duration_ms": 2.936292000413232}
+{"at": "2026-11-18T21:01:10.070867+00:00", "event": "process_error", "task_id": 40, "token": 2, "attempts": 2, "new_status": "queued", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.073021+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [38], "duration_ms": 2.0012939999105583}
+{"at": "2026-11-18T21:01:10.077447+00:00", "event": "step", "task_id": 38, "step": "fetch", "duration_ms": 4.284675000235438}
+{"at": "2026-11-18T21:01:10.079379+00:00", "event": "process_error", "task_id": 38, "token": 3, "attempts": 3, "new_status": "failed", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.081727+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [41], "duration_ms": 2.15961599997172}
+{"at": "2026-11-18T21:01:10.105635+00:00", "event": "step", "task_id": 41, "step": "fetch", "duration_ms": 23.747061999984}
+{"at": "2026-11-18T21:01:10.107280+00:00", "event": "process_error", "task_id": 41, "token": 1, "attempts": 1, "new_status": "queued", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.109420+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [41], "duration_ms": 1.9447570002739667}
+{"at": "2026-11-18T21:01:10.112455+00:00", "event": "step", "task_id": 41, "step": "fetch", "duration_ms": 2.9085679998388514}
+{"at": "2026-11-18T21:01:10.114119+00:00", "event": "process_error", "task_id": 41, "token": 2, "attempts": 2, "new_status": "queued", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:10.116038+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [41], "duration_ms": 1.7602469997655135}
+{"at": "2026-11-18T21:01:10.118448+00:00", "event": "step", "task_id": 41, "step": "fetch", "duration_ms": 2.299872000094183}
+{"at": "2026-11-18T21:01:10.119732+00:00", "event": "process_error", "task_id": 41, "token": 3, "attempts": 3, "new_status": "failed", "error_type": "ValueError", "error": "Отруєна задача: seed=0"}
+{"at": "2026-11-18T21:01:19.907585+00:00", "event": "claim", "mode": "skip_locked", "task_ids": [43], "duration_ms": 2.022404999934224}
+{"at": "2026-11-18T21:01:19.910222+00:00", "event": "step", "task_id": 43, "step": "fetch", "duration_ms": 2.5145399999928486}
+{"at": "2026-11-18T21:01:19.932291+00:00", "event": "step", "task_id": 43, "step": "process", "duration_ms": 21.97245200022735}
+{"at": "2026-11-18T21:01:19.932404+00:00", "event": "injected_exit", "task_id": 43, "token": 1, "fail_rate": 0.15}

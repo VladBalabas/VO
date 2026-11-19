@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-11-08T23:16:40.758365+00:00",
-  "finished_at": "2026-11-08T23:16:42.382111+00:00",
+  "started_at": "2026-11-18T20:08:40.994965+00:00",
+  "finished_at": "2026-11-18T20:08:42.347055+00:00",
   "command": [
     "kubectl",
     "-n",
@@ -13,6 +13,6 @@
     "--timeout=90s"
   ],
   "exit_code": 0,
-  "stdout": "pod/worker-fc5494598-5m67d condition met\npod/worker-fc5494598-hnqgw condition met\npod/worker-fc5494598-rjfnh condition met\npod/worker-fc5494598-sj72l condition met\npod/worker-fc5494598-xxfn2 condition met\n",
+  "stdout": "pod/worker-79696bf76d-992q7 condition met\npod/worker-79696bf76d-j9l2q condition met\npod/worker-79696bf76d-n2g2x condition met\npod/worker-79696bf76d-wdf9l condition met\npod/worker-79696bf76d-wfh2b condition met\n",
   "stderr": ""
 }

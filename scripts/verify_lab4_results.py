@@ -18,7 +18,8 @@ RUNS = DATA / "runs"
 EXPECTED = ("worker20", "naive_100ms", "naive_1ms", "skip_locked_1ms", "locked_1ms",
             "lease_fencing", "capacity_w1", "capacity_w2", "capacity_w5",
             "capacity30_w1", "capacity30_w2", "capacity30_w5", "little_steady",
-            "little_overload", "graceful_restart", "fail_baseline", "fail_poison", "priority_d1")
+            "little_overload", "graceful_restart", "fail_baseline", "fail_poison",
+            "f3_baseline", "f3_poison", "priority_d1")
 
 
 def source(run: str, name: str) -> Path:
@@ -88,7 +89,7 @@ def main() -> None:
     if locked_metrics["task"] != 300 or locked_metrics["empty"] <= 0:
         raise AssertionError(("locked metrics", locked_metrics))
 
-    for run in ("fail_baseline", "fail_poison"):
+    for run in ("fail_baseline", "fail_poison", "f3_baseline", "f3_poison"):
         measurement = json.loads(
             (RUNS / run / "measurement_end.json").read_text(encoding="utf-8")
         )
@@ -103,8 +104,32 @@ def main() -> None:
         if dict(sorted(distribution.items())) != dict(sorted(expected_distribution.items())):
             raise AssertionError((run, distribution, expected_distribution))
 
+        captured = [row for row in measured_tasks if int(row["attempts"]) > 0]
+        stored = analysis["failure"]
+        if run.startswith("f3_"):
+            key = "baseline" if run == "f3_baseline" else "poison"
+            calculated = stored["f3_measurement_pair"][key]
+        else:
+            key = "baseline_measurement" if run == "fail_baseline" else "poison_measurement"
+            calculated = stored[key]
+        attempts_gt_1 = sum(int(row["attempts"]) > 1 for row in captured)
+        failed = sum(row["status"] == "failed" for row in captured)
+        if calculated["measurement_captured_tasks"] != len(captured):
+            raise AssertionError((run, "captured denominator"))
+        if calculated["measurement_attempts_gt_1_captured"] != attempts_gt_1:
+            raise AssertionError((run, "attempts > 1 numerator"))
+        if calculated["measurement_failed_captured"] != failed:
+            raise AssertionError((run, "failed numerator"))
+
+    f3_tasks = rows("f3_poison", "tasks_at_measurement_end.jsonl")
+    f3_poison = [row for row in f3_tasks if row.get("seed") == 0]
+    if len(f3_poison) != 10 or any(
+        row["status"] != "failed" or int(row["attempts"]) != 3 for row in f3_poison
+    ):
+        raise AssertionError(("f3 poison at measurement end", f3_poison))
+
     for run in ("skip_locked_1ms", "locked_1ms", "lease_fencing", "graceful_restart",
-                "fail_baseline", "fail_poison", "priority_d1"):
+                "fail_baseline", "fail_poison", "f3_baseline", "f3_poison", "priority_d1"):
         counts = Counter(row["task_id"] for row in rows(run, "task_results.jsonl"))
         if any(value > 1 for value in counts.values()): raise AssertionError(f"Дубль у {run}")
 
@@ -126,6 +151,8 @@ def main() -> None:
               "checks": ["SHA-256 усіх первинних JSONL", "кількість запитів і задач",
                          "X(W) з finished_at", "повні 30-секундні capacity-вікна",
                          "точні task/empty claims", "snapshot failure на 300-й секунді",
+                         "знаменники attempts/failed лише за захопленими задачами",
+                         "10 poison-задач failed з attempts=3 до drain",
                          "відсутність дублів у фінальних режимах",
                          "незалежні lambda, W_q і часово-зважене L_q"]}
     (DATA / "independent_verification.json").write_text(

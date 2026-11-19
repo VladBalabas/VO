@@ -27,7 +27,7 @@ BASE_URL = "http://127.0.0.1:8080"
 PROM_URL = "http://127.0.0.1:9090"
 NAMESPACE = "lab4"
 R = 5
-GENERATOR_VERSION = "lab4-threaded-open-loop-v1"
+GENERATOR_VERSION = "lab4-threaded-open-loop-v2"
 
 
 def utcnow() -> str:
@@ -212,15 +212,25 @@ def send_task(referral_id: int, priority: int, seed: int | None,
             "task_id": task_id, **response}
 
 
-def generate_tasks(path: Path, referral_ids: list[int], count: int, rate: float,
+def write_request_rows(path: Path, rows: list[dict[str, Any]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", newline="\n") as stream:
+        for row in rows:
+            stream.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+
+def generate_tasks(path: Path | None, referral_ids: list[int], count: int, rate: float,
                    priority: Callable[[int], int] | None = None,
-                   seed: Callable[[int], int | None] | None = None) -> list[dict[str, Any]]:
-    origin = time.perf_counter()
+                   seed: Callable[[int], int | None] | None = None, *,
+                   origin: float | None = None, start_offset: float = 0.0,
+                   index_offset: int = 0) -> list[dict[str, Any]]:
+    origin = time.perf_counter() if origin is None else origin
     futures = []
     workers = min(64, max(8, math.ceil(rate)))
     with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as executor:
-        for index in range(count):
-            scheduled = origin + index / rate
+        for local_index in range(count):
+            index = index_offset + local_index
+            scheduled = origin + start_offset + local_index / rate
             delay = scheduled - time.perf_counter()
             if delay > 0:
                 time.sleep(delay)
@@ -231,10 +241,8 @@ def generate_tasks(path: Path, referral_ids: list[int], count: int, rate: float,
             ))
         rows = [future.result() for future in futures]
     rows.sort(key=lambda row: row["index"])
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as stream:
-        for row in rows:
-            stream.write(json.dumps(row, ensure_ascii=False) + "\n")
+    if path is not None:
+        write_request_rows(path, rows)
     return rows
 
 
@@ -397,6 +405,44 @@ def write_database_snapshot(run_dir: Path, suffix: str) -> None:
                 stream.write("\n")
 
 
+def capture_measurement_end(run_dir: Path) -> dict[str, Any]:
+    measurement_end = {
+        "at": utcnow(),
+        "epoch": time.time(),
+        "counts": task_counts(),
+        "database": database_summary(),
+    }
+    write_database_snapshot(run_dir, "at_measurement_end")
+    pods_result = subprocess.run(
+        ["kubectl", "-n", NAMESPACE, "get", "pods", "-l", "app=worker", "-o", "json"],
+        cwd=ROOT, text=True, capture_output=True, encoding="utf-8", errors="replace",
+    )
+    (run_dir / "pods_at_measurement_end.json").write_text(
+        pods_result.stdout, encoding="utf-8"
+    )
+    payload = json.loads(pods_result.stdout)
+    collected_logs = []
+    for item in payload.get("items", []):
+        pod = item["metadata"]["name"]
+        for previous in (False, True):
+            args = ["kubectl", "-n", NAMESPACE, "logs", pod, "--tail=-1"]
+            if previous:
+                args.append("--previous")
+            result = subprocess.run(
+                args, cwd=ROOT, text=True, capture_output=True,
+                encoding="utf-8", errors="replace",
+            )
+            collected_logs.append(
+                f"===== {pod} previous={previous} exit={result.returncode} =====\n"
+                f"{result.stdout}{result.stderr}"
+            )
+    (run_dir / "worker_at_measurement_end.log").write_text(
+        "\n".join(collected_logs), encoding="utf-8"
+    )
+    write_json(run_dir / "measurement_end.json", measurement_end)
+    return measurement_end
+
+
 def finish_run(run_dir: Path, config: dict[str, Any], started_epoch: float,
                rows: list[dict[str, Any]]) -> dict[str, Any]:
     ended_epoch = time.time()
@@ -482,11 +528,15 @@ def api_check(referrals: list[int]) -> None:
     })
 
 
-def phase_claims(referrals: list[int]) -> None:
+def phase_naive(referrals: list[int]) -> None:
     simple_run("naive_100ms", referrals, mode="naive", poll_ms=100, replicas=R,
                count=300, rate=100, unique=False)
     simple_run("naive_1ms", referrals, mode="naive", poll_ms=1, replicas=R,
                count=300, rate=100, unique=False)
+
+
+def phase_claims(referrals: list[int]) -> None:
+    phase_naive(referrals)
     simple_run("skip_locked_1ms", referrals, mode="skip_locked", poll_ms=1, replicas=R,
                count=300, rate=100, unique=True)
     simple_run("locked_1ms", referrals, mode="locked", poll_ms=1, replicas=R,
@@ -633,29 +683,7 @@ def load_for_duration(name: str, referrals: list[int], rate: float, duration: in
                           effective_priority, seed_fn)
     for thread in actions: thread.join()
     if controlled_drain:
-        measurement_end = {
-            "at": utcnow(),
-            "epoch": time.time(),
-            "counts": task_counts(),
-            "database": database_summary(),
-        }
-        write_database_snapshot(run_dir, "at_measurement_end")
-        pods_result = subprocess.run(["kubectl", "-n", NAMESPACE, "get", "pods", "-l",
-                                      "app=worker", "-o", "json"], cwd=ROOT, text=True,
-                                     capture_output=True, encoding="utf-8", errors="replace")
-        (run_dir / "pods_at_measurement_end.json").write_text(pods_result.stdout, encoding="utf-8")
-        payload = json.loads(pods_result.stdout)
-        collected_logs = []
-        for item in payload.get("items", []):
-            pod = item["metadata"]["name"]
-            for previous in (False, True):
-                args = ["kubectl", "-n", NAMESPACE, "logs", pod, "--tail=-1"]
-                if previous: args.append("--previous")
-                result = subprocess.run(args, cwd=ROOT, text=True, capture_output=True,
-                                        encoding="utf-8", errors="replace")
-                collected_logs.append(f"===== {pod} previous={previous} exit={result.returncode} =====\n{result.stdout}{result.stderr}")
-        (run_dir / "worker_at_measurement_end.log").write_text("\n".join(collected_logs), encoding="utf-8")
-        write_json(run_dir / "measurement_end.json", measurement_end)
+        capture_measurement_end(run_dir)
         configure_workers(name + "_controlled_drain", R, fail_rate=0)
     wait_terminal(timeout=max(600, duration * 3))
     stop.set(); sampler.join()
@@ -729,11 +757,82 @@ def phase_failures(referrals: list[int], x5: float) -> None:
                       fail_rate=0.15, controlled_drain=True)
     load_for_duration("fail_poison", referrals, 0.7 * x5, 300,
                       fail_rate=0.15, poison_at=150, controlled_drain=True)
+    phase_poison(referrals, x5)
 
 
-def phase_poison(referrals: list[int], x5: float) -> None:
-    load_for_duration("fail_poison", referrals, 0.7 * x5, 300,
-                      fail_rate=0.15, poison_at=150, controlled_drain=True)
+def f3_evidence_run(name: str, referrals: list[int], *, poison: bool) -> dict[str, Any]:
+    run_dir = RUNS / name
+    stop_workers(name)
+    reset_tasks(); set_result_uniqueness(True)
+    configure_workers(name, R, fail_rate=0.15)
+    stop = threading.Event()
+    sampler = threading.Thread(
+        target=sample_database, args=(run_dir / "samples.json", stop), daemon=True
+    )
+    sampler.start()
+    rate = 0.2
+    duration = 300
+    poison_at = 150
+    normal_count = round(rate * duration)
+    started_epoch = time.time()
+    origin = time.perf_counter()
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+        normal_future = executor.submit(
+            generate_tasks, None, referrals, normal_count, rate,
+            None, None, origin=origin,
+        )
+        poison_future = None
+        if poison:
+            poison_future = executor.submit(
+                generate_tasks, None, referrals, 10, 1000.0,
+                lambda _index: 3, lambda _index: 0,
+                origin=origin, start_offset=poison_at, index_offset=normal_count,
+            )
+        normal_rows = normal_future.result()
+        poison_rows = poison_future.result() if poison_future is not None else []
+    remaining = origin + duration - time.perf_counter()
+    if remaining > 0:
+        time.sleep(remaining)
+    rows = sorted(normal_rows + poison_rows, key=lambda row: row["scheduled_offset_ms"])
+    write_request_rows(run_dir / "requests.jsonl", rows)
+    capture_measurement_end(run_dir)
+    stop.set(); sampler.join()
+    measured_tasks = [
+        json.loads(line)
+        for line in (run_dir / "tasks_at_measurement_end.jsonl").read_text(
+            encoding="utf-8"
+        ).splitlines()
+        if line
+    ]
+    measured_poison = [row for row in measured_tasks if row.get("seed") == 0]
+    poison_accepted = (
+        not poison or (
+            len(measured_poison) == 10
+            and all(row["status"] == "failed" and int(row["attempts"]) == 3
+                    for row in measured_poison)
+        )
+    )
+    configure_workers(name + "_controlled_drain", R, fail_rate=0)
+    wait_terminal(timeout=600)
+    summary = finish_run(
+        run_dir,
+        {"rate": rate, "duration": duration, "fail_rate": 0.15,
+         "poison_at": poison_at if poison else None, "poison_burst": poison,
+         "normal_count": normal_count, "poison_count": len(poison_rows),
+         "controlled_drain": True},
+        started_epoch, rows,
+    )
+    if not poison_accepted:
+        raise RuntimeError(
+            f"Ф3-прогін не пройшов критерій: "
+            f"poison at measurement end={[(row['status'], row['attempts']) for row in measured_poison]}"
+        )
+    return summary
+
+
+def phase_poison(referrals: list[int], _x5: float) -> None:
+    f3_evidence_run("f3_baseline", referrals, poison=False)
+    f3_evidence_run("f3_poison", referrals, poison=True)
 
 
 def phase_priority(referrals: list[int], x5: float) -> None:
@@ -743,7 +842,7 @@ def phase_priority(referrals: list[int], x5: float) -> None:
 
 def parser() -> argparse.ArgumentParser:
     result = argparse.ArgumentParser()
-    result.add_argument("--phase", choices=("prepare", "api", "worker", "claims", "lease", "capacity", "capacity30",
+    result.add_argument("--phase", choices=("prepare", "api", "worker", "naive", "claims", "lease", "capacity", "capacity30",
                                              "queue", "shutdown", "failures", "poison", "priority", "all"),
                         required=True)
     result.add_argument("--x5", type=float)
@@ -756,6 +855,7 @@ def main() -> None:
     referrals = prepare_referrals()
     if args.phase in {"api", "all"}: api_check(referrals)
     if args.phase in {"worker", "all"}: phase_worker_smoke(referrals)
+    if args.phase == "naive": phase_naive(referrals)
     if args.phase in {"claims", "all"}: phase_claims(referrals)
     if args.phase in {"lease", "all"}: phase_lease(referrals)
     if args.phase in {"capacity", "all"}: phase_capacity(referrals)

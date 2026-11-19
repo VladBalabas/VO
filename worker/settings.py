@@ -44,6 +44,7 @@ class WorkerSettings:
     claim_mode: str
     claim_batch_size: int
     idempotent_results: bool
+    shutdown_task_timeout_seconds: float
     slice_size: int = 256
     q_lo: float = 0.05
     q_hi: float = 0.95
@@ -76,6 +77,7 @@ def load_settings() -> WorkerSettings:
         claim_batch_size=integer("CLAIM_BATCH_SIZE", 1),
         idempotent_results=os.getenv("IDEMPOTENT_RESULTS", "true").lower()
         not in {"0", "false", "no"},
+        shutdown_task_timeout_seconds=number("SHUTDOWN_TASK_TIMEOUT_SECONDS", 20.0, 0.1),
         slice_size=integer("SLICE_SIZE", 256),
         q_lo=q_lo,
         q_hi=q_hi,

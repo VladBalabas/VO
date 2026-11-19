@@ -13,6 +13,7 @@ data:
   CLAIM_MODE: skip_locked
   CLAIM_BATCH_SIZE: "1"
   IDEMPOTENT_RESULTS: "true"
+  SHUTDOWN_TASK_TIMEOUT_SECONDS: "20"
   Q_LO: "0.05"
   Q_HI: "0.95"
   SLICE_SIZE: "256"

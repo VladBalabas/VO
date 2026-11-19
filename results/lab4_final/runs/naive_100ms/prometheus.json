@@ -5,12 +5,12 @@
         "container": "postgres",
         "cpu": "total",
         "endpoint": "https-metrics",
-        "id": "/kubelet.slice/kubelet-kubepods.slice/kubelet-kubepods-burstable.slice/kubelet-kubepods-burstable-pod2c0a9cc5_8252_456c_9643_39fc915a3122.slice/cri-containerd-03c852711a25a9b9200fb0deb6560f5d4819af92d50fc2d75ddcc775d4d7caa9.scope",
+        "id": "/kubelet.slice/kubelet-kubepods.slice/kubelet-kubepods-burstable.slice/kubelet-kubepods-burstable-pod2c0a9cc5_8252_456c_9643_39fc915a3122.slice/cri-containerd-163d7877c46cdee446dd8a1e217346ce058afe18507dbcff871110536a32df14.scope",
         "image": "docker.io/library/postgres:17-alpine",
         "instance": "172.21.0.4:10250",
         "job": "kubelet",
         "metrics_path": "/metrics/cadvisor",
-        "name": "03c852711a25a9b9200fb0deb6560f5d4819af92d50fc2d75ddcc775d4d7caa9",
+        "name": "163d7877c46cdee446dd8a1e217346ce058afe18507dbcff871110536a32df14",
         "namespace": "lab4",
         "node": "vo-lab4-control-plane",
         "pod": "postgres-0",
@@ -18,8 +18,12 @@
       },
       "values": [
         [
-          1794209660.386,
-          "0.6321147088946676"
+          1795032482.697,
+          "0.0438057163976838"
+        ],
+        [
+          1795032487.697,
+          "0.0438057163976838"
         ]
       ]
     }
@@ -31,19 +35,19 @@
         "datid": "16384",
         "datname": "referrals",
         "endpoint": "metrics",
-        "instance": "10.244.0.7:9187",
+        "instance": "10.244.0.4:9187",
         "job": "monitoring/lab4-postgres-exporter",
         "namespace": "lab4",
         "pod": "postgres-exporter-64cc99dbd6-jnssc"
       },
       "values": [
         [
-          1794209655.386,
-          "4354.24"
+          1795032482.697,
+          "101.16404656186248"
         ],
         [
-          1794209660.386,
-          "3505.820232809312"
+          1795032487.697,
+          "94.24376975079002"
         ]
       ]
     }
@@ -55,12 +59,12 @@
       },
       "values": [
         [
-          1794209655.386,
-          "2169.402350260874"
+          1795032482.697,
+          "43.35942180859043"
         ],
         [
-          1794209660.386,
-          "1759.3459102714146"
+          1795032487.697,
+          "37.5306120027668"
         ]
       ]
     },
@@ -70,11 +74,11 @@
       },
       "values": [
         [
-          1794209655.386,
+          1795032482.697,
           "0"
         ],
         [
-          1794209660.386,
+          1795032487.697,
           "0"
         ]
       ]
@@ -85,12 +89,12 @@
       },
       "values": [
         [
-          1794209655.386,
-          "1128.2806377391153"
+          1795032482.697,
+          "0"
         ],
         [
-          1794209660.386,
-          "866.1284782810515"
+          1795032487.697,
+          "0"
         ]
       ]
     },
@@ -100,12 +104,12 @@
       },
       "values": [
         [
-          1794209655.386,
-          "2165.413689853189"
+          1795032482.697,
+          "43.1838384752571"
         ],
         [
-          1794209660.386,
-          "1755.7184338898712"
+          1795032487.697,
+          "37.48952866943347"
         ]
       ]
     },
@@ -115,12 +119,12 @@
       },
       "values": [
         [
-          1794209655.386,
-          "2166.5403565614447"
+          1795032482.697,
+          "43.25942180859043"
         ],
         [
-          1794209660.386,
-          "1756.6164284949948"
+          1795032487.697,
+          "37.5306120027668"
         ]
       ]
     },
@@ -130,12 +134,12 @@
       },
       "values": [
         [
-          1794209655.386,
-          "2167.818699003423"
+          1795032482.697,
+          "43.326088475257095"
         ],
         [
-          1794209660.386,
-          "1757.9053523822793"
+          1795032487.697,
+          "37.5306120027668"
         ]
       ]
     },
@@ -145,12 +149,12 @@
       },
       "values": [
         [
-          1794209655.386,
-          "2169.402350260874"
+          1795032482.697,
+          "43.35942180859043"
         ],
         [
-          1794209660.386,
-          "1759.3459102714146"
+          1795032487.697,
+          "37.5306120027668"
         ]
       ]
     },
@@ -160,12 +164,12 @@
       },
       "values": [
         [
-          1794209655.386,
-          "2169.402350260874"
+          1795032482.697,
+          "43.35942180859043"
         ],
         [
-          1794209660.386,
-          "1759.3459102714146"
+          1795032487.697,
+          "37.5306120027668"
         ]
       ]
     },
@@ -175,12 +179,12 @@
       },
       "values": [
         [
-          1794209655.386,
-          "2169.402350260874"
+          1795032482.697,
+          "43.35942180859043"
         ],
         [
-          1794209660.386,
-          "1759.3459102714146"
+          1795032487.697,
+          "37.5306120027668"
         ]
       ]
     },
@@ -190,12 +194,12 @@
       },
       "values": [
         [
-          1794209655.386,
-          "2169.402350260874"
+          1795032482.697,
+          "43.35942180859043"
         ],
         [
-          1794209660.386,
-          "1759.3459102714146"
+          1795032487.697,
+          "37.5306120027668"
         ]
       ]
     },
@@ -205,12 +209,12 @@
       },
       "values": [
         [
-          1794209655.386,
-          "2169.402350260874"
+          1795032482.697,
+          "43.35942180859043"
         ],
         [
-          1794209660.386,
-          "1759.3459102714146"
+          1795032487.697,
+          "37.5306120027668"
         ]
       ]
     },
@@ -220,12 +224,12 @@
       },
       "values": [
         [
-          1794209655.386,
-          "2169.402350260874"
+          1795032482.697,
+          "43.35942180859043"
         ],
         [
-          1794209660.386,
-          "1759.3459102714146"
+          1795032487.697,
+          "37.5306120027668"
         ]
       ]
     },
@@ -235,12 +239,12 @@
       },
       "values": [
         [
-          1794209655.386,
-          "2169.402350260874"
+          1795032482.697,
+          "43.35942180859043"
         ],
         [
-          1794209660.386,
-          "1759.3459102714146"
+          1795032487.697,
+          "37.5306120027668"
         ]
       ]
     },
@@ -250,12 +254,12 @@
       },
       "values": [
         [
-          1794209655.386,
-          "2169.402350260874"
+          1795032482.697,
+          "43.35942180859043"
         ],
         [
-          1794209660.386,
-          "1759.3459102714146"
+          1795032487.697,
+          "37.5306120027668"
         ]
       ]
     }
@@ -265,12 +269,12 @@
       "metric": {},
       "values": [
         [
-          1794209655.386,
-          "0.002474392827816787"
+          1795032482.697,
+          "0.002491037935931735"
         ],
         [
-          1794209660.386,
-          "0.0024764509772736594"
+          1795032487.697,
+          "0.0024866273544150944"
         ]
       ]
     }
@@ -280,12 +284,8 @@
       "metric": {},
       "values": [
         [
-          1794209655.386,
-          "183"
-        ],
-        [
-          1794209660.386,
-          "92"
+          1795032487.697,
+          "139"
         ]
       ]
     }
@@ -295,8 +295,8 @@
       "metric": {},
       "values": [
         [
-          1794209655.386,
-          "61816"
+          1795032482.697,
+          "914"
         ]
       ]
     }
@@ -307,16 +307,16 @@
         "__name__": "kube_pod_container_status_restarts_total",
         "container": "worker",
         "endpoint": "http",
-        "instance": "10.244.0.3:8080",
+        "instance": "10.244.0.5:8080",
         "job": "kube-state-metrics",
         "namespace": "lab4",
-        "pod": "worker-7bc58f8578-4cdgm",
+        "pod": "worker-67689d597b-4474t",
         "service": "monitoring-kube-state-metrics",
-        "uid": "2f7c9576-2dc7-428e-aa30-f08c8df27c9c"
+        "uid": "374983a1-6e1b-4c74-b7bc-12ad40b89ff4"
       },
       "values": [
         [
-          1794209655.386,
+          1795032487.697,
           "0"
         ]
       ]
@@ -326,16 +326,16 @@
         "__name__": "kube_pod_container_status_restarts_total",
         "container": "worker",
         "endpoint": "http",
-        "instance": "10.244.0.3:8080",
+        "instance": "10.244.0.5:8080",
         "job": "kube-state-metrics",
         "namespace": "lab4",
-        "pod": "worker-7bc58f8578-7dnfq",
+        "pod": "worker-67689d597b-cw99w",
         "service": "monitoring-kube-state-metrics",
-        "uid": "25413035-120b-40ba-96ae-281a6a5a5dfb"
+        "uid": "7183ac26-c06f-46cf-931e-3d12851b316e"
       },
       "values": [
         [
-          1794209655.386,
+          1795032487.697,
           "0"
         ]
       ]
@@ -345,16 +345,16 @@
         "__name__": "kube_pod_container_status_restarts_total",
         "container": "worker",
         "endpoint": "http",
-        "instance": "10.244.0.3:8080",
+        "instance": "10.244.0.5:8080",
         "job": "kube-state-metrics",
         "namespace": "lab4",
-        "pod": "worker-7bc58f8578-sv8g8",
+        "pod": "worker-67689d597b-k6299",
         "service": "monitoring-kube-state-metrics",
-        "uid": "6f0d6e79-dd3d-4f11-b8c5-e875fd7687b9"
+        "uid": "30e719b0-5246-424f-a194-8653c1f4c215"
       },
       "values": [
         [
-          1794209655.386,
+          1795032487.697,
           "0"
         ]
       ]
@@ -364,16 +364,16 @@
         "__name__": "kube_pod_container_status_restarts_total",
         "container": "worker",
         "endpoint": "http",
-        "instance": "10.244.0.3:8080",
+        "instance": "10.244.0.5:8080",
         "job": "kube-state-metrics",
         "namespace": "lab4",
-        "pod": "worker-7bc58f8578-sz47h",
+        "pod": "worker-67689d597b-ncknb",
         "service": "monitoring-kube-state-metrics",
-        "uid": "71f3c31f-37b1-48d3-894e-42b3e9b68901"
+        "uid": "15984a17-73cf-4b96-9c5e-a3d0de460df9"
       },
       "values": [
         [
-          1794209655.386,
+          1795032487.697,
           "0"
         ]
       ]
@@ -383,16 +383,16 @@
         "__name__": "kube_pod_container_status_restarts_total",
         "container": "worker",
         "endpoint": "http",
-        "instance": "10.244.0.3:8080",
+        "instance": "10.244.0.5:8080",
         "job": "kube-state-metrics",
         "namespace": "lab4",
-        "pod": "worker-7bc58f8578-t6pv4",
+        "pod": "worker-67689d597b-w8pdz",
         "service": "monitoring-kube-state-metrics",
-        "uid": "96738b33-9013-469a-9aa4-03121db183b6"
+        "uid": "b8d69521-6277-40b8-a072-b61522d78b7d"
       },
       "values": [
         [
-          1794209655.386,
+          1795032487.697,
           "0"
         ]
       ]
@@ -402,16 +402,16 @@
         "__name__": "kube_pod_container_status_restarts_total",
         "container": "worker",
         "endpoint": "http",
-        "instance": "10.244.0.3:8080",
+        "instance": "10.244.0.5:8080",
         "job": "kube-state-metrics",
         "namespace": "lab4",
-        "pod": "worker-7f485d5d54-dqhvw",
+        "pod": "worker-74fd87c676-dkvtq",
         "service": "monitoring-kube-state-metrics",
-        "uid": "62179e09-fca5-4c82-bd0c-d4bae4ff83e8"
+        "uid": "b8d879a6-3c58-4f0d-a226-0bb225ea205a"
       },
       "values": [
         [
-          1794209660.386,
+          1795032482.697,
           "0"
         ]
       ]
@@ -421,16 +421,16 @@
         "__name__": "kube_pod_container_status_restarts_total",
         "container": "worker",
         "endpoint": "http",
-        "instance": "10.244.0.3:8080",
+        "instance": "10.244.0.5:8080",
         "job": "kube-state-metrics",
         "namespace": "lab4",
-        "pod": "worker-7f485d5d54-glhv7",
+        "pod": "worker-74fd87c676-dlvwc",
         "service": "monitoring-kube-state-metrics",
-        "uid": "6022a3d8-37a3-4833-8e6f-bfa1f367ad2a"
+        "uid": "8ebb9cd1-66a6-41fd-9f90-99dafca867c6"
       },
       "values": [
         [
-          1794209660.386,
+          1795032482.697,
           "0"
         ]
       ]
@@ -440,16 +440,16 @@
         "__name__": "kube_pod_container_status_restarts_total",
         "container": "worker",
         "endpoint": "http",
-        "instance": "10.244.0.3:8080",
+        "instance": "10.244.0.5:8080",
         "job": "kube-state-metrics",
         "namespace": "lab4",
-        "pod": "worker-7f485d5d54-kj7t4",
+        "pod": "worker-74fd87c676-f8mzc",
         "service": "monitoring-kube-state-metrics",
-        "uid": "ed9f768d-051c-493d-8191-b1fa0efc3a19"
+        "uid": "b90c83db-98eb-48e8-b2bb-d90fee71a4f2"
       },
       "values": [
         [
-          1794209660.386,
+          1795032482.697,
           "0"
         ]
       ]
@@ -459,16 +459,16 @@
         "__name__": "kube_pod_container_status_restarts_total",
         "container": "worker",
         "endpoint": "http",
-        "instance": "10.244.0.3:8080",
+        "instance": "10.244.0.5:8080",
         "job": "kube-state-metrics",
         "namespace": "lab4",
-        "pod": "worker-7f485d5d54-m7d4l",
+        "pod": "worker-74fd87c676-jk2zv",
         "service": "monitoring-kube-state-metrics",
-        "uid": "179900a0-0210-4b1e-b6da-dcb2dad5ff90"
+        "uid": "514cdde6-6097-457c-82eb-03d0194215df"
       },
       "values": [
         [
-          1794209660.386,
+          1795032482.697,
           "0"
         ]
       ]
@@ -478,16 +478,16 @@
         "__name__": "kube_pod_container_status_restarts_total",
         "container": "worker",
         "endpoint": "http",
-        "instance": "10.244.0.3:8080",
+        "instance": "10.244.0.5:8080",
         "job": "kube-state-metrics",
         "namespace": "lab4",
-        "pod": "worker-7f485d5d54-ngr5q",
+        "pod": "worker-74fd87c676-tz7dm",
         "service": "monitoring-kube-state-metrics",
-        "uid": "703f7358-1c44-4c9e-905d-cc13463c3c24"
+        "uid": "2689e2c6-6e1a-40db-a07b-69424bd54d09"
       },
       "values": [
         [
-          1794209660.386,
+          1795032482.697,
           "0"
         ]
       ]

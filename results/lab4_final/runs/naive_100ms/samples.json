@@ -1,101 +1,79 @@
 [
   {
-    "db_at": "2026-11-09T07:34:15.536447+00:00",
+    "db_at": "2026-11-18T20:08:02.849118+00:00",
     "queued": 15,
     "running": 0,
     "done": 0,
     "failed": 0,
     "lock_waiters": 0,
-    "transactions": 1603964,
-    "host_at": "2026-11-09T07:34:15.546994+00:00",
-    "sample_duration_ms": 160.38859996479005
+    "transactions": 2977760,
+    "host_at": "2026-11-18T20:08:02.860914+00:00",
+    "sample_duration_ms": 163.36910001700744
   },
   {
-    "db_at": "2026-11-09T07:34:16.551022+00:00",
-    "queued": 117,
+    "db_at": "2026-11-18T20:08:03.862637+00:00",
+    "queued": 114,
     "running": 0,
     "done": 0,
     "failed": 0,
     "lock_waiters": 0,
-    "transactions": 1604076,
-    "host_at": "2026-11-09T07:34:16.560737+00:00",
-    "sample_duration_ms": 159.51549995224923
+    "transactions": 2977763,
+    "host_at": "2026-11-18T20:08:03.873229+00:00",
+    "sample_duration_ms": 162.926500022877
   },
   {
-    "db_at": "2026-11-09T07:34:17.543648+00:00",
-    "queued": 206,
+    "db_at": "2026-11-18T20:08:04.895975+00:00",
+    "queued": 218,
     "running": 2,
-    "done": 8,
+    "done": 0,
     "failed": 0,
     "lock_waiters": 0,
-    "transactions": 1604323,
-    "host_at": "2026-11-09T07:34:17.553051+00:00",
-    "sample_duration_ms": 151.3837999664247
+    "transactions": 2978214,
+    "host_at": "2026-11-18T20:08:04.907962+00:00",
+    "sample_duration_ms": 186.6366000031121
   },
   {
-    "db_at": "2026-11-09T07:34:18.553502+00:00",
-    "queued": 241,
-    "running": 2,
-    "done": 57,
+    "db_at": "2026-11-18T20:08:05.88399+00:00",
+    "queued": 234,
+    "running": 4,
+    "done": 62,
     "failed": 0,
     "lock_waiters": 0,
-    "transactions": 1604946,
-    "host_at": "2026-11-09T07:34:18.562250+00:00",
-    "sample_duration_ms": 152.96110010240227
+    "transactions": 2978498,
+    "host_at": "2026-11-18T20:08:05.893709+00:00",
+    "sample_duration_ms": 157.89050003513694
   },
   {
-    "db_at": "2026-11-09T07:34:19.568492+00:00",
-    "queued": 199,
-    "running": 2,
-    "done": 99,
+    "db_at": "2026-11-18T20:08:06.88543+00:00",
+    "queued": 165,
+    "running": 4,
+    "done": 131,
     "failed": 0,
     "lock_waiters": 0,
-    "transactions": 1605461,
-    "host_at": "2026-11-09T07:34:19.578328+00:00",
-    "sample_duration_ms": 163.25169999618083
+    "transactions": 2979030,
+    "host_at": "2026-11-18T20:08:06.896344+00:00",
+    "sample_duration_ms": 157.14620001381263
   },
   {
-    "db_at": "2026-11-09T07:34:20.568651+00:00",
-    "queued": 155,
-    "running": 2,
-    "done": 143,
+    "db_at": "2026-11-18T20:08:07.893046+00:00",
+    "queued": 87,
+    "running": 4,
+    "done": 209,
     "failed": 0,
     "lock_waiters": 0,
-    "transactions": 1606278,
-    "host_at": "2026-11-09T07:34:20.579189+00:00",
-    "sample_duration_ms": 149.1682999767363
+    "transactions": 2979688,
+    "host_at": "2026-11-18T20:08:07.901717+00:00",
+    "sample_duration_ms": 149.915800022427
   },
   {
-    "db_at": "2026-11-09T07:34:21.590529+00:00",
-    "queued": 111,
-    "running": 2,
-    "done": 187,
+    "db_at": "2026-11-18T20:08:08.898242+00:00",
+    "queued": 12,
+    "running": 3,
+    "done": 285,
     "failed": 0,
     "lock_waiters": 0,
-    "transactions": 1606997,
-    "host_at": "2026-11-09T07:34:21.600921+00:00",
-    "sample_duration_ms": 166.36809997726232
-  },
-  {
-    "db_at": "2026-11-09T07:34:22.583841+00:00",
-    "queued": 67,
-    "running": 1,
-    "done": 232,
-    "failed": 0,
-    "lock_waiters": 0,
-    "transactions": 1607743,
-    "host_at": "2026-11-09T07:34:22.594637+00:00",
-    "sample_duration_ms": 151.9187999656424
-  },
-  {
-    "db_at": "2026-11-09T07:34:23.582639+00:00",
-    "queued": 27,
-    "running": 1,
-    "done": 272,
-    "failed": 0,
-    "lock_waiters": 0,
-    "transactions": 1608470,
-    "host_at": "2026-11-09T07:34:23.592297+00:00",
-    "sample_duration_ms": 140.71030006743968
+    "transactions": 2980352,
+    "host_at": "2026-11-18T20:08:08.907945+00:00",
+    "sample_duration_ms": 144.70330002950504
   }
 ]

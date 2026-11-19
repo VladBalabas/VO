@@ -87,12 +87,22 @@
       "tasks": 18029
     },
     {
+      "run": "f3_baseline",
+      "requests": 60,
+      "tasks": 60
+    },
+    {
+      "run": "f3_poison",
+      "requests": 70,
+      "tasks": 70
+    },
+    {
       "run": "priority_d1",
       "requests": 13393,
       "tasks": 13393
     }
   ],
-  "total_requests": 89793,
+  "total_requests": 89923,
   "checks": [
     "SHA-256 усіх первинних JSONL",
     "кількість запитів і задач",
@@ -100,6 +110,8 @@
     "повні 30-секундні capacity-вікна",
     "точні task/empty claims",
     "snapshot failure на 300-й секунді",
+    "знаменники attempts/failed лише за захопленими задачами",
+    "10 poison-задач failed з attempts=3 до drain",
     "відсутність дублів у фінальних режимах",
     "незалежні lambda, W_q і часово-зважене L_q"
   ]

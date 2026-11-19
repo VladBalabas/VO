@@ -1,5 +1,5 @@
 {
-  "generator_version": "lab4-threaded-open-loop-v1",
+  "generator_version": "lab4-threaded-open-loop-v2",
   "config": {
     "mode": "naive",
     "poll_ms": 100,
@@ -10,33 +10,31 @@
     "fail_rate": 0,
     "batch": 1
   },
-  "started_at_epoch": 1794209655.3860414,
-  "ended_at_epoch": 1794209664.9941714,
+  "started_at_epoch": 1795032482.6970582,
+  "ended_at_epoch": 1795032489.7490544,
   "http": {
     "scheduled": 300,
     "accepted": 300,
     "non_2xx": 0,
     "transport_errors": 0,
-    "schedule_lag_p95_ms": 0.6423000013455749
+    "schedule_lag_p95_ms": 0.6741000106558204
   },
   "database": {
     "tasks": 300,
     "done": 300,
     "failed": 0,
-    "attempts_gt_1": 194,
-    "duplicate_task_ids": 194,
-    "result_rows": 590,
+    "attempts_gt_1": 42,
+    "duplicate_task_ids": 42,
+    "result_rows": 346,
     "attempts_distribution": {
-      "1": 106,
-      "2": 116,
-      "3": 61,
-      "4": 16,
-      "5": 1
+      "1": 258,
+      "2": 38,
+      "3": 4
     }
   },
   "primary_sha256": {
-    "requests.jsonl": "0069e26f23e63f21ddca58221bda33d49078e683375aadfddedd0400a0b6c9f6",
-    "tasks.jsonl": "3afa9c99b975fd59b148aac0ffa6972641bd1b9968159d21621458173f6d87e2",
-    "task_results.jsonl": "42e63b678d83b8dc1579a1d696a5f253064a6eba02b1489c97acc8dd1ce72fb4"
+    "requests.jsonl": "6d1202b707533f70cae9b6dd7cec2f2b6fe5d60eeb5d794cfbf49117f778d971",
+    "tasks.jsonl": "924b23632a03b3eb068428544c79c639da8d5610b56f95c28c8a42f258ba6815",
+    "task_results.jsonl": "2e3e2a8aaf3359cda03a570bc443c7aa73035069ca0923bae90dc4597b449125"
   }
 }

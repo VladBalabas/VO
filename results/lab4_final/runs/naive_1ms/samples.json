@@ -1,101 +1,79 @@
 [
   {
-    "db_at": "2026-11-09T07:34:28.461378+00:00",
+    "db_at": "2026-11-18T20:08:13.073674+00:00",
     "queued": 14,
     "running": 0,
     "done": 0,
     "failed": 0,
     "lock_waiters": 0,
-    "transactions": 1609614,
-    "host_at": "2026-11-09T07:34:28.471927+00:00",
-    "sample_duration_ms": 157.12090011220425
+    "transactions": 2981200,
+    "host_at": "2026-11-18T20:08:13.084597+00:00",
+    "sample_duration_ms": 155.18490003887564
   },
   {
-    "db_at": "2026-11-09T07:34:29.477871+00:00",
-    "queued": 114,
+    "db_at": "2026-11-18T20:08:14.097216+00:00",
+    "queued": 117,
     "running": 0,
     "done": 0,
     "failed": 0,
     "lock_waiters": 0,
-    "transactions": 1609749,
-    "host_at": "2026-11-09T07:34:29.488523+00:00",
-    "sample_duration_ms": 161.37819993309677
+    "transactions": 2981422,
+    "host_at": "2026-11-18T20:08:14.109140+00:00",
+    "sample_duration_ms": 168.19269995903596
   },
   {
-    "db_at": "2026-11-09T07:34:30.483544+00:00",
-    "queued": 210,
-    "running": 3,
-    "done": 4,
+    "db_at": "2026-11-18T20:08:15.09672+00:00",
+    "queued": 212,
+    "running": 4,
+    "done": 1,
     "failed": 0,
     "lock_waiters": 0,
-    "transactions": 1610022,
-    "host_at": "2026-11-09T07:34:30.493815+00:00",
-    "sample_duration_ms": 153.6361000034958
+    "transactions": 2981783,
+    "host_at": "2026-11-18T20:08:15.106742+00:00",
+    "sample_duration_ms": 154.809599975124
   },
   {
-    "db_at": "2026-11-09T07:34:31.493306+00:00",
-    "queued": 247,
-    "running": 2,
-    "done": 51,
+    "db_at": "2026-11-18T20:08:16.104332+00:00",
+    "queued": 221,
+    "running": 4,
+    "done": 75,
     "failed": 0,
     "lock_waiters": 0,
-    "transactions": 1610570,
-    "host_at": "2026-11-09T07:34:31.501389+00:00",
-    "sample_duration_ms": 150.94130008947104
+    "transactions": 2982391,
+    "host_at": "2026-11-18T20:08:16.113158+00:00",
+    "sample_duration_ms": 149.4679000461474
   },
   {
-    "db_at": "2026-11-09T07:34:32.494181+00:00",
-    "queued": 197,
-    "running": 2,
-    "done": 101,
+    "db_at": "2026-11-18T20:08:17.116706+00:00",
+    "queued": 148,
+    "running": 5,
+    "done": 147,
     "failed": 0,
     "lock_waiters": 0,
-    "transactions": 1611050,
-    "host_at": "2026-11-09T07:34:32.502854+00:00",
-    "sample_duration_ms": 141.79269992746413
+    "transactions": 2983111,
+    "host_at": "2026-11-18T20:08:17.126368+00:00",
+    "sample_duration_ms": 153.6247000331059
   },
   {
-    "db_at": "2026-11-09T07:34:33.510104+00:00",
-    "queued": 149,
-    "running": 2,
-    "done": 149,
+    "db_at": "2026-11-18T20:08:18.121949+00:00",
+    "queued": 70,
+    "running": 5,
+    "done": 225,
     "failed": 0,
     "lock_waiters": 0,
-    "transactions": 1611665,
-    "host_at": "2026-11-09T07:34:33.521615+00:00",
-    "sample_duration_ms": 151.4780999859795
+    "transactions": 2983616,
+    "host_at": "2026-11-18T20:08:18.132301+00:00",
+    "sample_duration_ms": 152.17320004012436
   },
   {
-    "db_at": "2026-11-09T07:34:34.517696+00:00",
-    "queued": 104,
-    "running": 3,
-    "done": 193,
+    "db_at": "2026-11-18T20:08:19.125059+00:00",
+    "queued": 0,
+    "running": 0,
+    "done": 300,
     "failed": 0,
     "lock_waiters": 0,
-    "transactions": 1612630,
-    "host_at": "2026-11-09T07:34:34.527399+00:00",
-    "sample_duration_ms": 148.62320001702756
-  },
-  {
-    "db_at": "2026-11-09T07:34:35.527256+00:00",
-    "queued": 57,
-    "running": 1,
-    "done": 242,
-    "failed": 0,
-    "lock_waiters": 0,
-    "transactions": 1613420,
-    "host_at": "2026-11-09T07:34:35.536187+00:00",
-    "sample_duration_ms": 145.3413999406621
-  },
-  {
-    "db_at": "2026-11-09T07:34:36.537828+00:00",
-    "queued": 15,
-    "running": 2,
-    "done": 283,
-    "failed": 0,
-    "lock_waiters": 0,
-    "transactions": 1614119,
-    "host_at": "2026-11-09T07:34:36.546348+00:00",
-    "sample_duration_ms": 144.8494999203831
+    "transactions": 2984596,
+    "host_at": "2026-11-18T20:08:19.135061+00:00",
+    "sample_duration_ms": 143.62459996482357
   }
 ]

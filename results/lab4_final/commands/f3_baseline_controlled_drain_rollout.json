@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-11-18T20:58:05.374588+00:00",
+  "finished_at": "2026-11-18T20:58:06.118526+00:00",
+  "command": [
+    "kubectl",
+    "-n",
+    "lab4",
+    "rollout",
+    "status",
+    "deployment/worker",
+    "--timeout=300s"
+  ],
+  "exit_code": 0,
+  "stdout": "Waiting for deployment \"worker\" rollout to finish: 0 of 5 updated replicas are available...\nWaiting for deployment \"worker\" rollout to finish: 0 of 5 updated replicas are available...\nWaiting for deployment \"worker\" rollout to finish: 0 of 5 updated replicas are available...\nWaiting for deployment \"worker\" rollout to finish: 0 of 5 updated replicas are available...\nWaiting for deployment \"worker\" rollout to finish: 0 of 5 updated replicas are available...\nWaiting for deployment \"worker\" rollout to finish: 0 of 5 updated replicas are available...\nWaiting for deployment \"worker\" rollout to finish: 1 of 5 updated replicas are available...\nWaiting for deployment \"worker\" rollout to finish: 3 of 5 updated replicas are available...\nWaiting for deployment \"worker\" rollout to finish: 4 of 5 updated replicas are available...\ndeployment \"worker\" successfully rolled out\n",
+  "stderr": ""
+}

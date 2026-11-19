@@ -11,9 +11,6 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-import matplotlib.pyplot as plt
-
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "results" / "lab4_final"
 RUNS = DATA / "runs"
@@ -271,25 +268,37 @@ def pod_restart_count(name: str) -> int:
 
 def failure_result(name: str) -> dict[str, Any]:
     tasks = load_jsonl(RUNS / name / "tasks.jsonl")
+    summary = load_json(RUNS / name / "summary.json")
     measurement = load_json(RUNS / name / "measurement_end.json")
     measurement_tasks = load_jsonl(RUNS / name / "tasks_at_measurement_end.jsonl")
-    poison = [row for row in tasks if row.get("seed") == 0]
-    normal = [row for row in tasks if row.get("seed") != 0]
     attempts = [int(row["attempts"]) for row in tasks]
-    normal_waits = [(dt(row["started_at"]) - dt(row["created_at"])).total_seconds()
-                    for row in normal if row["started_at"]]
+    measurement_captured = [row for row in measurement_tasks if int(row["attempts"]) > 0]
+    measurement_poison = [row for row in measurement_tasks if row.get("seed") == 0]
+    duration = float(summary["config"]["duration"])
+    captured_count = len(measurement_captured)
+    attempts_gt_1_count = sum(int(row["attempts"]) > 1 for row in measurement_captured)
+    failed_count = sum(row["status"] == "failed" for row in measurement_captured)
     result = {
         "measurement_end": measurement,
-        "measurement_x_done_per_second": measurement["counts"]["done"] / 300,
+        "measurement_x_done_per_second": measurement["counts"]["done"] / duration,
         "pod_restart_count_at_measurement_end": pod_restart_count(name),
         "final_tasks": len(tasks),
         "final_done": sum(row["status"] == "done" for row in tasks),
         "final_failed": sum(row["status"] == "failed" for row in tasks),
         "observed_mean_attempts_after_drain": statistics.fmean(attempts),
-        "normal_W_q_p99_after_drain": percentile(normal_waits, .99),
         "measurement_attempts_distribution": measurement["database"]["attempts_distribution"],
         "measurement_attempts_gt_1": measurement["database"]["attempts_gt_1"],
         "measurement_failed": measurement["database"]["failed"],
+        "measurement_uncaptured_tasks": len(measurement_tasks) - captured_count,
+        "measurement_captured_tasks": captured_count,
+        "measurement_attempts_gt_1_captured": attempts_gt_1_count,
+        "measurement_attempts_gt_1_fraction_of_captured": (
+            attempts_gt_1_count / captured_count if captured_count else None
+        ),
+        "measurement_failed_captured": failed_count,
+        "measurement_failed_fraction_of_captured": (
+            failed_count / captured_count if captured_count else None
+        ),
     }
     measurement_normal_waits = [
         (dt(row["started_at"]) - dt(row["created_at"])).total_seconds()
@@ -298,13 +307,15 @@ def failure_result(name: str) -> dict[str, Any]:
     result["normal_W_q_p99_at_measurement_end"] = percentile(
         measurement_normal_waits, .99
     )
-    if poison:
-        poison_times = [(dt(row["finished_at"]) - dt(row["created_at"])).total_seconds()
-                        for row in poison if row["finished_at"]]
-        result["poison"] = {
-            "count": len(poison),
-            "failed": sum(row["status"] == "failed" for row in poison),
-            "attempts": Counter(int(row["attempts"]) for row in poison),
+    if measurement_poison:
+        poison_times = [
+            (dt(row["finished_at"]) - dt(row["created_at"])).total_seconds()
+            for row in measurement_poison if row["finished_at"]
+        ]
+        result["poison_at_measurement_end"] = {
+            "count": len(measurement_poison),
+            "failed": sum(row["status"] == "failed" for row in measurement_poison),
+            "attempts": Counter(int(row["attempts"]) for row in measurement_poison),
             "time_to_failed_p50_seconds": percentile(poison_times, .50),
             "time_to_failed_p99_seconds": percentile(poison_times, .99),
         }
@@ -324,6 +335,8 @@ def step_times() -> dict[str, float]:
 
 
 def plot_capacity(rows: list[dict[str, Any]], model: dict[str, Any]) -> None:
+    import matplotlib.pyplot as plt
+
     FIG.mkdir(parents=True, exist_ok=True)
     ns = [row["workers"] for row in rows]; xs = [row["x"] for row in rows]
     plt.figure(figsize=(7, 4)); plt.errorbar(ns, xs, yerr=[row["stddev_per_second"] for row in rows],
@@ -335,6 +348,8 @@ def plot_capacity(rows: list[dict[str, Any]], model: dict[str, Any]) -> None:
 
 
 def plot_timeline(name: str, destination: str) -> None:
+    import matplotlib.pyplot as plt
+
     source = RUNS / name / "samples.json"
     if not source.exists():
         return
@@ -350,10 +365,14 @@ def plot_timeline(name: str, destination: str) -> None:
 
 
 def plot_failure_timeline() -> None:
-    samples = [row for row in load_json(RUNS / "fail_poison" / "samples.json")
+    import matplotlib.pyplot as plt
+
+    run_name = "f3_poison"
+    samples = [row for row in load_json(RUNS / run_name / "samples.json")
                if "db_at" in row]
     if len(samples) < 2:
-        raise RuntimeError("Недостатньо вибірок fail_poison для часової діаграми")
+        raise RuntimeError(f"Недостатньо вибірок {run_name} для часової діаграми")
+    poison_at = load_json(RUNS / run_name / "summary.json")["config"]["poison_at"]
     origin = dt(samples[0]["db_at"])
     samples = [row for row in samples
                if (dt(row["db_at"]) - origin).total_seconds() <= 300]
@@ -372,7 +391,8 @@ def plot_failure_timeline() -> None:
     rate_axis = queue_axis.twinx()
     rate_axis.plot(t, done_rate, color="tab:green", alpha=.75, label="done/с")
     rate_axis.set_ylabel("Завершено задач/с")
-    queue_axis.axvline(150, color="tab:red", linestyle="--", label="10 задач seed=0")
+    queue_axis.axvline(poison_at, color="tab:red", linestyle="--",
+                       label="10 задач seed=0")
     lines = queue_axis.get_lines() + rate_axis.get_lines()
     queue_axis.legend(lines, [line.get_label() for line in lines], loc="upper left")
     queue_axis.grid(alpha=.3)
@@ -389,6 +409,10 @@ def main() -> None:
     model = usl(capacities)
     baseline = load_json(RUNS / "fail_baseline" / "summary.json")
     poison = load_json(RUNS / "fail_poison" / "summary.json")
+    baseline_measurement = failure_result("fail_baseline")
+    poison_measurement = failure_result("fail_poison")
+    f3_baseline = failure_result("f3_baseline")
+    f3_poison = failure_result("f3_poison")
     analysis = {
         "definitions": {
             "X": "done tasks in the intersection of the final 30 s and the measured non-empty interval / actual interval seconds",
@@ -410,17 +434,27 @@ def main() -> None:
             "baseline": baseline, "poison": poison,
             "baseline_x": run_throughput("fail_baseline"),
             "poison_x": run_throughput("fail_poison"),
-            "baseline_measurement": failure_result("fail_baseline"),
-            "poison_measurement": failure_result("fail_poison"),
-            "normal_p99_comparison_seconds": {
-                "at_measurement_end": {
-                    "baseline": failure_result("fail_baseline")["normal_W_q_p99_at_measurement_end"],
-                    "poison": failure_result("fail_poison")["normal_W_q_p99_at_measurement_end"],
+            "fraction_denominator": "tasks with attempts > 0 at measurement end",
+            "baseline_measurement": baseline_measurement,
+            "poison_measurement": poison_measurement,
+            "high_rate_poison_f3_metrics": {
+                "usable": False,
+                "reason": (
+                    "poison tasks were not terminal at the 300 s measurement boundary; "
+                    "post-drain values were produced with FAIL_RATE=0"
+                ),
+            },
+            "f3_measurement_pair": {
+                "rate": 0.2,
+                "duration_seconds": 300,
+                "poison_injected_at_seconds": 150,
+                "baseline": f3_baseline,
+                "poison": f3_poison,
+                "normal_p99_comparison_seconds": {
+                    "baseline": f3_baseline["normal_W_q_p99_at_measurement_end"],
+                    "poison": f3_poison["normal_W_q_p99_at_measurement_end"],
                 },
-                "after_controlled_drain": {
-                    "baseline": failure_result("fail_baseline")["normal_W_q_p99_after_drain"],
-                    "poison": failure_result("fail_poison")["normal_W_q_p99_after_drain"],
-                },
+                "phase": "measurement snapshot before FAIL_RATE=0 controlled drain",
             },
             "limitation": "CrashLoopBackOff backoff dominates the 300 s window; FAIL_RATE was set to zero only after measurement for a controlled drain.",
         },

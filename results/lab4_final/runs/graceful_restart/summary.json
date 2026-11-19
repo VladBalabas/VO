@@ -1,35 +1,35 @@
 {
-  "generator_version": "lab4-threaded-open-loop-v1",
+  "generator_version": "lab4-threaded-open-loop-v2",
   "config": {
     "rate": 60.096142150500164,
     "duration": 120,
     "fail_rate": 0,
-    "poison_at": null
+    "poison_at": null,
+    "controlled_drain": false
   },
-  "started_at_epoch": 1794179803.8600183,
-  "ended_at_epoch": 1794179924.3639665,
+  "started_at_epoch": 1795032523.7873757,
+  "ended_at_epoch": 1795032644.1445992,
   "http": {
     "scheduled": 7212,
     "accepted": 7212,
     "non_2xx": 0,
     "transport_errors": 0,
-    "schedule_lag_p95_ms": 0.6175393937155604
+    "schedule_lag_p95_ms": 0.6396090611815453
   },
   "database": {
     "tasks": 7212,
     "done": 7212,
     "failed": 0,
-    "attempts_gt_1": 2,
+    "attempts_gt_1": 0,
     "duplicate_task_ids": 0,
     "result_rows": 7212,
     "attempts_distribution": {
-      "1": 7210,
-      "2": 2
+      "1": 7212
     }
   },
   "primary_sha256": {
-    "requests.jsonl": "e3b726192ae0da606963b4355e5fba2e04b341c8e8ae1220e89ace1302e829dd",
-    "tasks.jsonl": "6152530c46fa0a1246bdc5c7495cf7496f298b8fa32f76234ac9af53454a47f7",
-    "task_results.jsonl": "8c29aea8a5e3a1a2bf3d1695e6f71a7bef0aa029a0f437775b79f0efc0d39a6d"
+    "requests.jsonl": "cfb9ca230647c111663bc9b27ed2a58fb7ada546d6f931f4fb8f98809ad626e4",
+    "tasks.jsonl": "50d5e46597182cdf32ba439c2015fa79b009e90051cf86eca84c913bde3b0905",
+    "task_results.jsonl": "28cf343dbbd099520e15b51a0795b75a48d62fbc2935740fd6e522ecae116c42"
   }
 }
